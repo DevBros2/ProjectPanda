@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.MainPage"
-             xmlns:Page="clr-namespace:ProjectPanda.Views"
+             x:Class="ProjectPanda.Pages.MainPage"
+             xmlns:Page="clr-namespace:ProjectPanda.Views"     
                   >
-    
-    
+
     <MasterDetailPage.Master >
         <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu" >
             <ContentPage.Content>
@@ -112,6 +111,5 @@
         </TabbedPage>
 
     </MasterDetailPage.Detail>
-
 
 </MasterDetailPage>

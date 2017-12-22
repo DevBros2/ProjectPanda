@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ProjectPanda.Views
+namespace ProjectPanda.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPage : MasterDetailPage
@@ -16,12 +16,11 @@ namespace ProjectPanda.Views
 		{
 			InitializeComponent ();
 		}
-
         #region Event handlers for the side menu
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
 
-           // Detail = new NavigationPage(new Settings());
+            // Detail = new NavigationPage(new Settings());
 
             IsPresented = false;
         }
@@ -56,5 +55,4 @@ namespace ProjectPanda.Views
         }
         #endregion
     }
-
 }
