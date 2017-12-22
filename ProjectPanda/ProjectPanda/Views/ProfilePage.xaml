@@ -1,12 +1,142 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.ProfilePage">
+             x:Class="ProjectPanda.Views.ProfilePage"
+             BackgroundColor="#92da69"
+             >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ScrollView>
+                <StackLayout >
+
+                    <StackLayout Margin="0,30,0,10">
+                        <Image Source="userIcon.png" HorizontalOptions="Center" HeightRequest="200" BackgroundColor="White" WidthRequest="200" Aspect="AspectFit" x:Name="userIcon"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,0,0,20">
+                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="25"  />
+                    </StackLayout>
+
+
+
+                    <StackLayout Margin="20,0,20,10">
+                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                            <Label  TextColor="Black" FontSize="18">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Medical aid:"/>
+                                        <Span Text=""/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Margin="20,0,20,10">
+                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                            <Label  TextColor="Black" FontSize="18" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Blood type:  "  />
+                                        <Span/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <!--next to this will go the users blood type as a string input-->
+                        </Frame>
+                    </StackLayout>
+
+
+
+
+
+                    <StackLayout Margin="20,0,20,10">
+                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                            <Label   TextColor="Black" FontSize="18">
+                                <Label.FormattedText>
+                                    <FormattedString>
+
+                                        <Span Text="Doctor:   "/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                        </Frame>
+                        <!--The string input for the users frequently used doctor goes here-->
+                    </StackLayout>
+
+                    <StackLayout Margin="20,0,20,10">
+                        <Frame BackgroundColor="White" OutlineColor="Black" CornerRadius="8">
+                            <Label  TextColor="Black" FontSize="18">
+                                <Label.FormattedText>
+                                    <FormattedString>
+
+                                        <Span Text="Hospital:  "/>
+                                        <Span Text=""/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                        </Frame>
+
+                        <!--the users favorite hospital-->
+                    </StackLayout>
+
+
+
+
+
+                    <StackLayout Margin="20,0,20,10">
+                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8" >
+                            <Label   TextColor="Black"  FontSize="18" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Chroinc disease: "/>
+                                        <Span Text=" "/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <!--The users chronic diseases go here-->
+                        </Frame>
+                    </StackLayout>
+
+
+
+
+
+                    <StackLayout Margin="20,0,20,10">
+                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                            <Label   TextColor="Black" FontSize="18" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="medicine(s) taken:" />
+                                        <Span Text=""/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <!--the users list prescriptions go here the maximum being 10, so an array here-->
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Margin="20,0,20,10" >
+                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8" >
+                            <Label Text="Next delivery:"  TextColor="Black" FontSize="18" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span  Text="Next delivery: "/>
+                                        <Span Text=" "/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <!--the information from delivery will be put as a string here as a date and time and location-->
+                    </StackLayout>
+
+
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
