@@ -12,9 +12,20 @@ namespace ProjectPanda.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Delivery : ContentPage
 	{
-		public Delivery ()
+        public Delivery delivery { get; set; }
+
+        public Delivery ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+            delivery = new Delivery
+            {
+
+            };
+            BindingContext = this;
+        }
+        private async Task Delivery_Button_Clicked(object sender, EventArgs e)
+
+        => await Navigation.PushAsync(new PaymentPage());
+    }
 }

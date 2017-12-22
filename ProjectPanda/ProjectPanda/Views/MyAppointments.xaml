@@ -3,10 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.MyAppointments">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="LimeGreen">
+            <Label Text="Your have {0} Appontments "/>
+            <!--Code for the binding goes here-->
+
+            <Frame OutlineColor="Black">
+
+                <Label Text="Set Appointment" BackgroundColor="Gray" HorizontalOptions="Start"/>
+
+            </Frame>
+
+
+            <!--The drop down selecting menu for selecting a doctor will go here-->
+
+            <!--The drop down selecting menu for selecting a date-->
+
+            <!--The drop down selecting menu for selecting a Time-->
+
+            <Button BorderColor="Black" BackgroundColor="Green" Text="Schedule" HorizontalOptions="StartAndExpand" TextColor="Black"/>
+
+
+            <Frame OutlineColor="Black" >
+
+                <Label Text="Date:" BackgroundColor="Gray"/>
+            </Frame>
+
+
+            <Frame OutlineColor="Black">
+
+                <Label Text="Time:" BackgroundColor="Gray"/>
+
+            </Frame>
+
+
+
+            <!--The following button I am not not sure weather I should actually remove it or not-->
+            <Button 
+                   Text="ViewDoctorList()"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

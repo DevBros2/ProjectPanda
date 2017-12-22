@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjectPanda.Pages;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,7 +28,7 @@ namespace ProjectPanda.Views
              */
 
 
-            await Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
 
            
 
