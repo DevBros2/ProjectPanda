@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ProjectPanda.Views;
 
 using Xamarin.Forms;
 
@@ -13,8 +14,10 @@ namespace ProjectPanda
 		{
 			InitializeComponent();
 
-			MainPage = new ProjectPanda.MainPage();
-		}
+			//MainPage = new ProjectPanda.MainPage();
+            MainPage = new NavigationPage(new LoginPage());
+
+        }
 
 		protected override void OnStart ()
 		{
