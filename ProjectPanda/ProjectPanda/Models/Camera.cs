@@ -4,8 +4,7 @@ using System.Text;
 
 namespace ProjectPanda.Models
 {
-    public class Appointment
+    class Camera
     {
-
     }
 }

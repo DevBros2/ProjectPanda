@@ -3,44 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.Delivery">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="LimeGreen">
-            <Button Clicked="Delivery_Button_Clicked"/>
-
-            <Frame OutlineColor="Black"/>
-            <Label Text="Prescription" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" TextColor="Black"/>
-
-
-            <Frame OutlineColor="Black" WidthRequest="294" HeightRequest="27">
-                <!--Some code that will write data from the database of the prescriptions ordered-->
-            </Frame>
-
-            <Button Text="Schedule" HorizontalOptions="Center" BorderColor="Black" BackgroundColor="Green"/>
-            <!-- the button to get the medicine, which will have a prompt to verify the scheduled delivery-->
-
-            <Frame OutlineColor="Black">
-                <Label Text="Delivery history" HorizontalOptions="StartAndExpand" BackgroundColor="Gray"/>
-                <!--this will be the heading for delivery history-->
-            </Frame>
-
-            <Frame OutlineColor="Black" >
-                <Label Text="Date:" HorizontalOptions="StartAndExpand" BackgroundColor="Gray"/>
-                <!--the list of information of the date, time, place, medicines and deliverer-->
-            </Frame>
-
-            <Frame OutlineColor="Black">
-                <Label Text="Time:" HorizontalOptions="StartAndExpand" BackgroundColor="Gray"/>
-            </Frame>
-
-            <Frame OutlineColor="Black">
-                <Label Text="Place:" HorizontalOptions="StartAndExpand" BackgroundColor="Gray"/>
-            </Frame>
-
-            <Frame OutlineColor="Black">
-
-                <Label Text="Medicine(s):" HorizontalOptions="StartAndExpand" BackgroundColor="Gray"/>
-            </Frame>
-
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>
