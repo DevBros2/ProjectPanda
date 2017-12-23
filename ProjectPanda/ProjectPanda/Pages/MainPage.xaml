@@ -2,12 +2,15 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.MainPage"
-             xmlns:Page="clr-namespace:ProjectPanda.Views"     
-                 MasterBehavior="Popover"
+             xmlns:Page="clr-namespace:ProjectPanda.Views"    
+             MasterBehavior="Popover"
+              Title="Serapis Medical"
+                 
+
                   >
 
     <MasterDetailPage.Master >
-        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu" >
+        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu"  >
             <ContentPage.Content>
                 <StackLayout >
                     <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Center" />
@@ -85,21 +88,21 @@
 
     
 
-    <MasterDetailPage.Detail>
-
+    <MasterDetailPage.Detail >
+     
         <TabbedPage >
 
             <TabbedPage.Children >
 
-                <Page:ProfilePage Title="Profile" Icon="user.png" />
+                <Page:ProfilePage  Icon="user.png" />
 
 
 
-                <Page:MyAppointments Title="My Appoitments" Icon="monthlycalendar.png" />
+                <Page:MyAppointments  Icon="monthlycalendar.png" />
 
 
 
-                <Page:Delivery Title="Delivery" Icon="vansideview.png" />
+                <Page:Delivery  Icon="vansideview.png" />
 
 
 
@@ -110,7 +113,7 @@
             </TabbedPage.Children>
 
         </TabbedPage>
-
+     
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>

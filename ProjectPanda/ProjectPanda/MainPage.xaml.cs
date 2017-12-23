@@ -12,6 +12,9 @@ namespace ProjectPanda
 		public MainPage()
 		{
 			InitializeComponent();
-		}
-	}
+
+           
+
+        }
+    }
 }

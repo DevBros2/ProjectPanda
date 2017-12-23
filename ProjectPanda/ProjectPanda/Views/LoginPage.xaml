@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.LoginPage"
-             BackgroundImage="backgroundImage.png">
+             BackgroundImage="backgroundImage.png"
+            
+             >
     <ContentPage.Content>
         
         <Grid >
@@ -26,10 +28,10 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Entry Grid.Row="1" TextColor="Black" Placeholder="Email Address" PlaceholderColor="White" FontSize="17" Opacity="0.80" x:Name="emailAddress"/>
-                <Entry Grid.Row="2" TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="White" FontSize="17" x:Name="password"/>
-                <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="#229122" TextColor="White" HeightRequest="50" VerticalOptions="Center"  Grid.Row="3" Margin="0,20,0,20"/>
-                <Button Text="Having problems contact us" HorizontalOptions="Center" Grid.Row="4" Margin="0,0,0,0" FontSize="15" BackgroundColor="#92da69" Clicked="ContactUs"/>
+                <Entry Grid.Row="1" TextColor="Black" Placeholder="Email Address" PlaceholderColor="Black" FontSize="17"  x:Name="emailAddress"  />
+                <Entry Grid.Row="2" TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password"  />
+                <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="#229122" TextColor="White" HeightRequest="50" VerticalOptions="Center"  Grid.Row="3" Margin="0,20,0,20" FontSize="18"/>
+                <Button Text="Having problems contact us" HorizontalOptions="Center" Grid.Row="4" Margin="0,0,0,0" FontSize="15" BackgroundColor="#229122" Clicked="ContactUs" TextColor="White" BorderColor="Black" BorderWidth="1"/>
                 <Grid Grid.Row="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -37,13 +39,13 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
-                    <Label Text="OR" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0" TextColor="Black" />
+                    <Label Text="OR" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0" TextColor="Black" FontSize="18" />
 
 
                 </Grid>
                 <StackLayout Grid.Row="7" HorizontalOptions="Center" >
 
-                    <Button Text="Dont have an account Sign Up" Margin="0,0,0,0" BackgroundColor="#92da69" Clicked="prompt" Opacity="0.80" WidthRequest="100" HeightRequest="60" TextColor="Black" BorderColor="Black"/>
+                    <Button Text="Dont have an account Sign Up" Margin="0,0,0,0" BackgroundColor="#229122" Clicked="prompt"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1" BorderColor="Black" FontSize="15"/>
                 </StackLayout>
             </Grid>
 
