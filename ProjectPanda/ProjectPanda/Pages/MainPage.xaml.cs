@@ -15,7 +15,10 @@ namespace ProjectPanda.Pages
 		public MainPage ()
 		{
 			InitializeComponent ();
-		}
+
+            
+
+        }
         #region Event handlers for the side menu
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
