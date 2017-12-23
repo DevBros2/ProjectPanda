@@ -16,11 +16,6 @@ namespace ProjectPanda.Pages
 		{
 			InitializeComponent ();
 		}
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
         #region Event handlers for the side menu
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
