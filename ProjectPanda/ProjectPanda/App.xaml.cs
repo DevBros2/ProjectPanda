@@ -14,6 +14,8 @@ namespace ProjectPanda
 		{
 			InitializeComponent();
 
+            //InitApp();
+
 			//MainPage = new ProjectPanda.MainPage();
             MainPage = new NavigationPage(new LoginPage());
 
@@ -21,10 +23,20 @@ namespace ProjectPanda
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            base.OnStart();
+            /*First ask for location
+             * if [user declines ]
+             *      run app normally
+             * else
+             *  Return location
+             */
 
-		protected override void OnSleep ()
+
+
+
+        }
+
+        protected override void OnSleep ()
 		{
 			// Handle when your app sleeps
 		}
