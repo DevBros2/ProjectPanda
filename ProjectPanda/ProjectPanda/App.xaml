@@ -5,10 +5,10 @@
 	<Application.Resources>
         <ResourceDictionary>
             <!-- COLORS -->
-            <Color x:Key="WhiteColor">#32cd32</Color>
-            <Color x:Key="BlackColor">#000000</Color>
+            <Color x:Key="Primary">#92da69</Color>
+            <Color x:Key="DarkPrimary">#60a83a</Color>
             <Color x:Key="BackgroundColor">#F4F6FA</Color>
-            <Color x:Key="AccentColor">#00857D</Color>
+            <Color x:Key="LightPrimary">#c5ff99</Color>
             <Color x:Key="LightGreenColor">#83D01B</Color>
             <Color x:Key="GreenColor">#00A69C</Color>
             <Color x:Key="DarkGreenColor">#00857D</Color>
