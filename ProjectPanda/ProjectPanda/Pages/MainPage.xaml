@@ -90,15 +90,15 @@
 
             <TabbedPage.Children >
 
-                <Page:ProfilePage Title="Profile" Icon="user.png" />
+                <Page:ProfilePage  Icon="user.png" />
 
 
 
-                <Page:MyAppointments Title="My Appoitments" Icon="monthlycalendar.png" />
+                <Page:MyAppointments  Icon="monthlycalendar.png" />
 
 
 
-                <Page:Delivery Title="Delivery" Icon="vansideview.png" />
+                <Page:Delivery  Icon="vansideview.png" />
 
 
 

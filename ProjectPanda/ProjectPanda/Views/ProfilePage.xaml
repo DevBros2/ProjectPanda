@@ -10,7 +10,7 @@
                 <StackLayout >
 
                     <StackLayout Margin="0,30,0,10">
-                        <Image Source="userIcon.png" HorizontalOptions="Center" HeightRequest="200" BackgroundColor="White" WidthRequest="200" Aspect="AspectFit" x:Name="userIcon"/>
+                        <Image Source="userIcon.png" HorizontalOptions="Center" HeightRequest="150" BackgroundColor="White" WidthRequest="150" Aspect="AspectFit" x:Name="userIcon"/>
                     </StackLayout>
 
                     <StackLayout Margin="0,0,0,20">
