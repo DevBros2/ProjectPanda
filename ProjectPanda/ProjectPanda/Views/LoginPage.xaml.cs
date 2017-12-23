@@ -17,6 +17,19 @@ namespace ProjectPanda.Views
 		{
 			InitializeComponent ();
 		}
+
+        protected override void OnAppearing()
+        {
+            
+            var LoginPage = new NavigationPage(new LoginPage());
+            //LoginPage.BarBackgroundColor = Color.FromHex("#60a83a");
+            LoginPage.BarBackgroundColor = Color.LimeGreen;
+            LoginPage.BarTextColor = Color.White;
+            base.OnAppearing();
+            
+
+
+        }
         async void Button_Clicked(object sender, EventArgs e)
         {
 

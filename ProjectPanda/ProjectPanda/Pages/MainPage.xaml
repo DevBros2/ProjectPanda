@@ -2,10 +2,11 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.MainPage"
-             xmlns:Page="clr-namespace:ProjectPanda.Views"     
+             xmlns:Page="clr-namespace:ProjectPanda.Views"    
              MasterBehavior="Popover"
               Title="Serapis Medical"
                  
+
                   >
 
     <MasterDetailPage.Master >
@@ -85,7 +86,7 @@
     </MasterDetailPage.Master>
 
 
-    <!--The code for the manually congguired tabbed pages-->
+    
 
     <MasterDetailPage.Detail >
      

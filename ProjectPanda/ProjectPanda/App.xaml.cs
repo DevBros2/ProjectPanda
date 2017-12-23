@@ -14,17 +14,30 @@ namespace ProjectPanda
 		{
 			InitializeComponent();
 
-			//MainPage = new ProjectPanda.MainPage();
-            MainPage = new NavigationPage(new LoginPage());
+            //InitApp();
+
+            //MainPage = new ProjectPanda.MainPage();
+            //var MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage())
+            {
+                BarBackgroundColor = Color.FromHex("#229122"),
+                BarTextColor = Color.White,
+            };
 
         }
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            base.OnStart();
+            /*First ask for location
+             * if [user declines ]
+             *      run app normally
+             * else
+             *  Return location
+             */
+        }
 
-		protected override void OnSleep ()
+        protected override void OnSleep ()
 		{
 			// Handle when your app sleeps
 		}
