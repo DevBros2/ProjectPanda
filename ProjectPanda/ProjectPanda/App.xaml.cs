@@ -17,10 +17,10 @@ namespace ProjectPanda
             //InitApp();
 
             //MainPage = new ProjectPanda.MainPage();
-            var MainPage = new NavigationPage(new LoginPage());
-            //MainPage = new NavigationPage(new LoginPage());
-            MainPage.BarBackgroundColor = Color.FromHex("#60a83a");
-            MainPage.BarTextColor = Color.White;
+            //var MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage());
+            //MainPage.BarBackgroundColor = Color.FromHex("#60a83a");
+           // MainPage.BarTextColor = Color.White;
 
         }
 
@@ -33,10 +33,6 @@ namespace ProjectPanda
              * else
              *  Return location
              */
-
-
-
-
         }
 
         protected override void OnSleep ()
