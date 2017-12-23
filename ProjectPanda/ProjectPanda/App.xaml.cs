@@ -16,8 +16,11 @@ namespace ProjectPanda
 
             //InitApp();
 
-			//MainPage = new ProjectPanda.MainPage();
-            MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new ProjectPanda.MainPage();
+            var MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new NavigationPage(new LoginPage());
+            MainPage.BarBackgroundColor = Color.FromHex("#60a83a");
+            MainPage.BarTextColor = Color.White;
 
         }
 
