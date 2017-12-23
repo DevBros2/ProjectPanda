@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.MainPage"
              xmlns:Page="clr-namespace:ProjectPanda.Views"     
+             MasterBehavior="Popover"
+              Title="Serapis Medical"
+                 
                   >
 
     <MasterDetailPage.Master >
-        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu" >
+        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu"  >
             <ContentPage.Content>
                 <StackLayout >
                     <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Center" />
@@ -84,8 +87,8 @@
 
     <!--The code for the manually congguired tabbed pages-->
 
-    <MasterDetailPage.Detail>
-
+    <MasterDetailPage.Detail >
+     
         <TabbedPage >
 
             <TabbedPage.Children >
@@ -109,7 +112,7 @@
             </TabbedPage.Children>
 
         </TabbedPage>
-
+     
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>
