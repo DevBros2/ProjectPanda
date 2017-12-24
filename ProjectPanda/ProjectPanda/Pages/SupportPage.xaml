@@ -1,12 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Pages.SupportPage">
+             x:Class="ProjectPanda.Pages.SupportPage"
+             BackgroundColor="#92da69"
+             >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid  VerticalOptions="Center"  >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="70"/>
+                <RowDefinition  Height="80" />
+                <RowDefinition  Height="80"/>
+                <RowDefinition  Height="0"/>
+                <RowDefinition  Height="0"/>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Grid.Column="0" Grid.Row="0">
+                <Image Source="facebooksupport.PNG" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="1">
+                <Image Source="twittersupport.PNG"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="2">
+                <Image Source="mailsupport.PNG"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="1" >
+                <Label  Text="Facebook: RillaSoftworks" TextColor="White" FontSize="17" VerticalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" >
+                <Label  Text="Twitter: @RillaEver" TextColor="White" FontSize="17" VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="1">
+                <Label  Text="Email: pandamed20@gmail.com" TextColor="White" FontSize="17" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
