@@ -20,7 +20,8 @@ namespace ProjectPanda
             //var MainPage = new NavigationPage(new LoginPage());
             MainPage = new NavigationPage(new LoginPage())
             {
-                BarBackgroundColor = Color.FromHex("#229122"),
+                //BarBackgroundColor = Color.FromHex("#229122"),
+                BarBackgroundColor = Color.LimeGreen,
                 BarTextColor = Color.White,
             };
 

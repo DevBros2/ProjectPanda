@@ -4,7 +4,7 @@
              x:Class="ProjectPanda.Views.DoctorListView">
     <ContentPage.Content>
         <StackLayout>
-           
+            <Label Text="DoctorList" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

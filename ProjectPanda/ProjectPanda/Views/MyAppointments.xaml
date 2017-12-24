@@ -56,7 +56,7 @@
                     BorderColor="Black" 
                     BorderWidth="2" 
                     HeightRequest="60"
-                   
+                    Clicked="Doctor_Button_Clicked"
                      Image="doctor.png"     
                    
                  />
