@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjectPanda.Views;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -44,15 +45,15 @@ namespace ProjectPanda.Pages
         //   void Button_Clicked(object sender, EventArgs e)
         //    => new NavigationPage();//doctorlist
 
-
-
-        private void Logout(object sender, EventArgs e)
+        private void Logout_Button_Clicked(object sender, EventArgs e)
         {
             //code that will allow for logging out.
-            //new NavigationPage(new SignInPrompt());
-
-
+            Detail =  new NavigationPage(new LoginPage());
         }
+
+
         #endregion
+
+
     }
 }

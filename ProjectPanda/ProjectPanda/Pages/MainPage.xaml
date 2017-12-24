@@ -77,7 +77,7 @@
 
 
 
-                    <Button Text="Log out" HorizontalOptions="Center" BackgroundColor="LightGreen" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"  Clicked="Logout"/>
+                    <Button Text="Log out" HorizontalOptions="Center" BackgroundColor="LightGreen" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"  Clicked="Logout_Button_Clicked"/>
 
                 </StackLayout>
                 <!--Tabb.MasterPage(Menu)-->

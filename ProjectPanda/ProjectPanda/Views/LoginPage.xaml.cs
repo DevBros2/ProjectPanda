@@ -20,13 +20,19 @@ namespace ProjectPanda.Views
 
         protected override void OnAppearing()
         {
-            
-            var LoginPage = new NavigationPage(new LoginPage());
-            //LoginPage.BarBackgroundColor = Color.FromHex("#60a83a");
-            LoginPage.BarBackgroundColor = Color.LimeGreen;
-            LoginPage.BarTextColor = Color.White;
             base.OnAppearing();
-            
+            var LoginPage = new NavigationPage(new LoginPage())
+            {
+                BarBackgroundColor = Color.LimeGreen,
+                BarTextColor = Color.White,
+            };
+
+            //var LoginPage = new NavigationPage(new LoginPage());
+            //LoginPage.BarBackgroundColor = Color.FromHex("#60a83a");
+            //LoginPage.BarBackgroundColor = Color.LimeGreen;
+            //LoginPage.BarTextColor = Color.White;
+
+
 
 
         }
