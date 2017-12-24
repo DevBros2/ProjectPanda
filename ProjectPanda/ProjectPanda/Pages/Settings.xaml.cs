@@ -15,6 +15,7 @@ namespace ProjectPanda.Pages
 		public Settings ()
 		{
 			InitializeComponent ();
-		}
+            
+        }
 	}
 }
