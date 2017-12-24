@@ -21,21 +21,21 @@ namespace ProjectPanda.Pages
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
 
-            // Detail = new NavigationPage(new Settings());
+           Detail = new NavigationPage(new Settings());
 
             IsPresented = false;
         }
 
         private void Menu_btn4_Clicked(object sender, EventArgs e)
         {
-            //Detail = new NavigationPage(new SupportPagae());
+           Detail = new NavigationPage(new SupportPage());
             IsPresented = false;
         }
 
         private void Menu_btn3_Clicked(object sender, EventArgs e)
         {
             // This button is for payment history
-            //Detail = new NavigationPage(new PaymentHistory());
+           Detail = new NavigationPage(new PaymentHistory());
             IsPresented = false;
         }
 
@@ -49,6 +49,9 @@ namespace ProjectPanda.Pages
         {
             //code that will allow for logging out.
             Detail =  new NavigationPage(new LoginPage());
+
+            //need to add a pop up dialog rather than a navigation
+
         }
 
 
