@@ -91,7 +91,7 @@
                         <ViewCell>
                             <StackLayout Margin="10,15,0,5"  >
 
-
+                                <Label Text="Set the maximum distance you are willing to travel" Margin="8" FontAttributes="Bold" FontSize="15"/>
 
                                 <Label FontSize="20" Margin="12,0,0,10" TextColor="Black">
                                     <Label.FormattedText>
