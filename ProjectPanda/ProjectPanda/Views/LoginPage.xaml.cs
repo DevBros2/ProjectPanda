@@ -66,7 +66,7 @@ namespace ProjectPanda.Views
         async void ContactUs(object sender, EventArgs e)
         {
 
-            //await Navigation.PushAsync(new SupportPagae());
+            await Navigation.PushAsync(new SupportPage());
         }
 
 
