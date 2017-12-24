@@ -16,7 +16,10 @@ namespace ProjectPanda.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
-		}
+            //disables NavBar
+            NavigationPage.SetHasNavigationBar(this, false);
+
+        }
 
         protected override void OnAppearing()
         {
