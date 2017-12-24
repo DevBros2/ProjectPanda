@@ -31,6 +31,10 @@
       <DependentUpon>Settings.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SignUpPrompt.xaml.cs">
+      <DependentUpon>SignUpPrompt.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\SplashPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\SupportPage.xaml.cs">
       <DependentUpon>SupportPage.xaml</DependentUpon>
@@ -143,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PaymentHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\SignUpPrompt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
