@@ -5,12 +5,12 @@
              xmlns:Page="clr-namespace:ProjectPanda.Views"    
              MasterBehavior="Popover"
               Title="Serapis Medical"
-                 
+                 IsVisible="True"
 
                   >
 
     <MasterDetailPage.Master >
-        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu"  >
+        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu" >
             <ContentPage.Content>
                 <StackLayout >
                     <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Center" />
@@ -32,7 +32,8 @@
                               TextColor="Black"
                               Clicked="Menu_btn3_Clicked" 
                               Image="creditcard.png"
-                         />
+                           Margin="20"
+                            />
 
 
 
