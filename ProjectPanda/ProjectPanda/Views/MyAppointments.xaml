@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.MyAppointments"
-             BackgroundColor="#92da69"
+             BackgroundColor="{StaticResource Primary}"
              >
     <ContentPage.Content>
         <StackLayout>
@@ -71,7 +71,7 @@
                     Text="Date" FontSize="17" 
                     BorderColor="Black" 
                     BorderWidth="2"  
-                   Image="calendar1.png"
+                   Image="calendar.png"
                     
                    
                   />
