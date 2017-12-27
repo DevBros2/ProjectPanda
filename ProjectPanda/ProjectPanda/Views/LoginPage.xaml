@@ -31,7 +31,7 @@
                 <Entry Grid.Row="1" TextColor="Black" Placeholder="Email Address" PlaceholderColor="Black" FontSize="17"  x:Name="emailAddress"  />
                 <Entry Grid.Row="2" TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password"  />
                 <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="#229122" TextColor="White" HeightRequest="50" VerticalOptions="Center"  Grid.Row="3" Margin="0,20,0,20" FontSize="18"/>
-                <Button Text="Having problems contact us" HorizontalOptions="Center" Grid.Row="4" Margin="0,0,0,0" FontSize="15" BackgroundColor="#229122" Clicked="ContactUs" TextColor="White" BorderColor="Black" BorderWidth="1"/>
+                <Button Text="Having problems contact us" HorizontalOptions="Center" Grid.Row="4" Margin="0,0,0,0" FontSize="15" BackgroundColor="#229122" Clicked="ContactUs" TextColor="White"  BorderWidth="1"/>
                 <Grid Grid.Row="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -45,7 +45,7 @@
                 </Grid>
                 <StackLayout Grid.Row="7" HorizontalOptions="Center" >
 
-                    <Button Text="Dont have an account Sign Up" Margin="0,0,0,0" BackgroundColor="#229122" Clicked="prompt"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1" BorderColor="Black" FontSize="15"/>
+                    <Button Text="Dont have an account Sign Up" Margin="0,0,0,0" BackgroundColor="#229122" Clicked="prompt"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1"  FontSize="15"/>
                 </StackLayout>
             </Grid>
 
