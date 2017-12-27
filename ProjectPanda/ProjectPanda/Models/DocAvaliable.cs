@@ -16,7 +16,7 @@ namespace ProjectPanda.Models
             get { return name; }
             set
             {
-                name = value;
+                Name = value;
                 OnPropertyChanged("Name");
             }
         }

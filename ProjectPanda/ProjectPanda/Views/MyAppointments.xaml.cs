@@ -17,9 +17,10 @@ namespace ProjectPanda.Views
 			InitializeComponent ();
 		}
 
-        private async void Doctor_Button_Clicked(object sender, EventArgs e)
+        private  void Doctor_Button_Clicked(object sender, EventArgs e)
         {
-           await Navigation.PushAsync(new MedicalBuildingView()); 
+            // await Navigation.PushAsync(new MedicalBuildingView()); 
+             NavigationPage nav=new NavigationPage(new MedicalBuildingView());
         }
     }
 }
