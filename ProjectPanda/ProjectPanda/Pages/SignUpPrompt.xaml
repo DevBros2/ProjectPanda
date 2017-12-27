@@ -3,10 +3,89 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.SignUpPrompt">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+
+
+            <StackLayout.Resources>
+                <ResourceDictionary>
+
+                    <Style TargetType="Button">
+
+                        <Setter Property="VerticalOptions" Value="Center" />
+
+
+                    </Style>
+
+                </ResourceDictionary>
+            </StackLayout.Resources>
+
+
+
+
+            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" BorderRadius="5">
+                <Button.Image>
+                    <!--The following is the xaml code for the google button-->
+                    <OnPlatform x:TypeArguments="FileImageSource"
+                                iOS="google_icon.png" 
+                                Android="google_icon.png"
+                                WinPhone="google_icon.png" />
+
+                </Button.Image>
+            </Button>
+
+
+            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" BorderRadius="5">
+                <Button.Image>
+                    <!--The follwing is the xaml code for the facebook button-->
+                    <OnPlatform x:TypeArguments="FileImageSource"
+                                iOS="facebook_icon.png" 
+                                Android="facebook_icon.png"
+                                WinPhone="facebook_icon.png" />
+
+                </Button.Image>
+            </Button>
+
+
+            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" BorderRadius="5">
+                <Button.Image>
+                    <!--The follwing is the xaml code for the micrsoft outlook button-->
+                    <OnPlatform x:TypeArguments="FileImageSource"
+                                iOS="outlook_icon.png" 
+                                Android="outlook_icon.png"
+                                WinPhone="outlook_icon.png" />
+
+                </Button.Image>
+            </Button>
+
+
+            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" BorderRadius="5">
+                <Button.Image>
+                    <!--The follwing is the xaml code for the other mail button-->
+                    <OnPlatform x:TypeArguments="FileImageSource"
+                                iOS="mail_icon.png" 
+                                Android="mail_icon.png"
+                                WinPhone="mail_icon.png" />
+
+                </Button.Image>
+            </Button>
+
+
+
+            <Button BorderColor="Black" Text="Login" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="226" HeightRequest="55" Clicked="backbutton">
+                <!--This is the button code for signing here-->
+
+
+            </Button>
+
+
+
+
+
+
         </StackLayout>
+
+
+
     </ContentPage.Content>
+
 </ContentPage>
