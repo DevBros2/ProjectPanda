@@ -8,131 +8,322 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-                <StackLayout >
+                <StackLayout>
 
-                    <StackLayout Margin="0,30,0,10">
-                        <Image Source="userIcon.png" HorizontalOptions="Center" HeightRequest="150" BackgroundColor="White" WidthRequest="150" Aspect="AspectFit" x:Name="userIcon"/>
+                    <!--The users profile picture-->
+                    <StackLayout Margin="0,20,0,5">
+
+                        <controls:CircleImage Source="twittersupport.PNG" Aspect="AspectFit">
+                            <controls:CircleImage.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android, iOS">125</On>
+                                    <On Platform="WinPhone">75</On>
+                                </OnPlatform>
+                            </controls:CircleImage.WidthRequest>
+                            <controls:CircleImage.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android, iOS">125</On>
+                                    <On Platform="WinPhone">75</On>
+                                </OnPlatform>
+                            </controls:CircleImage.HeightRequest>
+                        </controls:CircleImage>
                     </StackLayout>
 
+                    <!--The usrs name-->
                     <StackLayout Margin="0,0,0,20">
-                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="25"  />
+                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="20"  />
                     </StackLayout>
 
+                    <StackLayout>
 
-
-                    <StackLayout Margin="20,0,20,10">
-                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
-                            <Label  TextColor="Black" FontSize="18">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="Medical aid:"/>
-                                        <Span Text=""/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </Frame>
-                    </StackLayout>
-
-
-                    <StackLayout Margin="20,0,20,10">
-                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
-                            <Label  TextColor="Black" FontSize="18" >
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="Blood type:  "  />
-                                        <Span/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <!--next to this will go the users blood type as a string input-->
-                        </Frame>
-                    </StackLayout>
+                        <Grid >
 
 
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="80"/>
 
+                            </Grid.RowDefinitions>
 
-                    <StackLayout Margin="20,0,20,10">
-                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
-                            <Label   TextColor="Black" FontSize="18">
-                                <Label.FormattedText>
-                                    <FormattedString>
+                            <!--The Medical aid part-->
+                            <StackLayout Grid.Row="0"    Margin="20,0,20,10">
 
-                                        <Span Text="Doctor:   "/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
 
-                        </Frame>
-                        <!--The string input for the users frequently used doctor goes here-->
-                    </StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
 
-                    <StackLayout Margin="20,0,20,10">
-                        <Frame BackgroundColor="White" OutlineColor="Black" CornerRadius="8">
-                            <Label  TextColor="Black" FontSize="18">
-                                <Label.FormattedText>
-                                    <FormattedString>
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
 
-                                        <Span Text="Hospital:  "/>
-                                        <Span Text=""/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                            <Label.FormattedText>
+                                                <FormattedString>
 
-                        </Frame>
+                                                    <Span Text="Medical aid:"/>
+                                                    <Span Text=""/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
 
-                        <!--the users favorite hospital-->
-                    </StackLayout>
-
-
-
-
-
-                    <StackLayout Margin="20,0,20,10">
-                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8" >
-                            <Label   TextColor="Black"  FontSize="18" >
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="Chroinc disease: "/>
-                                        <Span Text=" "/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <!--The users chronic diseases go here-->
-                        </Frame>
-                    </StackLayout>
+                                    </Grid>
 
 
 
+                                </Frame>
 
 
-                    <StackLayout Margin="20,0,20,10">
-                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
-                            <Label   TextColor="Black" FontSize="18" >
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="medicine(s) taken:" />
-                                        <Span Text=""/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <!--the users list prescriptions go here the maximum being 10, so an array here-->
-                        </Frame>
-                    </StackLayout>
+
+                            </StackLayout>
+
+                            <!--The blood type-->
+                            <StackLayout Grid.Row="1"   Margin="20,0,20,10">
+
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+
+                                                    <Span Text="Blood type:  "/>
+                                                    <Span Text=""/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </Grid>
 
 
-                    <StackLayout Margin="20,0,20,10" >
-                        <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8" >
-                            <Label Text="Next delivery:"  TextColor="Black" FontSize="18" >
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span  Text="Next delivery: "/>
-                                        <Span Text=" "/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </Frame>
-                        <!--the information from delivery will be put as a string here as a date and time and location-->
+
+                                </Frame>
+
+
+
+                            </StackLayout>
+
+
+                            <!--The Sex of the construct-->
+                            <StackLayout Grid.Row="2"   Margin="20,0,20,10">
+
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+
+                                                    <Span Text="Sex:  "/>
+                                                    <Span Text=""/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </Grid>
+
+
+
+                                </Frame>
+
+
+
+                            </StackLayout>
+
+
+                            <!--The age of the users-->
+                            <StackLayout Grid.Row="3"   Margin="20,0,20,10">
+
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+
+                                                    <Span Text="Age:  "/>
+                                                    <Span Text=""/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </Grid>
+
+
+
+                                </Frame>
+
+
+
+                            </StackLayout>
+
+
+
+                            <!--Next Delivery-->
+                            <StackLayout Grid.Row="4"   Margin="20,0,20,10">
+
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+
+                                                    <Span Text="Next Delivery:  "/>
+                                                    <Span Text=""/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </Grid>
+
+
+
+                                </Frame>
+
+
+
+                            </StackLayout>
+
+
+
+
+
+                            <!--The list view of the medication-->
+                            <StackLayout Grid.Row="5"   Margin="20,0,20,10">
+
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+
+                                        <ListView  x:Name="Medication">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <StackLayout 
+                                                             Orientation="Vertical">
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Image Source="{Binding Medicationimage}" />
+                                                                <Label Text="{Binding title}"
+                                                                     TextColor="#f35e20" />
+                                                                <Label Text="{Binding subtitle}"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                 TextColor="#503026" />
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+
+                                    </Grid>
+
+
+
+                                </Frame>
+
+
+
+                            </StackLayout>
+
+
+
+                            <!--The list of allergies of the user-->
+                            <StackLayout Grid.Row="6"   Margin="20,0,20,10">
+
+                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+
+                                        <ListView  x:Name="Allergies">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <StackLayout Orientation="Vertical">
+
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Image Source="{Binding Allergiesimage}" />
+                                                                <Label Text="{Binding title}"   TextColor="#f35e20" />
+
+                                                                <Label Text="{Binding subtitle}" HorizontalOptions="EndAndExpand"   TextColor="#503026" />
+
+
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+
+                                    </Grid>
+
+
+
+                                </Frame>
+
+
+
+                            </StackLayout>
+
+                        </Grid>
+
+
+
                     </StackLayout>
 
 
