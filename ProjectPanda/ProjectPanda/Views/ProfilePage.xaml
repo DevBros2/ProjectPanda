@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.ProfilePage"
              BackgroundColor="#92da69"
+            
              >
     <ContentPage.Content>
         <StackLayout>
