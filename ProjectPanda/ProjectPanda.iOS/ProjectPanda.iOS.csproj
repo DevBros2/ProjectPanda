@@ -198,6 +198,21 @@
   <ItemGroup>
     <BundleResource Include="Resources\twittersupport.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\age.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bloodtype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gender.png" />
+  </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

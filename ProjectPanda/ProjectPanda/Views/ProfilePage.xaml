@@ -98,7 +98,7 @@
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="bloodtype.png" Grid.Column="0" HorizontalOptions="Start"/>
 
                                         <Label  TextColor="Black" FontSize="18" Grid.Column="1">
                                             <Label.FormattedText>
@@ -133,7 +133,7 @@
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="gender.png" Grid.Column="0" HorizontalOptions="Start"/>
 
                                         <Label  TextColor="Black" FontSize="18" Grid.Column="1">
                                             <Label.FormattedText>
@@ -168,7 +168,7 @@
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="age.png" Grid.Column="0" HorizontalOptions="Start"/>
 
                                         <Label  TextColor="Black" FontSize="18" Grid.Column="1">
                                             <Label.FormattedText>
@@ -204,7 +204,7 @@
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="delivery.png" Grid.Column="0" HorizontalOptions="Start"/>
 
                                         <Label  TextColor="Black" FontSize="18" Grid.Column="1">
                                             <Label.FormattedText>
