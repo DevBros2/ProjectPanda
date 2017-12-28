@@ -4,7 +4,7 @@
              x:Class="ProjectPanda.Views.MyAppointments"
              BackgroundColor="{StaticResource Primary}"
              >
-    <ContentPage.Content>
+    <ContentPage.Content>pre
         <StackLayout>
             <ScrollView>
 
