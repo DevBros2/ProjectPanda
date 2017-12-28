@@ -41,14 +41,14 @@
 
 
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
-                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
 
                             </Grid.RowDefinitions>
 
@@ -59,14 +59,14 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill" />
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -93,14 +93,14 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="bloodtype.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="bloodtype.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill"/>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -128,14 +128,14 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="gender.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="gender.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill"/>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -163,14 +163,14 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
                                         <Image Source="age.png" Grid.Column="0" HorizontalOptions="Start"/>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -199,14 +199,14 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="150"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="delivery.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        <Image Source="truck.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill"/>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1">
+                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
                                             <Label.FormattedText>
                                                 <FormattedString>
 
@@ -237,26 +237,28 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                        
+                                      
+                                      
 
-                                        <ListView  x:Name="Medication">
+                                        <ListView  x:Name="Medication" Grid.Column="1">
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
                                                     <ViewCell>
                                                         <StackLayout 
                                                              Orientation="Vertical">
                                                             <StackLayout Orientation="Horizontal">
-                                                                <Image Source="{Binding Medicationimage}" />
-                                                                <Label Text="{Binding title}"
-                                                                     TextColor="#f35e20" />
-                                                                <Label Text="{Binding subtitle}"
-                                                                HorizontalOptions="EndAndExpand"
-                                                                 TextColor="#503026" />
+                                                                <Image Source="syringe.png" Grid.Column="0"/>
+                                                                <Label Text="{Binding titleofmedication}"  TextColor="#f35e20" Grid.Column="1" />
+
+                                                                <Label Text="{Binding dosageofmedication}" HorizontalOptions="EndAndExpand" TextColor="#503026" Grid.Column="2"/>
+                                                                
+                                                                 
                                                             </StackLayout>
                                                         </StackLayout>
                                                     </ViewCell>
@@ -283,12 +285,12 @@
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="28"/>
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="150"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start"/>
+                                       
 
                                         <ListView  x:Name="Allergies">
                                             <ListView.ItemTemplate>
@@ -297,10 +299,10 @@
                                                         <StackLayout Orientation="Vertical">
 
                                                             <StackLayout Orientation="Horizontal">
-                                                                <Image Source="{Binding Allergiesimage}" />
-                                                                <Label Text="{Binding title}"   TextColor="#f35e20" />
+                                                                <Image Source="prohibition.png" Aspect="Fill" Grid.Column="0"/>
+                                                                <Label Text="{Binding titleofallergy}"   TextColor="#f35e20" Grid.Column="1" />
 
-                                                                <Label Text="{Binding subtitle}" HorizontalOptions="EndAndExpand"   TextColor="#503026" />
+                                                                
 
 
                                                             </StackLayout>
