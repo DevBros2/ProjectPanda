@@ -1,26 +1,26 @@
-﻿using System;
+﻿using ProjectPanda.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Text;
-using ProjectPanda.Models;
 
 namespace ProjectPanda.ViewModels
 {
     public class MedicalBuildingViewModel
     {
         public IList<MedicalBuildingModel> CardDataCollection { get; set; }
-        public object SelectedItem { get; set; }
 
-        private void MedicalBuildingModel()
+        public object SelectedItem { get; set; }
+        public MedicalBuildingViewModel()
         {
             CardDataCollection = new List<MedicalBuildingModel>();
-            GenerateMedicalBuildingModel();
+            GenerateCardModel();
         }
 
-        private void GenerateMedicalBuildingModel()
+        private void GenerateCardModel()
         {
-            CardDataCollection = new ObservableCollection<MedicalBuildingModel>
+            
+                CardDataCollection = new ObservableCollection<MedicalBuildingModel>
                 {
                     new MedicalBuildingModel
                     {
@@ -74,7 +74,7 @@ namespace ProjectPanda.ViewModels
                         },
 
 
-                         new MedicalBuildingModel
+                       new  MedicalBuildingModel
                     {
                       HeadTitle = " 16 hrs ago - MacRumors",
                       HeadLinesDesc = "MacRumors.com is a website that aggregates Mac and Apple related news................small sample based on your scenario. Please review my project and let us know,",
@@ -93,6 +93,12 @@ namespace ProjectPanda.ViewModels
                    
                  //   AlertColor =  Color.Green : Color.Blue,    This can be added to set alert dialog inside card data model
                 };
-        }
+
+
+
+            }
+
+        
+
     }
 }

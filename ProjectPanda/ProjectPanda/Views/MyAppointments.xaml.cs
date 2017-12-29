@@ -19,7 +19,7 @@ namespace ProjectPanda.Views
 
         private async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
-           await Navigation.PushAsync(new MedicalBuildingView()); 
+           await Navigation.PushAsync(new CardView()); 
         }
     }
 }

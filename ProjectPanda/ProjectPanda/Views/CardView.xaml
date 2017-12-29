@@ -1,27 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.MedicalBuildingView">
+             x:Class="ProjectPanda.Views.CardView"
+             BackgroundColor="Green">
     
     <StackLayout Orientation="Vertical">
-        <Label Text="Hospital ListView"
-             VerticalOptions="Start"
-             HorizontalTextAlignment="Center"
-             VerticalTextAlignment="Center"
-             BackgroundColor="Transparent"
-             HorizontalOptions="CenterAndExpand"/>
+        <Label Text="ListView"
+               TextColor="Black"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="Transparent"
+               HorizontalOptions="CenterAndExpand"/>
 
-        <ListView x:Name="listView" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
-             RowHeight="150" 
-             ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
+        <ListView x:Name="MedicalListView"
+                  ItemsSource="{Binding CardDataModel}"
+                  HasUnevenRows="False"
+                  SeparatorColor="White"
+                  ItemSelected="MedicalListView_ItemSelected"
+                  >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <!--Start of CardTemplate -->
-
-                        <Frame IsClippedToBounds="True"
-                            HasShadow="True"
-                            BackgroundColor="White" >
+                        <Frame BackgroundColor="Black"
+                               HasShadow="True"
+                               IsClippedToBounds="True">
                             <Frame.OutlineColor>
                                 <OnPlatform x:TypeArguments="Color"
                                     Android="Gray"
@@ -35,20 +37,19 @@
                                 <OnPlatform x:TypeArguments="Thickness"
                                     Android="5" iOS="5"/>
                             </Frame.Padding>
-                            <StackLayout Orientation="Horizontal">
-
+                            <StackLayout>
                                 <Grid VerticalOptions="CenterAndExpand"
-                                 Padding="0"
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent">
+                                      Padding="0"
+                                      HorizontalOptions="FillAndExpand"
+                                      BackgroundColor="Transparent">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-
-                                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                                    <StackLayout Orientation="Horizontal"
+                                                 VerticalOptions="Start">
                                         <Image Source="{Binding ProfileImage}" VerticalOptions="Start" HeightRequest="30" WidthRequest="30"></Image>
                                         <Label FontAttributes="None"
                                         Grid.Row="0"
@@ -57,7 +58,6 @@
                                         FontSize="12"
                                         Text="{Binding HeadTitle , Mode = TwoWay}" TextColor="Gray" 
                                         />
-
                                     </StackLayout>
                                     <Grid Grid.Row="1">
                                         <StackLayout Orientation="Horizontal">
@@ -90,13 +90,20 @@
                                                VerticalOptions="Start"/>
                                     </Grid>
 
-                                </Grid>
-                            </StackLayout>
-                        </Frame>
 
+                                </Grid>
+                                
+
+                            </StackLayout>
+
+                        </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            
         </ListView>
+
     </StackLayout>
+    
+    
 </ContentPage>

@@ -18,6 +18,7 @@ namespace ProjectPanda
 
             //MainPage = new ProjectPanda.MainPage();
             MainPage = new NavigationPage(new Pages.SplashPage());
+            //MainPage = new NavigationPage(new CardView());
 
         }
 
