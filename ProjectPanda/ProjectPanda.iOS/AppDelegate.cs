@@ -22,7 +22,12 @@ namespace ProjectPanda.iOS
 		//
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			global::Xamarin.Forms.Forms.Init ();
+
+            // This MobileServiceClient has been configured to communicate with the Azure Mobile App and
+            // Azure Gateway using the application url. You're all set to start working with your Mobile App!
+            Microsoft.WindowsAzure.MobileServices.MobileServiceClient ProjectPandaClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+            "https://projectpanda.azurewebsites.net");
+            global::Xamarin.Forms.Forms.Init ();
 			LoadApplication (new ProjectPanda.App ());
 
 			return base.FinishedLaunching (app, options);
