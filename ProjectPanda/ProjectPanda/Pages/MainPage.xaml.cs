@@ -59,8 +59,38 @@ namespace ProjectPanda.Pages
         }
 
 
+
         #endregion
 
 
+
+        #region Event handelers for the tabbed pages
+
+        private void TapGestureRecognizerProfile(object sender, EventArgs e)
+        {
+            var page = new ProfilePage();
+            PlaceHolder.Content = page.Content;
+        }
+
+
+        private void TapGestureRecognizerAppointment(object sender, EventArgs e)
+        {
+            var page = new MyAppointments();
+            PlaceHolder.Content = page.Content;
+        }
+
+        private void TapGestureRecognizerDelivery(object sender, EventArgs e)
+        {
+            var page = new Delivery();
+            PlaceHolder.Content = page.Content;
+        }
+
+
+         private void TapGestureRecognizerCamera(object sender, EventArgs e)
+        {
+            var page = new CamPage();
+            PlaceHolder.Content = page.Content;
+        }
+        #endregion
     }
 }

@@ -90,31 +90,64 @@
     
 
     <MasterDetailPage.Detail >
-     
-        <TabbedPage >
+        <ContentPage BackgroundColor="{StaticResource Primary}">
+        <Grid ColumnSpacing="8" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="44"/>
+            </Grid.RowDefinitions>
+            <ContentView x:Name="PlaceHolder" Grid.Row="0"/>
+                <BoxView BackgroundColor="{StaticResource LightPrimary}" Grid.Row="1"/>
+            <!--This will be the tab bar-->
 
-            <TabbedPage.Children >
+            <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
 
-                <Page:ProfilePage  Icon="user.png" />
+                <!--This Will be the TabItems-->
+                <StackLayout Spacing="0" Grid.Column="0" BackgroundColor="{StaticResource LightPrimary}">
+                    <Image  Source="user.png" Aspect="AspectFit"/>
+                  
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizerProfile"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                    <StackLayout Spacing="0" Grid.Column="1"  BackgroundColor="{StaticResource LightPrimary}">
+                    <Image Source="calendar2.png" Aspect="AspectFit"/>
+                   
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizerAppointment"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                    <StackLayout Spacing="0" Grid.Column="2" BackgroundColor="{StaticResource LightPrimary}">
+                    <Image  Source="vansideview.png" Aspect="AspectFit"/>
+                   
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizerDelivery"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                    <StackLayout Spacing="0" Grid.Column="3" BackgroundColor="{StaticResource LightPrimary}">
+                    <Image Source="photocamera" Aspect="AspectFit"/>
+                   
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizerCamera"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+            </Grid>
+        </Grid>
 
 
-
-                <Page:MyAppointments  Icon="calendar2.png" />
-
-
-
-                <Page:Delivery  Icon="vansideview.png" />
-
-
-
-                <Page:CamPage Icon="photocamera.png" />
-
-
-
-            </TabbedPage.Children>
-
-        </TabbedPage>
-     
+        </ContentPage>
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>
