@@ -30,9 +30,9 @@ namespace ProjectPanda.Services
             }
            
          }
-        public async Task<CardDataModel> GetItemAsync(string headtitle)
+        public async Task<CardDataModel> GetItemAsync(string activityrate)
         {
-            return await Task.FromResult(cardData.FirstOrDefault(s => s.HeadTitle == headtitle));
+            return await Task.FromResult(cardData.FirstOrDefault(s => s.ActivityRate == activityrate));
         }
         public async Task<IEnumerable<CardDataModel>> GetItemsAsync(bool forceRefresh = false)
         {
