@@ -30,12 +30,12 @@
                         <StackLayout  WidthRequest="150" Margin="30,0,30,0" Grid.Row="0">
 
 
-                    <Frame BackgroundColor="#ccdbc3" Margin="0,0,0,16">
+                    <Frame BackgroundColor="White" Margin="0,0,0,16" CornerRadius="8" >
                         <StackLayout>
                             
                         <Entry  TextColor="Black" Placeholder="Email Address" PlaceholderColor="Black" FontSize="17"  x:Name="emailAddress" WidthRequest="120" Margin="0,0,0,20"/>
 
-                            <Entry  TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password" WidthRequest="120" Margin="0,0,0,0"/>
+                            <Entry  TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password" WidthRequest="120" Margin="0,0,0,10"/>
                     </StackLayout>
                     </Frame>
 
