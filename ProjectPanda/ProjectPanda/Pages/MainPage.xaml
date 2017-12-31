@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.MainPage"
              xmlns:Page="clr-namespace:ProjectPanda.Views"    
-             MasterBehavior="Popover"
+             MasterBehavior="Split"
               Title="Serapis Medical"
-                 IsVisible="True"
+               
 
                   >
 
