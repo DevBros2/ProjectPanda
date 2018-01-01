@@ -2,54 +2,68 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.LoginPage"
-             BackgroundImage="backgroundImage.png"
-            
              >
-    <ContentPage.Content>
-        
-        <Grid >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="80" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="80" />
-            </Grid.RowDefinitions>
-            <StackLayout>
-                <Label />
-            </StackLayout>
-            <Grid Grid.Row="1" Margin="20,0,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
 
-                <Entry Grid.Row="1" TextColor="Black" Placeholder="Email Address" PlaceholderColor="Black" FontSize="17"  x:Name="emailAddress"  />
-                <Entry Grid.Row="2" TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password"  />
-                <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="#229122" TextColor="White" HeightRequest="50" VerticalOptions="Center"  Grid.Row="3" Margin="0,20,0,20" FontSize="18"/>
-                <Button Text="Having problems contact us" HorizontalOptions="Center" Grid.Row="4" Margin="0,0,0,0" FontSize="15" BackgroundColor="#229122" Clicked="ContactUs" TextColor="White"  BorderWidth="1"/>
-                <Grid Grid.Row="5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
-                    <Label Text="OR" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0" TextColor="Black" FontSize="18" />
+
+        <RelativeLayout>
+
+            <Image Source="fish.png" Aspect="AspectFill" 
+         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"  
+         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"      
+         />
+
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+
+                <Grid VerticalOptions="Center" >
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="240"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                   
+                        <StackLayout  WidthRequest="150" Margin="30,0,30,0" Grid.Row="0">
+
+
+                    <Frame BackgroundColor="White" Margin="0,0,0,16" CornerRadius="8" >
+                        <StackLayout>
+                            
+                        <Entry  TextColor="Black" Placeholder="Email Address" PlaceholderColor="Black" FontSize="17"  x:Name="emailAddress" WidthRequest="120" Margin="0,0,0,20"/>
+
+                            <Entry  TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password" WidthRequest="120" Margin="0,0,0,10"/>
+                    </StackLayout>
+                    </Frame>
+
+                    <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="DarkGreen" TextColor="White" VerticalOptions="Center"  Grid.Row="3"   FontSize="18"/>
+
+
+                        </StackLayout>
+                   
+
+                    <StackLayout Grid.Row="1">
+                        <Label Text="OR"  HorizontalOptions="Center" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                    <Button Text="Having problems contact us"  Margin="30,0,30,9" FontSize="15" BackgroundColor="DarkGreen" Clicked="ContactUs" TextColor="White"  BorderWidth="1"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                    <Button Text="Dont have an account Sign Up" Margin="30,0,30,0" BackgroundColor="DarkGreen" Clicked="prompt" WidthRequest="314"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1"  FontSize="15"/>
+                    </StackLayout>
 
 
                 </Grid>
-                <StackLayout Grid.Row="7" HorizontalOptions="Center" >
 
-                    <Button Text="Dont have an account Sign Up" Margin="0,0,0,0" BackgroundColor="#229122" Clicked="prompt"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1"  FontSize="15"/>
-                </StackLayout>
+
             </Grid>
 
-        </Grid>
 
-    </ContentPage.Content>
+        </RelativeLayout>
+
 </ContentPage>
