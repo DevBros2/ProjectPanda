@@ -17,7 +17,7 @@ namespace ProjectPanda.Views
 		{
 			InitializeComponent ();
             //disables NavBar
-            NavigationPage.SetHasNavigationBar(this, false);
+           NavigationPage.SetHasNavigationBar(this, false);
 
         }
 

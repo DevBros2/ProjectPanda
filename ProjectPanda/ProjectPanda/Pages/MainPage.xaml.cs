@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace ProjectPanda.Pages
 		public MainPage ()
 		{
 			InitializeComponent ();
+
          
         }
         #region Event handlers for the side menu
@@ -51,11 +53,7 @@ namespace ProjectPanda.Pages
 
         private void Logout_Button_Clicked(object sender, EventArgs e)
         {
-            //code that will allow for logging out.
-            Detail =  new NavigationPage(new LoginPage());
-
-            //need to add a pop up dialog rather than a navigation
-
+            DisplayAlert("You are logging out", "Press Ok to verify", "OK");
         }
 
 
@@ -70,6 +68,7 @@ namespace ProjectPanda.Pages
         {
             var page = new ProfilePage();
             PlaceHolder.Content = page.Content;
+            
         }
 
 
