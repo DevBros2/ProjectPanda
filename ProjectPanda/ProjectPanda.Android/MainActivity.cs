@@ -6,6 +6,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SQLitePCL.lib;
+using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices.Sync;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
+using SQLitePCL.Extensions;
+
 
 namespace ProjectPanda.Droid
 {
