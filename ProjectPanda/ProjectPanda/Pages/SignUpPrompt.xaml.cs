@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ProjectPanda.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,23 +16,27 @@ namespace ProjectPanda.Pages
 		{
 			InitializeComponent ();
 		}
-        private void GoogleSignIn(object sender, EventArgs e)
+
+          private void GoogleSignIn(object sender, EventArgs e)
         {
             //The following code makes instasiates the class
-           // Authentication authentication = new Authentication();
-            //authentication.GoogeleAuthFunction();
+            AuthenticationGoogle google = new AuthenticationGoogle();
+            google.OnLoginClicked();
+
         }
 
         private void FacebookSignIn(object sender, EventArgs e)
         {
-            //Authentication authentication = new Authentication();
-            //authentication.FacebookAuthFunction();
+            AuthenticationFacebook facebook = new AuthenticationFacebook();
+            facebook.OnLoginClicked();
+            
         }
 
         private void OutlookSignIn(object sender, EventArgs e)
         {
-            //Authentication authentication = new Authentication();
-            //authentication.MicrosoftAuthFunction();
+            AuthenticationMicrosoft microsoft = new AuthenticationMicrosoft();
+            microsoft.OnLoginClicked();
+           
         }
 
         private async void OurSignIn(object sender, EventArgs e)
