@@ -51,12 +51,28 @@ namespace ProjectPanda.Pages
         //   void Button_Clicked(object sender, EventArgs e)
         //    => new NavigationPage();//doctorlist
 
-        private void Logout_Button_Clicked(object sender, EventArgs e)
+
+      
+        #region define the display pop up
+       
+        #endregion
+
+        async private void Logout_Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("You are logging out", "Press Ok to verify", "OK");
+
+            var result=await  DisplayAlert("You are logging out", "Press Ok to verify", "Ok", "Cancel");
+
+            if (result)
+            {
+                //need to put a log out protocol that deletes the users information on that device 
+                Navigation.PushModalAsync(new LoginPage());
+            }
+
+
+
         }
 
-
+        
 
         #endregion
 
