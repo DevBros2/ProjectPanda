@@ -30,7 +30,7 @@
             <Color x:Key="AndroidDefaultAccentColorColor">#1FAECE</Color>
             <Color x:Key="AndroidListViewBackgroundColor">Transparent</Color>
             <Color x:Key="iOSListViewBackgroundColor">Transparent</Color>
-            
+            <Color x:Key="ButtonLoginColour">#2db1ff</Color>
             <!--STYLES-->
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="#229122"/>
