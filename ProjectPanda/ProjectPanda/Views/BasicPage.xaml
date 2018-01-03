@@ -13,18 +13,7 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <ContentView padding="5">
-                        <Frame OutlineColor="Accent"
-                               Padding="10">
-                            <StackLayout Orientation="Horizontal">
-                                <BoxView x:Name="boxView"
-                                         WidthRequest="50"
-                                         HeightRequest="50"/>
-
-                            </StackLayout>
-                        </Frame>
-                        
-                    </ContentView>
+                    
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

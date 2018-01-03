@@ -2,24 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.Doc">
-    <ListView SeparatorVisibillity="None">
-        <ListView.RowHeight>
-            <OnPlatform x:TypeArguments="x:Int32"
-                        iOS="80"
-                        Android="80"
-                        WinPhone="90"/>
-        </ListView.RowHeight>
-
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate> 
-
-
-    </ListView>
+   
 
 
 </ContentPage>
