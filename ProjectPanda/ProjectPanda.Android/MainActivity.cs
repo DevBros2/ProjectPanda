@@ -30,6 +30,10 @@ namespace ProjectPanda.Droid
             Microsoft.WindowsAzure.MobileServices.MobileServiceClient ProjectPandaClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
             "https://projectpanda.azurewebsites.net");
 
+            //auth code for android
+            global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
+
+
             global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new ProjectPanda.App ());
 		}
