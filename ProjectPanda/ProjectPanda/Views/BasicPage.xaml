@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.BasicPage">
+    <ListView>
+        <ListView.RowHeight>
+            <OnPlatform x:TypeArguments="x:Int32"
+                        iOS="80"
+                        Android="80"
+                        WinPhone="90"/>
+        </ListView.RowHeight>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ContentView padding="5">
+                        <Frame OutlineColor="Accent"
+                               Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <BoxView x:Name="boxView"
+                                         WidthRequest="50"
+                                         HeightRequest="50"/>
+
+                            </StackLayout>
+                        </Frame>
+                        
+                    </ContentView>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
