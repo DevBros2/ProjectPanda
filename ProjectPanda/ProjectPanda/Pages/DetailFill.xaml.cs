@@ -12,5 +12,14 @@ namespace ProjectPanda.Pages
         {
             InitializeComponent();
         }
+
+
+        async void NextDetailfillPage(object sender, EventArgs args)
+        {
+
+          await  Navigation.PushAsync(new DetailFillPageChronic());
+
+        }
+
     }
 }

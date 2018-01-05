@@ -92,9 +92,17 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="7">
-                    <Button Text="Continue" TextColor="White" BackgroundColor="{StaticResource ButtonLoginColour}"/>
-                </StackLayout>
+
+
+                <Image Source="continueArrow.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFill" Grid.Row="7" HorizontalOptions="End">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NextDetailfillPage"/>
+                    </Image.GestureRecognizers>
+                    
+                </Image>
+
+
 
 
             </Grid>

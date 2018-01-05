@@ -36,6 +36,11 @@
                 <Setter Property="BarBackgroundColor" Value="#229122"/>
                 <Setter Property="BarTextColor" Value="White"/>
             </Style> 
+       
+        <!--Font Size-->
+        
+        
+        
         </ResourceDictionary>
 
 		<!-- Application resource dictionary -->
