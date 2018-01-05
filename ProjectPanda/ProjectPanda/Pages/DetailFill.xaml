@@ -6,7 +6,7 @@
 
         <ScrollView>
 
-            <Grid BackgroundColor="#92da69" Padding="30">
+            <Grid BackgroundColor="#92da69" Padding="15">
                 <Grid.ColumnDefinitions>
 
                 </Grid.ColumnDefinitions>
@@ -21,7 +21,8 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                
+                    <RowDefinition Height="*"/>
+
 
                 </Grid.RowDefinitions>
 
@@ -92,9 +93,28 @@
 
                 </StackLayout>
 
+                <StackLayout Grid.Row="7">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
+                        <Label WidthRequest="150" Grid.ColumnSpan="2" FontSize="18">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Do you have dependencies"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
 
-                <Image Source="continueArrow.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFill" Grid.Row="7" HorizontalOptions="End">
+                        <Switch Grid.Column="2" VerticalOptions="Start"/>
+
+                    </Grid>
+                </StackLayout>
+
+                <Image Source="continueArrow.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFill" Grid.Row="8" HorizontalOptions="End">
 
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="NextDetailfillPage"/>
