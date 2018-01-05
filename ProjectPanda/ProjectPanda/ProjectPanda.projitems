@@ -77,16 +77,16 @@
       <DependentUpon>ProfilePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailFill.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFill.xaml.cs">
       <DependentUpon>DetailFill.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailFillPageChronic.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillPageChronic.xaml.cs">
       <DependentUpon>DetailFillPageChronic.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailFillPageMeds.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillPageMeds.xaml.cs">
       <DependentUpon>DetailFillPageMeds.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailFillAllergies.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
       <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -99,25 +99,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailFill.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFill.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailFillPageChronic.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillPageChronic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailFillPageMeds.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillPageMeds.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailFillAllergies.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">

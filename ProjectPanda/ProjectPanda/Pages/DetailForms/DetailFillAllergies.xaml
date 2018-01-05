@@ -14,7 +14,7 @@
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="100"/>
-                        <RowDefinition Height="320"/>
+                        <RowDefinition Height="380"/>
                         <RowDefinition Height="90"/>
 
 
@@ -26,7 +26,7 @@
 
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="230"/>
                             <ColumnDefinition Width="*"/>
 
                         </Grid.ColumnDefinitions>
@@ -43,14 +43,14 @@
                         <Switch Grid.Column="1" HorizontalOptions="Center" Margin="10,0,0,10" VerticalOptions="Center"/>
 
 
-                        <!--The code for the list view needs to go here-->
+                        
 
                     </Grid>
                     </StackLayout>
 
 
                     <StackLayout  Grid.Row="1" >
-                        
+                        <!--The code for the list view needs to go here-->
                     </StackLayout>
 
                     <StackLayout Grid.Row="2"  Margin="8">

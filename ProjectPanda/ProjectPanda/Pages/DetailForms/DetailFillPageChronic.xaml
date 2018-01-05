@@ -43,14 +43,15 @@
                             <Switch Grid.Column="1" HorizontalOptions="Center" Margin="10,0,0,10" VerticalOptions="Center"/>
 
 
-                            <!--The code for the list view needs to go here-->
+                            
 
                         </Grid>
                     </StackLayout>
 
 
                     <StackLayout  Grid.Row="1" >
-
+                    <!--The code for the list view needs to go here-->                       
+             
                     </StackLayout>
 
                     <StackLayout Grid.Row="2"  Margin="8">
