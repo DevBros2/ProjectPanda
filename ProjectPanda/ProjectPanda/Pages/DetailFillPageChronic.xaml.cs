@@ -11,5 +11,12 @@ namespace ProjectPanda.Pages
         {
             InitializeComponent();
         }
+
+
+
+        async void NextDetailfillPageAllergies(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new DetailFillAllergies());
+        }
     }
 }

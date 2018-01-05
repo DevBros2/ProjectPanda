@@ -11,5 +11,10 @@ namespace ProjectPanda.Pages
         {
             InitializeComponent();
         }
+
+        async void MainProfilePageNav(object sender, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MainPage());
+        }
     }
 }

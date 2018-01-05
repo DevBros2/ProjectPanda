@@ -1,5 +1,85 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectPanda.Pages.DetailFillAllergies">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectPanda.Pages.DetailFillAllergies"
+             BackgroundColor="{StaticResource Primary}"
+            Title="Allergies"
+             >
 	<ContentPage.Content>
-	</ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+
+
+
+                <Grid HorizontalOptions="Center">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="320"/>
+                        <RowDefinition Height="90"/>
+
+
+
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" >
+                    <Grid VerticalOptions="Start" Margin="0,30,0,0"  >
+
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <Label Grid.Column="0" HorizontalOptions="Center" FontSize="18" WidthRequest="250" Margin="20,0,0,0">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Have Allergies?"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Switch Grid.Column="1" HorizontalOptions="Center" Margin="10,0,0,10" VerticalOptions="Center"/>
+
+
+                        <!--The code for the list view needs to go here-->
+
+                    </Grid>
+                    </StackLayout>
+
+
+                    <StackLayout  Grid.Row="1" >
+                        
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2"  Margin="8">
+                          <Image Source="continueArrow.png"  Aspect="AspectFill" Grid.Row="8" HorizontalOptions="End">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MainProfilePageNav"/>
+                    </Image.GestureRecognizers>
+                    
+                    </Image>
+                    </StackLayout>
+                
+                
+                </Grid>
+
+
+
+
+
+
+
+
+            </StackLayout>
+
+
+
+
+
+        </ScrollView>
+
+    </ContentPage.Content>
 </ContentPage>
