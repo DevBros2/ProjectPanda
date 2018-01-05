@@ -39,7 +39,7 @@
                     </StackLayout>
                     </Frame>
 
-                    <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="DarkGreen" TextColor="White" VerticalOptions="Center"  Grid.Row="3"   FontSize="18"/>
+                    <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}" TextColor="White" VerticalOptions="Center"  Grid.Row="3"   FontSize="18"/>
 
 
                         </StackLayout>
@@ -50,11 +50,11 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="2">
-                    <Button Text="Having problems contact us"  Margin="30,0,30,9" FontSize="15" BackgroundColor="DarkGreen" Clicked="ContactUs" TextColor="White"  BorderWidth="1"/>
+                    <Button Text="Having problems contact us"  Margin="30,0,30,9" FontSize="15" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="ContactUs" TextColor="White"  BorderWidth="1"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3">
-                    <Button Text="Dont have an account Sign Up" Margin="30,0,30,0" BackgroundColor="DarkGreen" Clicked="prompt" WidthRequest="314"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1"  FontSize="15"/>
+                    <Button Text="Dont have an account Sign Up" Margin="30,0,30,0" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="prompt" WidthRequest="314"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1"  FontSize="15"/>
                     </StackLayout>
 
 

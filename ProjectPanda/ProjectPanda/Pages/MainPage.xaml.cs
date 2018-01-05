@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace ProjectPanda.Pages
 		public MainPage ()
 		{
 			InitializeComponent ();
+
          
         }
         #region Event handlers for the side menu
@@ -50,16 +52,28 @@ namespace ProjectPanda.Pages
         //   void Button_Clicked(object sender, EventArgs e)
         //    => new NavigationPage();//doctorlist
 
-        private void Logout_Button_Clicked(object sender, EventArgs e)
-        {
-            //code that will allow for logging out.
-            Detail =  new NavigationPage(new LoginPage());
 
-            //need to add a pop up dialog rather than a navigation
+      
+        #region define the display pop up
+       
+        #endregion
+
+        async private void Logout_Button_Clicked(object sender, EventArgs e)
+        {
+
+            var result=await  DisplayAlert("You are logging out", "Press Ok to verify", "Ok", "Cancel");
+
+            if (result)
+            {
+                //need to put a log out protocol that deletes the users information on that device 
+                Navigation.PushModalAsync(new LoginPage());
+            }
+
+
 
         }
 
-
+        
 
         #endregion
 
@@ -71,6 +85,7 @@ namespace ProjectPanda.Pages
         {
             var page = new ProfilePage();
             PlaceHolder.Content = page.Content;
+            
         }
 
 
