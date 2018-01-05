@@ -49,10 +49,9 @@ namespace ProjectPanda.Views
              
              */
 
+         // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
 
-            await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
-
-           
+            await Navigation.PushAsync(new ProjectPanda.Pages.DetailFill());
 
         }
 
