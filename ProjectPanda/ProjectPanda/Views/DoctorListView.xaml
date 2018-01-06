@@ -1,10 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProjectPanda.ViewModels"
              x:Class="ProjectPanda.Views.DoctorListView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="DoctorList" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ContPage.BindingContext>
+        <local:DoctorListViewModel/>
+    </ContPage.BindingContext>
+
+    <ListView ItemSource="{Binding DocAvaliable}"
+              HasUnevenRow="True"
+              Margin="40,80">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
