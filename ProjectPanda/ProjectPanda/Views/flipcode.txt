@@ -1,0 +1,82 @@
+﻿       <StackLayout  Grid.Row="5"  Margin="15,10,15,0">
+                        <Frame OutlineColor="Black" BackgroundColor="#ccdbc3">
+                            <Label Text="Next Appointment" 
+                  
+                   FontSize="25" 
+                   TextColor="Black"
+                   VerticalTextAlignment="Center"
+                  HorizontalTextAlignment="Center"
+                                    
+                        
+                   
+                     />
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="6" Margin="15,10,15,8">
+                        <Frame  BackgroundColor="White" CornerRadius="8">
+                            <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
+                                <Label.FormattedText>
+                                    <FormattedString >
+                                        <Span Text= "Date:" />
+                                        <Span Text=" "/>
+                                        <Span  Text="" x:Name="TheDateForAppointment" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="7" Margin="15,0,15,8">
+                        <Frame BackgroundColor="White" CornerRadius="8">
+                            <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Time :"/>
+                                        <Span Text=" "/>
+                                        <Span Text="" x:Name="TheTimeForAppointment"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="8" Margin="15,0,15,8"  >
+
+                        <Frame BackgroundColor="White" CornerRadius="8">
+                            <Label   TextColor="Black" FontSize="20" VerticalTextAlignment="Center" x:Name="Place" LineBreakMode="TailTruncation" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Place:" />
+                                        <Span Text="" x:Name="NameOfPractice" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="9" Margin="15,0,15,10">
+                        <Frame BackgroundColor="White" CornerRadius="8">
+                            <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="Doctor" LineBreakMode="TailTruncation">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Doctor :"/>
+                                        <Span Text=" "/>
+                                        <Span Text="" x:Name="NameOfDoctor"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="10">
+                        <Button Text="Cancel" BorderWidth="2"  BorderRadius="2" BorderColor="Black" BackgroundColor="Red" HorizontalOptions="Center" TextColor="White" x:Name="CancelAppoint" />
+                    </StackLayout>
+
