@@ -4,6 +4,8 @@
              x:Class="ProjectPanda.Views.ProfilePage"
              BackgroundColor="{StaticResource Primary}"
             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+            Title="Profile"
+             NavigationPage.TitleIcon="Profile"
              >
     <ContentPage.Content>
         <StackLayout>

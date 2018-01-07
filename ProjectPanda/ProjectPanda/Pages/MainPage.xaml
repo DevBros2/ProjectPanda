@@ -5,7 +5,7 @@
              xmlns:Page="clr-namespace:ProjectPanda.Views"    
              MasterBehavior="Split"
               Title="Serapis Medical"
-               
+               NavigationPage.TitleIcon="Menu"
 
                   >
 

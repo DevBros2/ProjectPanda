@@ -21,7 +21,7 @@
                 <StackLayout Margin="15,22,15,30" Grid.Row="0" >
 
 
-                    <Label Text="Prescription" HorizontalOptions="Center" FontSize="40" TextColor="Black"/>
+                    <Label Text="Prescription" HorizontalOptions="Center" FontSize="40" TextColor="Black" />
 
 
                 </StackLayout>
