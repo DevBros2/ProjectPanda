@@ -230,7 +230,7 @@
     <BundleResource Include="Resources\facebookIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\facebooksupport.PNG" />
+    <AndroidResource Include="Resources\facebooksupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\googleIcon.jpg" />
@@ -239,7 +239,7 @@
     <BundleResource Include="Resources\mailIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\mailsupport.PNG" />
+    <AndroidResource Include="Resources\mailsupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\monthlycalendar.png" />
@@ -257,7 +257,7 @@
     <BundleResource Include="Resources\time.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\twittersupport.PNG" />
+    <AndroidResource Include="Resources\twittersupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\hospital.png" />
