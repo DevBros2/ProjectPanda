@@ -218,10 +218,10 @@
     <BundleResource Include="Resources\calendar.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\contactus.png" />
+    <AndroidResource Include="Resources\contactus.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\creditcard.png" />
+    <AndroidResource Include="Resources\creditcard.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\doctor.png" />
@@ -230,7 +230,7 @@
     <BundleResource Include="Resources\facebookIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\facebooksupport.PNG" />
+    <AndroidResource Include="Resources\facebooksupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\googleIcon.jpg" />
@@ -239,7 +239,7 @@
     <BundleResource Include="Resources\mailIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\mailsupport.PNG" />
+    <AndroidResource Include="Resources\mailsupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\monthlycalendar.png" />
@@ -251,13 +251,13 @@
     <BundleResource Include="Resources\photocamera.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\settings.png" />
+    <AndroidResource Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\time.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\twittersupport.PNG" />
+    <AndroidResource Include="Resources\twittersupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\hospital.png" />
@@ -279,6 +279,21 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\qrcode32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\userplaceholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loginArrow.png" />
   </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

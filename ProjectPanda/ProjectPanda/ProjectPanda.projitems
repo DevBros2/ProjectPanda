@@ -192,4 +192,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Views\flipcode.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Views\flipcodedelivery.txt" />
+  </ItemGroup>
 </Project>

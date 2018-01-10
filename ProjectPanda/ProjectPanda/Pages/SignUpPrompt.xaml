@@ -7,13 +7,17 @@
              >
    
     <ContentPage.Content>
+        
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
 
-
-
-            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand"  BorderRadius="20" WidthRequest="300" HeightRequest="70" Margin="10" BorderWidth="3" Clicked="GoogleSignIn"  Image="googleIcon.jpg"  Text="Continue with Google " >
+            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand" BorderRadius="20" WidthRequest="300"   HeightRequest="70" Margin="10" BorderWidth="3" Clicked="FacebookSignIn"  Text="Sign in" >
 
             </Button>
+
+
+            <Button BorderColor="Black" BackgroundColor="White"  HorizontalOptions="StartAndExpand"  BorderRadius="20" WidthRequest="300"   HeightRequest="70" Margin="10" BorderWidth="3" Clicked="GoogleSignIn"  Image="googleIcon.png"  Text="Continue with Google " />
+
+
 
 
             <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand" BorderRadius="20" WidthRequest="300" HeightRequest="70" Margin="10" BorderWidth="3" Clicked="FacebookSignIn" Image="facebookIcon.png" Text="Continue with Facebook" >
@@ -24,12 +28,6 @@
             <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand"  BorderRadius="20" WidthRequest="300" HeightRequest="70" Margin="10" BorderWidth="3" Clicked="OutlookSignIn" Image="outlookIcon.png" Text="Continue with Outlook" >
 
             </Button>
-
-
-            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand"  BorderRadius="20" WidthRequest="300" HeightRequest="70" Margin="10" BorderWidth="3" Clicked="OurSignIn" Image="mailIcon.png" Text="Continue with us" >
-                <!--This code should lead to the code that prompts the user to sign up with our services-->
-            </Button>
-
 
 
         </StackLayout>

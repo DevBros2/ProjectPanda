@@ -1,0 +1,14 @@
+{
+  "name": "project-panda.mobile-app-service",
+  "version": "0.0.0",
+  "description": "ProjectPanda.MobileAppService",
+  "scripts": {
+    "start": "node server"
+  },
+  "engines": {
+    "node": "~6.10.x"
+  },
+  "author": {
+    "name": "Khanyisani Buthelezi"
+  }
+}

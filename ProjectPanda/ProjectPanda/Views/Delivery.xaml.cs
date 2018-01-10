@@ -15,6 +15,9 @@ namespace ProjectPanda.Views
 		public Delivery ()
 		{
 			InitializeComponent ();
-		}
+
+
+            NavigationPage.SetHasNavigationBar(this, true);
+        }
 	}
 }

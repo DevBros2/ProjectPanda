@@ -5,17 +5,15 @@
              xmlns:Page="clr-namespace:ProjectPanda.Views"    
              MasterBehavior="Split"
               Title="Serapis Medical"
-               
+               NavigationPage.TitleIcon="Menu"
 
                   >
 
     <MasterDetailPage.Master >
         <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu" >
             <ContentPage.Content>
-                <StackLayout >
-                    <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Center" />
-
-
+                <StackLayout VerticalOptions="Center"  >
+                 
 
 
 
@@ -26,13 +24,13 @@
                                BorderWidth="2"
                               WidthRequest="222" 
                               HeightRequest="54"
-                              HorizontalOptions="Center" 
+                              
                               VerticalOptions="Center" 
                              BorderColor="Black"
                               TextColor="Black"
                               Clicked="Menu_btn3_Clicked" 
                               Image="creditcard.png"
-                           Margin="20"
+                           Margin="20,60,20,20"
                             />
 
 
@@ -46,7 +44,7 @@
                                 BorderWidth="2"
                                 WidthRequest="222" 
                                 HeightRequest="54"
-                                HorizontalOptions="Center"
+                              
                                 VerticalOptions="Center"      
                                BorderColor="Black"
                                 Margin="20"
@@ -65,7 +63,7 @@
                                BorderWidth="2"
                                 WidthRequest="222"
                                 HeightRequest="54"
-                                HorizontalOptions="Center"
+                               
                                 VerticalOptions="Center"
                                BorderColor="Black"
                                 Margin="20"            
@@ -78,7 +76,7 @@
 
 
 
-                    <Button Text="Log out" HorizontalOptions="Center" BackgroundColor="LightGreen" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"  Clicked="Logout_Button_Clicked"/>
+                    <Button Text="Log out" Image="logout.png"  BackgroundColor="LightGreen" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"   Clicked="Logout_Button_Clicked"/>
 
                 </StackLayout>
                 <!--Tabb.MasterPage(Menu)-->
@@ -90,64 +88,32 @@
     
 
     <MasterDetailPage.Detail >
-        <ContentPage BackgroundColor="{StaticResource Primary}">
-        <Grid ColumnSpacing="8" RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="1"/>
-                <RowDefinition Height="44"/>
-            </Grid.RowDefinitions>
-            <ContentView x:Name="PlaceHolder" Grid.Row="0"/>
-                <BoxView BackgroundColor="{StaticResource LightPrimary}" Grid.Row="1"/>
-            <!--This will be the tab bar-->
 
-            <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    
-                </Grid.ColumnDefinitions>
+        <TabbedPage xmlns:Page="clr-namespace:ProjectPanda.Views">
 
-                <!--This Will be the TabItems-->
-                <StackLayout Spacing="0" Grid.Column="0" BackgroundColor="{StaticResource LightPrimary}">
-                    <Image  Source="user.png" Aspect="AspectFit"/>
-                  
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizerProfile"/>
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>
+            <TabbedPage.Children >
 
-                    <StackLayout Spacing="0" Grid.Column="1"  BackgroundColor="{StaticResource LightPrimary}">
-                    <Image Source="calendar2.png" Aspect="AspectFit"/>
-                   
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizerAppointment"/>
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>
-
-                    <StackLayout Spacing="0" Grid.Column="2" BackgroundColor="{StaticResource LightPrimary}">
-                    <Image  Source="vansideview.png" Aspect="AspectFit"/>
-                   
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizerDelivery"/>
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>
-
-                    <StackLayout Spacing="0" Grid.Column="3" BackgroundColor="{StaticResource LightPrimary}">
-                    <Image Source="photocamera" Aspect="AspectFit"/>
-                   
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizerCamera"/>
-                    </StackLayout.GestureRecognizers>
-                </StackLayout>
-
-            </Grid>
-        </Grid>
+                <Page:ProfilePage  Icon="user.png" />
 
 
-        </ContentPage>
+
+                <Page:MyAppointments  Icon="calendar2.png" />
+
+
+
+                <Page:Delivery  Icon="vansideview.png" />
+
+
+
+                <Page:CamPage Icon="photocamera.png" />
+
+
+
+            </TabbedPage.Children>
+
+        </TabbedPage>
+
+
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>

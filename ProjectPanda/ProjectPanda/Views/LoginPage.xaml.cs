@@ -48,10 +48,9 @@ namespace ProjectPanda.Views
                     if(EmailAddress && Password && (isAuthenticated==true) == those in the databse )    {Navigation.PushAsync(new MainProfilePage());}
              
              */
+             await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
 
-         // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
-
-            await Navigation.PushAsync(new ProjectPanda.Pages.DetailFill());
+           // await Navigation.PushAsync(new ProjectPanda.Pages.DetailFill());
 
         }
 

@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectPanda.Pages.DetailFill"
              Title="Personal Information "
+            BackgroundColor="{StaticResource Primary}"
              >
 	<ContentPage.Content>
 
         <ScrollView>
 
-            <Grid BackgroundColor="#92da69" Padding="15">
+            <Grid  Padding="20">
                 <Grid.ColumnDefinitions>
 
                 </Grid.ColumnDefinitions>
@@ -30,24 +31,24 @@
 
 
                 <StackLayout  Grid.Row="1" BackgroundColor="#92da69">
-                    <Entry BackgroundColor="#92da69"   Placeholder="First Name" PlaceholderColor="#bbe8a0" Opacity="1"  FontSize="16"/>
+                    <Entry BackgroundColor="#92da69"   Placeholder="First Name" PlaceholderColor="White"  FontSize="18"/>
                 </StackLayout>
 
 
                 <StackLayout Grid.Row="2" BackgroundColor="#92da69" >
-                    <Entry BackgroundColor="#92da69"  Placeholder="Surname" PlaceholderColor="White" Opacity="1" FontSize="12"/>
+                    <Entry BackgroundColor="#92da69"  Placeholder="Surname" PlaceholderColor="White" Opacity="1" FontSize="18"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" BackgroundColor="#92da69" >
-                    <Entry BackgroundColor="#92da69"    Placeholder="Email Address" PlaceholderColor="White" Opacity="1" Keyboard="Email" FontSize="12"/>
+                    <Entry BackgroundColor="#92da69"    Placeholder="Email Address" PlaceholderColor="White" Opacity="1" Keyboard="Email" FontSize="18"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" BackgroundColor="#92da69"  >
-                    <Entry BackgroundColor="#92da69"   Placeholder="Cell number" PlaceholderColor="White" Opacity="1" Keyboard="Numeric" FontSize="12"/>
+                    <Entry BackgroundColor="#92da69"   Placeholder="Cell number" PlaceholderColor="White" Opacity="1" Keyboard="Numeric" FontSize="18"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="5" BackgroundColor="#92da69" >
-                    <Picker x:Name="picker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1"  >
+                    <Picker x:Name="picker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>O-Postive</x:String>
@@ -68,7 +69,7 @@
 
                 <StackLayout Grid.Row="6" BackgroundColor="#92da69">
 
-                    <Picker x:Name="picker2" Title="Medical Aid" BackgroundColor="#92da69" TextColor="#bbe8a0" Opacity="1" >
+                    <Picker x:Name="picker2" Title="Medical Aid" BackgroundColor="#92da69" TextColor="White" Opacity="1" >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Discovery Health</x:String>
@@ -101,7 +102,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label WidthRequest="150" Grid.ColumnSpan="2" FontSize="18">
+                        <Label WidthRequest="150" Grid.ColumnSpan="2" FontSize="18" TextColor="White">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="Do you have dependencies"/>

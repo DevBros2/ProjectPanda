@@ -16,47 +16,53 @@
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
 
 
-                <Grid VerticalOptions="Center" >
+                <Grid Padding="10">
 
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="240"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="80"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                   
-                        <StackLayout  WidthRequest="150" Margin="30,0,30,0" Grid.Row="0">
+
+                <StackLayout Grid.Row="0"  Margin="0,0,0,0">
+                    <!--Logo here-->
+                    
+                </StackLayout>
+                    
+                    
+                    <StackLayout  VerticalOptions="Center" Margin="30,90,30,0" Grid.Row="1" >
 
 
-                    <Frame BackgroundColor="White" Margin="0,0,0,16" CornerRadius="8" >
-                        <StackLayout>
-                            
-                        <Entry  TextColor="Black" Placeholder="Email Address" PlaceholderColor="Black" FontSize="17"  x:Name="emailAddress" WidthRequest="120" Margin="0,0,0,20"/>
+                    <Label Text="Login"  HorizontalOptions="Center" Margin="15" TextColor="White" FontSize="30" FontAttributes="Bold"/>
 
-                            <Entry  TextColor="Black" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="17" x:Name="password" WidthRequest="120" Margin="0,0,0,10"/>
-                    </StackLayout>
-                    </Frame>
-
-                    <Button Text="Log In" Clicked="Button_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}" TextColor="White" VerticalOptions="Center"  Grid.Row="3"   FontSize="18"/>
+                    <Image Source="loginArrow.png">
+                        <Image.GestureRecognizers >
+                           
+                            <TapGestureRecognizer  Tapped="prompt"/>
+                        </Image.GestureRecognizers>
+                    </Image>
 
 
-                        </StackLayout>
-                   
 
-                    <StackLayout Grid.Row="1">
-                        <Label Text="OR"  HorizontalOptions="Center" TextColor="White" FontSize="20" FontAttributes="Bold"/>
-                    </StackLayout>
+                </StackLayout>
 
-                    <StackLayout Grid.Row="2">
-                    <Button Text="Having problems contact us"  Margin="30,0,30,9" FontSize="15" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="ContactUs" TextColor="White"  BorderWidth="1"/>
-                    </StackLayout>
 
-                    <StackLayout Grid.Row="3">
-                    <Button Text="Dont have an account Sign Up" Margin="30,0,30,0" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="prompt" WidthRequest="314"  HorizontalOptions="Center"  TextColor="White" BorderWidth="1"  FontSize="15"/>
-                    </StackLayout>
 
+                
+                <StackLayout Grid.Row="3"  VerticalOptions="Center" >
+                    <Button Margin="30,0,30,0" 
+                            Text="Need Help?" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            TextColor="White"
+                            BorderWidth="1" 
+                            Opacity="0.80"  
+                            FontSize="18"
+                            Clicked="ContactUs"
+                            />
+                </StackLayout>
 
                 </Grid>
 

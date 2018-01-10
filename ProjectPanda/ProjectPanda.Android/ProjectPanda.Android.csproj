@@ -242,28 +242,10 @@
     <AndroidResource Include="Resources\Drawable\calendar.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\contactus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\creditcard.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Drawable\doctor.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\facebookIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\facebooksupport.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\googleIcon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Drawable\mailIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\mailsupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\monthlycalendar.png" />
@@ -275,13 +257,7 @@
     <AndroidResource Include="Resources\Drawable\photocamera.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Drawable\time.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\twittersupport.PNG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\user.png" />
@@ -324,6 +300,54 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\continueArrow32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\qrcode32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\doct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\calendar64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\userplaceholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\creditcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\contactus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\facebooksupport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\twittersupport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\mailsupport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\loginArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\facebookIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\googleIcon.png" />
   </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
