@@ -245,12 +245,6 @@
     <AndroidResource Include="Resources\Drawable\doctor.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\facebookIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\googleIcon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Drawable\mailIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -348,6 +342,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\loginArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\facebookIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\googleIcon.png" />
   </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

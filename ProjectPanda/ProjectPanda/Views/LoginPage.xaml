@@ -38,17 +38,30 @@
 
                     <Label Text="Login"  HorizontalOptions="Center" Margin="15" TextColor="White" FontSize="30" FontAttributes="Bold"/>
 
-                        <Image Source="loginArrow.png" />
+                    <Image Source="loginArrow.png">
+                        <Image.GestureRecognizers >
+                           
+                            <TapGestureRecognizer  Tapped="prompt"/>
+                        </Image.GestureRecognizers>
+                    </Image>
 
 
 
-                        </StackLayout>
+                </StackLayout>
 
 
 
                 
                 <StackLayout Grid.Row="3"  VerticalOptions="Center" >
-                    <Button Margin="30,0,30,0" Text="Need Help?" BackgroundColor="{StaticResource ButtonLoginColour}" TextColor="White" BorderWidth="1" Opacity="0.80"  FontSize="18"/>
+                    <Button Margin="30,0,30,0" 
+                            Text="Need Help?" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            TextColor="White"
+                            BorderWidth="1" 
+                            Opacity="0.80"  
+                            FontSize="18"
+                            Clicked="ContactUs"
+                            />
                 </StackLayout>
 
                 </Grid>
