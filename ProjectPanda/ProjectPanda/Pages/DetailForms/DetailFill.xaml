@@ -113,7 +113,7 @@
                             </Label.FormattedText>
                         </Label>
 
-                        <Switch x:Name="dependency" Grid.Column="2" VerticalOptions="Start"/>
+                        <Switch x:Name="dependency"  Toggled="DependencyPresent" Grid.Column="2" VerticalOptions="Start"/>
 
                     </Grid>
                 </StackLayout>

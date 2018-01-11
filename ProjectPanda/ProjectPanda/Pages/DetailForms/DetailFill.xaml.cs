@@ -9,6 +9,9 @@ namespace ProjectPanda.Pages
 {
     public partial class DetailFill : ContentPage
     {
+
+        
+
         UserRegistrationManager manager;
         public DetailFill()
         {
@@ -16,9 +19,13 @@ namespace ProjectPanda.Pages
             manager = UserRegistrationManager.DefaultManager;
         }
 
+        //this is for the switch
+        private void DependencyPresent(object sender, ToggledEventArgs e)
+        {
+            bool isToggled = e.Value;
+           
+        }
 
-
-        
 
 
 
