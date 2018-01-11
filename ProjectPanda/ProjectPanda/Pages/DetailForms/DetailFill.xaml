@@ -36,19 +36,19 @@
 
 
                 <StackLayout Grid.Row="2" BackgroundColor="#92da69" >
-                    <Entry BackgroundColor="#92da69"  Placeholder="Surname" PlaceholderColor="White" Opacity="1" FontSize="18"/>
+                    <Entry BackgroundColor="#92da69" x:Name="surname"  Placeholder="Surname" PlaceholderColor="White" Opacity="1" FontSize="18"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" BackgroundColor="#92da69" >
-                    <Entry BackgroundColor="#92da69"    Placeholder="Email Address" PlaceholderColor="White" Opacity="1" Keyboard="Email" FontSize="18"/>
+                    <Entry BackgroundColor="#92da69" x:Name="email_address"   Placeholder="Email Address" PlaceholderColor="White" Opacity="1" Keyboard="Email" FontSize="18"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" BackgroundColor="#92da69"  >
-                    <Entry BackgroundColor="#92da69"   Placeholder="Cell number" PlaceholderColor="White" Opacity="1" Keyboard="Numeric" FontSize="18"/>
+                    <Entry BackgroundColor="#92da69" x:Name="cellphoneNum"  Placeholder="Cell number" PlaceholderColor="White" Opacity="1" Keyboard="Numeric" FontSize="18"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="5" BackgroundColor="#92da69" >
-                    <Picker x:Name="picker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1">
+                    <Picker x:Name="bloodPicker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>O-Postive</x:String>
@@ -62,6 +62,9 @@
                                 <x:String>Not Sure</x:String>
                             </x:Array>
                         </Picker.ItemsSource>
+                    
+                        
+                    
                     </Picker>
 
                 </StackLayout>
@@ -69,7 +72,7 @@
 
                 <StackLayout Grid.Row="6" BackgroundColor="#92da69">
 
-                    <Picker x:Name="picker2" Title="Medical Aid" BackgroundColor="#92da69" TextColor="White" Opacity="1" >
+                    <Picker x:Name="medicalAidPicker" Title="Medical Aid" BackgroundColor="#92da69" TextColor="White"  >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Discovery Health</x:String>
@@ -110,7 +113,7 @@
                             </Label.FormattedText>
                         </Label>
 
-                        <Switch Grid.Column="2" VerticalOptions="Start"/>
+                        <Switch x:Name="dependency" Grid.Column="2" VerticalOptions="Start"/>
 
                     </Grid>
                 </StackLayout>

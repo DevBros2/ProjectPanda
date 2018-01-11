@@ -30,5 +30,8 @@ namespace ProjectPanda.Models
 
         [JsonProperty(PropertyName = "Dependencies")]
         public bool Dependencies { get; set; }
+
+
+
     }
 }

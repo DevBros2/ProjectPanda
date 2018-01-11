@@ -5,7 +5,7 @@
              >
 	<ContentPage.Content>
 
-        
+        <ScrollView>
             <StackLayout>
 
 
@@ -79,7 +79,7 @@
 
 
 
+        </ScrollView>
 
-      
     </ContentPage.Content>
 </ContentPage>
