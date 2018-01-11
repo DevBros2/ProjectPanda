@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjectPanda.Services;
+using ProjectPanda.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -42,6 +43,7 @@ namespace ProjectPanda.Pages
         private async void OurSignIn(object sender, EventArgs e)
         {
             //await Navigation.PushAsync(new Login());
+            await Navigation.PushAsync(new DetailFill());
         }
 
     }
