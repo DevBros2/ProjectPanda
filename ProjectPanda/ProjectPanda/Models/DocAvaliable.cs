@@ -2,34 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace ProjectPanda.Models
 {
     public class DocAvaliable : INotifyPropertyChanged
     {
-       
-        private string Name;
-        private string Varsity;
 
-        public string name
-        {
-            get { return name; }
-            set
-            {
-                Name = value;
-                OnPropertyChanged("Name");
-            }
-        }
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
 
-        public string varsity
-        {
-            get { return varsity; }
-            set
-            {
-                Varsity = value;
-                OnPropertyChanged("Varsity");
-            }
-        }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        [JsonProperty(PropertyName = "varsity")]
+        public string Varsity { get; set;}
+
+        [JsonProperty(PropertyName = "complete")]
+        public bool Complete { get; set; }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)

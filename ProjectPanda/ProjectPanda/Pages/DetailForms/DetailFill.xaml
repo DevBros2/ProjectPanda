@@ -31,7 +31,7 @@
 
 
                 <StackLayout  Grid.Row="1" BackgroundColor="#92da69">
-                    <Entry BackgroundColor="#92da69"   Placeholder="First Name" PlaceholderColor="White"  FontSize="18"/>
+                    <Entry BackgroundColor="#92da69" x:Name="first_name"  Placeholder="First Name" PlaceholderColor="White"  FontSize="18"/>
                 </StackLayout>
 
 

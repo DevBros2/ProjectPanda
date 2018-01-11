@@ -4,7 +4,34 @@
              x:Class="ProjectPanda.Views.DoctorListView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="DoctorList" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <ListView x:Name="DoctorList" 
+                      SeparatorColor="White"
+                     
+                ItemsSource="{Binding Doctors}"
+                VerticalOptions="FillAndExpand"
+                 HasUnevenRows="True"
+                 IsPullToRefreshEnabled="true" 
+                 CachingStrategy="RecycleElement"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Name}" 
+                       LineBreakMode="NoWrap"                        
+                       FontSize="16"
+                       TextColor="Black"/>
+                                <Label Text="{Binding Varsity}" 
+                       LineBreakMode="NoWrap"
+                       FontSize="13"
+                       TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
+   
 </ContentPage>
