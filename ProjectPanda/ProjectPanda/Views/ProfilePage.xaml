@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.ProfilePage"
-             BackgroundColor="{StaticResource Primary}"
+             BackgroundColor="#ffff"
             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
             
              NavigationPage.TitleIcon="Profile"
@@ -13,9 +13,9 @@
                 <StackLayout>
 
                     <!--The users profile picture-->
-                    <StackLayout Margin="0,20,0,5">
+                    <StackLayout Margin="0,15,0,5">
 
-                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit">
+                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit" BorderColor="Black" BorderThickness="3">
                             <controls:CircleImage.WidthRequest>
                                 <OnPlatform x:TypeArguments="x:Double">
                                     <On Platform="Android, iOS">125</On>
@@ -57,7 +57,7 @@
                             <!--The Medical aid part-->
                             <StackLayout Grid.Row="0"    Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame  BackgroundColor="{StaticResource Primary}" CornerRadius="1">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -91,7 +91,7 @@
                             <!--The blood type-->
                             <StackLayout Grid.Row="1"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame  BackgroundColor="{StaticResource Primary}" CornerRadius="0">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -126,7 +126,7 @@
                             <!--The Sex of the construct-->
                             <StackLayout Grid.Row="2"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame  BackgroundColor="{StaticResource Primary}" CornerRadius="0">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -161,7 +161,7 @@
                             <!--The age of the users-->
                             <StackLayout Grid.Row="3"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame BackgroundColor="{StaticResource Primary}" CornerRadius="0">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -197,7 +197,7 @@
                             <!--Next Delivery-->
                             <StackLayout Grid.Row="4"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame BackgroundColor="{StaticResource Primary}" CornerRadius="0">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -235,7 +235,7 @@
                             <!--The list view of the medication-->
                             <StackLayout Grid.Row="5"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame BackgroundColor="{StaticResource Primary}" CornerRadius="0">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -283,7 +283,7 @@
                             <!--The list of allergies of the user-->
                             <StackLayout Grid.Row="6"   Margin="20,0,20,15">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                                <Frame BackgroundColor="{StaticResource Primary}" CornerRadius="0">
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -325,7 +325,7 @@
                             </StackLayout>
 
                             <StackLayout Grid.Row="7" Margin="20,0,20,5">
-                                <Button Margin="5,5,5,5" Image="record.png" TextColor="White" FontSize="17" BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                        <Button Margin="5,5,5,5" Image="record.png" TextColor="White" FontSize="17" BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource ButtonLoginColour}"/>
                             </StackLayout>
 
                         </Grid>

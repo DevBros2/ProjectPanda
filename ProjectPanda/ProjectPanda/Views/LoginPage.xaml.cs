@@ -26,7 +26,7 @@ namespace ProjectPanda.Views
             base.OnAppearing();
             var LoginPage = new NavigationPage(new LoginPage())
             {
-                BarBackgroundColor = Color.LimeGreen,
+                BarBackgroundColor = Color.FromHex("#60a83a"),
                 BarTextColor = Color.White,
             };
 
