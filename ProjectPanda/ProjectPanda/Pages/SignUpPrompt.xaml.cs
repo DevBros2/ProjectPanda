@@ -43,7 +43,7 @@ namespace ProjectPanda.Pages
         private async void OurSignIn(object sender, EventArgs e)
         {
             //await Navigation.PushAsync(new Login());
-            await Navigation.PushAsync(new DetailFill());
+            await Navigation.PushAsync(new Pages.MainPage());
         }
 
     }
