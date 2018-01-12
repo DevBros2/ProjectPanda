@@ -17,5 +17,12 @@ namespace ProjectPanda.Pages
 			InitializeComponent ();
             
         }
-	}
+
+        //the event handler for changing the distance proximty 
+        private void KilometerChange(object sender, ValueChangedEventArgs args)
+        {
+            kilometerValue.Text = string.Format("{0}", args.NewValue);
+        }
+
+    }
 }

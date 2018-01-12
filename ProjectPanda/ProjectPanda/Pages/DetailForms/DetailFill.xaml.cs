@@ -10,7 +10,7 @@ namespace ProjectPanda.Pages
     public partial class DetailFill : ContentPage
     {
 
-        
+        public String GlobalString;
 
         UserRegistrationManager manager;
         public DetailFill()
@@ -24,9 +24,36 @@ namespace ProjectPanda.Pages
         {
             bool isToggled = e.Value;
            
+        }       
+
+        #region medical aid event handler
+        //this is for the medical aid text
+         void medicalAidPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Picker medicalAidPicker = (Picker)sender;
+            int selectedIndex = medicalAidPicker.SelectedIndex;
+
+            if (selectedIndex == -1)
+            {
+                return;
+            }
+
+            string selectedItem = medicalAidPicker.Items[selectedIndex];
+
+
+
         }
+        #endregion
 
 
+        #region blood picker event handler
+        //the blood picker text
+        private void bloodPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Picker bloodPicker = (Picker)sender;
+
+        }
+        #endregion
 
 
         async Task AddDetails(UserRegistration userregistration )
@@ -58,18 +85,20 @@ namespace ProjectPanda.Pages
             cellphoneNum.Text = string.Empty;
             cellphoneNum.Unfocus();
 
-         //Gonna add them later cause well they are a diffrent data type for some reason
+            //Gonna add them later cause well they are a diffrent data type for some reason
+
+
+
+            //   medicalAidPicker.Text = string.Empty;
+            //   medicalAidPicker.Unfocus();
+           
+           
             
-           //  bloodPicker.Text = string.Empty;
-           //  bloodPicker.Unfocus();
-
-         //   medicalAidPicker.Text = string.Empty;
-         //   medicalAidPicker.Unfocus();
-
-
 
 
             await Navigation.PushAsync(new DetailFillPageChronic());
         }
+
+       
     }
 }

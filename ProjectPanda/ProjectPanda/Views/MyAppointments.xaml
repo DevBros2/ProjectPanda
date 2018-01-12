@@ -28,7 +28,7 @@
 
                     <StackLayout  Margin="15,22,15,0">
                      
-                            <Label  Text="Set Appointment" FontSize="40"
+                            <Label  Text="Set Appointment" FontSize="30"
                       
                     VerticalTextAlignment="Center"
                     TextColor="Black" 
@@ -74,10 +74,22 @@
                   />
                     </StackLayout>
 
-
+                    <!--The date picker-->
                     <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                        <DatePicker  HeightRequest="74" WidthRequest="10" BackgroundColor="Gray" Opacity="0" x:Name="Datepick" />
-                    </StackLayout>
+                    <DatePicker  HeightRequest="74" WidthRequest="10" BackgroundColor="LightGray" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                        <DatePicker.MinimumDate>
+                            01/01/2018
+                        </DatePicker.MinimumDate>
+
+                        <DatePicker.MaximumDate>
+                            03/01/2018
+                        </DatePicker.MaximumDate>
+
+                        <DatePicker.Date>
+                           01/12/2018
+                        </DatePicker.Date>
+                    </DatePicker>
+                </StackLayout>
 
                     <StackLayout Grid.Row="3" Margin="15,0,15,10" >
                         <Button TextColor="Black"
@@ -94,7 +106,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Margin="30,22,38,0">
-                        <TimePicker  HeightRequest="74" WidthRequest="4" BackgroundColor="Gray" Opacity="0" x:Name="Timepick" />
+                        <TimePicker  HeightRequest="74" WidthRequest="4" BackgroundColor="LightGray" Opacity="0" x:Name="Timepick" />
                     </StackLayout>
 
 

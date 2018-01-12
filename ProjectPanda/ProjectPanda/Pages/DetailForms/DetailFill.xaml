@@ -48,9 +48,9 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="5" BackgroundColor="#92da69" >
-                    <Picker x:Name="bloodPicker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
+                    <Picker SelectedIndexChanged="bloodPicker_SelectedIndexChanged"  x:Name="bloodPicker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1">
+                        <Picker.Items>
+                            
                                 <x:String>O-Postive</x:String>
                                 <x:String>O-Negative</x:String>
                                 <x:String>A-Postive</x:String>
@@ -60,8 +60,8 @@
                                 <x:String>AB-Postive</x:String>
                                 <x:String>AB-Negative</x:String>
                                 <x:String>Not Sure</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
+                            
+                        </Picker.Items>
                     
                         
                     
@@ -72,9 +72,9 @@
 
                 <StackLayout Grid.Row="6" BackgroundColor="#92da69">
 
-                    <Picker x:Name="medicalAidPicker" Title="Medical Aid" BackgroundColor="#92da69" TextColor="White"  >
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
+                    <Picker SelectedIndexChanged="medicalAidPicker_SelectedIndexChanged"  x:Name="medicalAidPicker" Title="Medical Aid" BackgroundColor="#92da69" TextColor="White"  >
+                        <Picker.Items>
+                           
                                 <x:String>Discovery Health</x:String>
                                 <x:String>Bonitas</x:String>
                                 <x:String>FedHealth</x:String>
@@ -91,8 +91,8 @@
                                 <x:String>Keyhealth</x:String>
                                 <x:String>Medihelp</x:String>
                                 <x:String>Not Sure</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
+                          
+                        </Picker.Items>
                     </Picker>
 
                 </StackLayout>

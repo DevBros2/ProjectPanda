@@ -22,5 +22,14 @@ namespace ProjectPanda.Views
             // await Navigation.PushAsync(new MedicalBuildingView()); 
              NavigationPage nav=new NavigationPage(new MedicalBuildingView());
         }
+
+
+        //the event handler for the date picker
+
+        private void Datepick(object sender, DateChangedEventArgs args)
+        {
+          //
+        }
+
     }
 }

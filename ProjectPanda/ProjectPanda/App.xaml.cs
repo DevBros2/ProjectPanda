@@ -19,7 +19,7 @@ namespace ProjectPanda
 
             //MainPage = new ProjectPanda.MainPage();
             MainPage = new NavigationPage(new Pages.SplashPage());
-            //MainPage = new NavigationPage();
+         // MainPage = new NavigationPage(new CamPage());
         }
 
 		protected override void OnStart ()

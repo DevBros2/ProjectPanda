@@ -6,6 +6,7 @@
               
              >
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
 
             <Grid Padding="10">
@@ -53,8 +54,9 @@
 
 
             </Grid>
-             
 
+        
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
