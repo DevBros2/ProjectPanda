@@ -47,10 +47,9 @@
                                 <RowDefinition Height="150"/>
                                 <RowDefinition Height="150"/>
                                 <RowDefinition Height="150"/>
-                                <RowDefinition Height="150"/>
-                                <RowDefinition Height="150"/>
-                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="80"/>
                                 <RowDefinition Height="100"/>
+                              
 
                             </Grid.RowDefinitions>
 
@@ -240,148 +239,15 @@
 
                         </StackLayout>
 
-                            <!--The customers chronic diseases-->
-                        <StackLayout Grid.Row="5"   Margin="20,0,20,10">
 
-                            <Frame BackgroundColor="#ffff" CornerRadius="5">
-
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="50"/>
-                                        <ColumnDefinition Width="100"/>
-                                        <ColumnDefinition Width="150"/>
-                                    </Grid.ColumnDefinitions>
-
-
-
-
-
-                                    <ListView  x:Name="chronicDisease" Grid.Column="1">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell>
-                                                    <StackLayout 
-                                                             Orientation="Vertical">
-                                                        <StackLayout Orientation="Horizontal">
-                                                            <Image Source="syringe.png" Grid.Column="0"/>
-                                                            <Label Text="{Binding titleofmedication}"  TextColor="#f35e20" Grid.Column="1" />
-
-                                                            <Label Text="{Binding dosageofmedication}" HorizontalOptions="EndAndExpand" TextColor="#503026" Grid.Column="2"/>
-
-
-                                                        </StackLayout>
-                                                    </StackLayout>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
-
-                                </Grid>
-
-
-
-                            </Frame>
-
-
-
+                        <StackLayout Grid.Row="4" Margin="20,10,20,5">
+                            <Button HeightRequest="60"  Image="record.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource Primary}"/>
                         </StackLayout>
 
+                       
 
-
-                        <!--The list view of the medication-->
-                        <StackLayout Grid.Row="4"   Margin="20,0,20,10">
-
-                            <Frame BackgroundColor="#ffff" CornerRadius="5">
-
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="50"/>
-                                        <ColumnDefinition Width="100"/>
-                                        <ColumnDefinition Width="150"/>
-                                    </Grid.ColumnDefinitions>
-
-
-
-
-
-                                    <ListView  x:Name="Medication" Grid.Column="1">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell>
-                                                    <StackLayout 
-                                                             Orientation="Vertical">
-                                                        <StackLayout Orientation="Horizontal">
-                                                            <Image Source="syringe.png" Grid.Column="0"/>
-                                                            <Label Text="{Binding titleofmedication}"  TextColor="#f35e20" Grid.Column="1" />
-
-                                                            <Label Text="{Binding dosageofmedication}" HorizontalOptions="EndAndExpand" TextColor="#503026" Grid.Column="2"/>
-
-
-                                                        </StackLayout>
-                                                    </StackLayout>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
-
-                                </Grid>
-
-
-
-                            </Frame>
-
-
-
-                        </StackLayout>
-
-
-
-                        <!--The list of allergies of the user-->
-                            <StackLayout Grid.Row="6"   Margin="20,10,20,15">
-
-                                <Frame BackgroundColor="#ffff" CornerRadius="5">
-
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
-
-                                       
-
-                                        <ListView  x:Name="Allergies">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <ViewCell>
-                                                        <StackLayout Orientation="Vertical">
-
-                                                            <StackLayout Orientation="Horizontal">
-                                                                <Image Source="prohibition.png" Aspect="Fill" Grid.Column="0"/>
-                                                                <Label Text="{Binding titleofallergy}"   TextColor="#f35e20" Grid.Column="1" />
-
-                                                                
-
-
-                                                            </StackLayout>
-                                                        </StackLayout>
-                                                    </ViewCell>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-
-                                    </Grid>
-
-
-
-                                </Frame>
-
-
-
-                            </StackLayout>
-
-                            <StackLayout Grid.Row="7" Margin="20,0,20,15">
-                             <Button HeightRequest="60"  Image="record.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource Primary}"/>
+                        <StackLayout Grid.Row="5" Margin="20,0,20,10">
+                            <Button HeightRequest="60"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Medical Information" BackgroundColor="{StaticResource Primary}"/>
                             </StackLayout>
 
                         </Grid>
