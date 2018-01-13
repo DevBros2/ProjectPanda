@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.CamPage"
-              BackgroundColor="#92da69"
+              BackgroundColor="{StaticResource BackgroundColor}"
              >
     <ContentPage.Content>
 
@@ -18,7 +18,7 @@
             </StackLayout>
 
             <StackLayout Grid.Row="1"  VerticalOptions="End">
-                <Button VerticalOptions="Center" WidthRequest="20" HeightRequest="60" Image="qrcode32.png" TextColor="White" Text="Check out Scan" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                <Button VerticalOptions="Center" WidthRequest="20" HeightRequest="60" Image="qrcode32.png" TextColor="Black" Text="Check out Scan" BackgroundColor="{StaticResource Primary}"/>
             </StackLayout>
         
         </Grid>

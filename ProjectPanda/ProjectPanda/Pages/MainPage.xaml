@@ -10,7 +10,7 @@
                   >
 
     <MasterDetailPage.Master >
-        <ContentPage Padding="10" BackgroundColor="#ffff" Title="Menu" >
+        <ContentPage Padding="10" BackgroundColor="{StaticResource BackgroundColor}" Title="Menu" >
             <ContentPage.Content>
                 <StackLayout VerticalOptions="Center"  >
                  
@@ -89,7 +89,7 @@
 
     <MasterDetailPage.Detail >
 
-        <TabbedPage xmlns:Page="clr-namespace:ProjectPanda.Views" BarBackgroundColor="#60a83a">
+        <TabbedPage xmlns:Page="clr-namespace:ProjectPanda.Views" BarBackgroundColor="{StaticResource Primary}">
 
             <TabbedPage.Children >
 

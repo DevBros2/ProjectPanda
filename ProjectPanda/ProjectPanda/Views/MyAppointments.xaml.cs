@@ -32,5 +32,9 @@ namespace ProjectPanda.Views
           //
         }
 
+        private void Confirm(object sender, EventArgs e)
+        {
+            //code to confirm the appointemnt 
+        }
     }
 }

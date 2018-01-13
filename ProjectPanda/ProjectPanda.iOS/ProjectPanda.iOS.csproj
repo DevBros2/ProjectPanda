@@ -329,6 +329,18 @@
   <ItemGroup>
     <BundleResource Include="Resources\loginArrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calendar64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\doct.png" />
+  </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
