@@ -2,23 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.MyAppointments"
-             BackgroundColor="{StaticResource Primary}"
+             BackgroundColor="{StaticResource BackgroundColor}"
             
              >
     <ContentPage.Content>
         <StackLayout>
             
 
-                <Grid >
+                <Grid Padding="10">
                     <Grid.ColumnDefinitions>
 
                     </Grid.ColumnDefinitions>
 
                     <Grid.RowDefinitions>
 
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
@@ -26,25 +26,16 @@
 
                     </Grid.RowDefinitions>
 
-                    <StackLayout  Margin="15,22,15,0">
-                     
-                            <Label  Text="Set Appointment" FontSize="30"
-                      
-                    VerticalTextAlignment="Center"
-                    TextColor="Black" 
-                    
-                    HorizontalTextAlignment="Center" 
-                    Grid.Row="0"
-                 
-                     
-                    />
+                <StackLayout  Margin="15,22,15,0" Grid.Row="0">
 
-                       
-                    </StackLayout>
+                  
+                    <Label Text="Set Appointment" HorizontalOptions="Start" FontSize="25" TextColor="Black" Style="{DynamicResource TitleStyle}"/>
+                  
+                </StackLayout>
 
 
                     <StackLayout  Grid.Row="1" Margin="15,0,15,0"  >
-                        <Button BackgroundColor="LightGray" 
+                        <Button BackgroundColor="{StaticResource Primary}" 
                     
                     
                     Text="Doctor"
@@ -52,19 +43,21 @@
                     FontSize="20"
                     BorderColor="Black" 
                     BorderWidth="2" 
-                    HeightRequest="80"
+                    HeightRequest="60"
                     Clicked="Doctor_Button_Clicked"
                      Image="doct.png"     
                     Margin="10,20,20,0"
-                 />
+                    Style="{DynamicResource SubtitleStyle}"
+                   />
+                   
                     </StackLayout>
 
 
                     <StackLayout  Grid.Row="2" Margin="15,0,15,0" >
                         <Button TextColor="Black"
                     WidthRequest="23"
-                    HeightRequest="80"
-                    BackgroundColor="LightGray"
+                    HeightRequest="60"
+                    BackgroundColor="{StaticResource Primary}"
                     Text="Date" FontSize="20" 
                     BorderColor="Black" 
                     BorderWidth="2"  
@@ -76,7 +69,7 @@
 
                     <!--The date picker-->
                     <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                    <DatePicker  HeightRequest="74" WidthRequest="10" BackgroundColor="LightGray" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                    <DatePicker  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
                         <DatePicker.MinimumDate>
                             01/01/2018
                         </DatePicker.MinimumDate>
@@ -94,8 +87,8 @@
                     <StackLayout Grid.Row="3" Margin="15,0,15,10" >
                         <Button TextColor="Black"
                     WidthRequest="23"
-                    HeightRequest="80"
-                    BackgroundColor="LightGray" 
+                    HeightRequest="60"
+                    BackgroundColor="{StaticResource Primary}" 
                     Text="Time"
                     FontSize="20"
                     BorderColor="Black" 
@@ -106,23 +99,16 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Margin="30,22,38,0">
-                        <TimePicker  HeightRequest="74" WidthRequest="4" BackgroundColor="LightGray" Opacity="0" x:Name="Timepick" />
+                        <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="Timepick" />
                     </StackLayout>
 
 
-                    <StackLayout   Grid.Row="4" Margin="24,10,34,10"  VerticalOptions="Start">
-                        <Button Text="Schedule" 
-                
-                    FontSize="18"
-                    HeightRequest="50" 
-                    TextColor="White"
-                    BackgroundColor="{StaticResource ButtonLoginColour}"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                   VerticalOptions="End"
-                  
-                    
-                    />
+                    <StackLayout   Grid.Row="4" Margin="24,18,34,22"  VerticalOptions="Start" >
+                    <Image Source="check.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Confirm"/>
+                        </Image.GestureRecognizers>
+                    </Image>
                     </StackLayout>
 
 

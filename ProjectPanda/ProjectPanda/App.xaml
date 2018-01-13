@@ -7,7 +7,7 @@
             <!-- COLORS -->
             <Color x:Key="Primary">#92da69</Color>
             <Color x:Key="DarkPrimary">#229122</Color>
-            <Color x:Key="BackgroundColor">#F4F6FA</Color>
+            <Color x:Key="BackgroundColor">#d3d3d3</Color>
             <Color x:Key="LightPrimary">#c5ff99</Color>
             <Color x:Key="LightGreenColor">#83D01B</Color>
             <Color x:Key="GreenColor">#00A69C</Color>

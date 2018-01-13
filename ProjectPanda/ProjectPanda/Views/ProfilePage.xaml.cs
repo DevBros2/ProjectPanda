@@ -9,12 +9,24 @@ using Xamarin.Forms.Xaml;
 
 namespace ProjectPanda.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProfilePage : ContentPage
-	{
-		public ProfilePage ()
-		{
-			InitializeComponent ();
-		}
-	}
-}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProfilePage : ContentPage
+    {
+        public ProfilePage()
+        {
+            InitializeComponent();
+
+           
+
+
+        }
+
+
+
+
+      
+
+
+
+        }
+    }

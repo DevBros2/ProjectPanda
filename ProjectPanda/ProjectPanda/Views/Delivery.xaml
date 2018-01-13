@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.Delivery"
-             BackgroundColor="#92da69"
-              
+             BackgroundColor="{StaticResource BackgroundColor}"
+             
              >
     <ContentPage.Content>
         <ScrollView>
@@ -22,7 +22,7 @@
                 <StackLayout Margin="15,22,15,30" Grid.Row="0" >
 
 
-                    <Label Text="Prescription" HorizontalOptions="Center" FontSize="40" TextColor="Black" />
+                    <Label Text="Prescription" HorizontalOptions="Center" FontSize="30" TextColor="Black" />
 
 
                 </StackLayout>
@@ -43,9 +43,9 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Button  Text="Schedule Delivery" TextColor="White" Grid.Column="0"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black"/>
+                        <Button  Text="Schedule  Delivery" TextColor="Black" Grid.Column="0"  BorderWidth="2" BackgroundColor="{StaticResource Primary}" BorderColor="Black"/>
 
-                        <Button HeightRequest="65" TextColor="White" Text="Delivery History" Grid.Column="1" BorderWidth="2" BorderColor="Black" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                        <Button HeightRequest="65" TextColor="Black" Text="Delivery History" Grid.Column="1" BorderWidth="2" BorderColor="Black" BackgroundColor="{StaticResource Primary}"/>
 
                     </Grid>
                    

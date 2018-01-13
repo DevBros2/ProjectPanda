@@ -2,20 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.ProfilePage"
-             BackgroundColor="{StaticResource Primary}"
+             BackgroundColor="{StaticResource BackgroundColor}"
             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
             
              NavigationPage.TitleIcon="Profile"
              >
     <ContentPage.Content>
-        <StackLayout>
+        
             <ScrollView>
                 <StackLayout>
 
                     <!--The users profile picture-->
-                    <StackLayout Margin="0,20,0,5">
+                    <StackLayout Margin="0,15,0,5">
 
-                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit">
+                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit" BorderColor="Black" BorderThickness="3">
                             <controls:CircleImage.WidthRequest>
                                 <OnPlatform x:TypeArguments="x:Double">
                                     <On Platform="Android, iOS">125</On>
@@ -38,46 +38,57 @@
 
                     <StackLayout>
 
-                        <Grid >
+                        <Grid Padding="10">
 
 
 
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="80"/>
                                 <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
+                              
 
                             </Grid.RowDefinitions>
 
                             <!--The Medical aid part-->
-                            <StackLayout Grid.Row="0"    Margin="20,0,20,10">
+                            <StackLayout Grid.Row="0"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
 
-                                    <Grid>
+                                    <Grid ColumnSpacing="40">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="60"/>
+                                            <ColumnDefinition Width="200"/>
+                                            
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Source="hospital.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill" />
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
+                                        <Image Source="hospital.png"   HorizontalOptions="Start" Aspect="AspectFit" />
+                                    </StackLayout>
+                                        
+                                        
+                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
+                                        <Grid RowSpacing="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
 
-                                                    <Span Text="Medical aid:"/>
-                                                    <Span Text=""/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
+                                            <StackLayout Grid.Row="0">
+                                            <Label Text="Medical Aid" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                            </StackLayout>
 
+                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
+                                            <Label Text="Discovery health" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                                                           
+                                                                
                                     </Grid>
 
 
@@ -89,243 +100,154 @@
                             </StackLayout>
 
                             <!--The blood type-->
-                            <StackLayout Grid.Row="1"   Margin="20,0,20,10">
+                        <StackLayout Grid.Row="1"   Margin="20,0,20,10">
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
+                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
 
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
+                                <Grid ColumnSpacing="40">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        <Image Source="bloodtype.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill"/>
+                                    </Grid.ColumnDefinitions>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
 
-                                                    <Span Text="Blood type:  "/>
-                                                    <Span Text=""/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
+                                        <Image Source="bloodtype.png"   HorizontalOptions="Start" Aspect="AspectFit" />
+                                    </StackLayout>
 
-                                    </Grid>
 
+                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
+                                        <Grid RowSpacing="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
 
+                                            <StackLayout Grid.Row="0">
+                                                <Label Text="Blood Type" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                            </StackLayout>
 
-                                </Frame>
+                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
+                                                <Label Text="A+" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
 
 
+                                </Grid>
 
-                            </StackLayout>
 
 
-                            <!--The Sex of the construct-->
-                            <StackLayout Grid.Row="2"   Margin="20,0,20,10">
+                            </Frame>
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
 
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
 
-                                        <Image Source="gender.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill"/>
+                        </StackLayout>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
 
-                                                    <Span Text="Sex:  "/>
-                                                    <Span Text=""/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
+                        <!--The Sex of the customer-->
+                        <StackLayout Grid.Row="2"   Margin="20,0,20,10">
 
-                                    </Grid>
+                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
 
+                                <Grid ColumnSpacing="40">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="200"/>
 
+                                    </Grid.ColumnDefinitions>
 
-                                </Frame>
 
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
+                                        <Image Source="gender.png"   HorizontalOptions="Start" Aspect="AspectFit" />
+                                    </StackLayout>
 
 
-                            </StackLayout>
+                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
+                                        <Grid RowSpacing="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
 
+                                            <StackLayout Grid.Row="0">
+                                                <Label Text="Gender" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                            </StackLayout>
 
-                            <!--The age of the users-->
-                            <StackLayout Grid.Row="3"   Margin="20,0,20,10">
+                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
+                                                <Label Text="Male" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
 
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
+                                </Grid>
 
-                                        <Image Source="age.png" Grid.Column="0" HorizontalOptions="Start"/>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
 
-                                                    <Span Text="Age:  "/>
-                                                    <Span Text=""/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
+                            </Frame>
 
-                                    </Grid>
 
 
+                        </StackLayout>
 
-                                </Frame>
 
+                        <!--The age of the users-->
+                        <StackLayout Grid.Row="3"   Margin="20,0,20,10">
 
+                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
 
-                            </StackLayout>
+                                <Grid ColumnSpacing="40">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="200"/>
 
+                                    </Grid.ColumnDefinitions>
 
 
-                            <!--Next Delivery-->
-                            <StackLayout Grid.Row="4"   Margin="20,0,20,10">
+                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
+                                        <Image Source="age.png"   HorizontalOptions="Start" Aspect="AspectFit" />
+                                    </StackLayout>
 
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
 
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="150"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
+                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
+                                        <Grid RowSpacing="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
 
-                                        <Image Source="truck.png" Grid.Column="0" HorizontalOptions="Start" Aspect="AspectFill"/>
+                                            <StackLayout Grid.Row="0">
+                                                <Label Text="Age" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                            </StackLayout>
 
-                                        <Label  TextColor="Black" FontSize="18" Grid.Column="1" VerticalTextAlignment="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
+                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
+                                                <Label Text="21" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
 
-                                                    <Span Text="Next Delivery:  "/>
-                                                    <Span Text=""/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
 
-                                    </Grid>
+                                </Grid>
 
 
 
-                                </Frame>
+                            </Frame>
 
 
 
-                            </StackLayout>
+                        </StackLayout>
 
 
+                        <StackLayout Grid.Row="4" Margin="20,10,20,5">
+                            <Button HeightRequest="60"  Image="record.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource Primary}"/>
+                        </StackLayout>
 
+                       
 
-
-                            <!--The list view of the medication-->
-                            <StackLayout Grid.Row="5"   Margin="20,0,20,10">
-
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
-
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
-
-                                        
-                                      
-                                      
-
-                                        <ListView  x:Name="Medication" Grid.Column="1">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <ViewCell>
-                                                        <StackLayout 
-                                                             Orientation="Vertical">
-                                                            <StackLayout Orientation="Horizontal">
-                                                                <Image Source="syringe.png" Grid.Column="0"/>
-                                                                <Label Text="{Binding titleofmedication}"  TextColor="#f35e20" Grid.Column="1" />
-
-                                                                <Label Text="{Binding dosageofmedication}" HorizontalOptions="EndAndExpand" TextColor="#503026" Grid.Column="2"/>
-                                                                
-                                                                 
-                                                            </StackLayout>
-                                                        </StackLayout>
-                                                    </ViewCell>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-
-                                    </Grid>
-
-
-
-                                </Frame>
-
-
-
-                            </StackLayout>
-
-
-
-                            <!--The list of allergies of the user-->
-                            <StackLayout Grid.Row="6"   Margin="20,0,20,15">
-
-                                <Frame OutlineColor="Black" BackgroundColor="White" CornerRadius="8">
-
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="28"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="150"/>
-                                        </Grid.ColumnDefinitions>
-
-                                       
-
-                                        <ListView  x:Name="Allergies">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <ViewCell>
-                                                        <StackLayout Orientation="Vertical">
-
-                                                            <StackLayout Orientation="Horizontal">
-                                                                <Image Source="prohibition.png" Aspect="Fill" Grid.Column="0"/>
-                                                                <Label Text="{Binding titleofallergy}"   TextColor="#f35e20" Grid.Column="1" />
-
-                                                                
-
-
-                                                            </StackLayout>
-                                                        </StackLayout>
-                                                    </ViewCell>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-
-                                    </Grid>
-
-
-
-                                </Frame>
-
-
-
-                            </StackLayout>
-
-                            <StackLayout Grid.Row="7" Margin="20,0,20,5">
-                                <Button Margin="5,5,5,5" Image="record.png" TextColor="White" FontSize="17" BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                        <StackLayout Grid.Row="5" Margin="20,0,20,10">
+                            <Button HeightRequest="60"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Medical Information" BackgroundColor="{StaticResource Primary}"/>
                             </StackLayout>
 
                         </Grid>
@@ -338,6 +260,6 @@
                     
                 </StackLayout>
             </ScrollView>
-        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

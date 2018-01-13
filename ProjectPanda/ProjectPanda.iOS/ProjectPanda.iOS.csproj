@@ -300,7 +300,7 @@
     <BundleResource Include="Resources\age.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bloodtype.png" />
+    <AndroidResource Include="Resources\bloodtype.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\delivery.png" />
@@ -318,9 +318,6 @@
     <BundleResource Include="Resources\qrcode32.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\record.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\userplaceholder.png" />
   </ItemGroup>
   <ItemGroup>
@@ -328,6 +325,27 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\loginArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calendar64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\doct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moremeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\fish.png" />
   </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
