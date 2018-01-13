@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjectPanda.Models;
 using ProjectPanda.Services;
 using ProjectPanda.ViewModels;
 using Xamarin.Forms;
@@ -28,6 +29,15 @@ namespace ProjectPanda.Views
             base.OnAppearing();
             //await RefreshItems();
         }
+
+         void Make_Button_Visable(object sender, ItemTappedEventArgs e)
+        {
+            var vm = viewmodel;
+
+
+            var doctors = e.Item as DocAvaliable;
+            vm.HideOrShowProfile(doctors);
+        } 
 
         //Data methods
         //DoctorListView

@@ -21,6 +21,8 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "complete")]
         public bool Complete { get; set; }
 
+        public bool IsVisible { get; set; }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
