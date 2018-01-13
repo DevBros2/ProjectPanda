@@ -18,7 +18,7 @@ namespace ProjectPanda.Pages
         public MainPage()
         {
             InitializeComponent();
-
+            
 
         }
         #region Event handlers for the side menu
