@@ -110,7 +110,7 @@
                     </StackLayout>
 
 
-                    <StackLayout   Grid.Row="4" Margin="24,20,34,20"  VerticalOptions="Start">
+                    <StackLayout   Grid.Row="4" Margin="24,18,34,20"  VerticalOptions="Start" >
                     <Image Source="check.png">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Confirm"/>
