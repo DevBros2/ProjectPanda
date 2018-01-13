@@ -53,7 +53,7 @@
 
                 
                 <StackLayout Grid.Row="3"  VerticalOptions="Center" >
-                    <Button Margin="30,0,30,0" 
+                    <Button Margin="30,0,30,10" 
                             Text="Need Help?" 
                             BackgroundColor="{StaticResource ButtonLoginColour}" 
                             TextColor="White"
