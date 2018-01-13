@@ -27,20 +27,11 @@
                     </Grid.RowDefinitions>
 
                 <StackLayout  Margin="15,22,15,0" Grid.Row="0">
-                     
-                            <Label  Text="Set Appointment" FontSize="30"
-                      
-                    
-                    TextColor="Black" 
-                    
-                    HorizontalTextAlignment="Center" 
-                    
-                 
-                     
-                    />
 
-                       
-                    </StackLayout>
+                  
+                    <Label Text="Set Appointment" HorizontalOptions="Start" FontSize="25" TextColor="Black" Style="{DynamicResource TitleStyle}"/>
+                  
+                </StackLayout>
 
 
                     <StackLayout  Grid.Row="1" Margin="15,0,15,0"  >
@@ -56,7 +47,9 @@
                     Clicked="Doctor_Button_Clicked"
                      Image="doct.png"     
                     Margin="10,20,20,0"
-                 />
+                    Style="{DynamicResource SubtitleStyle}"
+                   />
+                   
                     </StackLayout>
 
 
@@ -110,7 +103,7 @@
                     </StackLayout>
 
 
-                    <StackLayout   Grid.Row="4" Margin="24,18,34,20"  VerticalOptions="Start" >
+                    <StackLayout   Grid.Row="4" Margin="24,18,34,22"  VerticalOptions="Start" >
                     <Image Source="check.png">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Confirm"/>
