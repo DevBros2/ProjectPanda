@@ -97,11 +97,11 @@
 
 
 
-                <Page:MyAppointments  Icon="calendar2.png" />
+                <Page:MyAppointments  Icon="calendar2.png"  />
 
 
 
-                <Page:Delivery  Icon="vansideview.png" />
+                <Page:Delivery  Icon="vansideview.png"  />
 
 
 
