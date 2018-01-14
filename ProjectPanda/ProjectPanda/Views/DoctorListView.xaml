@@ -5,13 +5,15 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="DoctorList" 
+            <ListView x:Name="DoctorList"
+                      SeparatorVisibility="Default"
                       SeparatorColor="White"       
                 ItemsSource="{Binding Doctors}"
                 VerticalOptions="FillAndExpand"
                  HasUnevenRows="True"
                  IsPullToRefreshEnabled="true" 
                  CachingStrategy="RecycleElement"
+                 ItemTapped="Make_Button_Visable"
                 >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -20,11 +22,13 @@
                                 <Label Text="{Binding Name}" 
                        LineBreakMode="NoWrap"                        
                        FontSize="16"
-                       TextColor="Red"/>
+                       TextColor="Black"/>
                                 <Label Text="{Binding Varsity}" 
                        LineBreakMode="NoWrap"
                        FontSize="13"
-                       TextColor="Red"/>
+                       TextColor="Green"/>
+                                <Button Text="Profile"
+                                        IsVisible="{Binding IsVisible}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

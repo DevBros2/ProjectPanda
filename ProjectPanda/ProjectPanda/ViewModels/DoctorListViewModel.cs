@@ -12,31 +12,77 @@ namespace ProjectPanda.ViewModels
 {
     public class DoctorListViewModel
     {
-        public IList<DocAvaliable> Doctors { get; set; }
+        private DocAvaliable _oldDoctorSelected;
+
+        public ObservableCollection<DocAvaliable> Doctors { get; set; }
         //public Command LoadDoctorsCommand { get; set; }
         public object SelectedItem { get; set; }
 
         public DoctorListViewModel()
         {
-            // Name = "Doctors";
-            Doctors = new List<DocAvaliable>();        
+            // Name = "Doctors";       
             GenerateDoctorList();
         }
              private void GenerateDoctorList()
             {
                   Doctors = new ObservableCollection<DocAvaliable>
                 {
-                    new DocAvaliable{ Name = "Dr Zulu ", Varsity="MBchB(Ukzn)"},
-                    new DocAvaliable{ Name = "Dr Duma ", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)"},
-                    new DocAvaliable{ Name = "Dr Moody ", Varsity="MBchB(Wits)"},
-                    new DocAvaliable{ Name = "Dr McGhee ", Varsity="MBchB(Stellenbosch)"},
-                    new DocAvaliable{ Name = "Dr Naidoo", Varsity="MBchB(Ukzn)"},
-                    new DocAvaliable{ Name = "Dr Ngwenya ", Varsity="MBchB(Stellenbosch)"},
+                    new DocAvaliable{ Name = "Dr Zulu ", Varsity="MBchB(Ukzn)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Duma ", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Moody ", Varsity="MBchB(Wits)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr McGhee ", Varsity="MBchB(Stellenbosch)",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Naidoo", Varsity="MBchB(Ukzn)",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ngwenya ", Varsity="MBchB(UFS)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Miller", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ronaldo ", Varsity="MBchB(Wits)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Buthelezi ", Varsity="MBchB(Stellenbosch)",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Moodley", Varsity="MBchB(Ukzn)",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Matsoso ", Varsity="MBchB(UP)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ngcobo ", Varsity="MBchB(Stellenbosch)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Miller", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Xulu ", Varsity="MBchB(Wits)", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ronaldo ", Varsity="MBchB(UFS)",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Moodley", Varsity="MBchB(Ukzn)",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Matsoso ", Varsity="MBchB(Stellenbosch)", IsVisible = false}
                 };
 
 
 
             }
+
+        public void HideOrShowProfile(DocAvaliable doctors)
+        {
+            if (_oldDoctorSelected == doctors)
+            {
+                // click twice on the same item will hide it
+                doctors.IsVisible = !doctors.IsVisible;
+                UpdateDoctorList(doctors);
+            }
+            else
+            {
+                if (_oldDoctorSelected != null)
+                {
+                    // hide previous selected item
+                    _oldDoctorSelected.IsVisible = false;
+                    UpdateDoctorList(_oldDoctorSelected);
+                }
+                // show selected item
+                doctors.IsVisible = true;
+                UpdateDoctorList(doctors);
+            }
+
+            _oldDoctorSelected = doctors;
+
+        }
+        private void UpdateDoctorList(DocAvaliable doctors)
+        {
+            var index = Doctors.IndexOf(doctors);
+            //updating method
+            Doctors.Remove(doctors);
+            //Or you can clear the list each time and just add everything back
+            Doctors.Insert(index, doctors);
+
+        }
 
 
 
@@ -47,7 +93,7 @@ namespace ProjectPanda.ViewModels
             //    await Navigation.PushAsync(new AppoinmentView());
             //}
 
-        }
+    }
     
 
     
