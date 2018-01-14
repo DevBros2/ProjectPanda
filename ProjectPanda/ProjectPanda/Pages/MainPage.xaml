@@ -6,7 +6,7 @@
              MasterBehavior="Split"
               Title="Serapis Medical"
                NavigationPage.TitleIcon="Menu"
-
+                
                   >
 
     <MasterDetailPage.Master >

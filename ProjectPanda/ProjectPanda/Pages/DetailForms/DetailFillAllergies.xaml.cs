@@ -10,13 +10,12 @@ namespace ProjectPanda.Pages
         public DetailFillAllergies()
         {
             InitializeComponent();
-       
 
         }
 
         async void MainProfilePageNav(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushAsync(new DetailFillPageMeds());
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectPanda.Pages.DetailFill"
              Title="Personal Information "
-            BackgroundColor="{StaticResource Primary}"
+            BackgroundColor="{StaticResource BackgroundColor}"
              >
 	<ContentPage.Content>
 
@@ -27,28 +27,28 @@
 
                 </Grid.RowDefinitions>
 
-     
 
 
-                <StackLayout  Grid.Row="1" BackgroundColor="#92da69">
-                    <Entry BackgroundColor="#92da69" x:Name="first_name"  Placeholder="First Name" PlaceholderColor="White"  FontSize="18"/>
+
+                <StackLayout  Grid.Row="1" Style="{DynamicResource DetailFillFont}">
+                    <Entry  x:Name="first_name" Placeholder="First Name"  />
                 </StackLayout>
 
 
-                <StackLayout Grid.Row="2" BackgroundColor="#92da69" >
-                    <Entry BackgroundColor="#92da69" x:Name="surname"  Placeholder="Surname" PlaceholderColor="White" Opacity="1" FontSize="18"/>
+                <StackLayout Grid.Row="2" >
+                    <Entry  x:Name="surname"   Placeholder="Surname" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="3" BackgroundColor="#92da69" >
-                    <Entry BackgroundColor="#92da69" x:Name="email_address"   Placeholder="Email Address" PlaceholderColor="White" Opacity="1" Keyboard="Email" FontSize="18"/>
+                <StackLayout Grid.Row="3" >
+                    <Entry  x:Name="email_address"   Placeholder="Email Address"  Keyboard="Email" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="4" BackgroundColor="#92da69"  >
-                    <Entry BackgroundColor="#92da69" x:Name="cellphoneNum"  Placeholder="Cell number" PlaceholderColor="White" Opacity="1" Keyboard="Numeric" FontSize="18"/>
+                <StackLayout Grid.Row="4"   >
+                    <Entry  x:Name="cellphoneNum"  Placeholder="Cell number"  Keyboard="Numeric" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="5" BackgroundColor="#92da69" >
-                    <Picker SelectedIndexChanged="bloodPicker_SelectedIndexChanged"  x:Name="bloodPicker" Title="Blood Type" BackgroundColor="#92da69" TextColor="White" Opacity="1">
+                <StackLayout Grid.Row="5" Style="{DynamicResource DetailFillFont}" >
+                    <Picker SelectedIndexChanged="bloodPicker_SelectedIndexChanged"  x:Name="bloodPicker" Title="Blood Type"  TextColor="White" Opacity="1">
                         <Picker.Items>
                             
                                 <x:String>O-Postive</x:String>
@@ -70,9 +70,9 @@
                 </StackLayout>
 
 
-                <StackLayout Grid.Row="6" BackgroundColor="#92da69">
+                <StackLayout Grid.Row="6" Style="{DynamicResource DetailFillFont}" >
 
-                    <Picker SelectedIndexChanged="medicalAidPicker_SelectedIndexChanged"  x:Name="medicalAidPicker" Title="Medical Aid" BackgroundColor="#92da69" TextColor="White"  >
+                    <Picker SelectedIndexChanged="medicalAidPicker_SelectedIndexChanged"  x:Name="medicalAidPicker" Title="Medical Aid"  TextColor="White"  >
                         <Picker.Items>
                            
                                 <x:String>Discovery Health</x:String>
@@ -97,7 +97,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="7">
+                <StackLayout Grid.Row="7" >
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"/>
@@ -105,15 +105,15 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label WidthRequest="150" Grid.ColumnSpan="2" FontSize="18" TextColor="White">
+                        <Label WidthRequest="150" Grid.ColumnSpan="2" Style="{DynamicResource DetailFillFormLabels}" >
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Do you have dependencies"/>
+                                    <Span Text="Do you have dependencies" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
 
-                        <Switch x:Name="dependency"  Toggled="DependencyPresent" Grid.Column="2" VerticalOptions="Start"/>
+                        <Switch x:Name="dependency"  Toggled="DependencyPresent" Grid.Column="2" VerticalOptions="Start" />
 
                     </Grid>
                 </StackLayout>
