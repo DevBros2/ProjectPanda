@@ -34,13 +34,13 @@
             <!--STYLES-->
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="#229122"/>
-                <Setter Property="BarTextColor" Value="White"/>
+                <Setter Property="BarTextColor" Value="Black"/>
             </Style> 
        
-        <!--Font Size-->
-        
-        
-        
+        <!--Font Styles-->
+          
+
+
         </ResourceDictionary>
 
 		<!-- Application resource dictionary -->
