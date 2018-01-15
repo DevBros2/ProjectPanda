@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.DeliveryViews.MedicationSearch">
+             x:Class="ProjectPanda.Views.DeliveryViews.MedicationSearch"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <StackLayout Orientation="Vertical">
+        <SearchBar x:Name="MedSearchBar"
+                   SearchButtonPressed="SearchBar_SearchButtonPressed"
+                   Placeholder="Find Your Medication"
+                   CancelButtonColor="Red"
+                   />
+
+        <ListView x:Name="MedsListview"
+                  
+                  />
+
+
+    </StackLayout>
     
 </ContentPage>

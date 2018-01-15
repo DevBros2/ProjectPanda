@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Camera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DocAvaliable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicalBuildingModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -47,6 +48,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationMicrosoft.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DocAvaliableManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserRegistrationManager .cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModel\MedicationSearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CamPage.xaml.cs">
@@ -59,6 +61,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml.cs">
       <DependentUpon>MedicationSearch.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DoctorListView.xaml.cs">
+      <DependentUpon>DoctorListView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml.cs">
@@ -206,6 +212,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DoctorListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

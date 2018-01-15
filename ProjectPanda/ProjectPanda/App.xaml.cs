@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ProjectPanda.Views;
 using ProjectPanda.Pages;
+using ProjectPanda.Views.DeliveryViews;
 
 using Xamarin.Forms;
 
@@ -18,8 +19,8 @@ namespace ProjectPanda
             //InitApp();
 
             //MainPage = new ProjectPanda.MainPage();
-            MainPage = new NavigationPage(new Pages.SplashPage());
-           // MainPage = new NavigationPage(new DoctorListView());
+            //MainPage = new NavigationPage(new Pages.SplashPage());
+            MainPage = new NavigationPage(new ProjectPanda.Pages.MainPage());
         }
 
 		protected override void OnStart ()
