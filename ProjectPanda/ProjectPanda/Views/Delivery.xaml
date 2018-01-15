@@ -11,43 +11,56 @@
 
             <Grid Padding="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="300"/>
-                    <RowDefinition Height="*"/>
+                   
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="400"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="400"/>
                     <RowDefinition Height="*"/>
 
                     </Grid.RowDefinitions>
 
         
 
-                <StackLayout Margin="20,22,15,30" Grid.Row="0" >
+                <StackLayout Margin="20,15,15,10" Grid.Row="0" >
 
 
-                    <Label Text="Prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"/>
+                    <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"/>
 
 
                 </StackLayout>
 
 
-                <StackLayout Margin="15,0,15,0" Grid.Row="1" >
+                <StackLayout Margin="15,20,15,15" Grid.Row="1" >
                     <Frame BackgroundColor="White"  WidthRequest="20" HeightRequest="250" OutlineColor="Black"  CornerRadius="8">
 
                     </Frame>
                 </StackLayout>
 
 
-                    <StackLayout Margin="5,15,5,20" Grid.Row="2"  VerticalOptions="End">
-
-                        <Button  Text="Schedule  Delivery" TextColor="Black" Grid.Column="0"  BorderWidth="2" BackgroundColor="{StaticResource Primary}" BorderColor="Black"/>
-                             
-                   
-                </StackLayout>
-
-                    <StackLayout Grid.Row="3">
-                        <Button TextColor="Black" Text="Delivery History" Grid.Column="1" BorderWidth="2" BorderColor="Black" BackgroundColor="{StaticResource Primary}"/>
+                    <StackLayout Grid.Row="2"  Margin="20,15,15,0">
+                        <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}"/>
                     </StackLayout>
 
-            </Grid>
+                    <StackLayout Grid.Row="3" Margin="20,25,20,10">
+                        <SearchBar BackgroundColor="White" Opacity="0.80">
+                            
+                        </SearchBar>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Margin="15,30,15,20">
+                        <Frame BackgroundColor="White"  WidthRequest="20" HeightRequest="250" OutlineColor="Black"  CornerRadius="8">
+
+                        </Frame>
+                    </StackLayout>
+
+
+
+
+
+
+                </Grid>
 
         
         </StackLayout>
