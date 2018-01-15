@@ -31,16 +31,59 @@
             <Color x:Key="AndroidListViewBackgroundColor">Transparent</Color>
             <Color x:Key="iOSListViewBackgroundColor">Transparent</Color>
             <Color x:Key="ButtonLoginColour">#2db1ff</Color>
+            <Color x:Key="DetailFillColour">#000000</Color>
+          
             <!--STYLES-->
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#229122"/>
-                <Setter Property="BarTextColor" Value="White"/>
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BarTextColor" Value="Black"/>
+              
             </Style> 
        
-        <!--Font Size-->
-        
-        
-        
+        <!--Font Styles Detail Fill forms Entry-->
+            <Style x:key="DetailFillFont" TargetType="Entry">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="PlaceholderColor" Value="Black"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+       
+            <!--Detail fill form Font Labels-->
+            <Style x:Key="DetailFillFormLabels" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+           
+            <!--Font Family for the headers of pages-->
+            <Style x:Key="FontStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+            
+            <!--Button font Attributes-->
+            <Style x:Key="ButtonFont" TargetType="Button">
+                <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            
+            <!--The header for Profile Attributes-->
+            <Style x:Key="HeaderAttributes" TargetType="Label" >
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="End"/>
+            </Style>
+            
+            <!--The font Attritbutes for the information-->
+            <Style x:Key="InformationLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="End"/>
+                <Setter Property="LineBreakMode" Value="TailTruncation"/>
+            </Style>
+            
         </ResourceDictionary>
 
 		<!-- Application resource dictionary -->

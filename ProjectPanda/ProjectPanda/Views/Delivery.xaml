@@ -14,15 +14,16 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="300"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
 
-                </Grid.RowDefinitions>
+                    </Grid.RowDefinitions>
 
         
 
-                <StackLayout Margin="15,22,15,30" Grid.Row="0" >
+                <StackLayout Margin="20,22,15,30" Grid.Row="0" >
 
 
-                    <Label Text="Prescription" HorizontalOptions="Center" FontSize="30" TextColor="Black" />
+                    <Label Text="Prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"/>
 
 
                 </StackLayout>
@@ -35,23 +36,16 @@
                 </StackLayout>
 
 
-                <StackLayout Margin="5,15,5,20" Grid.Row="2"  VerticalOptions="End">
-
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                    <StackLayout Margin="5,15,5,20" Grid.Row="2"  VerticalOptions="End">
 
                         <Button  Text="Schedule  Delivery" TextColor="Black" Grid.Column="0"  BorderWidth="2" BackgroundColor="{StaticResource Primary}" BorderColor="Black"/>
-
-                        <Button HeightRequest="65" TextColor="Black" Text="Delivery History" Grid.Column="1" BorderWidth="2" BorderColor="Black" BackgroundColor="{StaticResource Primary}"/>
-
-                    </Grid>
+                             
                    
                 </StackLayout>
 
-
+                    <StackLayout Grid.Row="3">
+                        <Button TextColor="Black" Text="Delivery History" Grid.Column="1" BorderWidth="2" BorderColor="Black" BackgroundColor="{StaticResource Primary}"/>
+                    </StackLayout>
 
             </Grid>
 

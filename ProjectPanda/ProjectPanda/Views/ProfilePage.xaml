@@ -33,7 +33,7 @@
 
                     <!--The usrs name-->
                     <StackLayout Margin="0,0,0,20">
-                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="20"  />
+                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="20" />
                     </StackLayout>
 
                     <StackLayout>
@@ -43,11 +43,11 @@
 
 
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="150"/>
-                                <RowDefinition Height="150"/>
-                                <RowDefinition Height="150"/>
-                                <RowDefinition Height="150"/>
-                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="125"/>
+                                <RowDefinition Height="125"/>
+                                <RowDefinition Height="125"/>
+                                <RowDefinition Height="125"/>
+                                <RowDefinition Height="100"/>
                                 <RowDefinition Height="100"/>
                               
 
@@ -56,7 +56,7 @@
                             <!--The Medical aid part-->
                             <StackLayout Grid.Row="0"   Margin="20,0,20,10">
 
-                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
+                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
                                     <Grid ColumnSpacing="40">
                                         <Grid.ColumnDefinitions>
@@ -79,11 +79,11 @@
                                             </Grid.RowDefinitions>
 
                                             <StackLayout Grid.Row="0">
-                                            <Label Text="Medical Aid" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                                <Label Text="Medical Aid" Margin="0,0,0,0"   Style="{DynamicResource HeaderAttributes}" />
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                            <Label Text="Discovery health" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                                <Label Text="Discovery health"   Style="{DynamicResource InformationLabel}" />
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>
@@ -102,7 +102,7 @@
                             <!--The blood type-->
                         <StackLayout Grid.Row="1"   Margin="20,0,20,10">
 
-                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
+                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
                                 <Grid ColumnSpacing="40">
                                     <Grid.ColumnDefinitions>
@@ -125,11 +125,11 @@
                                             </Grid.RowDefinitions>
 
                                             <StackLayout Grid.Row="0">
-                                                <Label Text="Blood Type" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                                <Label Text="Blood Type" Margin="0,0,0,0"   Style="{DynamicResource HeaderAttributes}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="A+" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                                <Label Text="A+"  Style="{DynamicResource InformationLabel}"  />
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>
@@ -149,7 +149,7 @@
                         <!--The Sex of the customer-->
                         <StackLayout Grid.Row="2"   Margin="20,0,20,10">
 
-                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
+                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
                                 <Grid ColumnSpacing="40">
                                     <Grid.ColumnDefinitions>
@@ -172,11 +172,11 @@
                                             </Grid.RowDefinitions>
 
                                             <StackLayout Grid.Row="0">
-                                                <Label Text="Gender" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                                <Label Text="Gender" Margin="0,0,0,0" Style="{DynamicResource HeaderAttributes}" />
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="Male" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                                <Label Text="Male"  Style="{DynamicResource InformationLabel}"  />
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>
@@ -196,7 +196,7 @@
                         <!--The age of the users-->
                         <StackLayout Grid.Row="3"   Margin="20,0,20,10">
 
-                            <Frame  BackgroundColor="#ffff" HeightRequest="150"  CornerRadius="5">
+                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
                                 <Grid ColumnSpacing="40">
                                     <Grid.ColumnDefinitions>
@@ -219,11 +219,11 @@
                                             </Grid.RowDefinitions>
 
                                             <StackLayout Grid.Row="0">
-                                                <Label Text="Age" Margin="0,0,0,0" HorizontalTextAlignment="Start"  TextColor="Black" Style="{DynamicResource TitleStyle}" FontSize="20"/>
+                                                <Label Text="Age" Margin="0,0,0,0"  Style="{DynamicResource HeaderAttributes}" />
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="21" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Style="{DynamicResource BodyStyle}" FontSize="20" TextColor="Black" />
+                                                <Label Text="21"  Style="{DynamicResource InformationLabel}"  />
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>
@@ -247,7 +247,7 @@
                        
 
                         <StackLayout Grid.Row="5" Margin="20,0,20,10">
-                            <Button HeightRequest="60"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Medical Information" BackgroundColor="{StaticResource Primary}"/>
+                            <Button HeightRequest="60"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Medical Information" BackgroundColor="{StaticResource Primary}" Clicked="PrivateInformation"/>
                             </StackLayout>
 
                         </Grid>
