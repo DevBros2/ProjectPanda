@@ -57,7 +57,11 @@
       <DependentUpon>Delivery.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DetailedUserInfo.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml.cs">
+      <DependentUpon>MedicationSearch.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml.cs">
       <DependentUpon>DetailedUserInfo.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -119,7 +123,10 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
@@ -192,7 +199,13 @@
     <Content Include="$(MSBuildThisFileDirectory)Views\flipcodedelivery.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DetailedUserInfo.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
