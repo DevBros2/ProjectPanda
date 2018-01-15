@@ -16,7 +16,7 @@ namespace ProjectPanda.Views.DeliveryViews
         //MedicationSearchViewModel viewModel;
         List<String> Medslist = new List<string>
         {
-            "Drugs","","","","","","","","","","","","","","","","","","","","","","","","","",
+            "Drugs","ibuprofen","baclofen","Protonix","Synthroid","Lyrica","cyclobenzaprine HCL","Namenda Solution","Depakote","Valtrex","","","","","","","","","","","","","","","","",
         };
 
         public MedicationSearch ()
