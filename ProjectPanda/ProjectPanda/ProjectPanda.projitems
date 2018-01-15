@@ -46,9 +46,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationGoogle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationMicrosoft.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DocAvaliableManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserRegistrationManager .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
@@ -60,12 +57,12 @@
       <DependentUpon>Delivery.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DetailedUserInfo.xaml.cs">
-      <DependentUpon>DetailedUserInfo.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml.cs">
+      <DependentUpon>MedicationSearch.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DoctorListView.xaml.cs">
-      <DependentUpon>DoctorListView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml.cs">
+      <DependentUpon>DetailedUserInfo.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml.cs">
@@ -126,7 +123,10 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
@@ -160,12 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CamPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DoctorListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -205,7 +199,13 @@
     <Content Include="$(MSBuildThisFileDirectory)Views\flipcodedelivery.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DetailedUserInfo.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
