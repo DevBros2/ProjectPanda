@@ -201,7 +201,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Views\flipcode.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\flipcodedelivery.txt" />
   </ItemGroup>
   <ItemGroup>
