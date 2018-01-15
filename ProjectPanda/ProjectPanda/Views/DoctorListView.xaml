@@ -4,43 +4,6 @@
              x:Class="ProjectPanda.Views.DoctorListView"
              BackgroundColor="{StaticResource BackgroundColor}
              >
-    <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="DoctorList"
-                      SeparatorVisibility="Default"
-                      SeparatorColor="White"       
-                      ItemsSource="{Binding Doctors}"
-                      VerticalOptions="FillAndExpand"
-                      HasUnevenRows="True"
-                      IsPullToRefreshEnabled="true" 
-                      CachingStrategy="RecycleElement"
-                      ItemTapped="Make_Button_Visable">
-                
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                          
-                                
-                                <StackLayout Padding="10">
-                                <Label Text="{Binding Name}" 
-                                 LineBreakMode="NoWrap"                        
-                                FontSize="16"
-                                TextColor="Black"/>
-                                <Label Text="{Binding Varsity}" 
-                                 LineBreakMode="NoWrap"
-                                 FontSize="13"
-                                 TextColor="Green"/>
-                                <Button Text="Profile"
-                                        BackgroundColor="{StaticResource ButtonLoginColour}" 
-                                        IsVisible="{Binding IsVisible}"/>
-                                </StackLayout>
-                           
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </StackLayout>
-    </ContentPage.Content>
+ 
    
 </ContentPage>
