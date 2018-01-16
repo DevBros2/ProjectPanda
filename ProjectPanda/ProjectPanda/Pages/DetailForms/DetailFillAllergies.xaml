@@ -2,84 +2,74 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectPanda.Pages.DetailFillAllergies"
              BackgroundColor="{StaticResource BackgroundColor}"
             Title="Allergies"
+            
              >
-	<ContentPage.Content>
 
+
+
+
+    
         <ScrollView>
-            <StackLayout>
 
 
+            <StackLayout Padding="10">
 
-                <Grid HorizontalOptions="Center">
-
+                <Grid Padding="15">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
                         <RowDefinition Height="380"/>
-                        <RowDefinition Height="90"/>
-
-
-
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <StackLayout Grid.Row="0" >
-                    <Grid VerticalOptions="Start" Margin="0,30,0,0"  >
+                    <StackLayout Grid.Row="0" VerticalOptions="Start">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="230"/>
-                            <ColumnDefinition Width="*"/>
+                            <Label Grid.Column="0" Grid.Row="0" Text="Are you Allergic to anything?" Style="{DynamicResource DetailFillFormLabels}"/>
 
-                        </Grid.ColumnDefinitions>
+                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0"/>
 
-
-                        <Label Grid.Column="0" HorizontalOptions="Center"  WidthRequest="250" Margin="20,0,0,0" Style="{DynamicResource DetailFillFormLabels}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Have Allergies?"/>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-
-                        <Switch Grid.Column="1" HorizontalOptions="Center" Margin="10,0,0,10" VerticalOptions="Center"/>
-
-
-                        
-
-                    </Grid>
+                        </Grid>
                     </StackLayout>
 
+                    <StackLayout Grid.Row="1" >
 
-                    <StackLayout  Grid.Row="1" >
-                        <!--The code for the list view needs to go here-->
+                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="allergySearch">
+                            <SearchBar CancelButtonColor="Red" VerticalOptions="Start"/>
+                        </Frame>
+
                     </StackLayout>
 
-                    <StackLayout Grid.Row="2"  Margin="8">
-                          <Image Source="continueArrow.png"  Aspect="AspectFill" Grid.Row="8" HorizontalOptions="End">
+                    <StackLayout Grid.Row="2" HorizontalOptions="End" VerticalOptions="End" AbsoluteLayout.LayoutBounds=".5,0,100,25" AbsoluteLayout.LayoutFlags="PositionProportional">
+                        <Image Source="continueArrow.png"  Aspect="AspectFill" >
 
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="MainProfilePageNav"/>
-                    </Image.GestureRecognizers>
-                    
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MainProfilePageNav"/>
+                        </Image.GestureRecognizers>
+
                     </Image>
                     </StackLayout>
-                
-                
+
+
                 </Grid>
-
-
-
-
-
-
-
-
             </StackLayout>
-
 
 
 
 
         </ScrollView>
 
-    </ContentPage.Content>
+
+
+
+   
+
+
 </ContentPage>
