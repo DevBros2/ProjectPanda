@@ -1,42 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.DoctorListView">
-    <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="DoctorList"
-                      SeparatorVisibility="Default"
-                      SeparatorColor="White"
-                      ItemsSource="{Binding Doctors}"
-                      VerticalOptions="FillAndExpand"
-                      HasUnevenRows="True"
-                      IsPullToRefreshEnabled="True"
-                      CachingStrategy="RecycleElement"
-                      ItemTapped="DoctorList_ItemTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+             x:Class="ProjectPanda.Views.DoctorListView"
+             BackgroundColor="{StaticResource BackgroundColor}" >
+    
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="10,20,10,0"
+                    Android="10,0"
+                    WinPhone="10,0"/>
 
-                            <StackLayout Padding="10">
+    </ContentPage.Padding>
 
-                                <Label Text="{Binding Name}" 
-                                 LineBreakMode="NoWrap"                        
-                                FontSize="16"
-                                TextColor="Black"/>
+    <ListView SeparatorVisibility="None" 
+        ItemsSource="{Binding Doctors}">
+        <ListView.RowHeight>
+            <OnPlatform x:TypeArguments="x:Int32"
+                        iOS="80"
+                        Android="80"
+                        WinPhone="90" />
+        </ListView.RowHeight>
 
-                                <Label Text="{Binding Varsity}" 
-                                 LineBreakMode="NoWrap"
-                                 FontSize="13"
-                                 TextColor="Green"/>
-                                <Button Text="Profile"
-                                        BackgroundColor="{StaticResource ButtonLoginColour}" 
-                                        IsVisible="{Binding IsVisible}"/>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ContentView Padding="5">
+                        <Frame OutlineColor="Azure"
+                               Padding="10"
+                               CornerRadius="7">
+                            <StackLayout Orientation="Horizontal">
+                                <BoxView x:Name="boxview"
+                                         WidthRequest="50"
+                                         HeightRequest="50"
+                                         />
+                                <StackLayout>
+                                    <Label Text="{Binding Name}"
+                                           FontSize="22"
+                                           VerticalOptions="StartAndExpand"
+                                           TextColor="Black"/>
+                                    <Label Text="{Binding Varsity}"
+                                           FontSize="14"
+                                           VerticalOptions="CenterAndExpand"
+                                           TextColor="Green"/>
+                                </StackLayout>
+
                             </StackLayout>
-                            
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentPage.Content>
+                        </Frame>
+                    </ContentView>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+              
+    
 </ContentPage>
