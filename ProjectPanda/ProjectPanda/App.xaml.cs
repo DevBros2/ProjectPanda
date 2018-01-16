@@ -18,7 +18,7 @@ namespace ProjectPanda
             //InitApp();
 //
             //MainPage = new ProjectPanda.MainPage();
-            MainPage = new NavigationPage(new Pages.SplashPage());
+            //MainPage = new NavigationPage(new Pages.SplashPage());
             MainPage = new NavigationPage(new ProjectPanda.Pages.MainPage());
         }
 
@@ -30,6 +30,7 @@ namespace ProjectPanda
              *      run app normally
              * else
              *  Return location
+
              */
         }
 
