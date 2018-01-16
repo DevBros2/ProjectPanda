@@ -34,7 +34,7 @@
 
                             <StackLayout Margin="15,10,15,10" Grid.Row="1" >
                                 <Frame BackgroundColor="White" VerticalOptions="FillAndExpand" HeightRequest="50" OutlineColor="Black" x:Name="DocPrescription"  CornerRadius="8">
-
+                                    
                                 </Frame>
                             </StackLayout>
 
