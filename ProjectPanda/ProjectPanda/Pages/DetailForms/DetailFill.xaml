@@ -7,22 +7,22 @@
 
         <ScrollView>
 
-            <Grid  Padding="20">
+            <Grid  Padding="15">
                 <Grid.ColumnDefinitions>
 
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
 
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
 
 
                 </Grid.RowDefinitions>
@@ -30,24 +30,24 @@
 
 
 
-                <StackLayout  Grid.Row="1" Style="{DynamicResource DetailFillFont}">
+                <StackLayout Margin="10,30,10,20" Grid.Row="1" Style="{DynamicResource DetailFillFont}">
                     <Entry  x:Name="first_name" Placeholder="First Name"  />
                 </StackLayout>
 
 
-                <StackLayout Grid.Row="2" >
+                <StackLayout Margin="10,20,10,20" Grid.Row="2" >
                     <Entry  x:Name="surname"   Placeholder="Surname" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="3" >
+                <StackLayout Margin="10,20,10,20" Grid.Row="3" >
                     <Entry  x:Name="email_address"   Placeholder="Email Address"  Keyboard="Email" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="4"   >
+                <StackLayout Margin="10,20,10,20" Grid.Row="4"   >
                     <Entry  x:Name="cellphoneNum"  Placeholder="Cell number"  Keyboard="Numeric" />
                 </StackLayout>
 
-                <StackLayout Grid.Row="5" Style="{DynamicResource DetailFillFont}" >
+                <StackLayout Margin="10,20,10,20" Grid.Row="5" Style="{DynamicResource DetailFillFont}" >
                     <Picker SelectedIndexChanged="bloodPicker_SelectedIndexChanged"  x:Name="bloodPicker" Title="Blood Type"  TextColor="White" Opacity="1">
                         <Picker.Items>
                             
@@ -70,7 +70,7 @@
                 </StackLayout>
 
 
-                <StackLayout Grid.Row="6" Style="{DynamicResource DetailFillFont}" >
+                <StackLayout Margin="10,20,10,20" Grid.Row="6" Style="{DynamicResource DetailFillFont}" >
 
                     <Picker SelectedIndexChanged="medicalAidPicker_SelectedIndexChanged"  x:Name="medicalAidPicker" Title="Medical Aid"  TextColor="White"  >
                         <Picker.Items>
@@ -97,7 +97,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="7" >
+                <StackLayout Margin="10,10,0,10" Grid.Row="7" >
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"/>
