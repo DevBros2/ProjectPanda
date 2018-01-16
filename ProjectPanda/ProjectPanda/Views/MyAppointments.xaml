@@ -9,118 +9,117 @@
 
         <ScrollView>
         <StackLayout>
-            
 
                 <Grid Padding="10">
-                    <Grid.ColumnDefinitions>
-
-                    </Grid.ColumnDefinitions>
-
                     <Grid.RowDefinitions>
-
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-
-
-
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <StackLayout  Margin="30,22,15,0" Grid.Row="0" >
 
-
+                    <StackLayout Grid.Row="0" Margin="25,10,15,5">
                         <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
-
-
                     </StackLayout>
 
+                    <StackLayout Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                
+                            </Grid.RowDefinitions>
 
-                    <StackLayout  Grid.Row="1" Margin="15,0,15,0"  >
-                        <Button BackgroundColor="{StaticResource Primary}" 
+                            <StackLayout  Grid.Row="1" Margin="15,0,15,15"  >
+                        
+                            <Button BackgroundColor="{StaticResource Primary}"                                     
+                             Text="Doctor"
+                             TextColor="Black"                   
+                             BorderColor="Black" 
+                            BorderWidth="2" 
+                            HeightRequest="60"
+                            Clicked="Doctor_Button_Clicked"
+                             Image="doct.png"     
+                            Margin="10,20,20,0"
+                            Style="{DynamicResource ButtonFont}"
                     
-                    
-                    Text="Doctor"
-                    TextColor="Black"
-                    
-                    BorderColor="Black" 
-                    BorderWidth="2" 
-                    HeightRequest="60"
-                    Clicked="Doctor_Button_Clicked"
-                     Image="doct.png"     
-                    Margin="10,20,20,0"
-                    Style="{DynamicResource ButtonFont}"
-                    
-                    />
+                            />
+
+                            </StackLayout>
+
+                            <StackLayout  Grid.Row="2" Margin="15,0,15,15" >
+                                <Button TextColor="Black"
+                                WidthRequest="23"
+                                HeightRequest="60"
+                                BackgroundColor="{StaticResource Primary}"
+                                Text="Date" 
+                                 Style="{DynamicResource ButtonFont}"          
+                                BorderColor="Black" 
+                                BorderWidth="2"  
+                               Image="calendar64.png"
+                                Margin="10,20,20,0"
                    
+                                />
+                            </StackLayout>
+
+
+                            <!--The date picker-->
+                            <StackLayout Grid.Row="2" Margin="30,22,38,0">
+                                <DatePicker  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                                    <DatePicker.MinimumDate>
+                                        01/01/2018
+                                    </DatePicker.MinimumDate>
+
+                                    <DatePicker.MaximumDate>
+                                        03/01/2018
+                                    </DatePicker.MaximumDate>
+
+                                    <DatePicker.Date>
+                                        01/12/2018
+                                    </DatePicker.Date>
+                                </DatePicker>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="3" Margin="15,0,15,15" >
+                                <Button TextColor="Black"
+                                WidthRequest="23"
+                                HeightRequest="60"
+                                BackgroundColor="{StaticResource Primary}" 
+                                Text="Time"
+                                Style="{DynamicResource ButtonFont}"
+                                BorderColor="Black" 
+                                BorderWidth="2"
+                                  Margin="10,20,20,0"                 
+                                Image="clock.png"
+                                />
+                            </StackLayout>
+
+                            <!--The Time Picker-->
+                            <StackLayout Grid.Row="3" Margin="30,22,38,0">
+                             <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="Timepick" />
+                            </StackLayout>
+                            
+                            
+
+                        </Grid>
                     </StackLayout>
 
 
-                    <StackLayout  Grid.Row="2" Margin="15,0,15,0" >
-                        <Button TextColor="Black"
-                    WidthRequest="23"
-                    HeightRequest="60"
-                    BackgroundColor="{StaticResource Primary}"
-                    Text="Date" 
-                     Style="{DynamicResource ButtonFont}"          
-                    BorderColor="Black" 
-                    BorderWidth="2"  
-                   Image="calendar64.png"
-                     Margin="10,20,20,0"
-                   
-                  />
-                    </StackLayout>
-
-                    <!--The date picker-->
-                    <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                    <DatePicker  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
-                        <DatePicker.MinimumDate>
-                            01/01/2018
-                        </DatePicker.MinimumDate>
-
-                        <DatePicker.MaximumDate>
-                            03/01/2018
-                        </DatePicker.MaximumDate>
-
-                        <DatePicker.Date>
-                           01/12/2018
-                        </DatePicker.Date>
-                    </DatePicker>
-                </StackLayout>
-
-                    <StackLayout Grid.Row="3" Margin="15,0,15,10" >
-                        <Button TextColor="Black"
-                    WidthRequest="23"
-                    HeightRequest="60"
-                    BackgroundColor="{StaticResource Primary}" 
-                    Text="Time"
-                    Style="{DynamicResource ButtonFont}"
-                    BorderColor="Black" 
-                    BorderWidth="2"
-                      Margin="10,20,20,0"                 
-                    Image="clock.png"
-                    />
-                    </StackLayout>
-
-                    <StackLayout Grid.Row="3" Margin="30,22,38,0">
-                        <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="Timepick" />
-                    </StackLayout>
-
-
-                    <StackLayout   Grid.Row="4" Margin="24,18,34,22"  VerticalOptions="Start" >
-                    <Image Source="check.png" IsVisible="True">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Confirm"/>
-                        </Image.GestureRecognizers>
-                    </Image>
-                    </StackLayout>
-
-
-
-             
+                    
+                        <StackLayout   Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" >
+                            <Image Source="check.png" IsVisible="True">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Confirm"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    
+                
+                
                 </Grid>
 
+              
             
         </StackLayout>
         </ScrollView>
