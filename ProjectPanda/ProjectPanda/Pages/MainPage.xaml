@@ -20,7 +20,7 @@
 
                     <Button x:Name="Menu_btn3" 
                              Text="Payments" 
-                              BackgroundColor="LightGreen" 
+                              BackgroundColor="{StaticResource Primary}" 
                                BorderWidth="2"
                               WidthRequest="222" 
                               HeightRequest="54"
@@ -40,7 +40,7 @@
 
                     <Button x:Name="Menu_btn2"
                                 Text="Settings"
-                                BackgroundColor="LightGreen" 
+                                BackgroundColor="{StaticResource Primary}" 
                                 BorderWidth="2"
                                 WidthRequest="222" 
                                 HeightRequest="54"
@@ -59,7 +59,7 @@
 
                     <Button x:Name="Menu_btn4" 
                                  Text="Contact us"
-                                BackgroundColor="LightGreen"
+                                BackgroundColor="{StaticResource Primary}"
                                BorderWidth="2"
                                 WidthRequest="222"
                                 HeightRequest="54"
@@ -76,7 +76,7 @@
 
 
 
-                    <Button Text="Log out" Image="logout.png"  BackgroundColor="LightGreen" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"   Clicked="Logout_Button_Clicked"/>
+                    <Button Text="Log out" Image="logout.png"  BackgroundColor="{StaticResource Primary}" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"   Clicked="Logout_Button_Clicked"/>
 
                 </StackLayout>
                 <!--Tabb.MasterPage(Menu)-->

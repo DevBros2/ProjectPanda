@@ -54,7 +54,7 @@
                             </Grid.RowDefinitions>
 
                             <!--The Medical aid part-->
-                            <StackLayout Grid.Row="0"   Margin="20,0,20,10">
+                            <StackLayout Grid.Row="0"   Margin="10,0,20,10">
 
                             <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
@@ -100,7 +100,7 @@
                             </StackLayout>
 
                             <!--The blood type-->
-                        <StackLayout Grid.Row="1"   Margin="20,0,20,10">
+                        <StackLayout Grid.Row="1"   Margin="10,0,20,10">
 
                             <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
@@ -147,7 +147,7 @@
 
 
                         <!--The Sex of the customer-->
-                        <StackLayout Grid.Row="2"   Margin="20,0,20,10">
+                        <StackLayout Grid.Row="2"   Margin="10,0,20,10">
 
                             <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 
@@ -194,7 +194,7 @@
 
 
                         <!--The age of the users-->
-                        <StackLayout Grid.Row="3"   Margin="20,0,20,10">
+                        <StackLayout Grid.Row="3"   Margin="10,0,20,10">
 
                             <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
 

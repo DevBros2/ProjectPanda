@@ -56,7 +56,7 @@
                                 </Picker>
 
 
-                                <Picker x:Name="picker2" Title="Medical Aid"  TextColor="White"  >
+                                <Picker x:Name="picker2" Title="Medical Aid"  TextColor="Black"  >
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>Discovery Health</x:String>
