@@ -13,8 +13,12 @@
 
     </ContentPage.Padding>
 
-    <ListView SeparatorVisibility="None" 
-        ItemsSource="{Binding Doctors}">
+    <ListView x:Name="DoctorList"
+              SeparatorVisibility="None" 
+              ItemsSource="{Binding Doctors}"
+              IsPullToRefreshEnabled="True"
+              CachingStrategy="RecycleElement"
+              ItemTapped="DoctorList_ItemTapped">
         <ListView.RowHeight>
             <OnPlatform x:TypeArguments="x:Int32"
                         iOS="80"
@@ -43,6 +47,9 @@
                                            FontSize="14"
                                            VerticalOptions="CenterAndExpand"
                                            TextColor="Green"/>
+                                    <Button Text="Profile"
+                                        BackgroundColor="{StaticResource ButtonLoginColour}" 
+                                        IsVisible="{Binding IsVisible}"/>
                                 </StackLayout>
 
                             </StackLayout>
