@@ -30,14 +30,14 @@
 
                             <Label Grid.Column="0" Grid.Row="0" Text="Do you have any chronic diseases?" Style="{DynamicResource DetailFillFormLabels}" VerticalOptions="Center" FontSize="17"/>
 
-                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0"/>
+                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0" x:Name="showChronicValues" IsToggled="false" Toggled="ChronicSearch"/>
 
                         </Grid>
                     </StackLayout>
 
                     <StackLayout Grid.Row="1" >
 
-                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="allergySearch">
+                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="chronicSearch" IsVisible="False">
                             <SearchBar CancelButtonColor="Red" VerticalOptions="Start"/>
                         </Frame>
 

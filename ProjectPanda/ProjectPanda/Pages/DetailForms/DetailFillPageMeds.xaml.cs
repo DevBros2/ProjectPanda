@@ -12,6 +12,17 @@ namespace ProjectPanda.Pages
             InitializeComponent();
         }
 
+        private void MedSwitch(object sender, ToggledEventArgs e)
+        {
+            if (e.Value == false)
+            {
+                MedsSearch.IsVisible = false;
+            }
+            else
+            {
+                MedsSearch.IsVisible = true;
+            }
+        }
 
         async void MainProfilePageNavStack(object sender, EventArgs e)
         {

@@ -34,14 +34,14 @@
 
                             <Label Grid.Column="0" Grid.Row="0" Text="Are you Allergic to anything?" Style="{DynamicResource DetailFillFormLabels}"/>
 
-                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0"/>
+                        <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0" x:Name="showValues" IsToggled="False" Toggled="showValues_Toggled"/>
 
                         </Grid>
                     </StackLayout>
 
                     <StackLayout Grid.Row="1" >
 
-                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="allergySearch">
+                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="allergySearch" IsVisible="False">
                             <SearchBar CancelButtonColor="Red" VerticalOptions="Start"/>
                         </Frame>
 

@@ -31,14 +31,14 @@
 
                             <Label Grid.Column="0" Grid.Row="0" Text="Do you have any recurring medication?" Style="{DynamicResource DetailFillFormLabels}" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
 
-                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0"/>
+                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0" IsToggled="false" Toggled="MedSwitch" x:Name="medsSwitcher"/>
 
                         </Grid>
                     </StackLayout>
 
                     <StackLayout Grid.Row="1" >
 
-                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="allergySearch">
+                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="MedsSearch">
                             <SearchBar CancelButtonColor="Red" VerticalOptions="Start"/>
                         </Frame>
 

@@ -13,9 +13,24 @@ namespace ProjectPanda.Pages
 
         }
 
+
+        private void showValues_Toggled(object sender, ToggledEventArgs e)
+        {
+            //this toggle switch displayes or hides the search bar icon
+            if (e.Value == false)
+            {
+                allergySearch.IsVisible = false;
+            }
+            else
+            {
+                allergySearch.IsVisible = true;
+            }
+        }
+
         async void MainProfilePageNav(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new DetailFillPageMeds());
         }
+
     }
 }

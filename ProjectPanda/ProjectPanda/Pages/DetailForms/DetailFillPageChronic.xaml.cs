@@ -12,11 +12,25 @@ namespace ProjectPanda.Pages
             InitializeComponent();
         }
 
+        private void ChronicSearch(object sender, ToggledEventArgs e)
+        {
+            if (e.Value == false)
+            {
+                chronicSearch.IsVisible = false;
 
+            }
+            else
+            {
+                chronicSearch.IsVisible = true;
+            }
+        }
 
         async void NextDetailfillPageAllergies(object sender, EventArgs args)
         {
             await Navigation.PushModalAsync(new DetailFillAllergies());
         }
+
+
+       
     }
 }
