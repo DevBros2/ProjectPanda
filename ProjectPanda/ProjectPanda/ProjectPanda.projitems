@@ -55,6 +55,7 @@
       <DependentUpon>CamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CustomEntry\EntryBlock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Delivery.xaml.cs">
       <DependentUpon>Delivery.xaml</DependentUpon>
       <SubType>Code</SubType>
