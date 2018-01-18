@@ -3,38 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.MyAppointments"
              BackgroundColor="{StaticResource BackgroundColor}"
-            
+              xmlns:xfFlipViewControl="clr-namespace:ProjectPanda.Models"
+             xmlns:refrencePage="clr-namespace:ProjectPanda.Views.AppoinmentViews"
              >
     <ContentPage.Content>
 
-        <ScrollView>
-        <StackLayout>
+      
 
-                <Grid Padding="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+        <Grid Padding="10">
+            <xfFlipViewControl:XFFlipView  x:Name="XFFlipViewControl1"  Grid.Row="0" Grid.Column="0">
 
 
-                    <StackLayout Grid.Row="0" Margin="25,10,15,5">
-                        <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
-                    </StackLayout>
+                <xfFlipViewControl:XFFlipView.FrontView>
 
-                    <StackLayout Grid.Row="1">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                
-                            </Grid.RowDefinitions>
+                    <Frame >
 
-                            <StackLayout  Grid.Row="1" Margin="15,0,15,15"  >
-                        
-                            <Button BackgroundColor="{StaticResource Primary}"                                     
+
+
+                       
+                                <!--The front page of the appoitment-->
+                            <ScrollView>
+                                <StackLayout>
+
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+
+                                        <StackLayout Grid.Row="0" Margin="25,10,15,5">
+                                            <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="1">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+
+                                                </Grid.RowDefinitions>
+
+                                                <StackLayout  Grid.Row="1" Margin="15,0,15,15"  >
+
+                                                    <Button BackgroundColor="{StaticResource Primary}"                                     
                              Text="Doctor"
                              TextColor="Black"                   
                              BorderColor="Black" 
@@ -47,10 +62,10 @@
                     
                             />
 
-                            </StackLayout>
+                                                </StackLayout>
 
-                            <StackLayout  Grid.Row="2" Margin="15,0,15,15" >
-                                <Button TextColor="Black"
+                                                <StackLayout  Grid.Row="2" Margin="15,0,15,15" >
+                                                    <Button TextColor="Black"
                                 WidthRequest="23"
                                 HeightRequest="60"
                                 BackgroundColor="{StaticResource Primary}"
@@ -62,28 +77,28 @@
                                 Margin="10,20,20,0"
                    
                                 />
-                            </StackLayout>
+                                                </StackLayout>
 
 
-                            <!--The date picker-->
-                            <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                                <DatePicker  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
-                                    <DatePicker.MinimumDate>
-                                        01/01/2018
-                                    </DatePicker.MinimumDate>
+                                                <!--The date picker-->
+                                                <StackLayout Grid.Row="2" Margin="30,22,38,0">
+                                                    <DatePicker  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                                                        <DatePicker.MinimumDate>
+                                                            01/01/2018
+                                                        </DatePicker.MinimumDate>
 
-                                    <DatePicker.MaximumDate>
-                                        03/01/2018
-                                    </DatePicker.MaximumDate>
+                                                        <DatePicker.MaximumDate>
+                                                            03/01/2018
+                                                        </DatePicker.MaximumDate>
 
-                                    <DatePicker.Date>
-                                        01/12/2018
-                                    </DatePicker.Date>
-                                </DatePicker>
-                            </StackLayout>
+                                                        <DatePicker.Date>
+                                                            01/12/2018
+                                                        </DatePicker.Date>
+                                                    </DatePicker>
+                                                </StackLayout>
 
-                            <StackLayout Grid.Row="3" Margin="15,0,15,15" >
-                                <Button TextColor="Black"
+                                                <StackLayout Grid.Row="3" Margin="15,0,15,15" >
+                                                    <Button TextColor="Black"
                                 WidthRequest="23"
                                 HeightRequest="60"
                                 BackgroundColor="{StaticResource Primary}" 
@@ -94,40 +109,145 @@
                                   Margin="10,20,20,0"                 
                                 Image="clock.png"
                                 />
-                            </StackLayout>
+                                                </StackLayout>
 
-                            <!--The Time Picker-->
-                            <StackLayout Grid.Row="3" Margin="30,22,38,0">
-                             <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="Timepick" />
-                            </StackLayout>
-                            
-                            
-
-                        </Grid>
-                    </StackLayout>
+                                                <!--The Time Picker-->
+                                                <StackLayout Grid.Row="3" Margin="30,22,38,0">
+                                                    <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="Timepick" />
+                                                </StackLayout>
 
 
-                    
-                        <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
-                            <Image Source="check.png" IsVisible="True">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Confirm"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+
+                                            </Grid>
+                                        </StackLayout>
+
+
+
+                                        <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
+                                            <Image Source="check.png" IsVisible="True">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="Confirm"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </StackLayout>
+
+
+                                        <StackLayout Grid.Row="2" HorizontalOptions="Center" >
+
+                                            <Editor  HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="200" WidthRequest="300" BackgroundColor="White" Style="{DynamicResource BodyStyle}" />
+
+                                        </StackLayout>
+
+                                    </Grid>
+
+
+
+                                </StackLayout>
+                            </ScrollView>
+
+                       
+
+                    </Frame>
+
+                </xfFlipViewControl:XFFlipView.FrontView>
+
+
+                <xfFlipViewControl:XFFlipView.BackView>
+                 
+                        <ScrollView>
+                        <StackLayout  Grid.Row="5"  Margin="15,10,15,0">
+                            <Frame OutlineColor="Black" BackgroundColor="#ccdbc3">
+                                <Label Text="Next Appointment" 
+                  
+                   FontSize="25" 
+                   TextColor="Black"
+                   VerticalTextAlignment="Center"
+                  HorizontalTextAlignment="Center"
+                                    
+                        
+                   
+                     />
+                            </Frame>
                         </StackLayout>
 
 
-                    <StackLayout Grid.Row="2" HorizontalOptions="Center" >
-                     
-                            <Editor  HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="200" WidthRequest="300" BackgroundColor="White" Style="{DynamicResource BodyStyle}" />
-                        
-                    </StackLayout>
-                
-                </Grid>
+                        <StackLayout Grid.Row="6" Margin="15,10,15,8">
+                            <Frame  BackgroundColor="White" CornerRadius="8">
+                                <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
+                                    <Label.FormattedText>
+                                        <FormattedString >
+                                            <Span Text= "Date:" />
+                                            <Span Text=" "/>
+                                            <Span  Text="" x:Name="TheDateForAppointment" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="7" Margin="15,0,15,8">
+                            <Frame BackgroundColor="White" CornerRadius="8">
+                                <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Time :"/>
+                                            <Span Text=" "/>
+                                            <Span Text="" x:Name="TheTimeForAppointment"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Row="8" Margin="15,0,15,8"  >
+
+                            <Frame BackgroundColor="White" CornerRadius="8">
+                                <Label   TextColor="Black" FontSize="20" VerticalTextAlignment="Center" x:Name="Place" LineBreakMode="TailTruncation" >
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Place:" />
+                                            <Span Text="" x:Name="NameOfPractice" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                            </Frame>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Row="9" Margin="15,0,15,10">
+                            <Frame BackgroundColor="White" CornerRadius="8">
+                                <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="Doctor" LineBreakMode="TailTruncation">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Doctor :"/>
+                                            <Span Text=" "/>
+                                            <Span Text="" x:Name="NameOfDoctor"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Row="10">
+                            <Button Text="Cancel" BorderWidth="2"  BorderRadius="2" BorderColor="Black" BackgroundColor="Red" HorizontalOptions="Center" TextColor="White" x:Name="CancelAppoint" />
+                        </StackLayout>
+
+                    </ScrollView>
+                    
+                </xfFlipViewControl:XFFlipView.BackView>
 
               
-            
-        </StackLayout>
-        </ScrollView>
+
+            </xfFlipViewControl:XFFlipView>
+
+
+
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

@@ -19,7 +19,7 @@ namespace ProjectPanda
 //
             //MainPage = new ProjectPanda.MainPage();
            // MainPage = new NavigationPage(new Pages.SplashPage());
-            MainPage = new NavigationPage(new DoctorListView());
+            MainPage = new NavigationPage(new MainPage());
         }
 
 		protected override void OnStart ()
