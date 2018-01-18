@@ -65,7 +65,7 @@
                                         </Grid.ColumnDefinitions>
 
 
-                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
+                                    <StackLayout  Grid.Column="0" VerticalOptions="Center" >
                                         <Image Source="hospital.png"   HorizontalOptions="Start" Aspect="AspectFit" />
                                     </StackLayout>
                                         

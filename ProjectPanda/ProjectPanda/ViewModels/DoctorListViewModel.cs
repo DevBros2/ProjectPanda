@@ -27,23 +27,23 @@ namespace ProjectPanda.ViewModels
             {
                   Doctors = new ObservableCollection<DocAvaliable>
                 {
-                    new DocAvaliable{ Name = "Dr Zulu ", Varsity="MBchB(Ukzn)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Duma ", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Moody ", Varsity="MBchB(Wits)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr McGhee ", Varsity="MBchB(Stellenbosch)",IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Naidoo", Varsity="MBchB(Ukzn)",IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Ngwenya ", Varsity="MBchB(UFS)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Miller", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Ronaldo ", Varsity="MBchB(Wits)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Buthelezi ", Varsity="MBchB(Stellenbosch)",IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Moodley", Varsity="MBchB(Ukzn)",IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Matsoso ", Varsity="MBchB(UP)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Ngcobo ", Varsity="MBchB(Stellenbosch)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Miller", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Xulu ", Varsity="MBchB(Wits)", IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Ronaldo ", Varsity="MBchB(UFS)",IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Moodley", Varsity="MBchB(Ukzn)",IsVisible = false},
-                    new DocAvaliable{ Name = "Dr Matsoso ", Varsity="MBchB(Stellenbosch)", IsVisible = false}
+                    new DocAvaliable{ Name = "Dr Zulu ", Varsity="MBchB(Ukzn)",ProfileImageURl="userplaceholder.png" , IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Duma ", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Moody ", Varsity="MBchB(Wits)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr McGhee ", Varsity="MBchB(Stellenbosch)",ProfileImageURl="userplaceholder.png",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Naidoo", Varsity="MBchB(Ukzn)",ProfileImageURl="userplaceholder.png",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ngwenya ", Varsity="MBchB(UFS)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Miller", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ronaldo ", Varsity="MBchB(Wits)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Buthelezi ", Varsity="MBchB(Stellenbosch)",ProfileImageURl="userplaceholder.png",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Moodley", Varsity="MBchB(Ukzn)",ProfileImageURl="userplaceholder.png",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Matsoso ", Varsity="MBchB(UP)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ngcobo ", Varsity="MBchB(Stellenbosch)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Miller", Varsity="MBchB(UWC),FC Orth(SA),Mmed Ortho(Natal)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Xulu ", Varsity="MBchB(Wits)",ProfileImageURl="userplaceholder.png", IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Ronaldo ", Varsity="MBchB(UFS)",ProfileImageURl="userplaceholder.png",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Moodley", Varsity="MBchB(Ukzn)",ProfileImageURl="userplaceholder.png",IsVisible = false},
+                    new DocAvaliable{ Name = "Dr Matsoso ", Varsity="MBchB(Stellenbosch)",ProfileImageURl="userplaceholder.png", IsVisible = false}
                 };
 
 

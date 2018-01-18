@@ -3,62 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.DoctorListView"
              BackgroundColor="{StaticResource BackgroundColor}" >
-    
-    
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-                    iOS="10,20,10,0"
-                    Android="10,0"
-                    WinPhone="10,0"/>
+    <ContentPage.Content>
 
-    </ContentPage.Padding>
-
-    <ListView x:Name="DoctorList"
+        <ListView x:Name="DoctorList"
               SeparatorVisibility="None" 
+                  HasUnevenRows="True"
               ItemsSource="{Binding Doctors}"
-              IsPullToRefreshEnabled="True"
               CachingStrategy="RecycleElement"
-              ItemTapped="DoctorList_ItemTapped">
-        <ListView.RowHeight>
-            <OnPlatform x:TypeArguments="x:Int32"
-                        iOS="80"
-                        Android="80"
-                        WinPhone="90" />
-        </ListView.RowHeight>
+                  HeightRequest="20"
+                  SelectedItem="DoctorList_ItemSelected"
+                  ItemSelected="DoctorList_ItemSelected">
 
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <ContentView Padding="5">
-                        <Frame OutlineColor="Azure"
-                               Padding="10"
-                               CornerRadius="7">
-                            <StackLayout Orientation="Horizontal">
-                                <BoxView x:Name="boxview"
-                                         WidthRequest="50"
-                                         HeightRequest="50"
-                                         />
-                                <StackLayout>
-                                    <Label Text="{Binding Name}"
-                                           FontSize="22"
-                                           VerticalOptions="StartAndExpand"
-                                           TextColor="Black"/>
-                                    <Label Text="{Binding Varsity}"
-                                           FontSize="14"
-                                           VerticalOptions="CenterAndExpand"
-                                           TextColor="Green"/>
-                                    <Button Text="Profile"
-                                        BackgroundColor="{StaticResource ButtonLoginColour}" 
-                                        IsVisible="{Binding IsVisible}"/>
-                                </StackLayout>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="5">
 
-                            </StackLayout>
-                        </Frame>
-                    </ContentView>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-              
-    
+                            <Frame OutlineColor="LimeGreen"  Padding="10"  CornerRadius="7"  VerticalOptions="StartAndExpand">
+
+                                <Grid Padding="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  Height="Auto"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+
+                                        <ColumnDefinition Width="Auto"/>
+
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand"  Orientation="Horizontal">
+
+                                        <Image Source="{Binding ProfileImageURl}" HeightRequest="30" Margin=" 8" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"/>
+
+                                    </StackLayout>
+
+
+                                    <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="3,1,1,10">
+                                        <Label Text="{Binding Name}" FontSize="16" VerticalOptions="StartAndExpand" TextColor="Black"/>
+                                        <Label  Text="{Binding Varsity}" FontSize="10" VerticalOptions="CenterAndExpand" TextColor="Green"/>
+                                    </StackLayout>
+
+
+
+                                </Grid>
+
+
+                            </Frame>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </ContentPage.Content>
+
 </ContentPage>

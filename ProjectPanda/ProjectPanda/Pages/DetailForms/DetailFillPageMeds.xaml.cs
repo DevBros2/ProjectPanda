@@ -26,7 +26,7 @@ namespace ProjectPanda.Pages
 
         async void MainProfilePageNavStack(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ProjectPanda.MainPage());
+            await Navigation.PushModalAsync(new MainPage());
         }
 
 
