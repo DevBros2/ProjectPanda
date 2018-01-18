@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
+
 namespace ProjectPanda.Models
 {
     public class UserRegistration
@@ -31,7 +32,7 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "Dependencies")]
         public bool Dependencies { get; set; }
 
-
+        //add other properties like chronic diseases and meds taking 
 
     }
 }

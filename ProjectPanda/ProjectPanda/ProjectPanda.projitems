@@ -12,6 +12,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\IFileHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalDataBase\UserInformation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Camera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DocAvaliable.cs" />
@@ -131,7 +133,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />

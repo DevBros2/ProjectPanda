@@ -92,6 +92,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="RoundedEntryIOS.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
     <None Include="app.config" />
     <BundleResource Include="Connected Services\ProjectPandaMobileApp\ConnectedService.json" />
     <None Include="Entitlements.plist" />
