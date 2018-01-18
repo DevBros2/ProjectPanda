@@ -16,7 +16,7 @@
 
                 <xfFlipViewControl:XFFlipView.FrontView>
 
-                    <Frame >
+                 
 
 
 
@@ -35,7 +35,9 @@
 
 
                                         <StackLayout Grid.Row="0" Margin="25,10,15,5">
+                                         <Frame  OutlineColor="Black" BackgroundColor="#ccdbc3">
                                             <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
+                                         </Frame>
                                         </StackLayout>
 
                                         <StackLayout Grid.Row="1">
@@ -147,15 +149,15 @@
 
                        
 
-                    </Frame>
-
+                   
                 </xfFlipViewControl:XFFlipView.FrontView>
 
 
                 <xfFlipViewControl:XFFlipView.BackView>
                  
                         <ScrollView>
-                        <StackLayout  Grid.Row="5"  Margin="15,10,15,0">
+                        <StackLayout>
+                            <StackLayout  Grid.Row="5"  Margin="15,10,15,0">
                             <Frame OutlineColor="Black" BackgroundColor="#ccdbc3">
                                 <Label Text="Next Appointment" 
                   
@@ -172,7 +174,7 @@
 
 
                         <StackLayout Grid.Row="6" Margin="15,10,15,8">
-                            <Frame  BackgroundColor="White" CornerRadius="8">
+                                <Frame  BackgroundColor="White" CornerRadius="8">
                                 <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
                                     <Label.FormattedText>
                                         <FormattedString >
@@ -236,7 +238,7 @@
                         <StackLayout Grid.Row="10">
                             <Button Text="Cancel" BorderWidth="2"  BorderRadius="2" BorderColor="Black" BackgroundColor="Red" HorizontalOptions="Center" TextColor="White" x:Name="CancelAppoint" />
                         </StackLayout>
-
+                        </StackLayout>
                     </ScrollView>
                     
                 </xfFlipViewControl:XFFlipView.BackView>

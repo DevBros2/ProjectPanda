@@ -17,15 +17,26 @@ namespace ProjectPanda.Views
 			InitializeComponent ();
 		}
 
-        private void Doctor_Button_Clicked(object sender, EventArgs e)
+        async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new DoctorListView());
+            // var newpage = await NavigationPage(new DoctorListView());
 
-            Navigation.PushAsync(new DoctorListView());
         }
 
 
+        //the event handler for the date picker
 
+        private void Datepick(object sender, DateChangedEventArgs args)
+        {
+            //
+        }
 
+        private void Confirm(object sender, EventArgs e)
+        {
+            //code to confirm the appointemnt 
+            XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+        }
 
 
     }
