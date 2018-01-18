@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ProjectPanda.Views
+namespace ProjectPanda.Views.AppoinmentViews
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MyAppointments : ContentPage
+	public partial class AppoitmentFront : ContentPage
 	{
-		public MyAppointments ()
+		public AppoitmentFront ()
 		{
 			InitializeComponent ();
 		}
+
+
 
         async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
@@ -34,8 +36,7 @@ namespace ProjectPanda.Views
 
         private void Confirm(object sender, EventArgs e)
         {
-            //code to confirm the appointemnt 
-            XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+          
         }
 
 

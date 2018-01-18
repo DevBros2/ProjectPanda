@@ -18,6 +18,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicalBuildingModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -48,6 +50,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModel\MedicationSearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentBack.xaml.cs">
+      <DependentUpon>AppoitmentBack.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentFront.xaml.cs">
+      <DependentUpon>AppoitmentFront.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CamPage.xaml.cs">
       <DependentUpon>CamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -125,7 +135,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +221,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DoctorListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentFront.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentBack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

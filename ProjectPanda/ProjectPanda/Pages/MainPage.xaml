@@ -6,7 +6,7 @@
              MasterBehavior="Split"
               Title="Serapis Medical"
                NavigationPage.TitleIcon="Menu"
-                
+                  xmlns:appoitmentPages="clr-namespace:ProjectPanda.Views.AppointmentDetailsFlipxaml"
                   >
 
     <MasterDetailPage.Master >
@@ -97,7 +97,7 @@
 
 
 
-                <Page:MyAppointments  Icon="calendar2.png"  />
+                <Page:MyAppointments Icon="calendar2.png"  />
 
 
 
