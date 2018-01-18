@@ -15,6 +15,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
 
@@ -107,15 +108,20 @@
 
 
                     
-                        <StackLayout   Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" >
+                        <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
                             <Image Source="check.png" IsVisible="True">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Confirm"/>
                                 </Image.GestureRecognizers>
                             </Image>
                         </StackLayout>
-                    
-                
+
+
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" >
+                     
+                            <Editor  HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="200" WidthRequest="300" BackgroundColor="White" Style="{DynamicResource BodyStyle}" />
+                        
+                    </StackLayout>
                 
                 </Grid>
 
