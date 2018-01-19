@@ -40,5 +40,13 @@ namespace ProjectPanda.Views
 
             MedicalBuilding.SelectedItem = null;
         }
+
+
+
+
+    //the following is for the charts
+
+
+
     }
 }
