@@ -6,9 +6,9 @@ namespace ProjectPanda.Models
 {
     public class MedicalBuildingModel
     {
-        public string HeadTitle { get; set; }
-        public string HeadLines { get; set; }
-        public string HeadLinesDesc { get; set; }
-        public string ProfileImage { get; set; }
+        public string ProfileImage {get; set; }
+        public string PracticeName { get; set; }
+        public string Charts { get; set; }
+        public double Distance { get; set; }
     }
 }

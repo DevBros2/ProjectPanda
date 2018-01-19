@@ -34,7 +34,7 @@
 
                             <StackLayout Margin="15,10,15,10" Grid.Row="1" >
                                 <Frame BackgroundColor="White" VerticalOptions="FillAndExpand" HeightRequest="50" OutlineColor="Black" x:Name="DocPrescription"  CornerRadius="8">
-
+                                    
                                 </Frame>
                             </StackLayout>
 
@@ -75,7 +75,7 @@
                                         </Grid.RowDefinitions>
 
 
-                                        <SearchBar Grid.Row="0" Placeholder="Find Medication" HorizontalOptions="Start"  CancelButtonColor="Red"  />
+                                        <SearchBar Grid.Row="0" Placeholder="Find Medication" HorizontalOptions="Start"  CancelButtonColor="Red"  x:Name="searchMedication" />
 
 
                                     </Grid>

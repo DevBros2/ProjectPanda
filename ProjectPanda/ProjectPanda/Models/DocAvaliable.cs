@@ -18,6 +18,9 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "varsity")]
         public string Varsity { get; set;}
 
+        [JsonProperty(PropertyName = "varsity")]
+        public string ProfileImageURl { get; set; }
+
         [JsonProperty(PropertyName = "complete")]
         public bool Complete { get; set; }
 

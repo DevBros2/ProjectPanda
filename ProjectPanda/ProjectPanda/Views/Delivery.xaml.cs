@@ -19,5 +19,21 @@ namespace ProjectPanda.Views
 
             NavigationPage.SetHasNavigationBar(this, true);
         }
-	}
+
+
+        /*
+              if(the list is empty in the frame){
+                  MedDeliveryButton.IsVisble=false;
+
+              }
+              
+            else{
+           
+                    MedDeliveryButton.IsVisible=true;
+                 }
+
+        */
+
+
+    }
 }

@@ -16,9 +16,13 @@ namespace ProjectPanda.Views
 	public partial class DoctorListView : ContentPage
 	{
         DoctorListViewModel viewmodel;
+        public DocAvaliable DocAvaliable;
+
 		public DoctorListView ()
 		{
 			InitializeComponent ();
+           // DoctorList.On<Android>().SetIsFastScrollEnable(true);
+           
             BindingContext = viewmodel = new DoctorListViewModel();
         }
 
@@ -36,6 +40,16 @@ namespace ProjectPanda.Views
 
             var doctors = e.Item as DocAvaliable;
             vm.HideOrShowProfile(doctors);
+        }
+
+         void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as DocAvaliable;
+            if (item == null)
+                return;
+
+            Navigation.PushAsync(new MedicalBuildingView());
+            DoctorList.SelectedItem = null;
         }
     }
     
