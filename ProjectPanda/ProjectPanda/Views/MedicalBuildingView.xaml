@@ -25,33 +25,53 @@
                                 <Grid Padding="5">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="150"/>
-                                        
-
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="80"/>
-                                        <ColumnDefinition Width="Auto"/>
+                                  
 
-                                        <ColumnDefinition Width="Auto"/>
-                                        
+                                    <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand" Margin="0,0,5,0" Orientation="Horizontal">
 
-                                    </Grid.ColumnDefinitions>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="50"/>
 
 
-                                    <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand"  Orientation="Horizontal">
 
-                                        <Image Source="{Binding ProfileImage}" HeightRequest="70" Margin=" 8" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackLayout Grid.Column="0">
+                                            <Image Source="{Binding ProfileImage}"  HeightRequest="150"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"/>
+                                            </StackLayout>
+
+                                            <StackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="25,0,0,0">
+                                                <Image Source="info.png" IsVisible="True">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="MoreInformation"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
+                                            
+                                        </Grid>
+                                                              
+                                      
 
                                     </StackLayout>
 
 
-                                    <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="3,1,1,10">
-                                        <Label Text="{Binding PracticeName}" FontSize="20" VerticalOptions="StartAndExpand" TextColor="Black"/>
-                                        <Label  Text="{Binding Distance }" FontSize="15" VerticalOptions="CenterAndExpand" TextColor="Green"/>
+                                    <StackLayout Grid.Row="1"  VerticalOptions="StartAndExpand" Margin="3,1,1,10">
+
+                                        <Label Text="{Binding PracticeName}" FontSize="20" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" LineBreakMode="NoWrap" />
+
                                     </StackLayout>
 
-
+                                    <StackLayout Grid.Row="2" Margin="3,1,1,10">
+                                        <Label  Text="{Binding Distance }"   TextColor="Green" Style="{DynamicResource InformationLabel}" LineBreakMode="NoWrap"/>
+                                    </StackLayout>
+                                    
 
                                 </Grid>
 

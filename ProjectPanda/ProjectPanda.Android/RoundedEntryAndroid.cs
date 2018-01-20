@@ -12,12 +12,20 @@ using Android.Widget;
 using Xamarin.Forms;
 using ProjectPanda.Droid;
 using ProjectPanda.Views.CustomEntry;
+using Xamarin.Forms.Platform.Android;
+using Android.Graphics.Drawables;
+
 namespace ProjectPanda.Droid
 {
 
-   
+   [Assembly: Xamarin.Forms.ExportRenderer(typeof(EntryBlock),  typeof(RoundedEntryAndroid))]
     public class RoundedEntryAndroid : EditorRenderer
     {
-      
+        protected override void OnElementChanged(ElementChangedEventArgs<Editor> e)
+        {
+            base.OnElementChanged(e);
+
+          
+        }
     }
 }

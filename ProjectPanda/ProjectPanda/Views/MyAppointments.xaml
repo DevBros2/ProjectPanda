@@ -5,6 +5,8 @@
              BackgroundColor="{StaticResource BackgroundColor}"
               xmlns:xfFlipViewControl="clr-namespace:ProjectPanda.Models"
              xmlns:refrencePage="clr-namespace:ProjectPanda.Views.AppoinmentViews"
+             
+             xmlns:Customizededitor="clr-namespace:ProjectPanda.Views.CustomEntry"
              >
     <ContentPage.Content>
 
@@ -84,7 +86,7 @@
 
                                                 <!--The date picker-->
                                                 <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                                                    <DatePicker  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                                                    <DatePicker Format="D"  HeightRequest="56" WidthRequest="10" BackgroundColor="{StaticResource Primary}" Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
                                                         <DatePicker.MinimumDate>
                                                             01/01/2018
                                                         </DatePicker.MinimumDate>
@@ -101,15 +103,15 @@
 
                                                 <StackLayout Grid.Row="3" Margin="15,0,15,15" >
                                                     <Button TextColor="Black"
-                                WidthRequest="23"
-                                HeightRequest="60"
-                                BackgroundColor="{StaticResource Primary}" 
-                                Text="Time"
-                                Style="{DynamicResource ButtonFont}"
-                                BorderColor="Black" 
-                                BorderWidth="2"
-                                  Margin="10,20,20,0"                 
-                                Image="clock.png"
+                                                    WidthRequest="23"
+                                                    HeightRequest="60"
+                                                    BackgroundColor="{StaticResource Primary}" 
+                                                    Text="Time"
+                                                    Style="{DynamicResource ButtonFont}"
+                                                    BorderColor="Black" 
+                                                    BorderWidth="2"
+                                                      Margin="10,20,20,0"                 
+                                                    Image="clock.png"
                                 />
                                                 </StackLayout>
 
@@ -125,7 +127,17 @@
 
 
 
-                                        <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
+
+                                <StackLayout Grid.Row="2"  Margin="15,15,15,15">
+
+                                    <Frame BackgroundColor="White" CornerRadius="10"  >
+                                    <Customizededitor:EntryBlock  />
+                                    </Frame>
+                                </StackLayout>
+
+
+
+                                <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
                                             <Image Source="check.png" IsVisible="True">
                                                 <Image.GestureRecognizers>
                                                     <TapGestureRecognizer Tapped="Confirm"/>
@@ -134,11 +146,7 @@
                                         </StackLayout>
 
 
-                                        <StackLayout Grid.Row="2" HorizontalOptions="Center" >
-
-                                            <Editor  HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="200" WidthRequest="300" BackgroundColor="White" Style="{DynamicResource BodyStyle}" />
-
-                                        </StackLayout>
+                                       
 
                                     </Grid>
 

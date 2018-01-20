@@ -29,7 +29,8 @@ namespace ProjectPanda.Views
 
         private void Datepick(object sender, DateChangedEventArgs args)
         {
-            //
+            string formatedDate;
+           formatedDate= TheDateForAppointment.Text = args.NewDate.ToString();
         }
 
         private void Confirm(object sender, EventArgs e)
