@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using SQLitePCL.Extensions;
-
+using Lottie.Forms.Droid;
 
 namespace ProjectPanda.Droid
 {
@@ -33,9 +33,11 @@ namespace ProjectPanda.Droid
             //auth code for android
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 
-
+            
             global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new ProjectPanda.App ());
+            AnimationViewRenderer.Init();
+
+            LoadApplication (new ProjectPanda.App ());
 		}
 	}
 }
