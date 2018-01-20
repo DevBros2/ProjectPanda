@@ -53,7 +53,10 @@ namespace ProjectPanda.Pages
         //   void Button_Clicked(object sender, EventArgs e)
         //    => new NavigationPage();//doctorlist
 
+        private void AppointmentHistory(object sender, EventArgs e)
+        {
 
+        }
 
         #region define the display pop up
 
@@ -76,9 +79,10 @@ namespace ProjectPanda.Pages
 
 
 
+
+
         #endregion
 
-
-
+       
     }
 }

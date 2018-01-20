@@ -26,9 +26,9 @@
 
                             <StackLayout Margin="25,15,15,15" Grid.Row="0" >
 
-
+                                
                                 <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"/>
-
+                      
 
                             </StackLayout>
 

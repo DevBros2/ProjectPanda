@@ -12,6 +12,8 @@
     <MasterDetailPage.Master >
         <ContentPage Padding="10" BackgroundColor="{StaticResource BackgroundColor}" Title="Menu" >
             <ContentPage.Content>
+
+                <ScrollView>
                 <StackLayout VerticalOptions="Center"  >
                  
 
@@ -20,7 +22,7 @@
 
                     <Button x:Name="Menu_btn3" 
                              Text="Payments" 
-                              BackgroundColor="{StaticResource Primary}" 
+                              BackgroundColor="{StaticResource ButtonLoginColour}" 
                                BorderWidth="2"
                               WidthRequest="222" 
                               HeightRequest="54"
@@ -40,7 +42,7 @@
 
                     <Button x:Name="Menu_btn2"
                                 Text="Settings"
-                                BackgroundColor="{StaticResource Primary}" 
+                                BackgroundColor="{StaticResource ButtonLoginColour}" 
                                 BorderWidth="2"
                                 WidthRequest="222" 
                                 HeightRequest="54"
@@ -59,7 +61,7 @@
 
                     <Button x:Name="Menu_btn4" 
                                  Text="Contact us"
-                                BackgroundColor="{StaticResource Primary}"
+                                BackgroundColor="{StaticResource ButtonLoginColour}"
                                BorderWidth="2"
                                 WidthRequest="222"
                                 HeightRequest="54"
@@ -73,13 +75,28 @@
                          />
 
 
+                    <Button 
+                        
+                          Text="Appointments"
+                                BackgroundColor="{StaticResource ButtonLoginColour}"
+                               BorderWidth="2"
+                                WidthRequest="222"
+                                HeightRequest="54"
+                               Clicked="AppointmentHistory"
+                                VerticalOptions="Center"
+                               BorderColor="Black"
+                                Margin="20"            
+                                TextColor="Black"
+                                Image="calendar2.png"
+                        />
 
 
-
-                    <Button Text="Log out" Image="logout.png"  BackgroundColor="{StaticResource Primary}" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"   Clicked="Logout_Button_Clicked"/>
+                        <Button Text="Log out" Image="logout.png"  BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"   Clicked="Logout_Button_Clicked"/>
 
                 </StackLayout>
                 <!--Tabb.MasterPage(Menu)-->
+
+                </ScrollView>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>
