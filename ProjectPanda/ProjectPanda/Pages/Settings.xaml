@@ -8,7 +8,7 @@
 
         <ScrollView>
 
-
+            <StackLayout>
             <TableView HasUnevenRows="True" x:Name="settingProperty" Intent="Settings">
 
 
@@ -115,7 +115,11 @@
             </TableView>
 
 
-
+                <StackLayout Margin="15,10,15,10">
+                    <Button Text="Save settings" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                </StackLayout>
+                
+            </StackLayout>
         </ScrollView>
 
 
