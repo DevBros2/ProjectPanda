@@ -129,9 +129,10 @@
 
                                 <StackLayout Grid.Row="2"  Margin="15,15,15,15">
 
-                                    <Frame BackgroundColor="White" CornerRadius="10"  >
-                                    <Customizededitor:EntryBlock  />
+                                    <Frame>
+                                    <Customizededitor:EntryBlock  Placeholder2="What seems to be the problem?" PlaceholderColor2="Black"/>
                                     </Frame>
+                                    
                                 </StackLayout>
 
 

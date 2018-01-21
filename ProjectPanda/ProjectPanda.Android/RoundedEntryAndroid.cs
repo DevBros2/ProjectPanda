@@ -25,7 +25,19 @@ namespace ProjectPanda.Droid
         {
             base.OnElementChanged(e);
 
-          
+            if (Element ==null)
+            {
+                var element = (EntryBlock)Element;
+
+                Control.Hint = element.Placeholder2;
+
+                Control.SetHintTextColor(element.PlaceholderColor2.ToAndroid());
+
+            }
+
+            
+
+     
         }
     }
 }

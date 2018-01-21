@@ -55,7 +55,8 @@ namespace ProjectPanda.Pages
 
         private void AppointmentHistory(object sender, EventArgs e)
         {
-
+            Detail = new NavigationPage(new ProjectPanda.Pages.AppointmentHistoryFolder.AppoitnmentHistory());
+            IsPresented = false;
         }
 
         #region define the display pop up

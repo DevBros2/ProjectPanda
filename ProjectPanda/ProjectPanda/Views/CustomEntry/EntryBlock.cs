@@ -13,6 +13,25 @@ namespace ProjectPanda.Views.CustomEntry
     public class EntryBlock:Editor
     {
 
+        public static BindableProperty PlaceholderProperty =
+            BindableProperty.Create(nameof(Placeholder2), typeof(string), typeof(EntryBlock));
+
+        public static BindableProperty PlaceholderColorProperty =
+            BindableProperty.Create(nameof(PlaceholderColor2), typeof(Color), typeof(EntryBlock), Color.Black);
+
+        public string Placeholder2
+        {
+            get { return (string)GetValue(PlaceholderProperty); }
+
+            set { SetValue(PlaceholderProperty, value); }
+        }
+
+
+        public Color PlaceholderColor2
+        {
+            get { return (Color)GetValue(PlaceholderColorProperty); }
+            set { SetValue(PlaceholderColorProperty, value); }
+        }
 
 
     }
