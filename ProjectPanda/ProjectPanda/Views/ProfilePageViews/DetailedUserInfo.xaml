@@ -3,175 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.DetailedUserInfo"
              Title="Detailed Information"
+             
+             
              >
     <ContentPage.Content>
-        <ScrollView>
-        <StackLayout>
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-
-
-
-                    <!--The list of allergies of the user-->
-                    <StackLayout Grid.Row="0"   Margin="20,10,20,15">
-
-                        <Frame BackgroundColor="#ffff" CornerRadius="5">
-
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="150"/>
-                                </Grid.ColumnDefinitions>
-
-
-
-                                <ListView  x:Name="AllergiesDetail">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <ViewCell>
-                                                <StackLayout Orientation="Vertical">
-
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Image Source="prohibition.png" Aspect="Fill" Grid.Column="0"/>
-                                                        <Label Text="{Binding titleofallergy}"   TextColor="Black" Grid.Column="1" />
-
-
-
-
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </ViewCell>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-
-                            </Grid>
-
-
-
-                        </Frame>
-
-
-
-                    </StackLayout>
-
-
-
-                    <!--The list view of the medication-->
-                    <StackLayout Grid.Row="1"   Margin="20,0,20,10">
-
-                        <Frame BackgroundColor="#ffff" CornerRadius="5">
-
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="150"/>
-                                </Grid.ColumnDefinitions>
-
-
-
-
-
-                                <ListView  x:Name="MedicationDetail" Grid.Column="1">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <ViewCell>
-                                                <StackLayout 
-                                                             Orientation="Vertical">
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Image Source="syringe.png" Grid.Column="0"/>
-                                                        <Label Text="{Binding titleofmedication}"  TextColor="Black" Grid.Column="1" />
-
-                                                        <Label Text="{Binding dosageofmedication}" HorizontalOptions="EndAndExpand" TextColor="#503026" Grid.Column="2"/>
-
-
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </ViewCell>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-
-                            </Grid>
-
-
-
-                        </Frame>
-
-
-
-                    </StackLayout>
-
-
-                    <!--The customers chronic diseases-->
-                    <StackLayout Grid.Row="2"   Margin="20,0,20,10">
-
-                        <Frame BackgroundColor="#ffff" CornerRadius="5">
-
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="150"/>
-                                </Grid.ColumnDefinitions>
-
-
-
-
-
-                                <ListView  x:Name="chronicDiseaseDetail" Grid.Column="1">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <ViewCell>
-                                                <StackLayout 
-                                                             Orientation="Vertical">
-                                                    <StackLayout Orientation="Horizontal">
-                                                        <Image Source="syringe.png" Grid.Column="0"/>
-                                                        <Label Text="{Binding titleofmedication}"  TextColor="#f35e20" Grid.Column="1" />
-
-                                                        <Label Text="{Binding dosageofmedication}" HorizontalOptions="EndAndExpand" TextColor="#503026" Grid.Column="2"/>
-
-
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </ViewCell>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-
-                            </Grid>
-
-
-
-                        </Frame>
-
-
-
-                    </StackLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </Grid>
-
-         </StackLayout>
-        </ScrollView>
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="5">
+                            <Frame OutlineColor="Black" Padding="5" CornerRadius="8" VerticalOptions="StartAndExpand">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                               
+                                
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

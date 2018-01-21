@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.ChronicDiseaseList" >
+
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding _Chronic}"  HasUnevenRows="True"  SeparatorVisibility="None">
+
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                <ViewCell>
+                    <ContentView Padding="5">
+
+                        <Frame OutlineColor="Black" Padding="5" CornerRadius="7" VerticalOptions="StartAndExpand">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Row="0" Grid.Column="0">
+                                    <Image Source="{Binding ChronicIcon}"/>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                                    <Label Text="{Binding ChronicName}"/>
+                                </StackLayout>
+
+
+                            </Grid>
+                        </Frame>
+
+                    </ContentView>
+                </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

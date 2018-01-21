@@ -13,7 +13,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AppoitmentHistoryModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Camera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\DetailedUserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\MedicationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DocAvaliable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicalBuildingModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
@@ -55,7 +60,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationMicrosoft.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DocAvaliableManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserRegistrationManager .cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppoitmentHistoryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModel\MedicationSearchViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\AllergiesDetailListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\ChronicDiseaseListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\DetailedUserViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\MedicationDetailListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentBack.xaml.cs">
@@ -71,7 +81,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CustomEntry\EntryBlock.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Delivery.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\Delivery.xaml.cs">
       <DependentUpon>Delivery.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +125,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
       <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\AllergiesDetailList.xaml.cs">
+      <DependentUpon>AllergiesDetailList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\ChronicDiseaseList.xaml.cs">
+      <DependentUpon>ChronicDiseaseList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\MedicationDetailList.xaml.cs">
+      <DependentUpon>MedicationDetailList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
@@ -143,7 +165,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
@@ -164,7 +185,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Delivery.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\Delivery.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -253,6 +274,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\AppointmentHistoryFolder\AppoitnmentHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\AllergiesDetailList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\MedicationDetailList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\ChronicDiseaseList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
