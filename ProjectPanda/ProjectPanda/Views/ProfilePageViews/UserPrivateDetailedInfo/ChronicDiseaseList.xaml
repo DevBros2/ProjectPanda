@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.ChronicDiseaseList" >
+             x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.ChronicDiseaseList" 
+             Title="My Chronic Diseases"
+            BackgroundColor="{StaticResource BackgroundColor}"
+             >
 
     <ContentPage.Content>
         <ListView ItemsSource="{Binding _Chronic}"  HasUnevenRows="True"  SeparatorVisibility="None">
@@ -9,7 +12,7 @@
             <ListView.ItemTemplate >
                 <DataTemplate>
                 <ViewCell>
-                    <ContentView Padding="5">
+                    <ContentView Padding="15">
 
                         <Frame OutlineColor="Black" Padding="5" CornerRadius="7" VerticalOptions="StartAndExpand">
                             <Grid>
@@ -21,15 +24,16 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="60"/>
                                     <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
 
-                                <StackLayout Grid.Row="0" Grid.Column="0">
-                                    <Image Source="{Binding ChronicIcon}"/>
-                                </StackLayout>
+                         
+                                        <Image Source="{Binding ChronicIcon}" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" />
 
-                                <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
-                                    <Label Text="{Binding ChronicName}"/>
-                                </StackLayout>
+
+
+                                    <Label Text="{Binding ChronicName}" VerticalOptions="Center" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" Margin="80,0,0,0" Style="{DynamicResource InformationLabel}"/>
+                               
 
 
                             </Grid>

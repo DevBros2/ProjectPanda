@@ -2,29 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.DetailedUserInfo"
-             Title="Detailed Information"
-             
-             
+             Title="Detailed Information"            
+             BackgroundColor="{StaticResource BackgroundColor}"
              >
     <ContentPage.Content>
-        <ListView>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ContentView Padding="5">
-                            <Frame OutlineColor="Black" Padding="5" CornerRadius="8" VerticalOptions="StartAndExpand">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                               
-                                
-                                </Grid>
-                            </Frame>
-                        </ContentView>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <StackLayout Padding="20">
+
+            <Button Text="My Allergies" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="allergyList"/>
+            <Button Text="My Medication" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="medciationList"/>
+            <Button Text="My Chronic Diseases" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="chronicDiseaseList"/>
+       
+        </StackLayout>    
     </ContentPage.Content>
 </ContentPage>
