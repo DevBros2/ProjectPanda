@@ -348,6 +348,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\fish.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chronicDisease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\medicationBottle.png" />
+  </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -22,7 +22,7 @@ namespace ProjectPanda.ViewModels.DetailUserViewModels
         {
             _Medications = new ObservableCollection<MedicationModel>
             {
-                new MedicationModel{dosageofmedication="23ml/g", medicationIcon="syringe.png", titleofmedication="Anti Retro Virals"}
+                new MedicationModel{dosageofmedication="23ml/g", medicationIcon="medicationBottle.png", titleofmedication="Anti Retro Virals"}
 
             };
 

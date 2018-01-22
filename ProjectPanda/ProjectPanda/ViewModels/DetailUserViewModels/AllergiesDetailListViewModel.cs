@@ -24,7 +24,7 @@ namespace ProjectPanda.ViewModels.DetailUserViewModels
         {
             _allergies = new ObservableCollection<AllergiesModel>
             {
-                new AllergiesModel{AllergyName="Pets", AllergyIcon="prohibition.png"}
+                new AllergiesModel{AllergyName="Pets", AllergyIcon="allergiesIcon.png"}
 
             };
         }

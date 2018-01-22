@@ -14,7 +14,7 @@
                 <ViewCell>
                     <ContentView Padding="15">
 
-                        <Frame OutlineColor="Black" Padding="5" CornerRadius="7" VerticalOptions="StartAndExpand">
+                        <Frame OutlineColor="Black" Padding="5" CornerRadius="7" VerticalOptions="StartAndExpand" HeightRequest="80">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -27,13 +27,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                         
-                                        <Image Source="{Binding ChronicIcon}" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" />
+                                    <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand" Padding="5">
+                                        <Image Source="{Binding ChronicIcon}"  />
+                                    </StackLayout>
 
-
-
-                                    <Label Text="{Binding ChronicName}" VerticalOptions="Center" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" Margin="80,0,0,0" Style="{DynamicResource InformationLabel}"/>
-                               
+                                    <StackLayout Grid.Row="0" Grid.Column="2" VerticalOptions="StartAndExpand"  HorizontalOptions="End" Margin="20,20,0,0">
+                                        <Label Text="{Binding ChronicName}"    Style="{DynamicResource InformationLabel}"/>
+                                    </StackLayout>
+                                                                
 
 
                             </Grid>
