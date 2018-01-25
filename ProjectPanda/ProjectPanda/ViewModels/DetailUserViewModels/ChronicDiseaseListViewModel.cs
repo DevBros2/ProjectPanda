@@ -23,8 +23,8 @@ namespace ProjectPanda.ViewModels.DetailUserViewModels
         {
             _Chronic = new ObservableCollection<ChronicDiseaseListModel>
             {
-                new ChronicDiseaseListModel{ ChronicIcon="syringe.png", ChronicName="HIV/AIDS"},
-                new ChronicDiseaseListModel{ChronicIcon="syringe.png", ChronicName="Diabetes"}
+                new ChronicDiseaseListModel{ ChronicIcon="chronicDisease.png", ChronicName="HIV/AIDS"},
+                new ChronicDiseaseListModel{ChronicIcon="chronicDisease.png", ChronicName="Diabetes"}
             };
         }
 

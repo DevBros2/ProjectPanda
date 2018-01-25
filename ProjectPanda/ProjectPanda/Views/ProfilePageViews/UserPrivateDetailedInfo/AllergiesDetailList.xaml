@@ -12,7 +12,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <ContentView Padding="15">
-                                <Frame OutlineColor="Black" Padding="10" CornerRadius="8" VerticalOptions="StartAndExpand">
+                                <Frame OutlineColor="Black" Padding="10" CornerRadius="8" VerticalOptions="StartAndExpand" HeightRequest="80">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
@@ -24,15 +24,15 @@
                                             
                                         </Grid.ColumnDefinitions>
 
-                                      
-                                        <Image Source="{Binding AllergyIcon}" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                                    <StackLayout HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Padding="5">
+                                        <Image Source="{Binding AllergyIcon}"  />
+                                    </StackLayout>
 
+                                    <StackLayout HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="0" Grid.Column="1" Margin="20,20,0,0">
+                                    <Label Text="{Binding AllergyName}"   Style="{DynamicResource InformationLabel}"/>
+                                    </StackLayout>
 
-
-                                    <Label Text="{Binding AllergyName}" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="60,0,0,0" Style="{DynamicResource InformationLabel}"/>
-                                      
-                                        
-                                    </Grid>
+                                </Grid>
                                 </Frame>
                             </ContentView>
                         </ViewCell>
