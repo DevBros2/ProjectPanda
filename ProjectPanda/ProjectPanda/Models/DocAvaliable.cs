@@ -18,8 +18,12 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "varsity")]
         public string Varsity { get; set;}
 
-        [JsonProperty(PropertyName = "varsity")]
+        [JsonProperty(PropertyName = "profileimageurl")]
         public string ProfileImageURl { get; set; }
+
+
+        [JsonProperty(PropertyName = "medicalbuilding")]
+        public string MedicalBuilding { get; set; }
 
         [JsonProperty(PropertyName = "complete")]
         public bool Complete { get; set; }
@@ -28,11 +32,7 @@ namespace ProjectPanda.Models
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
         
 
         

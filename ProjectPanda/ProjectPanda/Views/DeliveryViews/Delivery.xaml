@@ -75,6 +75,12 @@
 
 
 
+                            <StackLayout Grid.Row="3" Margin="15,10,15,20">
+                                <Button  Text="Deliver Self presicribed medication" Clicked="SelfMed_Button_Clicked" TextColor="Black" Grid.Column="0"  BorderWidth="2" BackgroundColor="{StaticResource Primary}" BorderColor="Black" IsVisible="False"/>
+                            </StackLayout>
+
+                      
+
                             
 
                           
