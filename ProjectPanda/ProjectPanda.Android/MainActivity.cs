@@ -13,6 +13,7 @@ using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using SQLitePCL.Extensions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
+
 using Xamarin.Forms.Platform.Android;
 
 namespace ProjectPanda.Droid
