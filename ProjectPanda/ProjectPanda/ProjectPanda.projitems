@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\MedicationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DistanceCalculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DocAvaliable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Locator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicalBuildingModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
@@ -234,7 +235,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Models\HiversonFunction.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcodedelivery.txt" />
   </ItemGroup>
