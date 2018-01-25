@@ -63,33 +63,21 @@
                                 <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}"/>
                             </StackLayout>
 
-                            <StackLayout Grid.Row="1" Margin="15,20,15,10" >
 
+                            
+                                <StackLayout Grid.Row="1" Margin="15,20,15,10" >
 
-                                <Frame BackgroundColor="White" VerticalOptions="FillAndExpand" HeightRequest="50" OutlineColor="Black"  CornerRadius="12">
+                                    <StackLayout >
+                                   <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Start" HeightRequest="65" Margin="8,8,8,8" BorderWidth="2" BorderColor="Black"/>
+                                    </StackLayout>
 
-                                    <Grid>
-
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
-
-
-                                        <SearchBar Grid.Row="0" Placeholder="Find Medication" HorizontalOptions="Start"  CancelButtonColor="Red"  x:Name="searchMedication" />
-
-
-                                    </Grid>
+                                </StackLayout>
 
 
 
-                                </Frame>
-                            </StackLayout>
+                            
 
-                            <StackLayout Grid.Row="3" Margin="15,10,15,20">
-                                <Button  Text="Deliver Self presicribed medication" TextColor="Black" Grid.Column="0"  BorderWidth="2" BackgroundColor="{StaticResource Primary}" BorderColor="Black" IsVisible="False"/>
-                            </StackLayout>
-
-
+                          
                         </Grid>
                     </StackLayout>
                 
