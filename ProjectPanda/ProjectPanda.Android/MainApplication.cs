@@ -58,6 +58,7 @@ namespace ProjectPanda.Droid
 
         public void OnActivityStopped(Activity activity)
         {
+
         }
 
 

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
+using Plugin.Permissions.Abstractions;
+using System.Threading.Tasks;
+
 namespace ProjectPanda.Models
 {
     public class Locator
@@ -10,5 +13,14 @@ namespace ProjectPanda.Models
         {
 
         }
+
+
+      
+        private async Task GetCurrentLocation()
+        {
+
+        }
+
+
     }
 }
