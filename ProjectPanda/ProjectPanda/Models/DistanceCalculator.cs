@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProjectPanda.Models
 {
-    public class DistanceCalculator
+    public class DistanceCalculator:Locator
     {
         #region Calculates the radians of the degree 
         //the c# libaray does not allow you to have parameters as degrees and radians are more accurate
@@ -17,7 +17,10 @@ namespace ProjectPanda.Models
 
 
 
-
+       public async void SetLocation()
+        {
+           await GetCurrentLocation();
+        }
 
 
 

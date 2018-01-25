@@ -167,6 +167,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\Scanner\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">

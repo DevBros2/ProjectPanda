@@ -85,7 +85,7 @@
 
                                                 <!--The date picker-->
                                                 <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                                            <DatePicker Format="D"  HeightRequest="56" WidthRequest="10"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                                            <DatePicker Format="DD-MM-YYYY"  HeightRequest="56" WidthRequest="10"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
                                                         <DatePicker.MinimumDate>
                                                             01/01/2018
                                                         </DatePicker.MinimumDate>
@@ -116,7 +116,7 @@
 
                                                 <!--The Time Picker-->
                                                 <StackLayout Grid.Row="3" Margin="30,22,38,0">
-                                            <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource ButtonLoginColour}" Opacity="0" x:Name="Timepick" />
+                                                <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource ButtonLoginColour}" Opacity="0" x:Name="Timepick" />
                                                 </StackLayout>
 
 
@@ -202,7 +202,7 @@
                                         <FormattedString>
                                             <Span Text="Time :"/>
                                             <Span Text=" "/>
-                                            <Span Text="" x:Name="TheTimeForAppointment"/>
+                                                <Span Text=" " />
                                         </FormattedString>
                                     </Label.FormattedText>
 
