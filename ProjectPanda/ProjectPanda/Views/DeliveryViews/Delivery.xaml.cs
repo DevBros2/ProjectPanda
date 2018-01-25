@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectPanda.Views.DeliveryViews;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,11 @@ namespace ProjectPanda.Views
 
 
             NavigationPage.SetHasNavigationBar(this, true);
+        }
+
+        private async void SelfMed_Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChatBotView());
         }
 
 
