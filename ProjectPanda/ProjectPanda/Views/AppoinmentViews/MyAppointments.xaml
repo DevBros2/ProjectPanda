@@ -13,9 +13,11 @@
       
 
         <Grid Padding="10">
+            
+            
             <xfFlipViewControl:XFFlipView  x:Name="XFFlipViewControl1"  Grid.Row="0" Grid.Column="0">
 
-
+                <!-- FlipCard FrontView-->
                 <xfFlipViewControl:XFFlipView.FrontView>
 
                  
@@ -35,13 +37,13 @@
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
 
-
+                                            <!-- UI Title-->
                                         <StackLayout Grid.Row="0" Margin="25,10,25,5">
-                                         <Frame  OutlineColor="Black" BackgroundColor="#ccdbc3">
-                                            <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
-                                         </Frame>
+                                            <Frame  OutlineColor="Black" BackgroundColor="#ccdbc3">
+                                                <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
+                                            </Frame>
                                         </StackLayout>
-
+                                <!-- UI Title-->
                                         <StackLayout Grid.Row="1">
                                             <Grid>
                                                 <Grid.RowDefinitions>
@@ -53,34 +55,34 @@
 
                                                 <StackLayout  Grid.Row="1" Margin="15,0,15,15"  >
 
-                                            <Button BackgroundColor="{StaticResource ButtonLoginColour}"                                     
-                                             Text="Doctor"
-                                             TextColor="Black"                   
-                                             BorderColor="Black" 
-                                            BorderWidth="2" 
-                                            HeightRequest="60"
-                                            Clicked="Doctor_Button_Clicked"
-                                             Image="doct.png"     
-                                            Margin="10,20,20,0"
-                                            Style="{DynamicResource ButtonFont}"
+                                                    <Button BackgroundColor="{StaticResource ButtonLoginColour}"                                     
+                                                            Text="Doctor"
+                                                            TextColor="Black"                   
+                                                            BorderColor="Black" 
+                                                            BorderWidth="2" 
+                                                            HeightRequest="60"
+                                                            Clicked="Doctor_Button_Clicked"
+                                                            Image="doct.png"     
+                                                            Margin="10,20,20,0"
+                                                            Style="{DynamicResource ButtonFont}"
                     
-                                            />
+                                                     />
 
-                                        </StackLayout>
+                                                </StackLayout>
 
                                                 <StackLayout  Grid.Row="2" Margin="15,0,15,15" >
-                                            <Button TextColor="Black"
-                                            WidthRequest="23"
-                                            HeightRequest="60"
-                                            BackgroundColor="{StaticResource ButtonLoginColour}"
-                                             Style="{DynamicResource ButtonFont}"          
-                                            BorderColor="Black" 
-                                            BorderWidth="2"  
-                                           Image="calendar64.png"
-                                            Margin="10,20,20,0"
-                                            Text="Date"
-                                            />  
-                                        </StackLayout>
+                                                     <Button TextColor="Black"
+                                                             WidthRequest="23"
+                                                             HeightRequest="60"
+                                                             BackgroundColor="{StaticResource ButtonLoginColour}"
+                                                             Style="{DynamicResource ButtonFont}"          
+                                                             BorderColor="Black" 
+                                                             BorderWidth="2"  
+                                                             Image="calendar64.png"
+                                                             Margin="10,20,20,0"
+                                                             Text="Date"
+                                                     />  
+                                                </StackLayout>
 
 
                                                 <!--The date picker-->
@@ -137,7 +139,7 @@
 
 
 
-                                <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
+                                        <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
                                             <Image Source="check.png" IsVisible="True">
                                                 <Image.GestureRecognizers>
                                                     <TapGestureRecognizer Tapped="Confirm"/>
@@ -160,11 +162,13 @@
                    
                 </xfFlipViewControl:XFFlipView.FrontView>
 
-
+                <!--FLipCardBackView-->
                 <xfFlipViewControl:XFFlipView.BackView>
                  
-                        <ScrollView>
+                    <ScrollView>
                         <StackLayout>
+
+                            <!-- UI Title-->
                             <StackLayout  Grid.Row="5"  Margin="15,10,15,0">
                             <Frame OutlineColor="Black" BackgroundColor="#ccdbc3">
                                 <Label Text="Next Appointment" 
@@ -180,7 +184,7 @@
                             </Frame>
                         </StackLayout>
 
-
+                         <!-- AppoimentDate -->
                         <StackLayout Grid.Row="6" Margin="15,10,15,8">
                                 <Frame  BackgroundColor="White" CornerRadius="8">
                                 <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
@@ -188,13 +192,14 @@
                                         <FormattedString >
                                             <Span Text= "Date:" />
                                             <Span Text=" "/>
-                                            <Span  Text="" x:Name="TheDateForAppointment" />
+                                            <Span Text="" x:Name="TheDateForAppointment" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
                             </Frame>
                         </StackLayout>
 
+                            <!-- AppoimentTime-->
                         <StackLayout Grid.Row="7" Margin="15,0,15,8">
                             <Frame BackgroundColor="White" CornerRadius="8">
                                 <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
@@ -210,7 +215,7 @@
                             </Frame>
                         </StackLayout>
 
-
+                            <!-- NameOfPractice-->
                         <StackLayout Grid.Row="8" Margin="15,0,15,8"  >
 
                             <Frame BackgroundColor="White" CornerRadius="8">
@@ -226,8 +231,8 @@
                             </Frame>
                         </StackLayout>
 
-
-                        <StackLayout Grid.Row="9" Margin="15,0,15,10">
+                            <!-- Doctors Name -->
+                            <StackLayout Grid.Row="9" Margin="15,0,15,10">
                             <Frame BackgroundColor="White" CornerRadius="8">
                                 <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="Doctor" LineBreakMode="TailTruncation">
                                     <Label.FormattedText>
@@ -242,8 +247,8 @@
                             </Frame>
                         </StackLayout>
 
-
-                        <StackLayout Grid.Row="10">
+                            <!-- Cancel Button-->
+                            <StackLayout Grid.Row="10">
                             <Button Text="Cancel" BorderWidth="2"  BorderRadius="2" BorderColor="Black" BackgroundColor="Red" HorizontalOptions="Center" TextColor="White" x:Name="CancelAppoint" />
                         </StackLayout>
                         </StackLayout>
