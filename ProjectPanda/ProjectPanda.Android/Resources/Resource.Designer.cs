@@ -26,6 +26,7 @@ namespace ProjectPanda.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microcharts.Droid.Resource.String.library_name = global::ProjectPanda.Droid.Resource.String.library_name;
 			global::PCLCrypto.Resource.String.ApplicationName = global::ProjectPanda.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::ProjectPanda.Droid.Resource.String.Hello;
 			global::Xamarin.Auth.Resource.Animation.slide_in_right = global::ProjectPanda.Droid.Resource.Animation.slide_in_right;
@@ -35,6 +36,7 @@ namespace ProjectPanda.Droid
 			global::Xamarin.Auth.Resource.Layout.activity_webview = global::ProjectPanda.Droid.Resource.Layout.activity_webview;
 			global::Xamarin.Auth.Resource.String.ApplicationName = global::ProjectPanda.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Auth.Resource.String.Hello = global::ProjectPanda.Droid.Resource.String.Hello;
+			global::Xamarin.Auth.Resource.String.library_name = global::ProjectPanda.Droid.Resource.String.library_name;
 			global::Xamarin.Auth.Resource.String.title_activity_webview = global::ProjectPanda.Droid.Resource.String.title_activity_webview;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ProjectPanda.Droid.Resource.Attribute.actionBarSize;
 		}
@@ -3898,6 +3900,9 @@ namespace ProjectPanda.Droid
 			
 			// aapt resource value: 0x7f070039
 			public const int character_counter_pattern = 2131165241;
+			
+			// aapt resource value: 0x7f070041
+			public const int library_name = 2131165249;
 			
 			// aapt resource value: 0x7f070001
 			public const int mr_button_content_description = 2131165185;
