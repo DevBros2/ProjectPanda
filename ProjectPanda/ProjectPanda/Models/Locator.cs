@@ -23,9 +23,9 @@ namespace ProjectPanda.Models
 
             var postion = await locator.GetPositionAsync(TimeSpan.FromMilliseconds(100000));
 
-            string userLat = postion.Latitude.ToString();
+            double userLat = postion.Latitude;
 
-            string userLongi = postion.Longitude.ToString();
+            double userLongi = postion.Longitude;
 
         }
 

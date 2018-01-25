@@ -36,7 +36,8 @@ namespace ProjectPanda.Droid
             //auth code for android
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 
-
+            //zxing qr code scanner
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new ProjectPanda.App());
@@ -44,8 +45,11 @@ namespace ProjectPanda.Droid
 
         }
 
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
+        {
+            global::ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
 
-    
     }
 }
 

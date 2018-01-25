@@ -18,7 +18,7 @@
             </StackLayout>
 
             <StackLayout Grid.Row="1"  VerticalOptions="End">
-                <Button VerticalOptions="Center" WidthRequest="20" HeightRequest="60" Image="qrcode32.png" TextColor="Black" Text="Check out Scan" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                <Button VerticalOptions="Center" WidthRequest="20" HeightRequest="60" Image="qrcode32.png" TextColor="Black" Text="Check out Scan" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="ScanMeds"/>
             </StackLayout>
         
         </Grid>
