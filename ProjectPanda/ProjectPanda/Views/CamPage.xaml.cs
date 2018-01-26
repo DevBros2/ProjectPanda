@@ -31,13 +31,14 @@ namespace ProjectPanda.Views
             var ScannerPage=new ZXingScannerPage();
 
             ScannerPage.OnScanResult += (result) => {
-                // Parar de escanear
+               
+                //scan instance
                 ScannerPage.IsScanning = false;
 
-                // Alert com o código escaneado
+                // Alert with customers name
                 Device.BeginInvokeOnMainThread(() => {
                     Navigation.PopAsync();
-                    DisplayAlert("Código escaneado", result.Text, "OK");
+                    DisplayAlert("Customer Name here", result.Text, "OK");
                 });
             };
 
