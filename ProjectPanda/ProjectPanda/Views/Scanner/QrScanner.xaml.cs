@@ -7,6 +7,7 @@ using ZXing.Net;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using ProjectPanda.Services;
 
 namespace ProjectPanda.Views.Scanner
 {
@@ -16,9 +17,9 @@ namespace ProjectPanda.Views.Scanner
 		public QrScanner ()
 		{
 			InitializeComponent ();
-        
 
-
+            QrCodeScanner scan = new QrCodeScanner();
+            scan.ReadQrCode();
         }
 
 

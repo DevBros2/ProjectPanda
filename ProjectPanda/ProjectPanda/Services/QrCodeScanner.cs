@@ -11,7 +11,16 @@ namespace ProjectPanda.Services
         async public void ReadQrCode()
         {
 
+            var scanPage = new ZXingScannerPage();
+
+            scanPage.OnScanResult += (result) => {
+
+                scanPage.IsScanning = false;
+
+
                 
+
+            };
 
         }
 
