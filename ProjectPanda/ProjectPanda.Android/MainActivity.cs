@@ -13,7 +13,7 @@ using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using SQLitePCL.Extensions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
-
+using ZXing.Net.Mobile.Forms;
 using Xamarin.Forms.Platform.Android;
 
 namespace ProjectPanda.Droid
@@ -37,7 +37,7 @@ namespace ProjectPanda.Droid
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 
             //zxing qr code scanner
-            ZXing.Net.Mobile.Forms.Android.Platform.Init();
+         
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new ProjectPanda.App());
@@ -45,9 +45,10 @@ namespace ProjectPanda.Droid
 
         }
 
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
         {
-            global::ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
     }

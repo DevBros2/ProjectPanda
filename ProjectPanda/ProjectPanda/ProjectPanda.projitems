@@ -23,7 +23,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppoitmentHistoryModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Camera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />
@@ -71,7 +70,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationGoogle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationMicrosoft.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DocAvaliableManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\QrCodeScanner.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserRegistrationManager .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppoitmentHistoryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\ChatBotViewModel.cs" />
@@ -154,10 +152,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\MedicationDetailList.xaml.cs">
       <DependentUpon>MedicationDetailList.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Scanner\QrScanner.xaml.cs">
-      <DependentUpon>QrScanner.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -334,12 +328,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Cell\UserMessage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Scanner\QrScanner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

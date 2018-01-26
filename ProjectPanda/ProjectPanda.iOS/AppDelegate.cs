@@ -30,7 +30,15 @@ namespace ProjectPanda.iOS
             global::Xamarin.Forms.Forms.Init ();
 			LoadApplication (new ProjectPanda.App ());
 
-			return base.FinishedLaunching (app, options);
-		}
+            //Inicializa o Zxing no iOS
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+
+
+
+            return base.FinishedLaunching (app, options);
+
+
+
+        }
 	}
 }
