@@ -18,7 +18,7 @@
 
                 <Button Text="My Chronic Diseases" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="chronicDiseaseList" Image="chronicDisease.png"/>
 
-
+                <Button HeightRequest="150" Text="Medical Records" Image="record.png" BackgroundColor="{StaticResource ButtonLoginColour}"/>
 
             </StackLayout>
         </ScrollView>
