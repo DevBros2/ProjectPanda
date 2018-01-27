@@ -239,13 +239,13 @@
                         </StackLayout>
 
 
-                        <StackLayout Grid.Row="4" Margin="20,10,20,5">
-                            <Button HeightRequest="60"  Image="record.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                        <StackLayout Grid.Row="5" Margin="20,10,20,5">
+                            <Button HeightRequest="60"  Image="record.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Medical records" BackgroundColor="{StaticResource ButtonLoginColour}" IsVisible="False"/>
                         </StackLayout>
 
                        
 
-                        <StackLayout Grid.Row="5" Margin="20,0,20,10">
+                        <StackLayout Grid.Row="4" Margin="20,0,20,10">
                             <Button HeightRequest="60"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Medical Information" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="PrivateInformation"/>
                             </StackLayout>
 
