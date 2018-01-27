@@ -21,17 +21,26 @@ namespace ProjectPanda.Droid
    [Assembly: Xamarin.Forms.ExportRenderer(typeof(EntryBlock),  typeof(RoundedEntryAndroid))]
     public class RoundedEntryAndroid : EditorRenderer
     {
+
+
+
+        public RoundedEntryAndroid(Context context) : base() { }
+
+
+
         protected override void OnElementChanged(ElementChangedEventArgs<Editor> e)
         {
             base.OnElementChanged(e);
 
-            if (Element ==null)
+            if (Control != null)
             {
                 var element = (EntryBlock)Element;
 
-                Control.Hint = element.Placeholder2;
+                Control.Hint = element.Placeholder2="What seems to be the problem?";
 
-                Control.SetHintTextColor(element.PlaceholderColor2.ToAndroid());
+                Control.SetHintTextColor(Android.Graphics.Color.Black);
+
+                Control.SetCursorVisible(false);
 
             }
 
