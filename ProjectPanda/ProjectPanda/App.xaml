@@ -62,7 +62,7 @@
             <!--Button font Attributes-->
             <Style x:Key="ButtonFont" TargetType="Button">
                 <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
-                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontSize" Value="18"/>
             </Style>
             
             <!--The header for Profile Attributes-->
@@ -77,7 +77,7 @@
             <!--The font Attritbutes for the information-->
             <Style x:Key="InformationLabel" TargetType="Label">
                 <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
-                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontSize" Value="18"/>
                 <Setter Property="HorizontalTextAlignment" Value="Start"/>
                 <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="VerticalTextAlignment" Value="End"/>
