@@ -104,6 +104,7 @@
     <None Include="packages.config" />
     <BundleResource Include="Resources\drawable\QrScan.json" />
     <BundleResource Include="Resources\drawable\greencheck.json" />
+    <BundleResource Include="Resources\drawable\check.json" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

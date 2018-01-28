@@ -299,6 +299,7 @@
     <AndroidAsset Include="Assets\Roboto-Bold.ttf" />
     <AndroidAsset Include="Assets\QrScan.json" />
     <AndroidAsset Include="Assets\greencheck.json" />
+    <AndroidAsset Include="Assets\check.json" />
     <None Include="Connected Services\ProjectPandaMobileApp\ConnectedService.json" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
