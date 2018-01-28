@@ -15,7 +15,7 @@ using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using ZXing.Net.Mobile.Forms;
 using Xamarin.Forms.Platform.Android;
-
+using Lottie.Forms.Droid;
 namespace ProjectPanda.Droid
 {
     [Activity(Label = "ProjectPanda", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -36,10 +36,15 @@ namespace ProjectPanda.Droid
             //auth code for android
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 
-            //zxing qr code scanner
+            
          
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+
+            //Lottie Animation android code
+            AnimationViewRenderer.Init();
+
             LoadApplication(new ProjectPanda.App());
 
 

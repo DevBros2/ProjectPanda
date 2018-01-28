@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Lottie.Forms.iOS.Renderers;
 using Foundation;
 using UIKit;
 
@@ -33,6 +33,7 @@ namespace ProjectPanda.iOS
             //Inicializa o Zxing no iOS
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
+            //the lottie code for Ios
 
 
             return base.FinishedLaunching (app, options);
