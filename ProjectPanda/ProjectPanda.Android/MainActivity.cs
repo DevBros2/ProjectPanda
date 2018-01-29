@@ -16,6 +16,7 @@ using Plugin.Permissions.Abstractions;
 using ZXing.Net.Mobile.Forms;
 using Xamarin.Forms.Platform.Android;
 using Lottie.Forms.Droid;
+
 namespace ProjectPanda.Droid
 {
     [Activity(Label = "ProjectPanda", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -40,6 +41,9 @@ namespace ProjectPanda.Droid
          
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            //Paypal code 
+           
 
 
             //Lottie Animation android code
