@@ -2,7 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.CamPage"
+
             BackgroundColor="Azure" >
+
+              BackgroundColor="{StaticResource BackgroundColor}"
+             
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             >
+
     <ContentPage.Content>
 
         <Grid Padding="20">
@@ -12,12 +19,20 @@
             </Grid.RowDefinitions>
 
 
-            <StackLayout Grid.Row="0" >
+            <StackLayout Grid.Row="0">
                 <!--The code for the lottie animation will go here-->
+
+                <forms:AnimationView 
+                x:Name="AnimationView" 
+                Animation="QrScan.json" 
+                AutoPlay="True" Loop="true"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand" />
+
             </StackLayout>
 
             <StackLayout Grid.Row="1"  VerticalOptions="End">
-                <Button VerticalOptions="Center" WidthRequest="20" HeightRequest="60" Image="qrcode32.png" TextColor="Black" Text="Check out Scan" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                <Button VerticalOptions="Center" WidthRequest="20" HeightRequest="60" Image="qrcode32.png" TextColor="Black" Text="Check out Scan" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="ScanMeds"/>
             </StackLayout>
 
         </Grid>

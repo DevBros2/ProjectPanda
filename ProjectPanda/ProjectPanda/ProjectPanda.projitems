@@ -23,7 +23,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppoitmentHistoryModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Camera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />

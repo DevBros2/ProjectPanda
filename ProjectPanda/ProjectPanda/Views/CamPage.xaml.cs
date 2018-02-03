@@ -6,15 +6,56 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing.Net.Mobile.Forms;
 
 namespace ProjectPanda.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CamPage : ContentPage
-    {
-        public CamPage()
-        {
-            InitializeComponent();
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class CamPage : ContentPage
+	{
+
+        
+
+
+        public CamPage ()
+		{
+			InitializeComponent ();
+
+
+
         }
-	}
+
+
+        public async void Scan()
+        {
+            var ScannerPage=new ZXingScannerPage();
+
+            ScannerPage.OnScanResult += (result) => {
+               
+                //scan instance
+                ScannerPage.IsScanning = false;
+
+                // Alert with customers name
+                Device.BeginInvokeOnMainThread(() => {
+                    Navigation.PopAsync();
+                    DisplayAlert("Customer Name here", result.Text, "OK");
+                });
+            };
+
+
+            await Navigation.PushAsync(ScannerPage);
+
+        }
+
+
+
+
+        private void ScanMeds(object sender, EventArgs e)
+        {
+
+            Scan();
+        }
+
+    }
+
 }

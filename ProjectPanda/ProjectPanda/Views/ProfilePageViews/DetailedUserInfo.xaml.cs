@@ -41,5 +41,6 @@ namespace ProjectPanda.Views
             Navigation.PushAsync(new ChronicDiseaseList());
         }
 
+     
     }
 }

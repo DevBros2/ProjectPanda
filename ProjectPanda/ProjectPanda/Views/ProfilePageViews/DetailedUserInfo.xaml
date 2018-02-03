@@ -6,12 +6,21 @@
              BackgroundColor="{StaticResource BackgroundColor}"
              >
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout Padding="20">
 
-            <Button Text="My Allergies" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="allergyList"/>
-            <Button Text="My Medication" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="medciationList"/>
-            <Button Text="My Chronic Diseases" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="chronicDiseaseList"/>
-       
-        </StackLayout>    
+
+                <Button Text="My Allergies" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="allergyList" Image="allergiesIcon.png"/>
+
+
+                <Button Text="My Medication" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="medciationList" Image="medicationBottle.png"/>
+
+
+                <Button Text="My Chronic Diseases" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="chronicDiseaseList" Image="chronicDisease.png"/>
+
+                <Button HeightRequest="150" Text="Medical Records" Image="record.png" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

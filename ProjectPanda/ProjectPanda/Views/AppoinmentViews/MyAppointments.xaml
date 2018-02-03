@@ -53,7 +53,7 @@
 
                                                 </Grid.RowDefinitions>
 
-                                                <StackLayout  Grid.Row="1" Margin="15,0,15,15"  >
+                                                <StackLayout  Grid.Row="1" Margin="0,0,0,15"  >
 
                                                     <Button BackgroundColor="{StaticResource ButtonLoginColour}"                                     
                                                             Text="Doctor"
@@ -70,7 +70,7 @@
 
                                                 </StackLayout>
 
-                                                <StackLayout  Grid.Row="2" Margin="15,0,15,15" >
+                                                <StackLayout  Grid.Row="2" Margin="0,0,0,15" >
                                                      <Button TextColor="Black"
                                                              WidthRequest="23"
                                                              HeightRequest="60"
@@ -86,8 +86,8 @@
 
 
                                                 <!--The date picker-->
-                                                <StackLayout Grid.Row="2" Margin="30,22,38,0">
-                                            <DatePicker Format="D"  HeightRequest="56" WidthRequest="10"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
+                                                <StackLayout Grid.Row="2" Margin="0,22,0,0">
+                                            <DatePicker Format="DD-MM-YYYY"  HeightRequest="56" WidthRequest="10"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
                                                         <DatePicker.MinimumDate>
                                                             01/01/2018
                                                         </DatePicker.MinimumDate>
@@ -102,7 +102,7 @@
                                                     </DatePicker>
                                                 </StackLayout>
 
-                                                <StackLayout Grid.Row="3" Margin="15,0,15,15" >
+                                                <StackLayout Grid.Row="3" Margin="0,0,0,15" >
                                                     <Button TextColor="Black"
                                                     WidthRequest="23"
                                                     HeightRequest="60"
@@ -117,8 +117,8 @@
                                                 </StackLayout>
 
                                                 <!--The Time Picker-->
-                                                <StackLayout Grid.Row="3" Margin="30,22,38,0">
-                                            <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource ButtonLoginColour}" Opacity="0" x:Name="Timepick" />
+                                                <StackLayout Grid.Row="3" Margin="0,22,0,0">
+                                                <TimePicker  HeightRequest="56" WidthRequest="4" BackgroundColor="{StaticResource ButtonLoginColour}" Opacity="0" x:Name="Timepick" />
                                                 </StackLayout>
 
 
@@ -129,10 +129,10 @@
 
 
 
-                                <StackLayout Grid.Row="2"  Margin="15,15,15,15">
+                                <StackLayout Grid.Row="2"  Margin="11,15,12,15">
 
-                                    <Frame>
-                                    <Customizededitor:EntryBlock  Placeholder2="What seems to be the problem?" PlaceholderColor2="Black"/>
+                                    <Frame CornerRadius="10">
+                                    <Customizededitor:EntryBlock  />
                                     </Frame>
                                     
                                 </StackLayout>
@@ -207,7 +207,7 @@
                                         <FormattedString>
                                             <Span Text="Time :"/>
                                             <Span Text=" "/>
-                                            <Span Text="" x:Name="TheTimeForAppointment"/>
+                                                <Span Text=" " />
                                         </FormattedString>
                                     </Label.FormattedText>
 
