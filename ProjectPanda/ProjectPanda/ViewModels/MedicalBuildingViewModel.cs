@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Text;
+using Entry = Microcharts.Entry;
+using SkiaSharp;
+using Microcharts;
+
 using ProjectPanda.Models;
 
 namespace ProjectPanda.ViewModels
 {
     public class MedicalBuildingViewModel
     {
+        //List<MyChart> MyCharts;
         public ObservableCollection<MedicalBuildingModel> Practices { get; set; }
         public object SelectedItem { get; set; }
 
         public MedicalBuildingViewModel()
         {
             GenerateMedicalBuildingModel();
+            PopulateCharts();
         }
 
         private void GenerateMedicalBuildingModel()
@@ -31,6 +37,11 @@ namespace ProjectPanda.ViewModels
 
 
             };
+
+        }
+
+        private void PopulateCharts()
+        {
 
         }
     }

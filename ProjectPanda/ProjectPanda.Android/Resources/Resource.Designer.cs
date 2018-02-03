@@ -2161,6 +2161,7 @@ namespace ProjectPanda.Droid
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_id = global::ProjectPanda.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ProjectPanda.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::ProjectPanda.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Microcharts.Droid.Resource.String.library_name = global::ProjectPanda.Droid.Resource.String.library_name;
 			global::PCLCrypto.Resource.String.ApplicationName = global::ProjectPanda.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::ProjectPanda.Droid.Resource.String.Hello;
 			global::Xamarin.Auth.Resource.Animation.slide_in_right = global::ProjectPanda.Droid.Resource.Animation.slide_in_right;

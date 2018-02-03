@@ -70,6 +70,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationGoogle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationMicrosoft.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DocAvaliableManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Serapis\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserRegistrationManager .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppoitmentHistoryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\ChatBotViewModel.cs" />
@@ -253,6 +254,7 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcodedelivery.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Views\MicroCharts.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml">

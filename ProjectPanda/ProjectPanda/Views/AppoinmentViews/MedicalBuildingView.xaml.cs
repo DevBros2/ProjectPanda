@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectPanda.ViewModels;
 using ProjectPanda.Models;
+using Entry = Microcharts.Entry;
+using SkiaSharp;
+using Microcharts;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,12 +19,12 @@ namespace ProjectPanda.Views
 	{
         MedicalBuildingViewModel viewModel;
         // DoctorListViewModel viewModel;
-        MedicalBuildingModel MedicalBuildingModel;
 
         public MedicalBuildingView ()
 		{
 			InitializeComponent ();
-
+            
+            
             BindingContext = viewModel = new MedicalBuildingViewModel();
            // BindingContext = viewModel = new DoctorListViewModel();
         }
@@ -29,9 +32,11 @@ namespace ProjectPanda.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            
+
         }
 
-         async void MedicalBuilding_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void MedicalBuilding_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MedicalBuildingViewModel;
             if (item == null)
@@ -46,5 +51,8 @@ namespace ProjectPanda.Views
         {
             //The pop up with graphs and more information about that practice 
         }
+
+       
+
     }
 }

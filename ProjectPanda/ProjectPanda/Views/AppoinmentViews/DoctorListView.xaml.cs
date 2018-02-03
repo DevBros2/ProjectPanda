@@ -42,7 +42,7 @@ namespace ProjectPanda.Views
             vm.HideOrShowProfile(doctors);
         }
 
-        async void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as DocAvaliable;
             if (item == null)
