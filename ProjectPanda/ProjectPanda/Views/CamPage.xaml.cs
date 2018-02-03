@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace ProjectPanda.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CamPage : ContentPage
-	{
-		public CamPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class CamPage : ContentPage
+    {
+        public CamPage()
+        {
+            InitializeComponent();
+        }
 	}
 }

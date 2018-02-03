@@ -41,9 +41,6 @@ namespace ProjectPanda.Views
             MedicalBuilding.SelectedItem = null;
         }
 
-        private void MoreInformation(object sender, EventArgs e)
-        {
-            //The pop up with graphs and more information about that practice 
-        }
+       
     }
 }

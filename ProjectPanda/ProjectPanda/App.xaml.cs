@@ -20,10 +20,10 @@ namespace ProjectPanda
             //MainPage = new ProjectPanda.MainPage();
 //<<<<<<< HEAD
             //MainPage = new NavigationPage(new Pages.SplashPage());
-            MainPage = new NavigationPage(new ProjectPanda.Pages.MainPage());
+            //MainPage = new NavigationPage(new ProjectPanda.Pages.MainPage());
 //=======
            // MainPage = new NavigationPage(new Pages.SplashPage());
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new ());
 //>>>>>>> fd68626cd017e0abf87ed1c29654c8b6bf94021e
         }
 

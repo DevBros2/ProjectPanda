@@ -8,7 +8,7 @@
         <ListView x:Name="MedicalBuilding"
                   SeparatorVisibility="None" 
                   HasUnevenRows="True"
-                  ItemsSource="{Binding Practices }"
+                  ItemsSource="{Binding Practices}"
                   IsPullToRefreshEnabled="True"
                   CachingStrategy="RecycleElement"
                   HeightRequest="100"
@@ -47,13 +47,7 @@
                                             <Image Source="{Binding ProfileImage}"  HeightRequest="150"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"/>
                                             </StackLayout>
 
-                                            <StackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="25,0,0,0">
-                                                <Image Source="info.png" IsVisible="True">
-                                                    <Image.GestureRecognizers>
-                                                        <TapGestureRecognizer Tapped="MoreInformation"/>
-                                                    </Image.GestureRecognizers>
-                                                </Image>
-                                            </StackLayout>
+                                            
                                             
                                         </Grid>
                                                               
