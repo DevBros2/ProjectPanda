@@ -26,6 +26,9 @@ namespace ProjectPanda.Droid
 		
 		public static void UpdateIdValues()
 		{
+
+			global::Microcharts.Droid.Resource.String.library_name = global::ProjectPanda.Droid.Resource.String.library_name;
+
 			global::Lottie.Forms.Droid.Resource.Animation.abc_fade_in = global::ProjectPanda.Droid.Resource.Animation.abc_fade_in;
 			global::Lottie.Forms.Droid.Resource.Animation.abc_fade_out = global::ProjectPanda.Droid.Resource.Animation.abc_fade_out;
 			global::Lottie.Forms.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::ProjectPanda.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -2161,6 +2164,7 @@ namespace ProjectPanda.Droid
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_id = global::ProjectPanda.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ProjectPanda.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::ProjectPanda.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+
 			global::PCLCrypto.Resource.String.ApplicationName = global::ProjectPanda.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::ProjectPanda.Droid.Resource.String.Hello;
 			global::Xamarin.Auth.Resource.Animation.slide_in_right = global::ProjectPanda.Droid.Resource.Animation.slide_in_right;
@@ -6098,11 +6102,19 @@ namespace ProjectPanda.Droid
 			// aapt resource value: 0x7f070039
 			public const int bottom_sheet_behavior = 2131165241;
 			
+
+			// aapt resource value: 0x7f070041
+			public const int library_name = 2131165249;
+			
+			// aapt resource value: 0x7f070001
+			public const int mr_button_content_description = 2131165185;
+
 			// aapt resource value: 0x7f07003a
 			public const int character_counter_pattern = 2131165242;
 			
 			// aapt resource value: 0x7f070000
 			public const int library_name = 2131165184;
+
 			
 			// aapt resource value: 0x7f070002
 			public const int mr_button_content_description = 2131165186;

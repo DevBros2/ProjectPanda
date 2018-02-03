@@ -14,13 +14,7 @@ namespace ProjectPanda
 		public App ()
 		{
 			InitializeComponent();
-
-            //InitApp();
-//
-            //MainPage = new ProjectPanda.MainPage();
-//<<<<<<< HEAD
-            //MainPage = new NavigationPage(new Pages.SplashPage());
-            MainPage = new NavigationPage(new ProjectPanda.Pages.MainPage());
+       
 //=======
            // MainPage = new NavigationPage(new Pages.SplashPage());
             MainPage = new NavigationPage(new MainPage());
