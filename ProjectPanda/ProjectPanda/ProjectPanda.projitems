@@ -65,7 +65,6 @@
       <DependentUpon>SupportPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Anele_AI\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Authentication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationFacebook.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationGoogle.cs" />
@@ -254,7 +253,6 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcodedelivery.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\MicroCharts.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml">

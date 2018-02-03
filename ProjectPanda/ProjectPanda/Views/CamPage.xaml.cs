@@ -57,5 +57,4 @@ namespace ProjectPanda.Views
         }
 
     }
-
 }

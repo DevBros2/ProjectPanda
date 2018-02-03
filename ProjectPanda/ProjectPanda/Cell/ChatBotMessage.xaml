@@ -2,29 +2,14 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Cell.ChatBotMessage">
-    
-        <Grid ColumnSpacing="2" Padding="5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*">
-                </ColumnDefinition>
-                <ColumnDefinition Width="40">
-                </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*">
-                </RowDefinition>
-                <RowDefinition Height="Auto">
-                </RowDefinition>
-            </Grid.RowDefinitions>
-            <Frame Grid.Row="0" OutlineColor="Transparent" HasShadow="False" Grid.Column="0" BackgroundColor="#03A9F4">
-                <Label TextColor="White" Text="{Binding Text}" />
-            </Frame>
-            
-            <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                <Label FontSize="Micro" Text="{Binding Name}" TextColor="Black" />
-                <Label FontSize="Micro" Text="{Binding MessagDateTime, StringFormat='{0:MM/dd/yyyy hh:mm tt}'}" 
-                TextColor="Gray" />
-            </StackLayout>
-        </Grid>
-    
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <ContentView Padding="5">
+
+
+                </ContentView>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
 </ViewCell>

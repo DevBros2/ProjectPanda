@@ -36,29 +36,20 @@ namespace ProjectPanda.Views
         private void DoctorList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var vm = viewmodel;
-            //
+
+
             var doctors = e.Item as DocAvaliable;
             vm.HideOrShowProfile(doctors);
         }
 
-         async void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-         {
+         void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
             var item = e.SelectedItem as DocAvaliable;
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new DoctorListView());
-            //Deselecting the listview
+            Navigation.PushAsync(new MedicalBuildingView());
             DoctorList.SelectedItem = null;
-
-         }
-
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            /* Does something
-            *  A
-            *  B
-            */
         }
     }
     
