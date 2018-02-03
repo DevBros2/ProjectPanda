@@ -16,7 +16,7 @@ namespace ProjectPanda.Views
 	{
         MedicalBuildingViewModel viewModel;
         // DoctorListViewModel viewModel;
-        MedicalBuildingModel MedicalBuildingModel;
+        
 
         public MedicalBuildingView ()
 		{
@@ -36,8 +36,9 @@ namespace ProjectPanda.Views
             var item = e.SelectedItem as MedicalBuildingViewModel;
             if (item == null)
                 return;
-           await Navigation.PushAsync(new DoctorListView());
 
+           await Navigation.PushAsync(new DoctorListView());
+            //Automatically deselects item
             MedicalBuilding.SelectedItem = null;
         }
 

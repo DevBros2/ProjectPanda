@@ -41,13 +41,13 @@ namespace ProjectPanda.Views
             vm.HideOrShowProfile(doctors);
         }
 
-         private void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+         async void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
          {
             var item = e.SelectedItem as DocAvaliable;
             if (item == null)
                 return;
 
-            Navigation.PushAsync(new MedicalBuildingView());
+            await Navigation.PushAsync(new DoctorListView());
             //Deselecting the listview
             DoctorList.SelectedItem = null;
 
