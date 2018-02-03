@@ -36,6 +36,7 @@ namespace ProjectPanda.Views
             var item = e.SelectedItem as MedicalBuildingViewModel;
             if (item == null)
                 return;
+
            await Navigation.PushAsync(new DoctorListView());
 
             MedicalBuilding.SelectedItem = null;
