@@ -46,8 +46,7 @@ namespace ProjectPanda.Views
 
         private void DocPrescription_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-
-
+   
             _heightRequest = 420;
 
             DocPrescription.HeightRequest = (_heightRequest);
