@@ -33,6 +33,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Locator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicalBuildingModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PrescribedMedication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MyAppointmentsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PrescribedMedicationListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentBack.xaml.cs">
       <DependentUpon>AppoitmentBack.xaml</DependentUpon>
       <SubType>Code</SubType>
