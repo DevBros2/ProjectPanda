@@ -56,14 +56,12 @@ namespace ProjectPanda.Pages
         #endregion
 
 
-        async Task AddDetails(UserRegistration userregistration )
-        {
-            await manager.InsertUsers(userregistration);
-           
-        }
+       
 
         public async void NextDetailfillPage(object sender, EventArgs e)
         {
+            //All this code must be pushed to the ViewModel
+
             var users = new UserRegistration {
                 FirstName = first_name.Text,
                 Surname = surname.Text,
@@ -87,18 +85,17 @@ namespace ProjectPanda.Pages
 
             //Gonna add them later cause well they are a diffrent data type for some reason
 
-
-
             //   medicalAidPicker.Text = string.Empty;
             //   medicalAidPicker.Unfocus();
-           
-           
-            
-
 
             await Navigation.PushAsync(new DetailFillPageChronic());
         }
 
-       
+        async Task AddDetails(UserRegistration userregistration)
+        {
+            await manager.InsertUsers(userregistration);
+
+        }
+
     }
 }

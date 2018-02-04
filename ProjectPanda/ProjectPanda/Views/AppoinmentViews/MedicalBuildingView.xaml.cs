@@ -18,7 +18,7 @@ namespace ProjectPanda.Views
 	public partial class MedicalBuildingView : ContentPage
 	{
         MedicalBuildingViewModel viewModel;
-        // DoctorListViewModel viewModel;
+        
 
         public MedicalBuildingView ()
 		{

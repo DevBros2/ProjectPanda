@@ -8,7 +8,8 @@ namespace ProjectPanda.Models
     {
         public string ProfileImage {get; set; }
         public string PracticeName { get; set; }
-        public string Charts { get; set; }
+        public float ChartValue { get; set; } //This Must be value 0 - 100%
         public double Distance { get; set; }
+
     }
 }
