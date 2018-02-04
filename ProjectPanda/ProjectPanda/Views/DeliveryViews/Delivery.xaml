@@ -11,7 +11,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="3*"/>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
@@ -51,9 +51,11 @@
                 </Frame>
                 <!--#endregion-->
 
-                <Button x:Name="MedDeliveryButton" Text="Deliver medication"  TextColor="Black" HeightRequest="65" BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" Grid.Row="2" Margin="20,10,20,10"/>
+                <Button x:Name="MedDeliveryButton" Text="Deliver medication" VerticalOptions="Start" TextColor="Black" HeightRequest="65" BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" Grid.Row="2" Margin="8,8,8,8" Image="Delivery.png"/>
 
-                <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3" Margin="30,30,0,10"/>
+                <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3" Margin="30,40,0,10"/>
+
+                <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Start" HeightRequest="65" Margin="8,8,8,8" BorderWidth="2" BorderColor="Black" Grid.Row="4"/>
 
 
             </Grid>
