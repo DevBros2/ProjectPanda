@@ -43,6 +43,9 @@ namespace ProjectPanda.Views
             XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
         }
 
+        private void Cancel(object sender, EventArgs e)
+        {
 
+        }
     }
 }
