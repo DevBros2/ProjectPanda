@@ -9,12 +9,53 @@
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*2"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*3"/>
-                    <RowDefinition Height="*2"/>
-                    <RowDefinition Height="*3"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
+
+                <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0" Margin="30,10,0,10"/>
+
+                <!--#region The frame for doctor precribed medication-->
+                <Frame BackgroundColor="White" VerticalOptions="FillAndExpand"  OutlineColor="Black" x:Name="DocPrescription"  CornerRadius="8" Margin="10,0,10,10" Grid.Row="1" PropertyChanged="DocPrescription_PropertyChanged" >
+                    <ListView HasUnevenRows="True" SeparatorVisibility="Default" ItemsSource="{Binding _prescribedMedication}"  x:Name="MedList"  ItemTapped="MedList_ItemTapped" ItemAppearing="MedList_ItemAppearing">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ContentView  >
+
+                                        <Grid >
+                                            
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20"/>
+                                                <RowDefinition Height="20"/>
+                                                <RowDefinition Height="20"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Label Text="{Binding Medication}" TextColor="Black" Grid.Row="0" />
+                                            <Label Text="{Binding DosageAmount}" TextColor="Black" Grid.Row="1"/>
+                                            <Label Text="{Binding MedicationDescription}" TextColor="Black" Grid.Row="2"/>
+
+
+                                        </Grid>
+                                        
+                                        
+                                       
+                                    </ContentView>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Frame>
+                <!--#endregion-->
+
+                <Button x:Name="MedDeliveryButton" Text="Deliver medication"  TextColor="Black" HeightRequest="65" BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" Grid.Row="2" Margin="20,10,20,10"/>
+
+                <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3" Margin="30,30,0,10"/>
+
+
             </Grid>
         </ScrollView>
     </ContentPage.Content>
