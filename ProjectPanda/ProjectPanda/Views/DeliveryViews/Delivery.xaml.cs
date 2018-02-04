@@ -41,19 +41,16 @@ namespace ProjectPanda.Views
             await Navigation.PushAsync(new ChatBotView());
         }
 
+
+
+
         private void DocPrescription_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             _heightRequest = 420;
 
             DocPrescription.HeightRequest = (_heightRequest);
 
-            /*
-             
-                    foreach(var 
-
-             
-             */
-
+           
         }
 
 
@@ -70,35 +67,24 @@ namespace ProjectPanda.Views
 
         #endregion
 
-        #region the logic for displaying other things for empty lists
-        /*
-              if(the list is empty in the frame){
-                  MedDeliveryButton.IsVisble=false;
+       
 
+        #region The code for the doctors prescription
 
-
-
-              }
-              
-            else{
-           
-                    MedDeliveryButton.IsVisible=true;
-                 }
-
-        */
-
-        #endregion
-
-
-        #region
         private void MedList_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
             if(e.Item != null)
             {
-               // foreach (var item in collection)
-               // {
-               //         _heightRequest+=30;
-              //  }
+                // foreach (var item in _prescribedMedication)
+                // {
+                //         _heightRequest+=30;
+              
+                    /*
+                     
+             
+                    */
+
+               //  }
             }
 
             //adding a item list empty picture or animation makes it look better

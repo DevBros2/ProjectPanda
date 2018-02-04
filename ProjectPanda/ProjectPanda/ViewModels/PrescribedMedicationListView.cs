@@ -23,7 +23,14 @@ namespace ProjectPanda.ViewModels
 
             _prescribedMedication = new ObservableCollection<PrescribedMedication>
             {
-             
+
+                new PrescribedMedication{Medication="Oxycon", DosageAmount="3mg/hl", MedicationDescription="Take three tablets after every meal"},
+                new  PrescribedMedication{Medication="Oxycon", DosageAmount="3mg/hl", MedicationDescription="Take three tablets after every meal" },
+                  new  PrescribedMedication{Medication="Oxycon", DosageAmount="3mg/hl", MedicationDescription="Take three tablets after every meal" },
+                    new  PrescribedMedication{Medication="Oxycon", DosageAmount="3mg/hl", MedicationDescription="Take three tablets after every meal" },
+                      new  PrescribedMedication{Medication="Oxycon", DosageAmount="3mg/hl", MedicationDescription="Take three tablets after every meal" },
+                      new  PrescribedMedication{Medication="lui", DosageAmount="6mg/hl", MedicationDescription="Take three tablets after every meal" }
+                   
             };
 
         }
