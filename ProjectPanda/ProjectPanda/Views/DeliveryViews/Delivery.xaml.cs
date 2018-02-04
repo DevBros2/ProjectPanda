@@ -78,13 +78,21 @@ namespace ProjectPanda.Views
                 // foreach (var item in _prescribedMedication)
                 // {
                 //         _heightRequest+=30;
-              
-                    /*
-                     
-             
-                    */
 
-               //  }
+                /*
+
+                        private void DocPrescription_PropertyChanged(object sender, PropertyChangedEventArgs e)
+                        {
+                            _heightRequest = 420;
+
+                            DocPrescription.HeightRequest = (_heightRequest);
+
+
+                        }
+
+                */
+
+                //  }
             }
 
             //adding a item list empty picture or animation makes it look better
