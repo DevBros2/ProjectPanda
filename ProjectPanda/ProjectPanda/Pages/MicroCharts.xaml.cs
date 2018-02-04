@@ -15,46 +15,105 @@ namespace ProjectPanda.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MicroCharts : ContentPage
 	{
-        #region dummy data
-        List<Entry> entries = new List<Entry>
-        {
-            new Entry(200)
-            {
-                Color = SKColor.Parse("#c5ff99"),
-                Label = "Data!",
-                ValueLabel = "200"
-            },
-            new Entry(100)
-            {
-                Color = SKColor.Parse("#229122"),
-                Label = "Data!",
-                ValueLabel = "200"
-            },
-            new Entry(300)
-            {
-                Color = SKColor.Parse("#ff5252"),
-                Label = "Data!",
-                ValueLabel = "200"
-            },
-            new Entry(250)
-            {
-                Color = SKColor.Parse("#229122"),
-                Label = "Data!",
-                ValueLabel = "200"
-            },
-            new Entry(210)
-            {
-                Color = SKColor.Parse("#c5ff99"),
-                Label = "Data!",
-                ValueLabel = "200"
-            },
-        };
-        #endregion
+        List<MyChart> MyCharts;
         public MicroCharts ()
 		{
 			InitializeComponent ();
-            Chart1.Chart = new LineChart { Entries = entries };
+            MyCharts = new List<MyChart>();
+            PopulateCharts();
         }
-       
+        #region ModelClass
+        public class MyChart
+        {
+            public Chart ChartData { get; set; }
+        }
+        #endregion 
+
+        private void PopulateCharts()
+        {
+            MyCharts.Add(new MyChart() { ChartData = Chart1 });
+            MyCharts.Add(new MyChart() { ChartData = Chart2 });
+            MyCharts.Add(new MyChart() { ChartData = Chart3 });
+            MyCharts.Add(new MyChart() { ChartData = Chart4 });
+           
+            MyListview.ItemsSource = MyCharts;
+        }
+        public Chart Chart1 => new BarChart()
+        {
+            Entries = new[]
+            {
+                new Entry(128)
+                {
+                    Label = "iOS",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+                new Entry(514)
+                {
+                     Label = "Shared",
+                    ValueLabel = "514",
+                    Color = SKColor.Parse("#3498db")
+            }   },
+                BackgroundColor = SKColors.White
+        };
+
+        public Chart Chart2 => new BarChart()
+        {
+            Entries = new[]
+           {
+                new Entry(128)
+                {
+                    Label = "iOS",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+                new Entry(514)
+                {
+                     Label = "Shared",
+                    ValueLabel = "514",
+                    Color = SKColor.Parse("#3498db")
+            }   },
+            BackgroundColor = SKColors.White
+        };
+
+        public Chart Chart3 => new BarChart()
+        {
+            Entries = new[]
+           {
+                new Entry(128)
+                {
+                    Label = "iOS",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+                new Entry(514)
+                {
+                     Label = "Shared",
+                    ValueLabel = "514",
+                    Color = SKColor.Parse("#3498db")
+            }   },
+            BackgroundColor = SKColors.White
+        };
+
+        public Chart Chart4 => new BarChart()
+        {
+            Entries = new[]
+           {
+                new Entry(128)
+                {
+                    Label = "iOS",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+                new Entry(514)
+                {
+                     Label = "Shared",
+                    ValueLabel = "514",
+                    Color = SKColor.Parse("#3498db")
+            }   },
+            BackgroundColor = SKColors.White
+        };
+
+
     }
 }

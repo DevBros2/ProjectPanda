@@ -13,14 +13,14 @@ namespace ProjectPanda.ViewModels
 {
     public class MedicalBuildingViewModel
     {
-        float ChartValue;
+        //float ChartValue;
         public ObservableCollection<MedicalBuildingModel> Practices { get; set; }
         public object SelectedItem { get; set; }
 
         public MedicalBuildingViewModel()
         {
             GenerateMedicalBuildingModel();
-            PopulateCharts();
+           
         }
 
         #region ListViewData
@@ -28,13 +28,20 @@ namespace ProjectPanda.ViewModels
         {
             Practices = new ObservableCollection<MedicalBuildingModel>
             {
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",Distance = 6.2,ChartValue = this.ChartValue= 100},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",Distance = 8,ChartValue = this.ChartValue= 100},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",Distance = 9.7,ChartValue = this.ChartValue= 100},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",Distance = 13.3,ChartValue = this.ChartValue= 100},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",Distance = 15.0,ChartValue = this.ChartValue= 100},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",Distance = 18.5,ChartValue = this.ChartValue= 100},
-                new MedicalBuildingModel{ ProfileImage="GreysHospital.jpg", PracticeName = "Grey's Hospital", Distance = 20.2,ChartValue = this.ChartValue= 100},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",Distance = 6.2,
+                ChartData = Chart1},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",Distance = 8,
+                 ChartData = Chart2},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",Distance = 9.7,
+                 ChartData = Chart3},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",Distance = 13.3,
+                 ChartData = Chart4},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",Distance = 15.0,
+                 ChartData = Chart5},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",Distance = 18.5,
+                 ChartData = Chart6},
+                new MedicalBuildingModel{ ProfileImage="GreysHospital.jpg", PracticeName = "Grey's Hospital", Distance = 20.2,
+                 ChartData = Chart7},
 
 
             };
@@ -42,35 +49,105 @@ namespace ProjectPanda.ViewModels
             //ChartValue = this.ChartValue;
         }
 
-
-        private void PopulateCharts()
+        public Chart Chart1 => new BarChart()
         {
-            List<Entry> entries = new List<Entry>
+            Entries = new[]
             {
-                 new Entry(ChartValue)
-                 {Color = SKColor.Parse("#00ff00"),Label = ChartValue.ToString(),ValueLabel = "25"//Green
-                 },
+                new Entry(128)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+            }   
+           
+        };
+        public Chart Chart2 => new BarChart()
+        {
+            Entries = new[]
+           {
+                new Entry(128)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+                
+            },
 
-                new Entry(ChartValue)
-                { Color = SKColor.Parse("#ff0000"), Label = "Data!", ValueLabel = "27" },
+        };
+        public Chart Chart3 => new BarChart()
+        {
+            Entries = new[]
+           {
+                new Entry(128)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
 
-                new Entry(ChartValue)
-                { Color = SKColor.Parse("#c5ff99"), Label = "Data!", ValueLabel = "200"},
+            },
 
-                new Entry(ChartValue)
-                { Color = SKColor.Parse("#FF4500"), Label = "Data!", ValueLabel = "50" },
+        };
+        public Chart Chart4 => new BarChart()
+        {
+            Entries = new[]
+           {
+                new Entry(28)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
 
-                new Entry(ChartValue)
-                { Color = SKColor.Parse("#c5ff99"),Label = "Data!",ValueLabel = "200"},
+            },
 
-                new Entry(ChartValue)
-                { Color = SKColor.Parse("#FF4500"), Label = "Data!",ValueLabel = "64" },//Orange
+        };
+        public Chart Chart5 => new BarChart()
+        {
+            Entries = new[]
+          {
+                new Entry(128)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
 
-                new Entry(ChartValue)
-                { Color = SKColor.Parse("#ff0000"),Label = "Data!", ValueLabel = "85"}//Red
-            };
-            #endregion
+            },
 
-        }
+        };
+        public Chart Chart6 => new BarChart()
+        {
+            Entries = new[]
+          {
+                new Entry(80)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+
+            },
+
+        };
+        public Chart Chart7 => new BarChart()
+        {
+            Entries = new[]
+          {
+                new Entry(58)
+                {
+                    Label = "",
+                    ValueLabel = "128",
+                     Color = SKColor.Parse("#b455b6")
+                },
+
+            },
+
+        };
+        #endregion
+
     }
+    
 }

@@ -4,11 +4,23 @@
              x:Class="ProjectPanda.Pages.MicroCharts"
              xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <forms:ChartView HeightRequest="150"  x:Name="Chart1" Grid.Row="0"/>
-    </Grid>
+    <ContentPage.Content>
+        <ListView
+            HasUnevenRows="True"
+            HeightRequest="100"
+            x:Name="MyListview">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <forms:ChartView Chart="{Binding ChartData}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            
+        
+    </ContentPage.Content>
+    
 </ContentPage>
