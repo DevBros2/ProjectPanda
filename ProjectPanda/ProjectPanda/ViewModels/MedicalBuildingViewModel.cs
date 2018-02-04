@@ -53,70 +53,71 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
             {
-                new Entry(128)
+                new Entry(120)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "60%",
+                     Color = SKColor.Parse("#FFFF00")
                 },
-            }   
-           
+            },
+           BackgroundColor = SKColors.Transparent,
         };
         public Chart Chart2 => new BarChart()
         {
             Entries = new[]
-           {
-                new Entry(128)
+            {
+                new Entry(148)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "75%",
+                     Color = SKColor.Parse("#FF4500"),
+                     
                 },
-                
+                 
             },
-
+            BackgroundColor = SKColors.Transparent,
         };
         public Chart Chart3 => new BarChart()
         {
             Entries = new[]
            {
-                new Entry(128)
+                new Entry(188)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "80%",
+                     Color = SKColor.Parse("#ff0000")
                 },
 
             },
-
+            BackgroundColor = SKColors.Transparent,
         };
         public Chart Chart4 => new BarChart()
         {
             Entries = new[]
            {
-                new Entry(28)
+                new Entry(168)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "70%",
+                     Color = SKColor.Parse("#FFFF00")
                 },
 
             },
-
+            BackgroundColor = SKColors.Transparent,
         };
         public Chart Chart5 => new BarChart()
         {
             Entries = new[]
           {
-                new Entry(128)
+                new Entry(208)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "84%",
+                     Color = SKColor.Parse("#ff0000")
                 },
 
             },
-
+            BackgroundColor = SKColors.Transparent,
         };
         public Chart Chart6 => new BarChart()
         {
@@ -125,12 +126,12 @@ namespace ProjectPanda.ViewModels
                 new Entry(80)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "40%",
+                     Color = SKColor.Parse("#00ff00")
                 },
 
             },
-
+            BackgroundColor = SKColors.Transparent,
         };
         public Chart Chart7 => new BarChart()
         {
@@ -139,12 +140,12 @@ namespace ProjectPanda.ViewModels
                 new Entry(58)
                 {
                     Label = "",
-                    ValueLabel = "128",
-                     Color = SKColor.Parse("#b455b6")
+                    ValueLabel = "29%",
+                     Color = SKColor.Parse("#00ff00")
                 },
 
             },
-
+            BackgroundColor = SKColors.Transparent,
         };
         #endregion
 

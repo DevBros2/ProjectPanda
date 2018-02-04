@@ -59,7 +59,7 @@
 
                                                     <StackLayout Grid.Row="0" HorizontalOptions="Center">
                                                       <!--CHARTS-->
-                                                        <forms:ChartView Chart="{Binding ChartData}"/>
+                                                        <forms:ChartView WidthRequest="60" HeightRequest="100" Chart="{Binding ChartData}"/>
                                                     </StackLayout>
 
                                                     <StackLayout Grid.Row="1" HorizontalOptions="Center">
