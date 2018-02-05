@@ -258,8 +258,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcode.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\flipcodedelivery.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\MicroCharts.txt" />
   </ItemGroup>
   <ItemGroup>
