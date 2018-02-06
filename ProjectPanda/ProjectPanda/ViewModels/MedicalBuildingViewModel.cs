@@ -46,13 +46,13 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
             {
-                new Entry(60)
+                new Entry(60)//Indicates how busy it is
                 {
                     Label = "",
                     ValueLabel = "",
                      Color = SKColor.Parse("#FFFF00")//Yellow
                 },
-                 new Entry(40)
+                 new Entry(40)//then less value of the first Entry out of 100
                 {
                     Label = "",
                     ValueLabel = "",
@@ -67,7 +67,7 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
             {
-                new Entry(74)
+                new Entry(74) //Indicates how busy it is
                 { 
                      Color = SKColor.Parse("#FF4500"),  
                 },
@@ -84,7 +84,7 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
            {
-                new Entry(94)
+                new Entry(94) //Indicates how busy it is
                 {
                      Color = SKColor.Parse("#ff0000")
                 },
@@ -101,7 +101,7 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
            {
-                new Entry(85)
+                new Entry(85) //Indicates how busy it is
                 {
                      Color = SKColor.Parse("#FFFF00")
                 },
