@@ -26,10 +26,10 @@
 
                        
                                 <!--The front page of the appoitment-->
-                            <ScrollView>
+                          
                                 <StackLayout>
 
-                                    <Grid Padding="10">
+                                    <Grid Padding="5">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
@@ -38,7 +38,7 @@
                                         </Grid.RowDefinitions>
 
                                             <!-- UI Title-->
-                                <StackLayout Grid.Row="0" Margin="25,15,15,5">
+                                <StackLayout Grid.Row="0" Margin="25,10,15,5">
                                       
                                                 <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
                                      
@@ -53,7 +53,7 @@
 
                                                 </Grid.RowDefinitions>
 
-                                                <StackLayout  Grid.Row="1" Margin="0,0,0,10"  >
+                                                <StackLayout  Grid.Row="1" Margin="0,0,0,5"  >
 
                                                     <Button BackgroundColor="{StaticResource ButtonLoginColour}"                                     
                                                             Text="Doctor"
@@ -70,7 +70,7 @@
 
                                                 </StackLayout>
 
-                                                <StackLayout  Grid.Row="2" Margin="0,0,0,10" >
+                                                <StackLayout  Grid.Row="2" Margin="0,0,0,5" >
                                                      <Button TextColor="Black"
                                                              WidthRequest="23"
                                                              HeightRequest="80"
@@ -86,7 +86,7 @@
 
 
                                                 <!--The date picker-->
-                                        <StackLayout Grid.Row="2" Margin="25,15,15,15">
+                                        <StackLayout Grid.Row="2" Margin="25,15,15,10">
                                             <DatePicker Format="DD-MM-YYYY"  HeightRequest="58" WidthRequest="10"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
                                                         <DatePicker.MinimumDate>
                                                             01/01/2018
@@ -102,7 +102,7 @@
                                                     </DatePicker>
                                                 </StackLayout>
 
-                                                <StackLayout Grid.Row="3" Margin="0,0,0,10" >
+                                                <StackLayout Grid.Row="3" Margin="0,0,0,5" >
                                                     <Button TextColor="Black"
                                                     WidthRequest="23"
                                                     HeightRequest="80"
@@ -128,18 +128,7 @@
 
 
 
-
-                                <StackLayout Grid.Row="2"  Margin="11,15,12,15">
-
-                                
-                                    <Customizededitor:EntryBlock  />
-                    
-                                    
-                                </StackLayout>
-
-
-
-                                        <StackLayout   Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center" >
+                                        <StackLayout   Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" >
                                             <Image Source="check.png" IsVisible="True">
                                                 <Image.GestureRecognizers>
                                                     <TapGestureRecognizer Tapped="Confirm"/>
@@ -155,7 +144,7 @@
 
 
                                 </StackLayout>
-                            </ScrollView>
+                         
 
                        
 
@@ -169,7 +158,7 @@
                         <StackLayout>
 
                             <!-- UI Title-->
-                            <StackLayout  Grid.Row="5"  Margin="15,10,15,0">
+                            <StackLayout  Grid.Row="5"  Margin="15,5,15,0">
 
                                 <Label Text="Next Appointment" Style="{DynamicResource Key=FontStyle}" TextColor="Black"/>
 
@@ -241,9 +230,13 @@
                         </StackLayout>
 
                             <!-- Cancel Button-->
-                            <StackLayout Grid.Row="10">
-                            <Button Text="Cancel" BorderWidth="2"  BorderRadius="2" BorderColor="Black" BackgroundColor="Red" HorizontalOptions="Center" TextColor="White" x:Name="CancelAppoint" />
-                        </StackLayout>
+                            <StackLayout Grid.Row="10" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image Source="cancel.png" IsVisible="True">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Cancel"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
                         </StackLayout>
                     </ScrollView>
                     

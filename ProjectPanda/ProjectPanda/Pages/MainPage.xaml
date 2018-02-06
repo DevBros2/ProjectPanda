@@ -14,25 +14,24 @@
             <ContentPage.Content>
 
                 <ScrollView>
-                <StackLayout VerticalOptions="Center"  >
-                 
 
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                          
+                        </Grid.RowDefinitions>
 
-
-
-                    <Button x:Name="Menu_btn3" 
+                        <Button x:Name="Menu_btn3" 
                              Text="Payments" 
-                              BackgroundColor="{StaticResource ButtonLoginColour}" 
-                               BorderWidth="2"
-                              WidthRequest="222" 
-                              HeightRequest="54"
-                              
-                              VerticalOptions="Center" 
-                             BorderColor="Black"
+                              Grid.Row="0"
                               TextColor="Black"
                               Clicked="Menu_btn3_Clicked" 
                               Image="creditcard.png"
-                           Margin="20,60,20,20"
+                           BackgroundColor="{StaticResource BackgroundColor}" 
                             />
 
 
@@ -40,61 +39,45 @@
 
 
 
-                    <Button x:Name="Menu_btn2"
-                                Text="Settings"
-                                BackgroundColor="{StaticResource ButtonLoginColour}" 
-                                BorderWidth="2"
-                                WidthRequest="222" 
-                                HeightRequest="54"
-                              
-                                VerticalOptions="Center"      
-                               BorderColor="Black"
-                                Margin="20"
+                        <Button x:Name="Menu_btn2"
+                                Text="Settings"                   
+                                Grid.Row="1"
                                 TextColor="Black"
                                 Clicked="Menu_btn2_Clicked"
                                 Image="settings.png"
+                                BackgroundColor="{StaticResource BackgroundColor}" 
                         />
 
 
 
 
 
-                    <Button x:Name="Menu_btn4" 
-                                 Text="Contact us"
-                                BackgroundColor="{StaticResource ButtonLoginColour}"
-                               BorderWidth="2"
-                                WidthRequest="222"
-                                HeightRequest="54"
-                               
-                                VerticalOptions="Center"
-                               BorderColor="Black"
-                                Margin="20"            
-                                TextColor="Black"
-                                Clicked="Menu_btn4_Clicked"
-                               Image="contactus.png"
+                        <Button x:Name="Menu_btn4" 
+                        Text="Contact us"
+                        Grid.Row="2"                                                                   
+                        TextColor="Black"
+                        Clicked="Menu_btn4_Clicked"
+                        Image="contactus.png"
+                        BackgroundColor="{StaticResource BackgroundColor}" 
                          />
 
 
-                    <Button 
+                        <Button 
                         
-                          Text="Appointments"
-                                BackgroundColor="{StaticResource ButtonLoginColour}"
-                               BorderWidth="2"
-                                WidthRequest="222"
-                                HeightRequest="54"
-                               Clicked="AppointmentHistory"
-                                VerticalOptions="Center"
-                               BorderColor="Black"
-                                Margin="20"            
-                                TextColor="Black"
-                                Image="calendar2.png"
+                        Text="Appointments"                                          
+                        Clicked="AppointmentHistory"                            
+                        TextColor="Black"
+                        Image="calendar2.png"
+                        Grid.Row="3"
+                        BackgroundColor="{StaticResource BackgroundColor}"    
                         />
 
 
-                        <Button Text="Log out" Image="logout.png"  BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"   Clicked="Logout_Button_Clicked"/>
+                        <Button Text="Log out" Image="logout.png" BackgroundColor="{StaticResource BackgroundColor}"   BorderWidth="2" TextColor="Black" Grid.Row="4"  Clicked="Logout_Button_Clicked"/>
 
-                </StackLayout>
-                <!--Tabb.MasterPage(Menu)-->
+
+
+                    </Grid>
 
                 </ScrollView>
             </ContentPage.Content>
@@ -102,11 +85,11 @@
     </MasterDetailPage.Master>
 
 
-    
 
+    <!--Tabb.MasterPage(Menu)-->
     <MasterDetailPage.Detail >
 
-        <TabbedPage xmlns:Page="clr-namespace:ProjectPanda.Views" BarBackgroundColor="{StaticResource Primary}">
+        <TabbedPage xmlns:Page="clr-namespace:ProjectPanda.Views" BarBackgroundColor="{StaticResource Primary}" HeightRequest="80" WidthRequest="80">
 
             <TabbedPage.Children >
 
@@ -114,7 +97,7 @@
 
 
 
-                <Page:MyAppointments Icon="calendar2.png"  />
+                <Page:MyAppointments Icon="calendar.png"  />
 
 
 
