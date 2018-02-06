@@ -20,133 +20,50 @@
                 <!-- FlipCard FrontView-->
                 <xfFlipViewControl:XFFlipView.FrontView>
 
-                 
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" Margin="10,0,0,20"/>
 
 
+                        <Button BackgroundColor="{StaticResource ButtonLoginColour}"  Text="Doctor" Image="doct.png"    Style="{DynamicResource ButtonFont}"  Clicked="Doctor_Button_Clicked" TextColor="Black"  BorderWidth="2" Grid.Row="1" Margin="0,0,0,20"/>
 
-                       
-                                <!--The front page of the appoitment-->
-                          
-                                <StackLayout>
+                        <Button TextColor="Black"  BackgroundColor="{StaticResource ButtonLoginColour}" Style="{DynamicResource ButtonFont}" Image="calendar64.png" Text="Date" BorderWidth="2"   Grid.Row="2" Margin="0,0,0,20"/>
 
-                                    <Grid Padding="5">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
+                        <DatePicker VerticalOptions="Start" HorizontalOptions="Center"  Format="DD-MM-YYYY"  HeightRequest="62"  WidthRequest="400"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" Grid.Row="2" BackgroundColor="Black" Margin="8,5,8,5">
+                            <DatePicker.MinimumDate>
+                                01/01/2018
+                            </DatePicker.MinimumDate>
 
-                                            <!-- UI Title-->
-                                <StackLayout Grid.Row="0" Margin="25,10,15,5">
-                                      
-                                                <Label Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" />
-                                     
-                                        </StackLayout>
-                                <!-- UI Title-->
-                                        <StackLayout Grid.Row="1">
-                                            <Grid>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="Auto"/>
-                                                    <RowDefinition Height="Auto"/>
-                                                    <RowDefinition Height="Auto"/>
+                            <DatePicker.MaximumDate>
+                                03/01/2018
+                            </DatePicker.MaximumDate>
 
-                                                </Grid.RowDefinitions>
+                            <DatePicker.Date>
+                                01/12/2018
+                            </DatePicker.Date>
+                        </DatePicker>
 
-                                                <StackLayout  Grid.Row="1" Margin="0,0,0,5"  >
+                        <Button TextColor="Black" BackgroundColor="{StaticResource ButtonLoginColour}" Text="Time" Style="{DynamicResource ButtonFont}" BorderWidth="2" Image="clock.png" Grid.Row="3"/>
 
-                                                    <Button BackgroundColor="{StaticResource ButtonLoginColour}"                                     
-                                                            Text="Doctor"
-                                                            TextColor="Black"                   
-                                                            BorderColor="Black" 
-                                                            BorderWidth="2" 
-                                                            HeightRequest="80"
-                                                            Clicked="Doctor_Button_Clicked"
-                                                            Image="doct.png"     
-                                                            Margin="10,10,20,0"
-                                                            Style="{DynamicResource ButtonFont}"
-                    
-                                                     />
-
-                                                </StackLayout>
-
-                                                <StackLayout  Grid.Row="2" Margin="0,0,0,5" >
-                                                     <Button TextColor="Black"
-                                                             WidthRequest="23"
-                                                             HeightRequest="80"
-                                                             BackgroundColor="{StaticResource ButtonLoginColour}"
-                                                             Style="{DynamicResource ButtonFont}"          
-                                                             BorderColor="Black" 
-                                                             BorderWidth="2"  
-                                                             Image="calendar64.png"
-                                                             Margin="10,10,20,0"
-                                                             Text="Date"
-                                                     />  
-                                                </StackLayout>
+                        <TimePicker VerticalOptions="Start" HorizontalOptions="Center"  HeightRequest="62" WidthRequest="400"   Opacity="0" x:Name="Timepick" Grid.Row="3" Margin="8,5,8,5">
+                            
+                        </TimePicker>
 
 
-                                                <!--The date picker-->
-                                        <StackLayout Grid.Row="2" Margin="25,15,15,10">
-                                            <DatePicker Format="DD-MM-YYYY"  HeightRequest="58" WidthRequest="10"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" >
-                                                        <DatePicker.MinimumDate>
-                                                            01/01/2018
-                                                        </DatePicker.MinimumDate>
-
-                                                        <DatePicker.MaximumDate>
-                                                            03/01/2018
-                                                        </DatePicker.MaximumDate>
-
-                                                        <DatePicker.Date>
-                                                            01/12/2018
-                                                        </DatePicker.Date>
-                                                    </DatePicker>
-                                                </StackLayout>
-
-                                                <StackLayout Grid.Row="3" Margin="0,0,0,5" >
-                                                    <Button TextColor="Black"
-                                                    WidthRequest="23"
-                                                    HeightRequest="80"
-                                                    BackgroundColor="{StaticResource ButtonLoginColour}" 
-                                                    Text="Time"
-                                                    Style="{DynamicResource ButtonFont}"
-                                                    BorderColor="Black" 
-                                                    BorderWidth="2"
-                                                      Margin="10,10,20,0"                 
-                                                    Image="clock.png"
-                                />
-                                                </StackLayout>
-
-                                                <!--The Time Picker-->
-                                        <StackLayout Grid.Row="3" Margin="14,28,22,0" >
-                                            <TimePicker  HeightRequest="58" WidthRequest="4" Opacity="0" x:Name="Timepick" />
-                                                </StackLayout>
+                        <Image Source="check.png" IsVisible="True" Grid.Row="4" HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Confirm"/>
+                            </Image.GestureRecognizers>
+                        </Image>
 
 
-
-                                            </Grid>
-                                        </StackLayout>
-
-
-
-                                        <StackLayout   Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" >
-                                            <Image Source="check.png" IsVisible="True">
-                                                <Image.GestureRecognizers>
-                                                    <TapGestureRecognizer Tapped="Confirm"/>
-                                                </Image.GestureRecognizers>
-                                            </Image>
-                                        </StackLayout>
-
-
-                                       
-
-                                    </Grid>
-
-
-
-                                </StackLayout>
-                         
-
-                       
+                    </Grid>
 
                    
                 </xfFlipViewControl:XFFlipView.FrontView>
