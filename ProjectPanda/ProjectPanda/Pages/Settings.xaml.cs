@@ -15,6 +15,9 @@ namespace ProjectPanda.Pages
 		public Settings ()
 		{
 			InitializeComponent ();
+            //removes the second Navbar 
+            NavigationPage.SetHasNavigationBar(this, true);
+            NavigationPage.SetHasBackButton(this,true);
             
         }
 

@@ -15,6 +15,9 @@ namespace ProjectPanda.Pages
 		public SupportPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            //removes the second Navbar 
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+    }
+	
 }

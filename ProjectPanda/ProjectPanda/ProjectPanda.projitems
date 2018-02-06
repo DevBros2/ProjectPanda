@@ -21,6 +21,7 @@
       <DependentUpon>UserMessage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppoitmentHistoryModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
@@ -185,8 +186,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
