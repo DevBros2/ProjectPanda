@@ -11,7 +11,7 @@ namespace ProjectPanda.Models
         public string PracticeName { get; set; }
         public float ChartValue { get; set; } //This Must be value 0 - 100%
         public Chart ChartData { get; set; }
-        public double Distance { get; set; }
+        public string Distance { get; set; }
 
     }
 }

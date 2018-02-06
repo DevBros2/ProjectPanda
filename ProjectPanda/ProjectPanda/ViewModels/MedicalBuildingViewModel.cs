@@ -28,13 +28,13 @@ namespace ProjectPanda.ViewModels
         {
             Practices = new ObservableCollection<MedicalBuildingModel>
             {
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7},
+                new MedicalBuildingModel{ Distance="7.8 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1},
+                new MedicalBuildingModel{ Distance="7 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2},
+                new MedicalBuildingModel{Distance="6 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3},
+                new MedicalBuildingModel{Distance="12 Km",  ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4},
+                new MedicalBuildingModel{Distance="8 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5},
+                new MedicalBuildingModel{Distance="5 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6},
+                new MedicalBuildingModel{Distance="2 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7},
 
 
             };
