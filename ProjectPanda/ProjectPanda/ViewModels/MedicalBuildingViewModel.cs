@@ -28,20 +28,13 @@ namespace ProjectPanda.ViewModels
         {
             Practices = new ObservableCollection<MedicalBuildingModel>
             {
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",Distance = 6.2,
-                ChartData = Chart1},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",Distance = 8,
-                 ChartData = Chart2},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",Distance = 9.7,
-                 ChartData = Chart3},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",Distance = 13.3,
-                 ChartData = Chart4},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",Distance = 15.0,
-                 ChartData = Chart5},
-                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",Distance = 18.5,
-                 ChartData = Chart6},
-                new MedicalBuildingModel{ ProfileImage="GreysHospital.jpg", PracticeName = "Grey's Hospital", Distance = 20.2,
-                 ChartData = Chart7},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6},
+                new MedicalBuildingModel{ ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7},
 
 
             };
@@ -49,103 +42,128 @@ namespace ProjectPanda.ViewModels
             //ChartValue = this.ChartValue;
         }
 
-        public Chart Chart1 => new BarChart()
+        public Chart Chart1 => new DonutChart()
         {
             Entries = new[]
             {
-                new Entry(120)
+                new Entry(60)
                 {
                     Label = "",
-                    ValueLabel = "60%",
-                     Color = SKColor.Parse("#FFFF00")
+                    ValueLabel = "",
+                     Color = SKColor.Parse("#FFFF00")//Yellow
+                },
+                 new Entry(40)
+                {
+                    Label = "",
+                    ValueLabel = "",
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
                 },
             },
            BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
         };
-        public Chart Chart2 => new BarChart()
+        public Chart Chart2 => new DonutChart()
         {
             Entries = new[]
             {
-                new Entry(148)
-                {
-                    Label = "",
-                    ValueLabel = "75%",
-                     Color = SKColor.Parse("#FF4500"),
-                     
+                new Entry(74)
+                { 
+                     Color = SKColor.Parse("#FF4500"),  
                 },
-                 
+                  new Entry(26)
+                  {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                  },
             },
             BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
         };
-        public Chart Chart3 => new BarChart()
+        public Chart Chart3 => new DonutChart()
         {
             Entries = new[]
            {
-                new Entry(188)
+                new Entry(94)
                 {
-                    Label = "",
-                    ValueLabel = "80%",
                      Color = SKColor.Parse("#ff0000")
                 },
-
+                 new Entry(6)
+                {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
             },
             BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
         };
-        public Chart Chart4 => new BarChart()
+        public Chart Chart4 => new DonutChart()
         {
             Entries = new[]
            {
-                new Entry(168)
+                new Entry(85)
                 {
-                    Label = "",
-                    ValueLabel = "70%",
                      Color = SKColor.Parse("#FFFF00")
                 },
-
+                 new Entry(15)
+                 {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                 },
             },
             BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
         };
-        public Chart Chart5 => new BarChart()
-        {
-            Entries = new[]
-          {
-                new Entry(208)
-                {
-                    Label = "",
-                    ValueLabel = "84%",
-                     Color = SKColor.Parse("#ff0000")
-                },
-
-            },
-            BackgroundColor = SKColors.Transparent,
-        };
-        public Chart Chart6 => new BarChart()
+        public Chart Chart5 => new DonutChart()
         {
             Entries = new[]
           {
                 new Entry(80)
                 {
-                    Label = "",
-                    ValueLabel = "40%",
-                     Color = SKColor.Parse("#00ff00")
+                     Color = SKColor.Parse("#ff0000")
                 },
-
+                 new Entry(20)
+                 {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                 },
             },
             BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
         };
-        public Chart Chart7 => new BarChart()
+        public Chart Chart6 => new DonutChart()
         {
             Entries = new[]
-          {
-                new Entry(58)
+            {
+                new Entry(40)
                 {
-                    Label = "",
-                    ValueLabel = "29%",
                      Color = SKColor.Parse("#00ff00")
                 },
-
+                 new Entry(60)
+                {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
             },
             BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
+        };
+        public Chart Chart7 => new DonutChart()
+        {
+            Entries = new[]
+            {
+                new Entry(25)
+                {
+                     Color = SKColor.Parse("#00ff00")
+                },
+                 new Entry(75)
+                 {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                 },
+            },
+            BackgroundColor = SKColors.Transparent,
+            MinValue = 0,
+            MaxValue = 100
         };
         #endregion
 
