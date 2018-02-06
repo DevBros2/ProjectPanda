@@ -9,12 +9,28 @@
     <ContentPage.Content>
         
             <ScrollView>
-                <StackLayout>
+           
+            <!--#region The whole thing-->    
+            <Grid Padding="10">
+                
+                    <Grid.RowDefinitions>
+                    <RowDefinition  Height="200"/>
+                    <RowDefinition Height="Auto"/>
+                 
+                </Grid.RowDefinitions>
 
-                    <!--The users profile picture-->
-                    <StackLayout Margin="0,15,0,5">
+                <!--#region The first part of the card-->
+                
+                <StackLayout Grid.Row="0">
 
-                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit" BorderColor="Black" BorderThickness="3">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="8*"/>
+                            <RowDefinition Height="2*"/>
+
+                        </Grid.RowDefinitions>
+
+                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit" BorderColor="Black" BorderThickness="3" Grid.Row="0" Margin="0,20,0,0">
                             <controls:CircleImage.WidthRequest>
                                 <OnPlatform x:TypeArguments="x:Double">
                                     <On Platform="Android, iOS">125</On>
@@ -28,231 +44,131 @@
                                 </OnPlatform>
                             </controls:CircleImage.HeightRequest>
                         </controls:CircleImage>
-                    </StackLayout>
 
-                    <!--The usrs name-->
-                    <StackLayout Margin="0,0,0,20">
-                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="20" />
-                    </StackLayout>
+                        <Label Text="User name" HorizontalOptions="Center" TextColor="Black" FontSize="25" Grid.Row="1"/>
 
-                    <StackLayout>
-
-                        <Grid Padding="10">
-
-
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="125"/>
-                                <RowDefinition Height="125"/>
-                                <RowDefinition Height="125"/>
-                                <RowDefinition Height="125"/>
-                                <RowDefinition Height="100"/>
-                              
-                              
-
-                            </Grid.RowDefinitions>
-
-                            <!--The Medical aid part-->
-                            <StackLayout Grid.Row="0"   Margin="10,0,20,10">
-
-                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                                    <Grid ColumnSpacing="40">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="60"/>
-                                            <ColumnDefinition Width="200"/>
-                                            
-                                        </Grid.ColumnDefinitions>
-
-
-                                    <StackLayout  Grid.Column="0" VerticalOptions="Center" >
-                                        <Image Source="hospital.png"   HorizontalOptions="Start" Aspect="AspectFit" />
-                                    </StackLayout>
-                                        
-                                        
-                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
-                                        <Grid RowSpacing="20">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"/>
-                                                <RowDefinition Height="*"/>
-                                            </Grid.RowDefinitions>
-
-                                            <StackLayout Grid.Row="0">
-                                                <Label Text="Medical Aid" Margin="0,0,0,0"   Style="{DynamicResource HeaderAttributes}" />
-                                            </StackLayout>
-
-                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="Discovery health"   Style="{DynamicResource InformationLabel}" />
-                                            </StackLayout>
-                                        </Grid>
-                                    </StackLayout>
-                                                                           
-                                                                
-                                    </Grid>
-
-
-
-                                </Frame>
-
-
-
-                            </StackLayout>
-
-                            <!--The blood type-->
-                        <StackLayout Grid.Row="1"   Margin="10,0,20,10">
-
-                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                                <Grid ColumnSpacing="40">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="60"/>
-                                        <ColumnDefinition Width="200"/>
-
-                                    </Grid.ColumnDefinitions>
-
-
-                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
-                                        <Image Source="bloodtype.png"   HorizontalOptions="Start" Aspect="AspectFit" />
-                                    </StackLayout>
-
-
-                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
-                                        <Grid RowSpacing="20">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"/>
-                                                <RowDefinition Height="*"/>
-                                            </Grid.RowDefinitions>
-
-                                            <StackLayout Grid.Row="0">
-                                                <Label Text="Blood Type" Margin="0,0,0,0"   Style="{DynamicResource HeaderAttributes}"/>
-                                            </StackLayout>
-
-                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="A+"  Style="{DynamicResource InformationLabel}"  />
-                                            </StackLayout>
-                                        </Grid>
-                                    </StackLayout>
-
-
-                                </Grid>
-
-
-
-                            </Frame>
-
-
-
-                        </StackLayout>
-
-
-                        <!--The Sex of the customer-->
-                        <StackLayout Grid.Row="2"   Margin="10,0,20,10">
-
-                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                                <Grid ColumnSpacing="40">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="60"/>
-                                        <ColumnDefinition Width="200"/>
-
-                                    </Grid.ColumnDefinitions>
-
-
-                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
-                                        <Image Source="gender.png"   HorizontalOptions="Start" Aspect="AspectFit" />
-                                    </StackLayout>
-
-
-                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
-                                        <Grid RowSpacing="20">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"/>
-                                                <RowDefinition Height="*"/>
-                                            </Grid.RowDefinitions>
-
-                                            <StackLayout Grid.Row="0">
-                                                <Label Text="Gender" Margin="0,0,0,0" Style="{DynamicResource HeaderAttributes}" />
-                                            </StackLayout>
-
-                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="Male"  Style="{DynamicResource InformationLabel}"  />
-                                            </StackLayout>
-                                        </Grid>
-                                    </StackLayout>
-
-
-                                </Grid>
-
-
-
-                            </Frame>
-
-
-
-                        </StackLayout>
-
-
-                        <!--The age of the users-->
-                        <StackLayout Grid.Row="3"   Margin="10,0,20,10">
-
-                            <Frame  BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                                <Grid ColumnSpacing="40">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="60"/>
-                                        <ColumnDefinition Width="200"/>
-
-                                    </Grid.ColumnDefinitions>
-
-
-                                    <StackLayout Grid.Column="0" VerticalOptions="Center" >
-                                        <Image Source="age.png"   HorizontalOptions="Start" Aspect="AspectFit" />
-                                    </StackLayout>
-
-
-                                    <StackLayout   Grid.Column="1" HorizontalOptions="End"  VerticalOptions="Center">
-                                        <Grid RowSpacing="20">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"/>
-                                                <RowDefinition Height="*"/>
-                                            </Grid.RowDefinitions>
-
-                                            <StackLayout Grid.Row="0">
-                                                <Label Text="Age" Margin="0,0,0,0"  Style="{DynamicResource HeaderAttributes}" />
-                                            </StackLayout>
-
-                                            <StackLayout Grid.Row="1" VerticalOptions="Center">
-                                                <Label Text="21"  Style="{DynamicResource InformationLabel}"  />
-                                            </StackLayout>
-                                        </Grid>
-                                    </StackLayout>
-
-
-                                </Grid>
-
-
-
-                            </Frame>
-
-
-
-                        </StackLayout>
-
-
-                    
-                            <StackLayout Grid.Row="4" Margin="10,10,20,10">
-                            <Button HeightRequest="60"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Information" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="PrivateInformation"/>
-                            </StackLayout>
-
-                        </Grid>
-
-
-
-                    </StackLayout>
-
-                   
-                    
+                    </Grid>
+                
                 </StackLayout>
+
+                <!--#endregion-->
+                
+                <!--#region  The second part of the card-->
+                
+                <StackLayout Grid.Row="1" VerticalOptions="Center">
+                    <Grid RowSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="70"/>
+
+                        </Grid.RowDefinitions>
+
+                      <!--#region  The medical information cards-->
+                        
+                        <Frame Grid.Row="0"   BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+                              
+                                <Image Source="hospital.png" VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
+
+                                <Label Grid.Row="1" Text="Medical Aid" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
+
+                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="Discovery health"   Style="{DynamicResource InformationLabel}" />
+
+                            </Grid>
+                            
+                        </Frame>
+
+                        <Frame Grid.Row="1" BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+
+                                <Image Source="bloodtype.png"  VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
+
+                                <Label Grid.Row="1" Text="Blood Type" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
+
+                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="A+"   Style="{DynamicResource InformationLabel}" />
+
+                            </Grid>
+
+
+                        </Frame>
+
+                        <Frame Grid.Row="2" BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+
+                                <Image Source="gender.png" VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
+
+                                <Label Grid.Row="1" Text="Gender" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
+
+                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="Male"   Style="{DynamicResource InformationLabel}" />
+
+                            </Grid>
+
+
+                        </Frame>
+
+
+                        <Frame Grid.Row="3" BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+
+                                <Image Source="age.png" VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
+
+                                <Label Grid.Row="1" Text="Age" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
+
+                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="21"   Style="{DynamicResource InformationLabel}"/>
+
+                            </Grid>
+
+
+                        </Frame>
+
+                        <!--#endregion-->
+
+                        
+                        <!--#region  The more medical card-->
+                        <Button Grid.Row="4"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Information" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="PrivateInformation"/>
+                        <!--#endregion-->
+
+
+                    </Grid>
+                </StackLayout>
+                
+                <!--#endregion-->
+                
+            </Grid>
+           
+            <!--#endregion-->
+                
             </ScrollView>
         
     </ContentPage.Content>
