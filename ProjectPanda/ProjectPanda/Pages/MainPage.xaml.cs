@@ -20,7 +20,7 @@ namespace ProjectPanda.Pages
         {
             InitializeComponent();
             
-
+           
         }
         #region Event handlers for the side menu
         private void Menu_btn2_Clicked(object sender, EventArgs e)
@@ -72,11 +72,13 @@ namespace ProjectPanda.Pages
             {
                 //need to put a log out protocol that deletes the users information on that device 
                 Navigation.PushModalAsync(new LoginPage());
+               
             }
 
-
-
+            //supposed to reset the navigation stack
+            //Navigation.NavigationStack
         }
+
 
 
 
@@ -84,6 +86,10 @@ namespace ProjectPanda.Pages
 
         #endregion
 
-       
+        private async void HomeButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync(true);
+             
+        }
     }
 }
