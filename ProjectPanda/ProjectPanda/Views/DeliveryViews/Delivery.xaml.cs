@@ -49,7 +49,7 @@ namespace ProjectPanda.Views
    
             _heightRequest = 420;
 
-            DocPrescription.HeightRequest = (_heightRequest);
+           // DocPrescription.HeightRequest = (_heightRequest);
 
            
         }
@@ -76,32 +76,16 @@ namespace ProjectPanda.Views
         {
             if(e.Item != null)
             {
-                // foreach (var item in _prescribedMedication)
-                // {
-                //         _heightRequest+=30;
+             //   foreach (var Item in )
+               // {
 
-                /*
-
-                        private void DocPrescription_PropertyChanged(object sender, PropertyChangedEventArgs e)
-                        {
-                            _heightRequest = 420;
-
-                            DocPrescription.HeightRequest = (_heightRequest);
-
-
-                        }
-
-                */
-
-                //  }
+                //}
             }
 
             //adding a item list empty picture or animation makes it look better
             else if(e.Item==null)
             {
                 DocPrescription.IsVisible = false;
-
-                MedDeliveryButton.IsVisible = false;
             }
 
         }
