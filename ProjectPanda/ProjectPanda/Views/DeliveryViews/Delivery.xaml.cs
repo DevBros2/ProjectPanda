@@ -8,6 +8,8 @@ using ProjectPanda.ViewModels;
 using Xamarin.Forms;
 using System.ComponentModel;
 using Xamarin.Forms.Xaml;
+using ProjectPanda.Views.PopUpPages;
+
 
 namespace ProjectPanda.Views
 {
@@ -90,6 +92,15 @@ namespace ProjectPanda.Views
 
         }
 
+        #endregion
+
+
+        #region The button to make medical orders 
+        async private void MedDeliveryButton_Clicked(object sender, EventArgs e)
+        {
+            //This needs to use a diffrent navigfation method
+           await Navigation.PushAsync(new Views.PopUpPages.EditorPopUp());
+        }
         #endregion
     }
 }
