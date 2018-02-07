@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection.Emit;
 using ProjectPanda.Pages;
-
+using ProjectPanda.ViewModels.UserViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,9 +14,12 @@ namespace ProjectPanda.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
     {
-		public LoginPage ()
+        //private LoginPageViewModel _viewModel;
+        public LoginPage ()
 		{
-			InitializeComponent ();
+           // BindingContext = _viewModel = vm;
+
+            InitializeComponent ();
             //disables NavBar
            NavigationPage.SetHasNavigationBar(this, false);
 
@@ -24,40 +28,39 @@ namespace ProjectPanda.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            var LoginPage = new NavigationPage(new LoginPage())
-            {
-                BarBackgroundColor = Color.FromHex("#60a83a"),
-                BarTextColor = Color.White,
-            };
+           // var LoginPage = new NavigationPage(new LoginPage())
+           // {
+           //     BarBackgroundColor = Color.FromHex("#60a83a"),
+           //     BarTextColor = Color.White,
+           // };
 
-            //var LoginPage = new NavigationPage(new LoginPage());
-            //LoginPage.BarBackgroundColor = Color.FromHex("#60a83a");
-            //LoginPage.BarBackgroundColor = Color.LimeGreen;
-            //LoginPage.BarTextColor = Color.White;
-
-
+            
 
 
         }
         async void Button_Clicked(object sender, EventArgs e)
         {
-
+            // _viewModel.SignIn();
 
             /*
              
                     if(EmailAddress && Password && (isAuthenticated==true) == those in the databse )    {Navigation.PushAsync(new MainProfilePage());}
              
              */
-             await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
-            
+           // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
+           // Navigation.InsertPageBefore(new LoginPage(), new MainPage());
+
             // await Navigation.PushAsync(new ProjectPanda.Pages.DetailFill());
 
         }
 
         async void prompt(object sender, EventArgs e)
         {
-
-            await Navigation.PushAsync(new SignUpPrompt());
+            // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
+            // Navigation.InsertPageBefore(new LoginPage(), new MainPage());
+            Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack[0]);
+            await Navigation.PopToRootAsync();
+            // await Navigation.PushAsync(new SignUpPrompt());
         }
 
 

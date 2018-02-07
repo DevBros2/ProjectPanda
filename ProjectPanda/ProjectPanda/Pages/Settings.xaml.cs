@@ -36,6 +36,8 @@ namespace ProjectPanda.Pages
             Helpers.Settings.GeneralSettings = CityOrTown.Text;
             //Helpers.Settings.GeneralSettings = Blood_Type.Title;
             //Helpers.Settings.GeneralSettings = Medical_Aid.Text;
+            
+           
             await Navigation.PopToRootAsync(true);
         }
 

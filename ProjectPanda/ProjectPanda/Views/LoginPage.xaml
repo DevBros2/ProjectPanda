@@ -41,7 +41,7 @@
                     <Image Source="loginArrow.png">
                         <Image.GestureRecognizers >
                            
-                            <TapGestureRecognizer  Tapped="prompt"/>
+                            <TapGestureRecognizer Tapped="prompt"/>
                         </Image.GestureRecognizers>
                     </Image>
 

@@ -6,22 +6,41 @@ using ProjectPanda.Views;
 using ProjectPanda.Pages;
 using ProjectPanda.Views.DeliveryViews;
 using Xamarin.Forms;
+using ProjectPanda.ViewModels.UserViewModels;
 
 namespace ProjectPanda
 {
 	public partial class App : Application
 	{
+        public bool IsLoggedIn;
 		public App ()
 		{
+            IsLoggedIn = false;
 			InitializeComponent();
 
-         
-           // MainPage = new NavigationPage(new Pages.SplashPage());
-            MainPage = new NavigationPage(new MainPage());
+            SerapisInit(); 
+            //MainPage = new NavigationPage(new LoginPage());
+            // MainPage = new NavigationPage(new MainPage());
+
+          
+
+        }
+
+        private void SerapisInit()
+        {
+            if (IsLoggedIn)
+            {
+                MainPage = new NavigationPage(new MainPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+
             
         }
 
-		protected override void OnStart ()
+        protected override void OnStart ()
 		{
             base.OnStart();
             /*First ask for location
