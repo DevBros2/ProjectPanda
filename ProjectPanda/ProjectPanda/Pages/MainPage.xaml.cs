@@ -16,12 +16,15 @@ namespace ProjectPanda.Pages
     public partial class MainPage : MasterDetailPage
     {
         
+        
         public MainPage()
         {
             InitializeComponent();
-            
-           
+
+            NavigationPage.SetHasNavigationBar(this, true);
         }
+
+
         #region Event handlers for the side menu
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
@@ -44,6 +47,7 @@ namespace ProjectPanda.Pages
         {
             // This button is for payment history
             Detail = new NavigationPage(new PaymentHistory());
+           
             IsPresented = false;
         }
 
@@ -51,6 +55,7 @@ namespace ProjectPanda.Pages
         {
             //returns back to orignal state8
             await Navigation.PopToRootAsync(true);
+            
 
         }
 
