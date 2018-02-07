@@ -47,6 +47,12 @@ namespace ProjectPanda.Pages
             IsPresented = false;
         }
 
+        private async void HomeButton_Clicked(object sender, EventArgs e)
+        {
+            //returns back to orignal state8
+            await Navigation.PopToRootAsync(true);
+
+        }
 
 
 
@@ -86,10 +92,6 @@ namespace ProjectPanda.Pages
 
         #endregion
 
-        private async void HomeButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync(true);
-             
-        }
+      
     }
 }
