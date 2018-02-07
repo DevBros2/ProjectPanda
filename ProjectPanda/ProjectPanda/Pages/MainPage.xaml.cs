@@ -88,7 +88,8 @@ namespace ProjectPanda.Pages
 
         private async void HomeButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync(true);
+            //returns back to orignal state8
+            await Navigation.PopToRootAsync(true);
              
         }
     }
