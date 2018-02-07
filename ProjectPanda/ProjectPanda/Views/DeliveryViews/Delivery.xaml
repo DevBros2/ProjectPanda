@@ -7,40 +7,25 @@
              >
 
     <ContentPage.Content>
-        <ScrollView>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="3*"/>
-                </Grid.RowDefinitions>
 
-                
-                <!--#region This is the title-->
-                <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0" Margin="30,10,0,10"/>
-                <!--#endregion-->
-                
-                
-                <!--#region The prescription area -->
-             
-                
-                <!--#region The frame for doctor precribed medication-->
-                <Button Grid.Row="1"/>
-                <!--#endregion-->
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
 
-                <Button x:Name="MedDeliveryButton" Text="Deliver medication" VerticalOptions="Start" TextColor="Black" HeightRequest="65" BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" Grid.Row="2" Margin="8,8,8,8" Image="Delivery.png" Clicked="MedDeliveryButton_Clicked"/>
-                <!--#endregion-->
-                
-                <!--#region This the self precribed area-->
-                <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3" Margin="30,40,0,10"/>
-                              
-                <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Start" HeightRequest="65" Margin="8,8,8,8" BorderWidth="2" BorderColor="Black" Grid.Row="4"/>
 
-                <!--#endregion-->
-
-            </Grid>
-        </ScrollView>
+            <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"  Grid.Row="0"/>
+            <Button  Text="Show Prescription" Image="moremeds.png"  BackgroundColor="{StaticResource ButtonLoginColour}"  Grid.Row="1" HeightRequest="65" VerticalOptions="Start"/>
+            <Button x:Name="MedDeliveryButton" Text="Prescription Delivery History" VerticalOptions="Start" TextColor="Black"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}"  Image="historyOfDel.png"  Clicked="MedDeliveryButton_Clicked" Grid.Row="2"/>
+            <Label Text="Self prescription" Margin="0,0,0,15" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3"/>
+            <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Center" HeightRequest="65"  BorderWidth="2"  Grid.Row="4"/>
+            <Button Text="Order History" BackgroundColor="{StaticResource ButtonLoginColour}" HeightRequest="65" Grid.Row="5" VerticalOptions="End" Image="historyOfDel.png"/>
+        </Grid>  
+      
     </ContentPage.Content>
 </ContentPage>
