@@ -78,7 +78,10 @@
                    
                 </xfFlipViewControl:XFFlipView.FrontView>
 
-                <!--FLipCardBackView-->
+                
+                
+                <!--FLipCardBackView-->          
+                <!--#region Back view region-->
                 <xfFlipViewControl:XFFlipView.BackView>
                  
                     <ScrollView>
@@ -162,7 +165,7 @@
                     </ScrollView>
                     
                 </xfFlipViewControl:XFFlipView.BackView>
-
+                <!--#endregion-->
               
 
             </xfFlipViewControl:XFFlipView>

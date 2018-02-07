@@ -6,9 +6,10 @@
              >
     <ContentPage.Content>
 
+
         <ScrollView>
-            <StackLayout>
             <Grid>
+          
                 <Grid.RowDefinitions>
 
                     <RowDefinition Height="Auto"/>
@@ -17,8 +18,8 @@
                 </Grid.RowDefinitions>
 
 
-                <StackLayout Grid.Row="0">
-                    <TableView HasUnevenRows="True" x:Name="settingProperty" Intent="Settings">
+                
+                    <TableView HasUnevenRows="True" x:Name="settingProperty" Intent="Settings" Grid.Row="0">
 
 
 
@@ -127,24 +128,22 @@
 
 
 
-                </StackLayout>
 
-               
+                    <Button Text="Save settings" x:Name="User_0Settings" Clicked="User_0Settings_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}" Grid.Row="1"/>
 
-
-            </Grid>
-
-
-
-            <StackLayout Margin="15,10,15,10" >
-                <Button Text="Save settings" x:Name="User_0Settings" Clicked="User_0Settings_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}"/>
-            </StackLayout>
-
-
-
-
-            </StackLayout>
+           
+        </Grid>
         </ScrollView>
+
+
+
+
+
+
+
+
+
+
 
 
 
