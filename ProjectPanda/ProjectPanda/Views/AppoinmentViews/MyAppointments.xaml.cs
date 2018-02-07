@@ -17,16 +17,20 @@ namespace ProjectPanda.Views
 			InitializeComponent ();
 		}
 
+
+
+        #region The select doctor and medical practice code
         async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DoctorListView());
             // var newpage = await NavigationPage(new DoctorListView());
 
         }
+        #endregion
 
+       
 
-        //the event handler for the date picker
-
+        #region Date picker event handler
         private void Datepick(object sender, DateChangedEventArgs args)
         {
              string formatedDate;
@@ -34,18 +38,32 @@ namespace ProjectPanda.Views
 
            
         }
+        #endregion
 
+        #region Confirm code
         private void Confirm(object sender, EventArgs e)
         {
            
-            
+            //going to be moved else where
             //code to confirm the appointemnt 
             XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
         }
 
+        #endregion
+
+
+        //dont know if we will use this
         private void Cancel(object sender, EventArgs e)
         {
-
+           
         }
+
+
+        #region Pop Up code
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            //pop up card 
+        }
+        #endregion
     }
 }

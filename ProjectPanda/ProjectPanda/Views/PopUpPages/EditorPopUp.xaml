@@ -4,7 +4,8 @@
              x:Class="ProjectPanda.Views.PopUpPages.EditorPopUp"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-             >
+            xmlns:CustomEntryEditor="clr-namespace:ProjectPanda.Views.CustomEntry"
+            >
     
 
         <pages:PopupPage.Animation>
@@ -20,28 +21,27 @@
     </pages:PopupPage.Animation>
 
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
-        <StackLayout BackgroundColor="White" Padding="0, 10, 0, 0">
-            <Label Text="First Popup Page" TextColor="Gray" FontSize="20" HorizontalOptions="Center"></Label>
-            <ScrollView>
-                <StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Entry Placeholder="Test Entry" 
-                   HorizontalOptions="FillAndExpand"
-                   BindingContext="{x:Reference Switch}" 
-                   IsEnabled="{Binding Path=IsToggled}" 
-                   PlaceholderColor="Silver" 
-                   Keyboard="Email"
-                   TextColor="Gray"></Entry>
-                        <Switch IsToggled="True" x:Name="Switch"></Switch>
-                    </StackLayout>
-                    <ActivityIndicator Color="Gray" IsRunning="True"></ActivityIndicator>
-                    <Slider Value="0.4" x:Name="Slider"></Slider>
-                   
-                    <Button Text="Close" TextColor="#A9D1DE" ></Button>
-                </StackLayout>
-            </ScrollView>
-        </StackLayout>
-    </StackLayout>
+    <Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="15"> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
 
+        
+        <!--#region The text editor-->
+        <Frame CornerRadius="8" HeightRequest="250" WidthRequest="300">
+            <CustomEntryEditor:EntryBlock/>
+        </Frame>
+    <!--#endregion-->
+    
+        <!--#region The confirm button-->
+
+        <Button Text="Confirm" HorizontalOptions="Center" Margin="10" Grid.Row="1"/>
+
+        <!--#endregion-->
+        
+        
+    </Grid>
+    
+  
 </pages:PopupPage>
