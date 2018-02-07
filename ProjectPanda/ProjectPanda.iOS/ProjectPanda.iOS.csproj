@@ -609,6 +609,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\drawable\home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable\ButtonConfirm.png" />
+  </ItemGroup>
   <Import Project="..\ProjectPanda\ProjectPanda.projitems" Label="Shared" Condition="Exists('..\ProjectPanda\ProjectPanda.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

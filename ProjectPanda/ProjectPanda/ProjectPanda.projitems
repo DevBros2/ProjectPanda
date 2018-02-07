@@ -263,6 +263,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)PseudoCode\tappForConfirmationCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Views\MicroCharts.txt" />
   </ItemGroup>
   <ItemGroup>
