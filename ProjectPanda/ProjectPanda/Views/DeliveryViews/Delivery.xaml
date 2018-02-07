@@ -19,7 +19,7 @@
 
                 
                 <!--#region This is the title-->
-                <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0" Margin="30,10,0,10"/>
+                <Label Text="Doctor prescription" x:Name="DocPrescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0" Margin="30,10,0,10"/>
                 <!--#endregion-->
                 
                 

@@ -29,8 +29,8 @@ namespace ProjectPanda.Pages
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
 
-            Detail = new NavigationPage(new Settings());
-
+            //Detail = new NavigationPage(new Settings());
+            Detail.Navigation.PushAsync(new Settings());
             IsPresented = false;
 
 
@@ -39,15 +39,16 @@ namespace ProjectPanda.Pages
 
         private void Menu_btn4_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new SupportPage());
+            // Detail = new NavigationPage(new SupportPage());
+            Detail.Navigation.PushAsync(new SupportPage());
             IsPresented = false;
         }
 
         private void Menu_btn3_Clicked(object sender, EventArgs e)
         {
             // This button is for payment history
-            Detail = new NavigationPage(new PaymentHistory());
-           
+            //Detail = new NavigationPage(new PaymentHistory());
+            Detail.Navigation.PushAsync(new PaymentHistory());
             IsPresented = false;
         }
 
