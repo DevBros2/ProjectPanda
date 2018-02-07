@@ -72,20 +72,22 @@
                 <xfFlipViewControl:XFFlipView.BackView>
                  
                     <ScrollView>
-                        <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
 
-                            <!-- UI Title-->
-                            <StackLayout  Grid.Row="5"  Margin="15,5,15,0">
-
-                                <Label Text="Next Appointment" Style="{DynamicResource Key=FontStyle}" TextColor="Black"/>
+                            </Grid.RowDefinitions>
 
 
+                            <Label Text="Next Appointment" Style="{DynamicResource Key=FontStyle}" TextColor="Black" Grid.Row="0" Margin="15,5,15,0"/>
 
-                            </StackLayout>
-
-                         <!-- AppoimentDate -->
-                        <StackLayout Grid.Row="6" Margin="15,10,15,8">
-                                <Frame  BackgroundColor="White" CornerRadius="8">
+                            <!-- AppoimentDate -->
+                            <Frame  BackgroundColor="White" CornerRadius="8" Grid.Row="1"  Margin="15,10,15,8">
                                 <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
                                     <Label.FormattedText>
                                         <FormattedString >
@@ -96,28 +98,24 @@
                                     </Label.FormattedText>
                                 </Label>
                             </Frame>
-                        </StackLayout>
 
-                            <!-- AppoimentTime-->
-                        <StackLayout Grid.Row="7" Margin="15,0,15,8">
-                            <Frame BackgroundColor="White" CornerRadius="8">
-                                <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="Time :"/>
-                                            <Span Text=" "/>
+                            <!-- AppoimentTime-->                        
+                                <Frame BackgroundColor="White" CornerRadius="8" Margin="15,0,15,8" Grid.Row="2">
+                                    <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Time :"/>
+                                                <Span Text=" "/>
                                                 <Span Text=" " />
-                                        </FormattedString>
-                                    </Label.FormattedText>
+                                            </FormattedString>
+                                        </Label.FormattedText>
 
-                                </Label>
-                            </Frame>
-                        </StackLayout>
+                                    </Label>
+                                </Frame>
+
 
                             <!-- NameOfPractice-->
-                        <StackLayout Grid.Row="8" Margin="15,0,15,8"  >
-
-                            <Frame BackgroundColor="White" CornerRadius="8">
+                            <Frame BackgroundColor="White" CornerRadius="8" Grid.Row="3" Margin="15,0,15,8">
                                 <Label   TextColor="Black" FontSize="20" VerticalTextAlignment="Center" x:Name="Place" LineBreakMode="TailTruncation" >
                                     <Label.FormattedText>
                                         <FormattedString>
@@ -128,11 +126,9 @@
                                 </Label>
 
                             </Frame>
-                        </StackLayout>
 
                             <!-- Doctors Name -->
-                            <StackLayout Grid.Row="9" Margin="15,0,15,10">
-                            <Frame BackgroundColor="White" CornerRadius="8">
+                            <Frame BackgroundColor="White" CornerRadius="8" Grid.Row="4" Margin="15,0,15,10">
                                 <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="Doctor" LineBreakMode="TailTruncation">
                                     <Label.FormattedText>
                                         <FormattedString>
@@ -144,17 +140,15 @@
 
                                 </Label>
                             </Frame>
-                        </StackLayout>
 
                             <!-- Cancel Button-->
-                            <StackLayout Grid.Row="10" HorizontalOptions="Center" VerticalOptions="Center">
-                                <Image Source="cancel.png" IsVisible="True">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="Cancel"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </StackLayout>
-                        </StackLayout>
+                            <Image Source="cancel.png" IsVisible="True" Grid.Row="5" HorizontalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Cancel"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                        </Grid>
                     </ScrollView>
                     
                 </xfFlipViewControl:XFFlipView.BackView>

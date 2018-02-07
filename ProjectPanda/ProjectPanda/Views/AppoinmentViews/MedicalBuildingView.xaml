@@ -25,70 +25,49 @@
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="50"/>
-                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="150"/>
+                                        <RowDefinition Height="100"/>
                                     </Grid.RowDefinitions>
 
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    
+                                    <Label Text="{Binding PracticeName}" FontSize="20" VerticalOptions="StartAndExpand" HorizontalOptions="Center" HorizontalTextAlignment="Start" Style="{DynamicResource HeaderAttributes}" LineBreakMode="NoWrap" Grid.Row="0" Grid.ColumnSpan="2"/>
+                                    
+                                    
+                                    <Image Source="{Binding ProfileImage}"   HorizontalOptions="Start" Aspect="AspectFit" Grid.Row="1" Grid.Column="0"/>
 
 
-                                    <StackLayout Grid.Row="0">
-                                        <Label Text="{Binding PracticeName}" FontSize="20" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" Style="{DynamicResource HeaderAttributes}" LineBreakMode="NoWrap" />
-                                    </StackLayout>
+                                    <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center">
 
-                                    <StackLayout Grid.Row="1">
-
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="150"/>
-                                                <ColumnDefinition Width="Auto"/>
-
-                                            </Grid.ColumnDefinitions>
-
-
-                                            <StackLayout Grid.Column="0" VerticalOptions="Center">
-                                                <Image Source="{Binding ProfileImage}" HeightRequest="150" WidthRequest="150" VerticalOptions="End" HorizontalOptions="Start" Aspect="AspectFit"/>
-                                            </StackLayout>
-
-                                            <StackLayout Grid.Column="1">
-                                                <Grid>
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="100"/>
-                                                        <RowDefinition Height="50"/>
-                                                        <RowDefinition Height="30"/>
-                                                    </Grid.RowDefinitions>
-
-                                                    <StackLayout Grid.Row="0" HorizontalOptions="Center">
-                                                      <!--CHARTS-->
-                                                        <forms:ChartView WidthRequest="60" HeightRequest="100" Chart="{Binding ChartData}"/>
-                                                    </StackLayout>
-
-                                                    <StackLayout Grid.Row="1" HorizontalOptions="Center">
-                                                        <Label  Text="{Binding Distance}" TextColor="Green" Style="{DynamicResource InformationLabel}" LineBreakMode="NoWrap"/>
-                                                    </StackLayout>
-
-                                                    
-                                                    
-                                                    <StackLayout Grid.Row="2" HorizontalOptions="Center" >
-                                                        <Image Source="info.png" IsVisible="True">
-                                                            <Image.GestureRecognizers>
-                                                                <TapGestureRecognizer Tapped="MoreInformation"/>
-                                                            </Image.GestureRecognizers>
-                                                        </Image>
-                                                    </StackLayout>
-
-                                                </Grid>
-                                            </StackLayout>
-
-
+                                        <Grid RowSpacing="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="30"/>
+                                                <RowDefinition Height="50"/>
+                                            </Grid.RowDefinitions>
                                         </Grid>
+                                        
+                                        
+                                        <Label  Text="{Binding Distance}" TextColor="Green" Style="{DynamicResource InformationLabel}" LineBreakMode="NoWrap" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20"/>
+
+                                        <Image Source="info.png" IsVisible="True" Grid.Row="1" Aspect="AspectFit" VerticalOptions="End">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="MoreInformation" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
 
                                     </StackLayout>
+                                        
+                                        
+                                 
 
+                                    <forms:ChartView  Chart="{Binding ChartData}" Grid.Row="2" Grid.ColumnSpan="2"/>
 
                                 </Grid>
-
-
-
 
                             </Frame>
 

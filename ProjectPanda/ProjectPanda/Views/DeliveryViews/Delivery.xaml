@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.Delivery"
              BackgroundColor="{StaticResource BackgroundColor}"   
+            xmlns:PopperPage="clr-namespace:ProjectPanda.Views.PopUpPages"
              >
 
     <ContentPage.Content>
@@ -16,8 +17,13 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
+                
+                <!--#region This is the title-->
                 <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0" Margin="30,10,0,10"/>
-
+                <!--#endregion-->
+                
+                
+                <!--#region The prescription area -->
                 <!--#region The frame for doctor precribed medication-->
                 <Frame BackgroundColor="White" VerticalOptions="FillAndExpand"  OutlineColor="Black" x:Name="DocPrescription"  CornerRadius="8" Margin="10,0,10,10" Grid.Row="1" >
                     <ListView HasUnevenRows="True" SeparatorVisibility="Default" ItemsSource="{Binding _prescribedMedication}"  x:Name="MedList"  ItemTapped="MedList_ItemTapped"  ItemAppearing="MedList_ItemAppearing" VerticalOptions="FillAndExpand">
@@ -51,12 +57,15 @@
                 </Frame>
                 <!--#endregion-->
 
-                <Button x:Name="MedDeliveryButton" Text="Deliver medication" VerticalOptions="Start" TextColor="Black" HeightRequest="65" BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" Grid.Row="2" Margin="8,8,8,8" Image="Delivery.png"/>
-
+                <Button x:Name="MedDeliveryButton" Text="Deliver medication" VerticalOptions="Start" TextColor="Black" HeightRequest="65" BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}" BorderColor="Black" Grid.Row="2" Margin="8,8,8,8" Image="Delivery.png" Clicked="MedDeliveryButton_Clicked"/>
+                <!--#endregion-->
+                
+                <!--#region This the self precribed area-->
                 <Label Text="Self prescription" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3" Margin="30,40,0,10"/>
-
+                              
                 <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Start" HeightRequest="65" Margin="8,8,8,8" BorderWidth="2" BorderColor="Black" Grid.Row="4"/>
 
+                <!--#endregion-->
 
             </Grid>
         </ScrollView>

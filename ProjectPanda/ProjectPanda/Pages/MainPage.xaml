@@ -30,7 +30,7 @@
                               Grid.Row="0"
                               TextColor="Black"
                               Clicked="HomeButton_Clicked"
-                              Image="creditcard.png"
+                              Image="home.png"
                            BackgroundColor="{StaticResource BackgroundColor}" 
                             />
                         
