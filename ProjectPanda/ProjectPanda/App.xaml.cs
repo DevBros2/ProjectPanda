@@ -19,7 +19,7 @@ namespace ProjectPanda
             IsLoggedIn = true;
 			InitializeComponent();
 
-           // SerapisInit(); 
+            SerapisInit(); 
             //MainPage = new NavigationPage(new MainRootPage());
             // MainPage = new NavigationPage(new );
 

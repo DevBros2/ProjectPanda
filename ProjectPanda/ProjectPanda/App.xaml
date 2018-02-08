@@ -17,20 +17,7 @@
             <Color x:Key="TextColor">#757575</Color>
             <Color x:Key="InverseTextColor">#FFFFFF</Color>
             <Color x:Key="LightTextColor">#979797</Color>
-            <Color x:Key="iOSDefaultTintColor">#007aff</Color>
-            <Color x:Key="SeparatorLineColor">#CCCCCC</Color>
-            <Color x:Key="AndroidDefaultButtonClassBackgroundColor">#C9C9C9</Color>
-            <Color x:Key="iOSDefaultButtonClassBackgroundColor">Transparent</Color>
-            <Color x:Key="AndroidDefaultButtonClassBorderColor">Transparent</Color>
-            <Color x:Key="iOSDefaultButtonClassBorderColor">#007aff</Color>
-            <Color x:Key="AndroidDefaultButtonClassTextColor">#FFFFFF</Color>
-            <Color x:Key="iOSDefaultButtonClassTextColor">#007aff</Color>
-            <Color x:Key="AndroidEntryBackgroundColor">Transparent</Color>
-            <Color x:Key="iOSEntryBackgroundColor">#FFFFFF</Color>
-            <Color x:Key="AndroidDefaultAccentColorColor">#1FAECE</Color>
-            <Color x:Key="AndroidListViewBackgroundColor">Transparent</Color>
-            <Color x:Key="iOSListViewBackgroundColor">Transparent</Color>
-            <Color x:Key="ButtonLoginColour">#2db1ff</Color>
+           
             <Color x:Key="DetailFillColour">#000000</Color>
           
             <!--STYLES-->
