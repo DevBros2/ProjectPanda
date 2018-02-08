@@ -7,6 +7,7 @@ using ProjectPanda.Pages;
 using ProjectPanda.Views.DeliveryViews;
 using Xamarin.Forms;
 using ProjectPanda.ViewModels.UserViewModels;
+using ProjectPanda.Pages.MainRootPage;
 
 namespace ProjectPanda
 {
@@ -15,12 +16,12 @@ namespace ProjectPanda
         public bool IsLoggedIn;
 		public App ()
 		{
-            IsLoggedIn = false;
+            IsLoggedIn = true;
 			InitializeComponent();
 
-            SerapisInit(); 
-            //MainPage = new NavigationPage(new LoginPage());
-            // MainPage = new NavigationPage(new MainPage());
+           // SerapisInit(); 
+            //MainPage = new NavigationPage(new MainRootPage());
+            // MainPage = new NavigationPage(new );
 
           
 
