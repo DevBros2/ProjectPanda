@@ -58,9 +58,8 @@ namespace ProjectPanda.Views
         {
             // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
             // Navigation.InsertPageBefore(new LoginPage(), new MainPage());
-            Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack[0]);
-            await Navigation.PopToRootAsync();
-            // await Navigation.PushAsync(new SignUpPrompt());
+            
+            await Navigation.PushAsync(new SignUpPrompt());
         }
 
 

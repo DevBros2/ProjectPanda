@@ -42,33 +42,47 @@ namespace ProjectPanda.ViewModels
             //ChartValue = this.ChartValue;
         }
 
-        public Chart Chart1 => new DonutChart()
+        public Chart Chart1 => new LineChart()
         {
             Entries = new[]
             {
                 new Entry(60)//Indicates how busy it is
                 {
-                    Label = "",
+                    Label = "8am",
                     ValueLabel = "",
                      Color = SKColor.Parse("#FFFF00")//Yellow
                 },
                  new Entry(40)//then less value of the first Entry out of 100
                 {
-                    Label = "",
+                    Label = "10am",
                     ValueLabel = "",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
                 },
+                new Entry(74) //Indicates how busy it is
+                {
+                    Label = "12pm",
+                    Color = SKColor.Parse("#FF4500"),
+                },
+                new Entry(24) //Indicates how busy it is
+                {
+                    Label = "2pm",
+                    Color = SKColor.Parse("#FF4500"),
+                },
             },
            BackgroundColor = SKColors.Transparent,
+           LabelTextSize = 18, 
+           LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
-        public Chart Chart2 => new DonutChart()
+
+        public Chart Chart2 => new LineChart()
         {
             Entries = new[]
             {
                 new Entry(74) //Indicates how busy it is
-                { 
+                {
+                    Label = "8am",
                      Color = SKColor.Parse("#FF4500"),  
                 },
                   new Entry(26)
@@ -77,15 +91,28 @@ namespace ProjectPanda.ViewModels
                   },
             },
             BackgroundColor = SKColors.Transparent,
+            LabelTextSize = 18,
+            LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
-        public Chart Chart3 => new DonutChart()
+        public Chart Chart3 => new LineChart()
         {
             Entries = new[]
            {
+                new Entry(85) //Indicates how busy it is
+                {
+                    Label = "8am",
+                     Color = SKColor.Parse("#FFFF00")
+                },
+                new Entry(15)
+                {
+                    Label = "8am",
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
                 new Entry(94) //Indicates how busy it is
                 {
+                    Label = "10am",
                      Color = SKColor.Parse("#ff0000")
                 },
                  new Entry(6)
@@ -94,74 +121,124 @@ namespace ProjectPanda.ViewModels
                 },
             },
             BackgroundColor = SKColors.Transparent,
+            LabelTextSize = 18,
+            LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
-        public Chart Chart4 => new DonutChart()
+        public Chart Chart4 => new LineChart()
         {
             Entries = new[]
            {
                 new Entry(85) //Indicates how busy it is
                 {
+                    Label = "8am",
                      Color = SKColor.Parse("#FFFF00")
                 },
-                 new Entry(15)
-                 {
+                new Entry(15)
+                {
+                    Label = "10am",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
-                 },
+                },
+                new Entry(85) //Indicates how busy it is
+                {
+                     Color = SKColor.Parse("#FFFF00")
+                },
+                new Entry(15)
+                {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
             },
             BackgroundColor = SKColors.Transparent,
+            LabelTextSize = 18,
+            LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
-        public Chart Chart5 => new DonutChart()
+        public Chart Chart5 => new LineChart()
         {
             Entries = new[]
           {
                 new Entry(80)
                 {
+                    Label = "8am",
                      Color = SKColor.Parse("#ff0000")
                 },
-                 new Entry(20)
-                 {
+                new Entry(20)
+                {
+                    Label = "10am",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
-                 },
+                },
+                new Entry(85) //Indicates how busy it is
+                {
+                     Color = SKColor.Parse("#FFFF00")
+                },
+                new Entry(15)
+                {
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
             },
             BackgroundColor = SKColors.Transparent,
+            LabelTextSize = 18,
+            LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
-        public Chart Chart6 => new DonutChart()
+        public Chart Chart6 => new LineChart()
         {
             Entries = new[]
             {
                 new Entry(40)
                 {
+                    Label = "8am",
                      Color = SKColor.Parse("#00ff00")
                 },
-                 new Entry(60)
+                new Entry(60)
+                {
+                    Label = "10am",
+                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
+                new Entry(85) //Indicates how busy it is
+                {
+                     Color = SKColor.Parse("#FFFF00")
+                },
+                new Entry(15)
                 {
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
                 },
             },
             BackgroundColor = SKColors.Transparent,
+            LabelTextSize = 18,
+            LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
-        public Chart Chart7 => new DonutChart()
+        public Chart Chart7 => new LineChart()
         {
             Entries = new[]
             {
                 new Entry(25)
                 {
+                    Label = "8am",
                      Color = SKColor.Parse("#00ff00")
                 },
-                 new Entry(75)
-                 {
+                new Entry(75)
+                {
+                    Label = "10am",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
-                 },
+                },
+                 new Entry(85) //Indicates how busy it is
+                {
+                     Color = SKColor.Parse("#FFFF00")
+                },
+                new Entry(15)
+                {
+                    Color = SKColor.Parse("#D3D3D3")//Grey Color
+                },
             },
             BackgroundColor = SKColors.Transparent,
+            LabelTextSize = 18,
+            LineSize = 7,
             MinValue = 0,
             MaxValue = 100
         };
