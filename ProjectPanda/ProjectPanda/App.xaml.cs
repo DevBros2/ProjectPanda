@@ -7,7 +7,7 @@ using ProjectPanda.Pages;
 using ProjectPanda.Views.DeliveryViews;
 using Xamarin.Forms;
 using ProjectPanda.ViewModels.UserViewModels;
-using ProjectPanda.Pages.MainRootPage;
+//using ProjectPanda.Pages.MainRootPage;
 
 namespace ProjectPanda
 {
