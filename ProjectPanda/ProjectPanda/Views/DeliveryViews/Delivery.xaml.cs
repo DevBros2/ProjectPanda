@@ -43,15 +43,12 @@ namespace ProjectPanda.Views
             await Navigation.PushAsync(new ChatBotView());
         }
 
-
-
      
 
         #region The button to make medical orders 
         async private void MedDeliveryButton_Clicked(object sender, EventArgs e)
         {
-            //This needs to use a diffrent navigfation method
-           await Navigation.PushAsync(new Views.PopUpPages.EditorPopUp());
+           
         }
         #endregion
     }

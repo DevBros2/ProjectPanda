@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.PopUpPages.ConfirmationPage"
+             Title="Confirmation"
+             BackgroundColor="{StaticResource BackgroundColor}"           
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="0,15,0,0">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+
+
+                <Label Text="Next Appointment" Style="{DynamicResource Key=FontStyle}" TextColor="Black" Grid.Row="0" Margin="15,5,15,0"/>
+
+                <!-- AppoimentDate -->
+                <Frame  BackgroundColor="White" CornerRadius="8" Grid.Row="1"  Margin="15,10,15,8">
+                    <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
+                        <Label.FormattedText>
+                            <FormattedString >
+                                <Span Text= "Date:" />
+                                <Span Text=" "/>
+                                <Span Text="" x:Name="TheDateForAppointment" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+
+                <!-- AppoimentTime-->
+                <Frame BackgroundColor="White" CornerRadius="8" Margin="15,0,15,8" Grid.Row="2">
+                    <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Time :"/>
+                                <Span Text=" "/>
+                                <Span Text=" " />
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+                </Frame>
+
+
+                <!-- NameOfPractice-->
+                <Frame BackgroundColor="White" CornerRadius="8" Grid.Row="3" Margin="15,0,15,8">
+                    <Label   TextColor="Black" FontSize="20" VerticalTextAlignment="Center" x:Name="Place" LineBreakMode="TailTruncation" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Place:" />
+                                <Span Text="" x:Name="NameOfPractice" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </Frame>
+
+                <!-- Doctors Name -->
+                <Frame BackgroundColor="White" CornerRadius="8" Grid.Row="4" Margin="15,0,15,10">
+                    <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="Doctor" LineBreakMode="TailTruncation">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Doctor :"/>
+                                <Span Text=" "/>
+                                <Span Text="" x:Name="NameOfDoctor"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+                </Frame>
+
+                <!-- Cancel Button-->
+                <StackLayout Grid.Row="5" HorizontalOptions="Center">
+                    <Grid ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+
+                    
+
+                        <Image Source="check.png" Grid.Column="1">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FinalConfirmation"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                    </Grid>
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
