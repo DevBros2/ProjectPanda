@@ -70,7 +70,7 @@
                         <!--#endregion-->
                         
                         <!--#region Confirm button grid row 4-->
-                        <Button  Image="ButtonConfirm.png" Text="Confirm" Margin="0,20,0,10" HeightRequest="65"  BackgroundColor="{StaticResource Primary}" Grid.Row="4" Style="{DynamicResource ButtonFont}" Clicked="Button_Clicked"/>
+                        <Button  Image="ButtonConfirm.png" Text="Confirm" Margin="0,20,0,10" HeightRequest="65"  BackgroundColor="{StaticResource Primary}" Grid.Row="4" Style="{DynamicResource ButtonFont}" Clicked="NextPage"/>
                         <!--#endregion-->
 
                     </Grid>

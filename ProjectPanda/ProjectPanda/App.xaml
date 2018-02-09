@@ -17,7 +17,7 @@
             <Color x:Key="TextColor">#757575</Color>
             <Color x:Key="InverseTextColor">#FFFFFF</Color>
             <Color x:Key="LightTextColor">#979797</Color>
-           
+            <Color x:Key="ButtonLoginColour">#2db1ff</Color>
             <Color x:Key="DetailFillColour">#000000</Color>
           
             <!--STYLES-->

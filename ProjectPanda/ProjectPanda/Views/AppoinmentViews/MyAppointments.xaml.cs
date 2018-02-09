@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ProjectPanda.Views.PopUpPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -60,9 +60,10 @@ namespace ProjectPanda.Views
 
 
         #region Pop Up code
-        private void Button_Clicked(object sender, EventArgs e)
+        async private void NextPage(object sender, EventArgs e)
         {
-            //pop up card 
+            //This needs to use a diffrent navigfation method
+            await Navigation.PushAsync(new ProblemMessage());
         }
         #endregion
     }
