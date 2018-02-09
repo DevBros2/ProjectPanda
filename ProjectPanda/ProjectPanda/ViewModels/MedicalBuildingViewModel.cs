@@ -46,13 +46,8 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
             {
-                new Entry(60)//Indicates how busy it is
-                {
-                    Label = "8am",
-                    ValueLabel = "",
-                     Color = SKColor.Parse("#FFFF00")//Yellow
-                },
-                 new Entry(40)//then less value of the first Entry out of 100
+                new Entry(60) { Label = "8am", ValueLabel = "", Color = SKColor.Parse("#FFFF00")},
+                new Entry(40)//then less value of the first Entry out of 100
                 {
                     Label = "10am",
                     ValueLabel = "",
@@ -96,6 +91,7 @@ namespace ProjectPanda.ViewModels
             MinValue = 0,
             MaxValue = 100
         };
+
         public Chart Chart3 => new LineChart()
         {
             Entries = new[]
@@ -140,13 +136,15 @@ namespace ProjectPanda.ViewModels
                     Label = "10am",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
                 },
-                new Entry(85) //Indicates how busy it is
+                new Entry(74) //Indicates how busy it is
                 {
-                     Color = SKColor.Parse("#FFFF00")
+                    Label = "12pm",
+                    Color = SKColor.Parse("#FF4500"),
                 },
-                new Entry(15)
+                new Entry(24) //Indicates how busy it is
                 {
-                     Color = SKColor.Parse("#D3D3D3")//Grey Color
+                    Label = "2pm",
+                    Color = SKColor.Parse("#FF4500"),
                 },
             },
             BackgroundColor = SKColors.Transparent,
@@ -171,10 +169,12 @@ namespace ProjectPanda.ViewModels
                 },
                 new Entry(85) //Indicates how busy it is
                 {
+                     Label = "12pm",
                      Color = SKColor.Parse("#FFFF00")
                 },
                 new Entry(15)
                 {
+                     Label = "2pm",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
                 },
             },
@@ -200,10 +200,12 @@ namespace ProjectPanda.ViewModels
                 },
                 new Entry(85) //Indicates how busy it is
                 {
+                     Label = "12pm",
                      Color = SKColor.Parse("#FFFF00")
                 },
                 new Entry(15)
                 {
+                     Label = "2pm",
                      Color = SKColor.Parse("#D3D3D3")//Grey Color
                 },
             },

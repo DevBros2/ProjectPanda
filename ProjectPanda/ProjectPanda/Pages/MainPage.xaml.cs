@@ -22,10 +22,20 @@ namespace ProjectPanda.Pages
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, true);
+            Detail = new NavigationPage(new TabbedPage1());
         }
 
 
         #region Event handlers for the side menu
+        private void HomeButton_Clicked(object sender, EventArgs e)
+        {
+            //returns back to orignal state8
+            // await Navigation.PopToRootAsync(true);
+            Detail = new NavigationPage(new TabbedPage1());
+            IsPresented = false;
+
+        }
+
         private void Menu_btn2_Clicked(object sender, EventArgs e)
         {
 
@@ -47,18 +57,12 @@ namespace ProjectPanda.Pages
         private void Menu_btn3_Clicked(object sender, EventArgs e)
         {
             // This button is for payment history
-            //Detail = new NavigationPage(new PaymentHistory());
-            Detail.Navigation.PushAsync(new PaymentHistory());
+            Detail = new NavigationPage(new PaymentHistory());
+           // Detail.Navigation.PushAsync(new PaymentHistory());
             IsPresented = false;
         }
 
-        private async void HomeButton_Clicked(object sender, EventArgs e)
-        {
-            //returns back to orignal state8
-            await Navigation.PopToRootAsync(true);
-            
-
-        }
+       
 
 
 

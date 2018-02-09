@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Page="clr-namespace:ProjectPanda.Views" 
+             x:Class="ProjectPanda.Pages.TabbedPage1"
+            BarBackgroundColor="{StaticResource Primary}" HeightRequest="80" WidthRequest="80">
+  <!--Pages can be added as references or inline-->
+    <Page:ProfilePage  Icon="user.png" />
+
+    <Page:MyAppointments Icon="calendar.png"  />
+
+    <Page:Delivery  Icon="vansideview.png"  />
+
+    <Page:CamPage Icon="photocamera.png" />
+
+</TabbedPage>

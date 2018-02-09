@@ -70,6 +70,10 @@
       <DependentUpon>SupportPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\TabbedPage1.xaml.cs">
+      <DependentUpon>TabbedPage1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\Authentication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\AuthenticationFacebook.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\AuthenticationGoogle.cs" />
@@ -377,6 +381,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PopUpPages\ConfirmationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\TabbedPage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
