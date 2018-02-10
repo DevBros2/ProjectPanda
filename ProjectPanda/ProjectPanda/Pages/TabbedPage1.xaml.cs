@@ -16,6 +16,7 @@ namespace ProjectPanda.Pages
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
         }
     }
 }
