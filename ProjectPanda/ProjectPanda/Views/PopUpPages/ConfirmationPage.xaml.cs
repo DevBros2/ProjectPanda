@@ -18,11 +18,7 @@ namespace ProjectPanda.Views.PopUpPages
 		}
 
 
-        private void GoBackToThePreviousPage(object sender, EventArgs e)
-        {
-
-        }
-
+    
         async private void FinalConfirmation(object sender, EventArgs e)
         {
             //This sends all the booking information to the cloud 
