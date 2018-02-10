@@ -4,6 +4,7 @@
             xmlns:Page="clr-namespace:ProjectPanda.Views" 
              x:Class="ProjectPanda.Pages.TabbedPage1"
             BarBackgroundColor="{StaticResource Primary}" HeightRequest="80" WidthRequest="80">
+    
   <!--Pages can be added as references or inline-->
     <Page:ProfilePage  Icon="user.png" />
 
