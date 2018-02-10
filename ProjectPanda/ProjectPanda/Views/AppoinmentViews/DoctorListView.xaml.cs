@@ -48,7 +48,7 @@ namespace ProjectPanda.Views
             if (item == null)
                 return;
 
-           await  Navigation.PushAsync(new MedicalBuildingView());
+           await Navigation.PushAsync(new Delivery());
             DoctorList.SelectedItem = null;
         }
     }

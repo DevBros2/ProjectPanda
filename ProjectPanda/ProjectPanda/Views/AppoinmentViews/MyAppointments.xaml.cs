@@ -20,11 +20,9 @@ namespace ProjectPanda.Views
 
 
         #region The select doctor and medical practice code
-        async void Doctor_Button_Clicked(object sender, EventArgs e)
+        private async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DoctorListView());
-            // var newpage = await NavigationPage(new DoctorListView());
-
+            await Navigation.PushAsync(new MedicalBuildingView());
         }
         #endregion
 
@@ -35,15 +33,12 @@ namespace ProjectPanda.Views
         {
              string formatedDate;
              formatedDate= TheDateForAppointment.Text = args.NewDate.ToString();
-
-           
         }
         #endregion
 
         #region Confirm code
         private void Confirm(object sender, EventArgs e)
         {
-           
             //going to be moved else where
             //code to confirm the appointemnt 
             XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
