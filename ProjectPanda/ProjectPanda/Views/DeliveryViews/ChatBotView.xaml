@@ -21,7 +21,7 @@
                     <ColumnDefinition Width="Auto">
                     </ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Entry Grid.Column="0" HeightRequest="35" Placeholder="Message" x:Name="txtMessage" Text="{Binding MessageText, Mode=TwoWay}" />
+                <Entry Grid.Column="0" HeightRequest="45" Placeholder="Message" x:Name="txtMessage" Text="{Binding MessageText, Mode=TwoWay}" />
                 <Button BackgroundColor="{StaticResource ButtonLoginColour}" Grid.Column="1" Text="Send" CommandParameter="{Binding Source={x:Reference Name=txtMessage}, Path=Text}" Command="{Binding SendMessage}" />
             </Grid>
         </RelativeLayout>

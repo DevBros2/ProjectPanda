@@ -38,7 +38,7 @@ namespace ProjectPanda.Views
 
         private async void MedicalBuilding_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MedicalBuildingViewModel;
+            var item = e.SelectedItem as MedicalBuildingModel;
             if (item == null)
                 return;
 

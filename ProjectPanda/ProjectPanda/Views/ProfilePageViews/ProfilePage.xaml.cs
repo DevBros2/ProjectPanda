@@ -21,7 +21,7 @@ namespace ProjectPanda.Views
 
         private async void PrivateInformation(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DetailedUserInfo());
+            await Navigation.PushAsync(new DetailedUserInfo()); 
         }
     }
-    }
+}
