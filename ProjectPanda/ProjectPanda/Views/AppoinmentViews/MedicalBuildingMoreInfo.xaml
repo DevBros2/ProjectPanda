@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.AppoinmentViews.MedicalBuildingMoreInfo">
+    <ContentPage.Content>
+       
+        
+        <!--The page with more info regarding the practice-->
+
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+
+            </Grid.RowDefinitions>
+
+            <!--A bigger picture of the practice-->
+            <Frame BackgroundColor="Green" Grid.Row="0"/>
+
+            
+            <!--More detailed graph  -->
+            <Frame BackgroundColor="Red" Grid.Row="1"/>
+
+            
+            <!--The doctors at that practice listview with horzontal scroll-->
+            <Frame BackgroundColor="Yellow" Grid.Row="2"/>
+
+
+        </Grid>
+    
+    
+    </ContentPage.Content>
+</ContentPage>

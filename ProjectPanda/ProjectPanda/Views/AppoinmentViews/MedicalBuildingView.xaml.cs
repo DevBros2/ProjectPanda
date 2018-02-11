@@ -8,7 +8,7 @@ using ProjectPanda.Models;
 using Entry = Microcharts.Entry;
 using SkiaSharp;
 using Microcharts;
-
+using ProjectPanda.Views.AppoinmentViews;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -36,6 +36,7 @@ namespace ProjectPanda.Views
 
         }
 
+        #region Navigation  to doctors at the practice
         private async void MedicalBuilding_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MedicalBuildingModel;
@@ -46,13 +47,22 @@ namespace ProjectPanda.Views
 
            MedicalBuilding.SelectedItem = null;
         }
+        #endregion
 
+        #region More information on that practice
         private void MoreInformation(object sender, EventArgs e)
         {
-            //The pop up with graphs and more information about that practice 
+            //for now using the navigation push method cause I asked charlin to help me with the pop ups
+
+            //This event handler gives more information than the the standard view card 
+
+            Navigation.PushAsync(new MedicalBuildingMoreInfo());
+                
+
         }
 
-       
+        #endregion
+
 
     }
 }

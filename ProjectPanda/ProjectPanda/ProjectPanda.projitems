@@ -104,6 +104,10 @@
       <DependentUpon>AppoitmentFront.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\MedicalBuildingMoreInfo.xaml.cs">
+      <DependentUpon>MedicalBuildingMoreInfo.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CamPage.xaml.cs">
       <DependentUpon>CamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -400,6 +404,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ShowPrecriptionPopUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\MedicalBuildingMoreInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
