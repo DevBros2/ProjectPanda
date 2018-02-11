@@ -34,6 +34,7 @@ namespace ProjectPanda.Pages
             Helpers.Settings.GeneralSettings = AddressLine.Text;
             Helpers.Settings.GeneralSettings = AddressLine2.Text;
             Helpers.Settings.GeneralSettings = CityOrTown.Text;
+            Helpers.Settings.GeneralSettings = Blood.Text;
             //Helpers.Settings.GeneralSettings = Blood_Type.Title;
             //Helpers.Settings.GeneralSettings = Medical_Aid.Text;
             
@@ -41,5 +42,16 @@ namespace ProjectPanda.Pages
             await Navigation.PopToRootAsync(true);
         }
 
+        private void Blood_Type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                Blood.Text = picker.Items[selectedIndex];
+               // BloodType.Text = picker.Items[selectedIndex];
+            }
+        }
     }
 }

@@ -102,7 +102,7 @@
 
                                 <Label Grid.Row="1" Text="Blood Type" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
 
-                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="A+"   Style="{DynamicResource InformationLabel}" />
+                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" x:Name="BloodType"   Style="{DynamicResource InformationLabel}" />
 
                             </Grid>
 

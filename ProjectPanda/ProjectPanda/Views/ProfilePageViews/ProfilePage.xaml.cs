@@ -17,6 +17,7 @@ namespace ProjectPanda.Views
         {
             InitializeComponent();
             City.Text = Settings.GeneralSettings;
+            BloodType.Text = Settings.GeneralSettings;
         }
 
         private async void PrivateInformation(object sender, EventArgs e)
