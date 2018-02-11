@@ -8,8 +8,8 @@ using ProjectPanda.ViewModels;
 using Xamarin.Forms;
 using System.ComponentModel;
 using Xamarin.Forms.Xaml;
-using ProjectPanda.Views.PopUpPages;
 
+using ProjectPanda.Views.DeliveryViews.DeliveryPopUps;
 
 namespace ProjectPanda.Views
 {
@@ -37,19 +37,38 @@ namespace ProjectPanda.Views
             base.OnAppearing();
         }
 
-
-        private async void SelfMed_Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ChatBotView());
-        }
-
-     
-
-        #region The button to make medical orders 
-        async private void MedDeliveryButton_Clicked(object sender, EventArgs e)
+        #region Self prescribed medication history
+        private async void OrderHistorySelfPrecribedMeds(object sender, EventArgs e)
         {
            
         }
         #endregion
+
+
+        #region The button to make medical orders 
+        async private void ShowSelfPrescriptionHistory(object sender, EventArgs e)
+        {
+          //deleting option listview
+        }
+        #endregion
+
+        #region Order Medicine (brings the chat bot up)
+
+        async private void OrderMedicine(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChatBotView());
+        }
+
+        #endregion 
+
+        #region The button for brining up the pop up for doctor prescription
+
+        async private void ShowDocPrecription(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ShowPrecriptionPopUp());
+        }
+
+       
     }
+          #endregion
 }

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.DeliveryViews.DeliveryPopUps.ShowPrecriptionPopUp"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+              BackgroundColor="{StaticResource BackgroundColor}" 
+             >
+
+    
+    <Grid Padding="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition  Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="White" VerticalOptions="FillAndExpand"  OutlineColor="Black" x:Name="DocPrescription"  CornerRadius="8" Margin="10,0,10,10" Grid.Row="0" HeightRequest="300">
+            <ListView HasUnevenRows="True" SeparatorVisibility="Default" ItemsSource="{Binding _prescribedMedication}"  x:Name="MedList"  VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+
+                                <Grid >
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Medication}" TextColor="Black" Grid.Row="0" />
+                                    <Label Text="{Binding DosageAmount}" TextColor="Black" Grid.Row="1"/>
+                                    <Label Text="{Binding MedicationDescription}" TextColor="Black" Grid.Row="2"/>
+
+
+                                </Grid>
+
+
+
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
+
+        <Button Text="Order Prescribed medication" Grid.Row="1" BackgroundColor="{StaticResource ButtonLoginColour}" Margin="10,0,10,10"/>
+
+    </Grid>
+   
+</ContentPage>
