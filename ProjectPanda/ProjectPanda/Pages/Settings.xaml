@@ -113,7 +113,7 @@
                                             </Label.FormattedText>
                                         </Label>
 
-                                        <Slider ValueChanged="KilometerChange" Margin="10" Maximum="30" Minimum="0" x:Name="sliderDistance"/>
+                                    <Slider ValueChanged="KilometerChange" Margin="10" Maximum="30" Minimum="0" x:Name="sliderDistance"/>
 
                                     </StackLayout>
                                 </ViewCell>

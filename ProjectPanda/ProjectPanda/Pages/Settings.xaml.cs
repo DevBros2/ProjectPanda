@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using ProjectPanda.Helpers;
-
-
+using ProjectPanda.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -31,14 +31,14 @@ namespace ProjectPanda.Pages
 
         private async void User_0Settings_Clicked(object sender, EventArgs e)
         {
-            Helpers.Settings.GeneralSettings = AddressLine.Text;
-            Helpers.Settings.GeneralSettings = AddressLine2.Text;
+            //Helpers.Settings.GeneralSettings = AddressLine.Text;
+            //Helpers.Settings.GeneralSettings = AddressLine2.Text;  
             Helpers.Settings.GeneralSettings = CityOrTown.Text;
-            Helpers.Settings.GeneralSettings = Blood.Text;
-            //Helpers.Settings.GeneralSettings = Blood_Type.Title;
-            //Helpers.Settings.GeneralSettings = Medical_Aid.Text;
-            
+
+
            
+
+
             await Navigation.PopToRootAsync(true);
         }
 
@@ -53,5 +53,7 @@ namespace ProjectPanda.Pages
                // BloodType.Text = picker.Items[selectedIndex];
             }
         }
+
+        
     }
 }

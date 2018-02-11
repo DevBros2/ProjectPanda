@@ -36,6 +36,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\MedicalBuildingModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrescribedMedication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />

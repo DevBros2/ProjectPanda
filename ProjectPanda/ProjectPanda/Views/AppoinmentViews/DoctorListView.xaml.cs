@@ -13,12 +13,13 @@ using Xamarin.Forms.Xaml;
 namespace ProjectPanda.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DoctorListView : ContentPage
+	public partial class AppointmentView : ContentPage
 	{
         DoctorListViewModel viewmodel;
         public DocAvaliable DocAvaliable;
+        private String _BasicString = "Doctor"; 
 
-		public DoctorListView ()
+		public AppointmentView ()
 		{
 			InitializeComponent ();
            // DoctorList.On<Android>().SetIsFastScrollEnable(true);
@@ -47,6 +48,9 @@ namespace ProjectPanda.Views
             var item = e.SelectedItem as DocAvaliable;
             if (item == null)
                 return;
+
+            //This sends the message
+            MessagingCenter.Send(this, _BasicString, DocAvaliable);
 
            await Navigation.PushAsync(new Delivery());
             DoctorList.SelectedItem = null;
