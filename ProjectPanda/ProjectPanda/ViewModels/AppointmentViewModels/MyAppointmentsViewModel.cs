@@ -10,6 +10,8 @@ namespace ProjectPanda.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        //please implement it here
+
         private void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

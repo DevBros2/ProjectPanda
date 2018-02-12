@@ -18,6 +18,8 @@ namespace ProjectPanda.Views
 		public MyAppointments ()
 		{
 			InitializeComponent ();
+
+            BindingContext = _viewmodel = new MyAppointmentsViewModel();
 		}
 
 
