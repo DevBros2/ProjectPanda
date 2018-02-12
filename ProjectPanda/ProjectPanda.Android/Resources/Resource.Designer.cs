@@ -6478,7 +6478,7 @@ namespace ProjectPanda.Droid
 			public const int mailsupport = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int mainlogo = 2130837779;
+			public const int MainLogo = 2130837779;
 			
 			// aapt resource value: 0x7f020114
 			public const int medicationBottle = 2130837780;
