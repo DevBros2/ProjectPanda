@@ -45,7 +45,7 @@
                             </controls:CircleImage.HeightRequest>
                         </controls:CircleImage>
 
-                        <Label x:Name="City" HorizontalOptions="Center" TextColor="Black" FontSize="25" Grid.Row="1"/>
+                        <Label x:Name="City" Text="Khanyisani Buthelezi" HorizontalOptions="Center" TextColor="Black" FontSize="25" Grid.Row="1"/>
 
                     </Grid>
                 
