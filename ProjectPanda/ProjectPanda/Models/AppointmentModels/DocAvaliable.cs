@@ -32,10 +32,10 @@ namespace ProjectPanda.Models
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-        
-        
 
-        
-        
+        public static implicit operator string(DocAvaliable v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
