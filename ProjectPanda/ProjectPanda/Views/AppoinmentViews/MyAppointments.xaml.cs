@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjectPanda.ViewModels;
+using ProjectPanda.Views;
 using ProjectPanda.Views.PopUpPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,22 +14,34 @@ namespace ProjectPanda.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MyAppointments : ContentPage
 	{
+        //60% of code needs to be moved to viewmodel
         MyAppointmentsViewModel _viewmodel;
-
-		public MyAppointments ()
+        private String _BasicString = "Doctor";
+        public MyAppointments ()
 		{
 			InitializeComponent ();
-		}
+           BindingContext = _viewmodel = new MyAppointmentsViewModel();
 
-
-
+            //subscribes(listens) for the item being sent from doctorlistViewModel 
+            MessagingCenter.Subscribe<AppointmentView, string>(this, _BasicString, (sender, specialArgs) =>
+            {
+                //replaces string, using the OnPropertyChanged method in viewmodel
+                _viewmodel.MyAppointmentsViewModelText = specialArgs;
+               
+            });
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+          
+        }
         #region The select doctor and medical practice code
         private async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MedicalBuildingView());
         }
         #endregion
-
+        
        
 
         #region Date picker event handler
@@ -62,6 +75,7 @@ namespace ProjectPanda.Views
         {
             //This needs to use a diffrent navigfation method
             await Navigation.PushAsync(new ProblemMessage());
+            // MessagingCenter.Unsubscribe<AppointmentView, string>(this, _BasicString);
         }
         #endregion
     }

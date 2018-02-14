@@ -4,8 +4,7 @@
              x:Class="ProjectPanda.Views.MyAppointments"
              BackgroundColor="{StaticResource BackgroundColor}"
               xmlns:xfFlipViewControl="clr-namespace:ProjectPanda.Models"
-             xmlns:refrencePage="clr-namespace:ProjectPanda.Views.AppoinmentViews"
-             
+             xmlns:refrencePage="clr-namespace:ProjectPanda.Views.AppoinmentViews" 
              xmlns:Customizededitor="clr-namespace:ProjectPanda.Views.CustomEntry"
              >
     <ContentPage.Content>
@@ -34,7 +33,7 @@
                         <!--#endregion-->
 
                         <!--#region Button to select doctor Grid row 1-->
-                        <Button BackgroundColor="{StaticResource ButtonLoginColour}"  Text="Doctor" Image="doct.png"    Style="{DynamicResource ButtonFont}"  Clicked="Doctor_Button_Clicked" TextColor="Black"  BorderWidth="2" Grid.Row="1" Margin="0,0,0,20"/>
+                        <Button BackgroundColor="{StaticResource ButtonLoginColour}" Text="{Binding MyAppointmentsViewModelText}" Image="doct.png" x:Name="DoctorLabel"   Style="{DynamicResource ButtonFont}"  Clicked="Doctor_Button_Clicked" TextColor="Black"  BorderWidth="2" Grid.Row="1" Margin="0,0,0,20"/>
 
                         <!--#endregion-->
                         

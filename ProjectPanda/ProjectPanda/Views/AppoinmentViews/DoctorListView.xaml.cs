@@ -17,7 +17,7 @@ namespace ProjectPanda.Views
 	{
         DoctorListViewModel viewmodel;
         public DocAvaliable DocAvaliable;
-        private String _BasicString = "Doctor"; 
+        private String _BasicString = "Doctor"; //a global string needs to be created
 
 		public AppointmentView ()
 		{
@@ -27,7 +27,7 @@ namespace ProjectPanda.Views
             BindingContext = viewmodel = new DoctorListViewModel();
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             //await RefreshItems();
@@ -45,14 +45,19 @@ namespace ProjectPanda.Views
 
         private async void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            //simulates connection latency
+           // await Task.Delay(4000);
+
             var item = e.SelectedItem as DocAvaliable;
             if (item == null)
                 return;
 
-            //This sends the message
-            MessagingCenter.Send(this, _BasicString, DocAvaliable);
+            string listitem = item.Name.ToString(); 
+            //This sends the message of itemSelected
+            MessagingCenter.Send<AppointmentView,string>(this, _BasicString, listitem);
 
-           await Navigation.PushAsync(new Delivery());
+            await Navigation.PopToRootAsync();
+           //await Navigation.PushAsync(new MyAppointments());
             DoctorList.SelectedItem = null;
         }
     }
