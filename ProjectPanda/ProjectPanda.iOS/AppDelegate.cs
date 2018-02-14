@@ -4,6 +4,7 @@ using System.Linq;
 using Lottie.Forms.iOS.Renderers;
 using Foundation;
 using UIKit;
+using System.IO;
 
 namespace ProjectPanda.iOS
 {
@@ -28,14 +29,26 @@ namespace ProjectPanda.iOS
             Microsoft.WindowsAzure.MobileServices.MobileServiceClient ProjectPandaClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
             "https://projectpanda.azurewebsites.net");
             global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new ProjectPanda.App ());
 
             //Inicializa o Zxing no iOS
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
+
             //the lottie code for Ios
 
 
+
+            #region SqLite local databse for ios
+
+            string dbName = "travel_db.sqlite";
+            string folderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "..", "Library");
+            string fullPath = Path.Combine(folderPath, dbName);
+
+            #endregion
+
+            LoadApplication(new ProjectPanda.App (fullPath));
+
+        
             return base.FinishedLaunching (app, options);
 
 
