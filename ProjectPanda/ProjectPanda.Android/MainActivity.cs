@@ -18,6 +18,7 @@ using Xamarin.Forms.Platform.Android;
 using Lottie.Forms.Droid;
 using Rg.Plugins.Popup;
 using Rg.Plugins.Popup.Animations;
+using System.IO;
 
 namespace ProjectPanda.Droid
 {
@@ -50,7 +51,14 @@ namespace ProjectPanda.Droid
             //Lottie Animation android code
             AnimationViewRenderer.Init();
 
-            LoadApplication(new ProjectPanda.App());
+            #region Local database for android devices
+            string dbName = "userSettingsdb.sqlite";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string fullPath = Path.Combine(folderPath, dbName);
+            #endregion 
+
+
+            LoadApplication(new ProjectPanda.App(fullPath));
 
 
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
-
+using SQLite;
 
 namespace ProjectPanda.Helpers
 {
@@ -18,13 +18,11 @@ namespace ProjectPanda.Helpers
         }
 
         #region Setting Constants
-
         private const string SettingsKey = "settings_key";
         private static readonly string SettingsDefault = string.Empty;
-
         #endregion
 
-
+        #region General settings 
         public static string GeneralSettings
         {
             get
@@ -36,5 +34,7 @@ namespace ProjectPanda.Helpers
                 AppSettings.AddOrUpdateValue(SettingsKey, value);
             }
         }
+        #endregion
+
     }
 }
