@@ -7,6 +7,7 @@ using ProjectPanda.Services;
 using ProjectPanda.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ProjectPanda.Views;
 
 namespace ProjectPanda.Pages
 {
@@ -46,6 +47,8 @@ namespace ProjectPanda.Pages
               //await Navigation.PushAsync(new Pages.MainPage());
               Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack[0]);
               await Navigation.PopToRootAsync();
+              Navigation.RemovePage(new LoginPage());
+              Navigation.RemovePage(new SignUpPrompt());
         }
 
     }
