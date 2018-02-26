@@ -11,7 +11,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
 
             </Grid.RowDefinitions>
 
@@ -24,9 +24,9 @@
 
             
             <!--The doctors at that practice listview with horzontal scroll-->
-            <Grid Grid.Row="2" VerticalOptions="Center">
+            <Grid Grid.Row="2" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
                 <ScrollView Orientation="Horizontal">
-                    <ListView SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center">
+                    <ListView SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

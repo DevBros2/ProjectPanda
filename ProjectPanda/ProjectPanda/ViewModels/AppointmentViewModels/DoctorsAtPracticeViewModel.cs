@@ -22,7 +22,10 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
         {
             _docs = new ObservableCollection<DoctorsAtPractice>
             {
-                new DoctorsAtPractice{FullName="Dr Zulu", ProfileImageURl="userplaceholder.png"  }
+                new DoctorsAtPractice{FullName="Dr Zulu", ProfileImageURl="userplaceholder.png"  },
+                new DoctorsAtPractice{FullName="Dr Buthelezi", ProfileImageURl="userplaceholder.png}" },
+                new DoctorsAtPractice{FullName="Dr Zuma", ProfileImageURl="userplaceholder.png}" }
+
             };
         }
     }
