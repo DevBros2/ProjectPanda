@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\AppoitmentHistoryModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DoctorsAtPractice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrecriptionHistory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
@@ -84,6 +85,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Serapis\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserRegistrationManager .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\AppoitmentHistoryViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\DoctorsAtPracticeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\MedicalBuildingMoreInfoViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\ChatBotViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\MedicationSearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\PrescriptionHistroyViewModel.cs" />
@@ -215,13 +218,11 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\JudoPay\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">

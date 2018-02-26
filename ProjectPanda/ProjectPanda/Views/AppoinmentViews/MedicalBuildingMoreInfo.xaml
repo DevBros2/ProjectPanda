@@ -7,24 +7,48 @@
         
         <!--The page with more info regarding the practice-->
 
-        <Grid Padding="10">
+        <Grid Padding="10" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
 
             </Grid.RowDefinitions>
 
             <!--A bigger picture of the practice-->
-            <Frame BackgroundColor="Green" Grid.Row="0"/>
+            <Image Source="GreysHospital.jpg" Aspect="Fill" Grid.Row="0"/>
 
-            
+
             <!--More detailed graph  -->
-            <Frame BackgroundColor="Red" Grid.Row="1"/>
+            
 
             
             <!--The doctors at that practice listview with horzontal scroll-->
-            <Frame BackgroundColor="Yellow" Grid.Row="2"/>
+            <Grid Grid.Row="2" VerticalOptions="Center">
+                <ScrollView Orientation="Horizontal">
+                    <ListView SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                    <Grid VerticalOptions="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Image Source="{Binding ProfileImageURl}" HeightRequest="70" Grid.Row="0"/>
+                                        <Label Text="{Binding FullName}" Grid.Row="1"/>
+
+                                    </Grid>
+                                   
+                                    
+                                </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </ScrollView>
+            </Grid>
 
 
         </Grid>

@@ -12,6 +12,6 @@ namespace ProjectPanda.Models
         public float ChartValue { get; set; } //This Must be value 0 - 100%
         public Chart ChartData { get; set; }
         public string Distance { get; set; }
-
+       
     }
 }
