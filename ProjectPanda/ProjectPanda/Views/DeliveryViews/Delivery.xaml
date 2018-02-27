@@ -21,7 +21,7 @@
 
             <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"  Grid.Row="0"/>
             <Button  Text="Show Prescription" Image="moremeds.png"  BackgroundColor="{StaticResource ButtonLoginColour}"  Grid.Row="1" HeightRequest="65" VerticalOptions="Start" Clicked="ShowDocPrecription"/>
-            <Button x:Name="MedDeliveryButton" Text="Prescription Delivery History" VerticalOptions="Start" TextColor="Black"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}"  Image="historyOfDel.png"  Clicked="ShowSelfPrescriptionHistory" Grid.Row="2"/>
+            <Button x:Name="MedDeliveryButton" Text="Prescription Delivery History" VerticalOptions="Start" TextColor="Black"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}"  Image="historyOfDel.png"  Clicked="DocPrescriptionHistory" Grid.Row="2"/>
             <Label Text="Self prescription" Margin="0,0,0,15" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3"/>
             <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Center" HeightRequest="65"  BorderWidth="2"  Grid.Row="4" Clicked="OrderMedicine"/>
             <Button Text="Order History" BackgroundColor="{StaticResource ButtonLoginColour}" HeightRequest="65" Grid.Row="5" VerticalOptions="End" Image="historyOfDel.png" Clicked="OrderHistorySelfPrecribedMeds"/>

@@ -27,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DoctorsAtPractice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrecriptionHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\SelfPrescriptionHistoryModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\DetailedUserModel.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\ChatBotViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\MedicationSearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\PrescriptionHistroyViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\SelfPrescriptionHistoryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\AllergiesDetailListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\ChronicDiseaseListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\DetailedUserViewModel.cs" />
@@ -122,6 +124,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\Delivery.xaml.cs">
       <DependentUpon>Delivery.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\PrescriptionHistory.xaml.cs">
+      <DependentUpon>PrescriptionHistory.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\SelfPrescriptionHistroy.xaml.cs">
+      <DependentUpon>SelfPrescriptionHistroy.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ShowPrecriptionPopUp.xaml.cs">
@@ -411,6 +421,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\MedicalBuildingMoreInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\PrescriptionHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\SelfPrescriptionHistroy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

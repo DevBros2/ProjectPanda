@@ -26,7 +26,7 @@ namespace ProjectPanda.ViewModels.DeliveryViewModels
             _historyPrescriptionList = new ObservableCollection<PrecriptionHistory>
             {
 
-                //get the values from the cloud 
+                new PrecriptionHistory{ _descriptionHistory="Take 3 times a day after each meal", _dosageHistory="5 times a day", _medicationHistory="Oxycon", MedicationDeliveryDate="27/03/18"}
 
             };
         }

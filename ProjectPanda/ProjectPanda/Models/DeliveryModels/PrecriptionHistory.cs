@@ -38,6 +38,11 @@ namespace ProjectPanda.Models.DeliveryModels
             set { _descriptionHistory = DescriptionHistory; }
         }
 
+        public string MedicationDeliveryDate
+        {
+            get;
+            set;
+        }
 
     }
 }
