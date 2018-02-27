@@ -26,23 +26,39 @@
             <!--The doctors at that practice listview with horzontal scroll-->
             <Grid Grid.Row="2" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
                 <ScrollView Orientation="Horizontal">
-                    <ListView SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center" HasUnevenRows="True">
+                    <ListView SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center" HorizontalOptions="Center" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
+                                    <ViewCell.View>
+                                    <Grid VerticalOptions="Center" HorizontalOptions="Start">
+                                       
 
-                                    <Grid VerticalOptions="Center">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
 
-                                        <Image Source="{Binding ProfileImageURl}" HeightRequest="70" Grid.Row="0"/>
-                                        <Label Text="{Binding FullName}" Grid.Row="1"/>
+                                            <Grid Grid.Column="0">
+
+                                                <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                 <Image Source="{Binding ProfileImageURl}" HeightRequest="70" Grid.Row="0"/>
+                                                 <Label Text="{Binding Name}" Grid.Row="1"/>
+
+                                                </Grid>
+
+                                               
+
+                                            </Grid>
+                                      
 
                                     </Grid>
-                                   
-                                    
+
+                                    </ViewCell.View>
                                 </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
