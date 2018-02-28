@@ -19,7 +19,7 @@
                 <!-- FlipCard FrontView-->
                 <xfFlipViewControl:XFFlipView.FrontView>
 
-                    <Grid>
+                    <Grid VerticalOptions="CenterAndExpand">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>

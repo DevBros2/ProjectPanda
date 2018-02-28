@@ -109,11 +109,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\MyAppointmentsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PrescribedMedicationListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\LoginPageViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentBack.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)PseudoCode\AppoitmentBack.xaml.cs">
       <DependentUpon>AppoitmentBack.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentFront.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)PseudoCode\AppoitmentFront.xaml.cs">
       <DependentUpon>AppoitmentFront.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -332,13 +332,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentFront.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PseudoCode\AppoitmentFront.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppoitmentBack.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PseudoCode\AppoitmentBack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
