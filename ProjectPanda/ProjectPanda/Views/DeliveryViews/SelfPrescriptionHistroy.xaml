@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.DeliveryViews.SelfPrescriptionHistroy">
-    <ContentPage.Content>
+             x:Class="ProjectPanda.Views.DeliveryViews.SelfPrescriptionHistroy"
+             BackgroundColor="{StaticResource BackgroundColor}"
+            Padding="15"
+             >
+    <ContentPage.Content >
         <ListView x:Name="ContextDemoList" ItemsSource="{Binding _selfPrescriptionHistoryList}" HasUnevenRows="True" SeparatorVisibility="Default" >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -14,13 +17,12 @@
                             <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"   Text="Delete" IsDestructive="True" />
 
                         </ViewCell.ContextActions>
-                        <Grid Padding="15">
+                        <Grid Padding="15" BackgroundColor="White">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                               
                             </Grid.RowDefinitions>
 
                             <Label Text="{Binding selfMedicationHistory}" Grid.Row="0" />
