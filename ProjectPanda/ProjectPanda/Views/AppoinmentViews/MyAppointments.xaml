@@ -13,11 +13,7 @@
 
         <Grid Padding="10">
             
-            
-            <xfFlipViewControl:XFFlipView  x:Name="XFFlipViewControl1"  Grid.Row="0" Grid.Column="0">
-
-                <!-- FlipCard FrontView-->
-                <xfFlipViewControl:XFFlipView.FrontView>
+     
 
                     <Grid VerticalOptions="CenterAndExpand">
                         <Grid.RowDefinitions>
@@ -75,102 +71,12 @@
                     </Grid>
 
                    
-                </xfFlipViewControl:XFFlipView.FrontView>
+                
 
                 
                 
                 <!--FLipCardBackView-->          
-                <!--#region Back view region-->
-                <xfFlipViewControl:XFFlipView.BackView>
-                 
-                    <ScrollView>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-
-                            </Grid.RowDefinitions>
-
-
-                            <Label Text="Next Appointment" Style="{DynamicResource Key=FontStyle}" TextColor="Black" Grid.Row="0" Margin="15,5,15,0"/>
-
-                            <!-- AppoimentDate -->
-                            <Frame  BackgroundColor="White" CornerRadius="8" Grid.Row="1"  Margin="15,10,15,8">
-                                <Label    TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="DateOfAppoint" LineBreakMode="TailTruncation">
-                                    <Label.FormattedText>
-                                        <FormattedString >
-                                            <Span Text= "Date:" />
-                                            <Span Text=" "/>
-                                            <Span Text="" x:Name="TheDateForAppointment" />
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-                            </Frame>
-
-                            <!-- AppoimentTime-->                        
-                                <Frame BackgroundColor="White" CornerRadius="8" Margin="15,0,15,8" Grid.Row="2">
-                                    <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="TimeOfAppoint" LineBreakMode="TailTruncation">
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text="Time :"/>
-                                                <Span Text=" "/>
-                                                <Span Text=" " />
-                                            </FormattedString>
-                                        </Label.FormattedText>
-
-                                    </Label>
-                                </Frame>
-
-
-                            <!-- NameOfPractice-->
-                            <Frame BackgroundColor="White" CornerRadius="8" Grid.Row="3" Margin="15,0,15,8">
-                                <Label   TextColor="Black" FontSize="20" VerticalTextAlignment="Center" x:Name="Place" LineBreakMode="TailTruncation" >
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="Place:" />
-                                            <Span Text="" x:Name="NameOfPractice" />
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-
-                            </Frame>
-
-                            <!-- Doctors Name -->
-                            <Frame BackgroundColor="White" CornerRadius="8" Grid.Row="4" Margin="15,0,15,10">
-                                <Label   TextColor="Black"  FontSize="20"  VerticalTextAlignment="Center" x:Name="Doctor" LineBreakMode="TailTruncation">
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="Doctor :"/>
-                                            <Span Text=" "/>
-                                            <Span Text="" x:Name="NameOfDoctor"/>
-                                        </FormattedString>
-                                    </Label.FormattedText>
-
-                                </Label>
-                            </Frame>
-
-                            <!-- Cancel Button-->
-                            <Image Source="cancel.png" IsVisible="True" Grid.Row="5" HorizontalOptions="Center">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Cancel"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-
-                        </Grid>
-                    </ScrollView>
-                    
-                </xfFlipViewControl:XFFlipView.BackView>
-                <!--#endregion-->
-              
-
-            </xfFlipViewControl:XFFlipView>
-
-
-
+        
         </Grid>
 
     </ContentPage.Content>

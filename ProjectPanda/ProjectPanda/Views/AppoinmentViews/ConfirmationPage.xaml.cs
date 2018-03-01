@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ProjectPanda.Views.PopUpPages
+namespace ProjectPanda.Views.AppoinmentViews
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ConfirmationPage : ContentPage

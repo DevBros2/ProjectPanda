@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.PopUpPages.ProblemMessage"
-             Title="Set Appointment"
-              BackgroundColor="{StaticResource BackgroundColor}"
+             x:Class="ProjectPanda.Views.AppoinmentViews.ProblemEntryPage"
+             BackgroundColor="{StaticResource BackgroundColor}"
              >
     <ContentPage.Content>
-
         <Grid Padding="15" RowSpacing="10">
 
 
@@ -15,7 +13,7 @@
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="150"/>
-               
+
             </Grid.RowDefinitions>
 
             <Label Text="What seems to be the Problem?" TextColor="Black" FontSize="20" HorizontalOptions="Center" Margin="0,10,0,10"/>
@@ -24,7 +22,7 @@
             <!--#region The text editor-->
             <Frame Grid.Row="1"  CornerRadius="8" HorizontalOptions="Center" VerticalOptions="Center">
 
-                <Editor HeightRequest="250" WidthRequest="300"/>
+                <Editor HeightRequest="250" WidthRequest="300" />
 
             </Frame>
             <!--#endregion-->
@@ -39,11 +37,10 @@
 
             <!--#endregion-->
 
-    
+
 
 
         </Grid>
-
 
     </ContentPage.Content>
 </ContentPage>

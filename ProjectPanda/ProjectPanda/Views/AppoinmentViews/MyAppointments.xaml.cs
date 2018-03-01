@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectPanda.ViewModels;
 using ProjectPanda.Views;
-using ProjectPanda.Views.PopUpPages;
+using ProjectPanda.Views.AppoinmentViews;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -54,7 +54,7 @@ namespace ProjectPanda.Views
         private void Datepick(object sender, DateChangedEventArgs args)
         {
              string formatedDate;
-            formatedDate = TheDateForAppointment.Text = args.NewDate.ToShortDateString();
+            // formatedDate = TheDateForAppointment.Text = args.NewDate.ToString();
 
             
 
@@ -93,7 +93,7 @@ namespace ProjectPanda.Views
         async private void NextPage(object sender, EventArgs e)
         {
             //This needs to use a diffrent navigfation method
-            await Navigation.PushAsync(new ProblemMessage());
+             await Navigation.PushAsync(new ProblemEntryPage());
             // MessagingCenter.Unsubscribe<AppointmentView, string>(this, _BasicString);
         }
         #endregion

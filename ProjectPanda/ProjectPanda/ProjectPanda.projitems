@@ -121,6 +121,10 @@
       <DependentUpon>MedicalBuildingMoreInfo.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\ProblemEntryPage.xaml.cs">
+      <DependentUpon>ProblemEntryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CamPage.xaml.cs">
       <DependentUpon>CamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -154,16 +158,8 @@
       <DependentUpon>DoctorListView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\PopUpPages\ConfirmationPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\ConfirmationPage.xaml.cs">
       <DependentUpon>ConfirmationPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\PopUpPages\EditorPopUp.xaml.cs">
-      <DependentUpon>EditorPopUp.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\PopUpPages\ProblemMessage.xaml.cs">
-      <DependentUpon>ProblemMessage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml.cs">
@@ -398,19 +394,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PopUpPages\EditorPopUp.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PopUpPages\ProblemMessage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PopUpPages\ConfirmationPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\ConfirmationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -453,6 +437,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Payments\PaymentOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\ProblemEntryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
