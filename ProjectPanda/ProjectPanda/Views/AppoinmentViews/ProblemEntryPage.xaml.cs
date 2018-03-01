@@ -23,5 +23,13 @@ namespace ProjectPanda.Views.AppoinmentViews
             await Navigation.PushAsync(new ConfirmationPage());
         }
 
+
+
+        async public void SendParagraphToNextPage(object sender, EventArgs e)
+        {
+            //On completed event handler
+
+        }
+
     }
 }

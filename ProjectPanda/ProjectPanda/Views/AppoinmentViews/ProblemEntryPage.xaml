@@ -22,7 +22,7 @@
             <!--#region The text editor-->
             <Frame Grid.Row="1"  CornerRadius="8" HorizontalOptions="Center" VerticalOptions="Center">
 
-                <Editor HeightRequest="250" WidthRequest="300" />
+                <Editor HeightRequest="250" WidthRequest="300" Completed="SendParagraphToNextPage" x:Name="FiftyWordParagraph" />
 
             </Frame>
             <!--#endregion-->
