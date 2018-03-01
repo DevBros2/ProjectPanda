@@ -49,6 +49,9 @@ namespace ProjectPanda.Views
         {
              string formatedDate;
              formatedDate= TheDateForAppointment.Text = args.NewDate.ToString();
+
+            
+
         }
         #endregion
 
@@ -57,7 +60,17 @@ namespace ProjectPanda.Views
         {
             //going to be moved else where
             //code to confirm the appointemnt 
-            XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+            //  XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+
+            try
+            {
+                
+            }
+            catch
+            {
+                DisplayAlert("Invalid Selection", "You have entred something incorrectly", "Cancel");
+            }
+
         }
 
         #endregion
