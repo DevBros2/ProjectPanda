@@ -29,7 +29,12 @@ namespace ProjectPanda.Views
                 _viewmodel.MyAppointmentsViewModelText = specialArgs;
                
             });
+
+
+            Datepick(null, null);
         }
+
+
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
@@ -41,6 +46,7 @@ namespace ProjectPanda.Views
             await Navigation.PushAsync(new MedicalBuildingView());
         }
         #endregion
+
         
        
 
@@ -48,7 +54,7 @@ namespace ProjectPanda.Views
         private void Datepick(object sender, DateChangedEventArgs args)
         {
              string formatedDate;
-             formatedDate= TheDateForAppointment.Text = args.NewDate.ToString();
+            formatedDate = TheDateForAppointment.Text = args.NewDate.ToShortDateString();
 
             
 
