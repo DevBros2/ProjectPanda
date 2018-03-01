@@ -5,150 +5,127 @@
              BackgroundColor="{StaticResource BackgroundColor}"
              >
     <ContentPage.Content>
-
-
         <ScrollView>
-            <Grid>
-          
-                <Grid.RowDefinitions>
-
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-
-                </Grid.RowDefinitions>
+            <StackLayout Padding="15">
 
 
-                
-                    <TableView HasUnevenRows="True" x:Name="settingProperty" Intent="Settings" Grid.Row="0">
+            <TableView HasUnevenRows="True" x:Name="settingProperty" Intent="Settings" >
+
+
+                <!-- <local:Settings/>-->
+                <TableRoot>
+
+                    <TableSection Title="Personal Infomation"  >
 
 
 
+                        <EntryCell Label="Address Line 1:" x:Name="AddressLine" Placeholder="6 Calsi gardens"  LabelColor="Black" HorizontalTextAlignment="Center"/>
 
-                        <!-- <local:Settings/>-->
-                        <TableRoot Title="Personal Infomation" >
-                            <TableSection Title="Personal Infomation"  >
+                        <EntryCell Label="Address Line 2:" x:Name="AddressLine2" Placeholder="11 Sunnyside Lane" LabelColor="Black" HorizontalTextAlignment="Center"/>
 
+                        <EntryCell Label="City/Town:" x:Name="CityOrTown" LabelColor="Black" Placeholder="Pinetown" HorizontalTextAlignment="Center"/>
 
+                        <EntryCell Label="Postal code:" x:Name="Postal_Code" LabelColor="Black" Placeholder="3610" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
 
-                                <EntryCell Label="Address Line 1:" x:Name="AddressLine" Placeholder="6 Calsi gardens"  LabelColor="Black" HorizontalTextAlignment="Center"/>
-
-                                <EntryCell Label="Address Line 2:" x:Name="AddressLine2" Placeholder="11 Sunnyside Lane" LabelColor="Black" HorizontalTextAlignment="Center"/>
-
-                                <EntryCell Label="City/Town:" x:Name="CityOrTown" LabelColor="Black" Placeholder="Pinetown" HorizontalTextAlignment="Center"/>
-
-                                <EntryCell Label="Postal code:" x:Name="Postal_Code" LabelColor="Black" Placeholder="3610" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
-
-                                <EntryCell Label="cellphone number:" x:Name="Cellphone_Number" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0609887758" Keyboard="Telephone"/>
+                        <EntryCell Label="cellphone number:" x:Name="Cellphone_Number" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0609887758" Keyboard="Telephone"/>
 
 
-                                    <EntryCell Label="Email:" x:Name="Email" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="khanyisani.buthelezi03@gmail.com"/>
+                        <EntryCell Label="Email:" x:Name="Email" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="khanyisani.buthelezi03@gmail.com"/>
 
 
+
+                        <ViewCell>
+
+
+
+                            <Picker x:Name="Blood_Type" Title="Blood Type:"  TextColor="Black" SelectedIndexChanged="Blood_Type_SelectedIndexChanged" >
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>O-Postive</x:String>
+                                        <x:String>O-Negative</x:String>
+                                        <x:String>A-Postive</x:String>
+                                        <x:String>A-Negative</x:String>
+                                        <x:String>B-Postive</x:String>
+                                        <x:String>B-Negative</x:String>
+                                        <x:String>AB-Postive</x:String>
+                                        <x:String>AB-Negative</x:String>
+
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+
+                         </ViewCell>
+
+                            <ViewCell>
+                                <Picker x:Name="Medical_Aid" Title="Medical Aid"  TextColor="Black"  >
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Discovery Health</x:String>
+                                            <x:String>Bonitas</x:String>
+                                            <x:String>FedHealth</x:String>
+                                            <x:String>Metropolitan OpenPlan</x:String>
+                                            <x:String>Oxygen</x:String>
+                                            <x:String>Resolution Health</x:String>
+                                            <x:String>Spectramed</x:String>
+                                            <x:String>Sizwe</x:String>
+                                            <x:String>Momentum</x:String>
+                                            <x:String>Topmed</x:String>
+                                            <x:String>Bestmed</x:String>
+                                            <x:String>Profmed</x:String>
+                                            <x:String>Jenus</x:String>
+                                            <x:String>Keyhealth</x:String>
+                                            <x:String>Medihelp</x:String>
+
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+
+                            </ViewCell>
+
+                    </TableSection  >
+
+
+                    <TableSection Title="Appointment Settings">
+
+                        
+
+                            <ViewCell>
+                            <Label Text="Set the maximum distance you are willing to travel" Margin="8" FontAttributes="Bold" FontSize="15"/>
+                            </ViewCell>
+
+                            <ViewCell>
+                                <Label FontSize="20" Margin="12,0,0,10" TextColor="Black">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Kilometers: " />
+                                        <Span x:Name="kilometerValue"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                                </Label>
+                            </ViewCell>
 
                                 <ViewCell>
-                                    <StackLayout Margin="10,0,10,20" >
-
-
-                                        <Picker x:Name="Blood_Type" Title="Blood Type:"  TextColor="Black" SelectedIndexChanged="Blood_Type_SelectedIndexChanged" >
-                                            <Picker.ItemsSource>
-                                                <x:Array Type="{x:Type x:String}">
-                                                    <x:String>O-Postive</x:String>
-                                                    <x:String>O-Negative</x:String>
-                                                    <x:String>A-Postive</x:String>
-                                                    <x:String>A-Negative</x:String>
-                                                    <x:String>B-Postive</x:String>
-                                                    <x:String>B-Negative</x:String>
-                                                    <x:String>AB-Postive</x:String>
-                                                    <x:String>AB-Negative</x:String>
-
-                                                </x:Array>
-                                            </Picker.ItemsSource>
-                                        </Picker>
-
-                                    <Label x:Name="Blood"/>
-                                        
-                                    <Picker x:Name="Medical_Aid" Title="Medical Aid"  TextColor="Black"  >
-                                            <Picker.ItemsSource>
-                                                <x:Array Type="{x:Type x:String}">
-                                                    <x:String>Discovery Health</x:String>
-                                                    <x:String>Bonitas</x:String>
-                                                    <x:String>FedHealth</x:String>
-                                                    <x:String>Metropolitan OpenPlan</x:String>
-                                                    <x:String>Oxygen</x:String>
-                                                    <x:String>Resolution Health</x:String>
-                                                    <x:String>Spectramed</x:String>
-                                                    <x:String>Sizwe</x:String>
-                                                    <x:String>Momentum</x:String>
-                                                    <x:String>Topmed</x:String>
-                                                    <x:String>Bestmed</x:String>
-                                                    <x:String>Profmed</x:String>
-                                                    <x:String>Jenus</x:String>
-                                                    <x:String>Keyhealth</x:String>
-                                                    <x:String>Medihelp</x:String>
-
-                                                </x:Array>
-                                            </Picker.ItemsSource>
-                                        </Picker>
-
-
-                                    </StackLayout>
+                                <Slider ValueChanged="KilometerChange" Margin="10" Maximum="30" Minimum="0" x:Name="sliderDistance"/>
                                 </ViewCell>
 
-                            </TableSection  >
+
+                         
+
+                    </TableSection>
+
+                   
+
+                </TableRoot>
+
+              
+
+            </TableView>
 
 
-                            <TableSection Title="Appointment Settings">
+                <Button Text="Save settings" x:Name="User_0Settings" Clicked="User_0Settings_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}"/>
 
-                                <ViewCell>
-                                    <StackLayout Margin="10,15,0,5"  >
+            </StackLayout>
 
-                                        <Label Text="Set the maximum distance you are willing to travel" Margin="8" FontAttributes="Bold" FontSize="15"/>
-
-                                        <Label FontSize="20" Margin="12,0,0,10" TextColor="Black">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="Kilometers: " />
-                                                    <Span x:Name="kilometerValue"/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-
-                                    <Slider ValueChanged="KilometerChange" Margin="10" Maximum="30" Minimum="0" x:Name="sliderDistance"/>
-
-                                    </StackLayout>
-                                </ViewCell>
-
-                            </TableSection>
-
-
-                        </TableRoot>
-
-
-
-                    </TableView>
-
-
-
-
-                    <Button Text="Save settings" x:Name="User_0Settings" Clicked="User_0Settings_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}" Grid.Row="1"/>
-
-           
-        </Grid>
         </ScrollView>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </ContentPage.Content>
 </ContentPage>

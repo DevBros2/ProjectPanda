@@ -29,18 +29,16 @@ namespace ProjectPanda.Pages
             kilometerValue.Text = string.Format("{0}", args.NewValue);
         }
 
-        private async void User_0Settings_Clicked(object sender, EventArgs e)
+       
+      
+       private async void User_0Settings_Clicked(object sender, EventArgs e)
         {
-            //Helpers.Settings.GeneralSettings = AddressLine.Text;
-            //Helpers.Settings.GeneralSettings = AddressLine2.Text;  
-            Helpers.Settings.GeneralSettings = CityOrTown.Text;
-
-
-           
-
-
+             Helpers.Settings.GeneralSettings = AddressLine.Text;
+             Helpers.Settings.GeneralSettings = AddressLine2.Text;  
+             Helpers.Settings.GeneralSettings = CityOrTown.Text;
             await Navigation.PopToRootAsync(true);
         }
+      
 
         private void Blood_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -49,7 +47,7 @@ namespace ProjectPanda.Pages
 
             if (selectedIndex != -1)
             {
-                Blood.Text = picker.Items[selectedIndex];
+              //  Blood.Text = picker.Items[selectedIndex];
                // BloodType.Text = picker.Items[selectedIndex];
             }
         }

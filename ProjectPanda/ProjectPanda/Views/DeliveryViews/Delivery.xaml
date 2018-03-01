@@ -7,7 +7,7 @@
              >
 
     <ContentPage.Content>
-        <ScrollView>
+       
         <Grid Padding="15">
 
             <Grid.RowDefinitions>
@@ -90,6 +90,6 @@
             <!--#endregion-->
             
         </Grid>
-        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>
