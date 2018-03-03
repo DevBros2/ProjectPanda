@@ -52,6 +52,17 @@ namespace ProjectPanda.Pages
             }
         }
 
-        
+        private void Medical_Aid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Picker picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex == -1) { return; }
+
+            else
+            {
+                string selcetedMedicalAid = picker.Items[selectedIndex];
+            }
+        }
     }
 }

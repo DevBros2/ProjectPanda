@@ -57,7 +57,7 @@
                          </ViewCell>
 
                             <ViewCell>
-                                <Picker x:Name="Medical_Aid" Title="Medical Aid"  TextColor="Black"  >
+                                <Picker x:Name="Medical_Aid" Title="Medical Aid"  TextColor="Black" SelectedIndexChanged="Medical_Aid_SelectedIndexChanged">
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>Discovery Health</x:String>
@@ -89,11 +89,11 @@
 
                         
 
-                            <ViewCell>
-                            <Label Text="Set the maximum distance you are willing to travel" Margin="8" FontAttributes="Bold" FontSize="15"/>
-                            </ViewCell>
 
                             <ViewCell>
+
+                                <Label Text="Set the maximum distance you are willing to travel" Margin="8" FontAttributes="Bold" FontSize="15"/>
+
                                 <Label FontSize="20" Margin="12,0,0,10" TextColor="Black">
                                 <Label.FormattedText>
                                     <FormattedString>

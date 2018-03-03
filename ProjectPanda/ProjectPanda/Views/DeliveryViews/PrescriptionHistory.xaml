@@ -11,7 +11,7 @@
                           
                             <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"  Text="More" />
 
-                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"   Text="Delete" IsDestructive="True" />
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding DeleteMedicalHistory}"   Text="Delete" IsDestructive="True" />
 
                         </ViewCell.ContextActions>
                         <Grid Padding="15">
