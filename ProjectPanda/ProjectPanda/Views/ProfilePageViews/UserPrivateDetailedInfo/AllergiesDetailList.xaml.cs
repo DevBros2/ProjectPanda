@@ -30,6 +30,9 @@ namespace ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo
             base.OnAppearing();
         }
 
+        private void ToolbarItem_Clicked()
+        {
 
+        }
     }
 }

@@ -6,8 +6,16 @@
             BackgroundColor="{StaticResource BackgroundColor}"
              >
 
-    <ContentPage.Content>
-        <ListView ItemsSource="{Binding _Chronic}"  HasUnevenRows="True"  SeparatorVisibility="None">
+
+    <ContentPage.ToolbarItems >
+
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
+
+
+    </ContentPage.ToolbarItems>
+
+
+    <ListView ItemsSource="{Binding _Chronic}"  HasUnevenRows="True"  SeparatorVisibility="None">
 
             <ListView.ItemTemplate >
                 <DataTemplate>
@@ -45,5 +53,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </ContentPage.Content>
+  
 </ContentPage>
