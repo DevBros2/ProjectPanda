@@ -129,7 +129,6 @@
       <DependentUpon>CamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\CustomEntry\EntryBlock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ChatBotView.xaml.cs">
       <DependentUpon>ChatBotView.xaml</DependentUpon>
       <SubType>Code</SubType>

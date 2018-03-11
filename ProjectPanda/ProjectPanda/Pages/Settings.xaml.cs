@@ -8,38 +8,54 @@ using ProjectPanda.Helpers;
 using ProjectPanda.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using System.ComponentModel;
 namespace ProjectPanda.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Settings : ContentPage
 	{
-		public Settings ()
+
+        #region Global variables
+
+        bool workDelivEnabled;
+
+
+        #endregion
+
+        #region default constructor
+        public Settings ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
             //removes the second Navbar 
             NavigationPage.SetHasNavigationBar(this,false);
             NavigationPage.SetHasBackButton(this,true);
             
         }
+        #endregion
 
-        //the event handler for changing the distance proximty 
+        #region Properties
+
+        #endregion
+
+
+        #region the event handler for changing the distance proximty 
         private void KilometerChange(object sender, ValueChangedEventArgs args)
         {
             kilometerValue.Text = string.Format("{0}", args.NewValue);
         }
+        #endregion
 
-       
-      
-       private async void User_0Settings_Clicked(object sender, EventArgs e)
+        #region Some Event handler by Bonga
+        private async void User_0Settings_Clicked(object sender, EventArgs e)
         {
              Helpers.Settings.GeneralSettings = AddressLine.Text;
              Helpers.Settings.GeneralSettings = AddressLine2.Text;  
-             Helpers.Settings.GeneralSettings = CityOrTown.Text;
+            Helpers.Settings.GeneralSettings = CityOrTown.Text;
             await Navigation.PopToRootAsync(true);
         }
-      
+        #endregion
 
+        #region pick and convert the blood type to a text for saving -event handler
         private void Blood_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
@@ -51,7 +67,10 @@ namespace ProjectPanda.Pages
                // BloodType.Text = picker.Items[selectedIndex];
             }
         }
+        #endregion
 
+
+        #region picks and converts the the medical aid picked to text -event handler
         private void Medical_Aid_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker picker = (Picker)sender;
@@ -64,5 +83,22 @@ namespace ProjectPanda.Pages
                 string selcetedMedicalAid = picker.Items[selectedIndex];
             }
         }
+
+        #endregion
+
+
+
+        #region Switchcell Event handler
+
+        private void switchWorkDelivery_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName== "workDelivEnabled")
+            {
+                
+            }
+        }
+
+        #endregion
+
     }
 }
