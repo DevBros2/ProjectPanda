@@ -13,9 +13,9 @@
 
 
     </ContentPage.ToolbarItems>
-   
 
-    <ListView HasUnevenRows="True" SeparatorVisibility="None" ItemsSource="{Binding _allergies}" >
+
+        <ListView HasUnevenRows="True" SeparatorVisibility="None" ItemsSource="{Binding _allergies}" Grid.Row="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -47,6 +47,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        
-    
+ 
+
 </ContentPage>

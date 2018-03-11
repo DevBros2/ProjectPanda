@@ -9,75 +9,69 @@
              >
     <ContentPage.Content>
 
-      
-
-        <Grid Padding="10">
-            
-     
-
-                    <Grid VerticalOptions="CenterAndExpand">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-
-                        <!--#region Title grid row 0-->                      
-                        <Label Grid.Row="0" Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" Margin="10,0,0,20"/>
-                        <!--#endregion-->
-
-                        <!--#region Button to select doctor Grid row 1-->
-                        <Button BackgroundColor="{StaticResource ButtonLoginColour}" Text="{Binding MyAppointmentsViewModelText}" Image="doct.png" x:Name="DoctorLabel"   Style="{DynamicResource ButtonFont}"  Clicked="Doctor_Button_Clicked" TextColor="Black"  BorderWidth="2" Grid.Row="1" Margin="0,0,0,20"/>
-
-                        <!--#endregion-->
-                        
-                        
-                        <!--#region Date xaml code Grid row 2-->
-                        <Button TextColor="Black"  BackgroundColor="{StaticResource ButtonLoginColour}" Style="{DynamicResource ButtonFont}" Image="calendar64.png" Text="Date" BorderWidth="2"   Grid.Row="2" Margin="0,0,0,20"/>
-
-                        
-                        
-                        <DatePicker VerticalOptions="Start" HorizontalOptions="Center"  Format="DD-MM-YYYY"  HeightRequest="62"  WidthRequest="400"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" Grid.Row="2" BackgroundColor="Black" Margin="8,5,8,5">
-                            <DatePicker.MinimumDate>
-                                01/01/2018
-                            </DatePicker.MinimumDate>
-
-                            <DatePicker.MaximumDate>
-                                03/01/2018
-                            </DatePicker.MaximumDate>
-
-                            <DatePicker.Date>
-                                01/12/2018
-                            </DatePicker.Date>
-                        </DatePicker>
-                        <!--#endregion-->
-                        
-                        
-                        <!--#region Time Pick code grid row 3-->
-                        <Button TextColor="Black" BackgroundColor="{StaticResource ButtonLoginColour}" Text="Time" Style="{DynamicResource ButtonFont}" BorderWidth="2" Image="clock.png" Grid.Row="3"/>
-
-                <TimePicker VerticalOptions="Start" HorizontalOptions="Center"  HeightRequest="62" WidthRequest="400"   Opacity="0" x:Name="Timepick" Grid.Row="3" Margin="8,5,8,5"/>
+        <ScrollView>
+            <Grid Padding="10">
 
 
 
-                <!--#endregion-->
-                        
-                        <!--#region Confirm button grid row 4-->
-                        <Button  Image="ButtonConfirm.png" Text="Confirm" Margin="0,20,0,10" HeightRequest="65"  BackgroundColor="{StaticResource Primary}" Grid.Row="4" Style="{DynamicResource ButtonFont}" Clicked="NextPage"/>
-                        <!--#endregion-->
+                <Grid VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-                    </Grid>
+                    <!--#region Title grid row 0-->
+                    <Label Grid.Row="0" Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" Margin="10,0,0,20"/>
+                    <!--#endregion-->
 
-                   
-                
+                    <!--#region Button to select doctor Grid row 1-->
+                    <Button BackgroundColor="{StaticResource ButtonLoginColour}" Text="{Binding MyAppointmentsViewModelText}" Image="doct.png" x:Name="DoctorLabel"   Style="{DynamicResource ButtonFont}"  Clicked="Doctor_Button_Clicked" TextColor="Black"  BorderWidth="2" Grid.Row="1" Margin="0,0,0,20"/>
 
-                
-                
-                <!--FLipCardBackView-->          
-        
-        </Grid>
+                    <!--#endregion-->
 
+
+                    <!--#region Date xaml code Grid row 2-->
+                    <Button TextColor="Black"  BackgroundColor="{StaticResource ButtonLoginColour}" Style="{DynamicResource ButtonFont}" Image="calendar64.png" Text="Date" BorderWidth="2"   Grid.Row="2" Margin="0,0,0,20"/>
+
+
+
+                    <DatePicker VerticalOptions="Start" HorizontalOptions="Center"  Format="DD-MM-YYYY"  HeightRequest="62"  WidthRequest="400"  Opacity="0" x:Name="UserDatepicker" DateSelected="Datepick" Grid.Row="2" BackgroundColor="Black" Margin="8,5,8,5">
+                        <DatePicker.MinimumDate>
+                            01/01/2018
+                        </DatePicker.MinimumDate>
+
+                        <DatePicker.MaximumDate>
+                            03/01/2018
+                        </DatePicker.MaximumDate>
+
+                        <DatePicker.Date>
+                            01/12/2018
+                        </DatePicker.Date>
+                    </DatePicker>
+                    <!--#endregion-->
+
+
+                    <!--#region Time Pick code grid row 3-->
+                    <Button TextColor="Black" BackgroundColor="{StaticResource ButtonLoginColour}" Text="Time" Style="{DynamicResource ButtonFont}" BorderWidth="2" Image="clock.png" Grid.Row="3"/>
+
+                    <TimePicker VerticalOptions="Start" HorizontalOptions="Center"  HeightRequest="62" WidthRequest="400"   Opacity="0" x:Name="Timepick" Grid.Row="3" Margin="8,5,8,5"/>
+
+
+
+                    <!--#endregion-->
+
+                    <!--#region Confirm button grid row 4-->
+                    <Button  Image="ButtonConfirm.png" Text="Confirm" Margin="0,20,0,10" HeightRequest="65"  BackgroundColor="{StaticResource Primary}" Grid.Row="4" Style="{DynamicResource ButtonFont}" Clicked="NextPage"/>
+                    <!--#endregion-->
+
+                </Grid>
+
+                <!--FLipCardBackView-->
+
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

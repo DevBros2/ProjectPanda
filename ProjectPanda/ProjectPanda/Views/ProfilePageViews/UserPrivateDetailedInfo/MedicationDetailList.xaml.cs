@@ -30,9 +30,9 @@ namespace ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo
             base.OnAppearing();
         }
 
-        private void ToolbarItem_Clicked()
+         async private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-
+           await Navigation.PushAsync(new SearchMedicalCondition());
         }
     }
 }
