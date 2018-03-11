@@ -23,13 +23,15 @@
 
                     <TableSection Title="Personal Infomation"  >
 
+                        <!--#region Contact information-->
                             <EntryCell Label="cellphone number:" x:Name="Cellphone_Number" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0609887758" Keyboard="Telephone"/>
 
                             <EntryCell Label="Alternate number" x:Name="altNum" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0787554429" Keyboard="Telephone"/>
 
                             <EntryCell Label="Email:" x:Name="Email" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="khanyisani.buthelezi03@gmail.com"/>
-
-
+                        <!--#endregion-->
+                        
+                        <!--#region Blood type Custom Picker-->
                             
                                 <pickertype:PickerCell Title="Blood type" Label="Blood type">
                                     <x:String>O-Postive</x:String>
@@ -41,9 +43,9 @@
                                     <x:String>AB-Postive</x:String>
                                     <x:String>AB-Negative</x:String>
                                 </pickertype:PickerCell>
+<!--#endregion-->
 
-
-
+                        <!--#region Medical aid custom picker-->
                             <pickertype:PickerCell Label="Medical Aid" Title="Medical Aid" >
                                         <x:String>Discovery Health</x:String>
                                         <x:String>Bonitas</x:String>
@@ -61,7 +63,7 @@
                                         <x:String>Keyhealth</x:String>
                                         <x:String>Medihelp</x:String>
                                 </pickertype:PickerCell>
-
+                            <!--#endregion-->
                           
 
                     </TableSection  >

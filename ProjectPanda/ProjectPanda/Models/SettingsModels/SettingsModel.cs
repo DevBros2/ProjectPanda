@@ -17,5 +17,9 @@ namespace ProjectPanda.Models
         public String Postal_Code { get; set; }
         public String Cellphone_Number { get; set; }
         public String Email { get; set; }
+        public String WorkAddressLine1 { get; set; }
+        public String WorkAddressLine2 { get; set; }
+        public String WorkCityOrTown { get; set; }
+        public String WorkPostal_Code { get; set; }
     }
 }

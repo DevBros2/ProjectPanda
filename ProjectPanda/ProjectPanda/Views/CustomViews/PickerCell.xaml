@@ -5,12 +5,20 @@
              x:Name="cell"
           >
   <ViewCell.View>
-      <StackLayout Orientation="Horizontal" BindingContext="{x:Reference cell}" Padding="16,0">
+        <StackLayout>
+     
+     <StackLayout Orientation="Horizontal" BindingContext="{x:Reference cell}" Padding="16,0">
 
             <Label Text="{Binding Label}" VerticalOptions="Center" TextColor="Black"/>
 
             <Picker x:Name="TypePicker" Title="{Binding Title}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" SelectedIndexChanged="OnPickerSelectedIndexChanged"/>
 
         </StackLayout>
-  </ViewCell.View>
+
+      <StackLayout Orientation="Horizontal">
+            
+        </StackLayout>
+            
+        </StackLayout>
+    </ViewCell.View>
 </ViewCell>
