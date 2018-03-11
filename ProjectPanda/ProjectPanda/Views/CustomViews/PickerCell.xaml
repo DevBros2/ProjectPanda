@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.CustomViews.PickerCell"
+          x:Name="cell"
+          >
+  <ViewCell.View>
+      <StackLayout Orientation="Horizontal" BindingContext="{x:Refrence cell}" Padding="16,0">
+
+            <Label Text="{Binding Label}" VerticalOptions="Center"/>
+
+            <Picker x:Name="cpicker" Title="{Binding Title}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" SelectedIndexChanged="OnPickerSelectedIndexChanged"/>
+
+        </StackLayout>
+  </ViewCell.View>
+</ViewCell>
