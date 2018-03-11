@@ -240,6 +240,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\JudoPay\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\CustomViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\CustomViews\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
