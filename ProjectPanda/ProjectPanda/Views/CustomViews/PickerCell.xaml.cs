@@ -29,12 +29,12 @@ namespace ProjectPanda.Views.CustomViews
 
                            if (String.IsNullOrEmpty(newValue.ToString()))
                            {
-                               pickerCell.bloodTypePicker.SelectedIndex = -1;
+                               pickerCell.TypePicker.SelectedIndex = -1;
                            }
 
                            else
                            {
-                               pickerCell.bloodTypePicker.SelectedIndex = pickerCell.Items.IndexOf(newValue);
+                               pickerCell.TypePicker.SelectedIndex = pickerCell.Items.IndexOf(newValue);
                            }
                        }
 
@@ -69,21 +69,21 @@ namespace ProjectPanda.Views.CustomViews
 
         public IList<string> Items
         {
-            get { return bloodTypePicker.Items; }
+            get { return TypePicker.Items; }
         }
       
 
         void OnPickerSelectedIndexChanged(object sender, EventArgs args)
         {
            
-            if (bloodTypePicker.SelectedIndex == -1)
+            if (TypePicker.SelectedIndex == -1)
             {
                 SelectedValue = null;
             }
 
             else
             {
-                SelectedValue = Items[bloodTypePicker.SelectedIndex];
+                SelectedValue = Items[TypePicker.SelectedIndex];
             }
             
         }

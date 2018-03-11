@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.Settings"
-             BackgroundColor="#ffff"
+             BackgroundColor="Snow"
              xmlns:pickermodel="clr-namespace:ProjectPanda.Models"
-             xmlns:pickerbloodtype="clr-namespace:ProjectPanda.Views.CustomViews"
-            xmlns:pickermedaid="clr-namespace:ProjectPanda.Views.CustomViews"
+             xmlns:pickertype="clr-namespace:ProjectPanda.Views.CustomViews"
+            
              >
     <ContentPage.Content>
         <ScrollView>
@@ -31,7 +31,7 @@
 
 
                             
-                                <pickerbloodtype:PickerCell Title="Blood type" Label="Blood type">
+                                <pickertype:PickerCell Title="Blood type" Label="Blood type">
                                     <x:String>O-Postive</x:String>
                                     <x:String>O-Negative</x:String>
                                     <x:String>A-Postive</x:String>
@@ -40,12 +40,12 @@
                                     <x:String>B-Negative</x:String>
                                     <x:String>AB-Postive</x:String>
                                     <x:String>AB-Negative</x:String>
-                                </pickerbloodtype:PickerCell>
+                                </pickertype:PickerCell>
 
 
 
-                            <pickermedaid:MedicalAidPickerCell Label="Medical Aid" Title="Medical Aid" >
-                                <x:String>Discovery Health</x:String>
+                            <pickertype:PickerCell Label="Medical Aid" Title="Medical Aid" >
+                                        <x:String>Discovery Health</x:String>
                                         <x:String>Bonitas</x:String>
                                         <x:String>FedHealth</x:String>
                                         <x:String>Metropolitan OpenPlan</x:String>
@@ -60,7 +60,7 @@
                                         <x:String>Jenus</x:String>
                                         <x:String>Keyhealth</x:String>
                                         <x:String>Medihelp</x:String>
-                                </pickermedaid:MedicalAidPickerCell>
+                                </pickertype:PickerCell>
 
                           
 

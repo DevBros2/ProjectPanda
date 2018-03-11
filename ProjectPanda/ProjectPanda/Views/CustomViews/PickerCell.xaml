@@ -9,7 +9,7 @@
 
             <Label Text="{Binding Label}" VerticalOptions="Center" TextColor="Black"/>
 
-            <Picker x:Name="bloodTypePicker" Title="{Binding Title}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" SelectedIndexChanged="OnPickerSelectedIndexChanged"/>
+            <Picker x:Name="TypePicker" Title="{Binding Title}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" SelectedIndexChanged="OnPickerSelectedIndexChanged"/>
 
         </StackLayout>
   </ViewCell.View>
