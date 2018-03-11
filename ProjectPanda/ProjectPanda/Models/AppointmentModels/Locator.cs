@@ -15,7 +15,7 @@ namespace ProjectPanda.Models
 
         
     
-        protected async Task GetCurrentLocation()
+        public async Task GetCurrentLocation()
         {
 
             var locator = CrossGeolocator.Current;
@@ -26,10 +26,18 @@ namespace ProjectPanda.Models
 
             double userLongi = postion.Longitude;
 
+
+           
+
+            
             #region Try catch-finally region
             try
-            { 
-                //if(moving to much then display a pop up with a message to ask user to stop moving too much to get location for)
+            {
+                GetLatitude(userLat);
+
+                GetLongitude(userLongi);
+
+
             }
 
             catch (Exception postionChangingStandStill)
@@ -48,6 +56,17 @@ namespace ProjectPanda.Models
 
         }
 
+        //the user Latitude
+         private  double GetLatitude(double userLatitudeLocation)
+        {
+            return userLatitudeLocation;
+        }
+
+        //the user Longitude
+        private double GetLongitude(double userLongitudeLocation)
+        {
+            return userLongitudeLocation;
+        }
 
     }
 }

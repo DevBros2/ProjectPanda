@@ -8,25 +8,19 @@ namespace ProjectPanda.Models
     {
         #region Calculates the radians of the degree 
         //the c# libaray does not allow you to have parameters as degrees and radians are more accurate
-        public static double toRadians(double angle)
+         public  static  double toRadians(double angle)
         {
-            return Math.PI * angle / 180.0;
+            return  Math.PI * angle / 180.0;
         }
 
         #endregion
 
 
-
-       public async void SetLocation()
-        {
-           await GetCurrentLocation();
-        }
+        //instantiate user location
+        Locator userCurrentLocation = new Locator();
 
 
-
-
-
-
+    
         #region distance calculator 
         //method for calulating distance between user and location
         public double DistanceCalculating(double latitude1, double latitude2, double longitude1, double longitude2)
@@ -40,9 +34,8 @@ namespace ProjectPanda.Models
              
              */
 
-            //  GpsLocator locator = new GpsLocator();
 
-            //    locator.GetLocation();
+
 
             const double kilo = 6372.8; //in kilometeres this the radius of the earth
 
@@ -70,7 +63,7 @@ namespace ProjectPanda.Models
         }
         #endregion
 
-
+        
 
 
     }

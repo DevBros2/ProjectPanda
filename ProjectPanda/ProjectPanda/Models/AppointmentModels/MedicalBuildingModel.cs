@@ -12,6 +12,8 @@ namespace ProjectPanda.Models
         public float ChartValue { get; set; } //This Must be value 0 - 100%
         public Chart ChartData { get; set; }
         public string Distance { get; set; }
-       
+        public double Latitude { get; set; } //The Hospitals Latitude postion in space
+        public double Longitude { get; set; } //The Hospitals Longitude postion in space
+
     }
 }
