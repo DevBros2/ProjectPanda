@@ -5,7 +5,7 @@
              x:Name="cell"
           >
   <ViewCell.View>
-        <StackLayout>
+       
      
      <StackLayout Orientation="Horizontal" BindingContext="{x:Reference cell}" Padding="16,0">
 
@@ -13,12 +13,8 @@
 
             <Picker x:Name="TypePicker" Title="{Binding Title}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" SelectedIndexChanged="OnPickerSelectedIndexChanged"/>
 
-        </StackLayout>
-
-      <StackLayout Orientation="Horizontal">
+     </StackLayout>
             
-        </StackLayout>
-            
-        </StackLayout>
-    </ViewCell.View>
+    
+  </ViewCell.View>
 </ViewCell>

@@ -21,5 +21,7 @@ namespace ProjectPanda.Models
         public String WorkAddressLine2 { get; set; }
         public String WorkCityOrTown { get; set; }
         public String WorkPostal_Code { get; set; }
+        public Boolean isWorkDeliveryEnabled { get; set; }
+
     }
 }
