@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.Settings"
-             BackgroundColor="{StaticResource BackgroundColor}"
+             BackgroundColor="#ffff"
+             xmlns:pickermodel="clr-namespace:ProjectPanda.Models"
+             xmlns:pickerbloodtype="clr-namespace:ProjectPanda.Views.CustomViews"
+            xmlns:pickermedaid="clr-namespace:ProjectPanda.Views.CustomViews"
              >
     <ContentPage.Content>
         <ScrollView>
@@ -11,6 +14,9 @@
 
             <TableView HasUnevenRows="True" x:Name="settingProperty" Intent="Settings">
 
+                    <TableView.BindingContext>
+                        <pickermodel:SettingsModel/>
+                    </TableView.BindingContext>
 
                 <!-- <local:Settings/>-->
                 <TableRoot>
@@ -24,53 +30,39 @@
                             <EntryCell Label="Email:" x:Name="Email" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="khanyisani.buthelezi03@gmail.com"/>
 
 
-                            <ViewCell>
+                            
+                                <pickerbloodtype:PickerCell Title="Blood type" Label="Blood type">
+                                    <x:String>O-Postive</x:String>
+                                    <x:String>O-Negative</x:String>
+                                    <x:String>A-Postive</x:String>
+                                    <x:String>A-Negative</x:String>
+                                    <x:String>B-Postive</x:String>
+                                    <x:String>B-Negative</x:String>
+                                    <x:String>AB-Postive</x:String>
+                                    <x:String>AB-Negative</x:String>
+                                </pickerbloodtype:PickerCell>
 
 
 
-                            <Picker x:Name="Blood_Type" Title="Blood Type:"  TextColor="Black" SelectedIndexChanged="Blood_Type_SelectedIndexChanged" >
-                                <Picker.ItemsSource>
-                                    <x:Array Type="{x:Type x:String}">
-                                        <x:String>O-Postive</x:String>
-                                        <x:String>O-Negative</x:String>
-                                        <x:String>A-Postive</x:String>
-                                        <x:String>A-Negative</x:String>
-                                        <x:String>B-Postive</x:String>
-                                        <x:String>B-Negative</x:String>
-                                        <x:String>AB-Postive</x:String>
-                                        <x:String>AB-Negative</x:String>
+                            <pickermedaid:MedicalAidPickerCell Label="Medical Aid" Title="Medical Aid" >
+                                <x:String>Discovery Health</x:String>
+                                        <x:String>Bonitas</x:String>
+                                        <x:String>FedHealth</x:String>
+                                        <x:String>Metropolitan OpenPlan</x:String>
+                                        <x:String>Oxygen</x:String>
+                                        <x:String>Resolution Health</x:String>
+                                        <x:String>Spectramed</x:String>
+                                        <x:String>Sizwe</x:String>
+                                        <x:String>Momentum</x:String>
+                                        <x:String>Topmed</x:String>
+                                        <x:String>Bestmed</x:String>
+                                        <x:String>Profmed</x:String>
+                                        <x:String>Jenus</x:String>
+                                        <x:String>Keyhealth</x:String>
+                                        <x:String>Medihelp</x:String>
+                                </pickermedaid:MedicalAidPickerCell>
 
-                                    </x:Array>
-                                </Picker.ItemsSource>
-                            </Picker>
-
-                         </ViewCell>
-
-                        <ViewCell>
-                                <Picker x:Name="Medical_Aid" Title="Medical Aid"  TextColor="Black" SelectedIndexChanged="Medical_Aid_SelectedIndexChanged">
-                                    <Picker.ItemsSource>
-                                        <x:Array Type="{x:Type x:String}">
-                                            <x:String>Discovery Health</x:String>
-                                            <x:String>Bonitas</x:String>
-                                            <x:String>FedHealth</x:String>
-                                            <x:String>Metropolitan OpenPlan</x:String>
-                                            <x:String>Oxygen</x:String>
-                                            <x:String>Resolution Health</x:String>
-                                            <x:String>Spectramed</x:String>
-                                            <x:String>Sizwe</x:String>
-                                            <x:String>Momentum</x:String>
-                                            <x:String>Topmed</x:String>
-                                            <x:String>Bestmed</x:String>
-                                            <x:String>Profmed</x:String>
-                                            <x:String>Jenus</x:String>
-                                            <x:String>Keyhealth</x:String>
-                                            <x:String>Medihelp</x:String>
-
-                                        </x:Array>
-                                    </Picker.ItemsSource>
-                                </Picker>
-
-                            </ViewCell>
+                          
 
                     </TableSection  >
 

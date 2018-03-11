@@ -5,14 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectPanda.ViewModels.SettingsViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
+
 
 namespace ProjectPanda.Views.CustomViews
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     [ContentProperty("Items")]  
 	public partial class PickerCell : ViewCell
 	{
-        /*
+       
         public static readonly BindableProperty LabelProperty = BindableProperty.Create("Label",typeof(string), typeof(PickerCell), default(string));
 
         public static readonly BindableProperty TitleProperty = BindableProperty.Create("Title", typeof(string), typeof(PickerCell), default(string));
@@ -24,14 +27,14 @@ namespace ProjectPanda.Views.CustomViews
                        {
                            PickerCell pickerCell = (PickerCell)sender;
 
-                           if (String.IsNullOrEmpty(newValue))
+                           if (String.IsNullOrEmpty(newValue.ToString()))
                            {
-                               pickerCell.picker.SelectedIndex = -1;
+                               pickerCell.bloodTypePicker.SelectedIndex = -1;
                            }
 
                            else
                            {
-                               pickerCell.picker.SelectedIndex = pickerCell.Items.IndexOf(newValue);
+                               pickerCell.bloodTypePicker.SelectedIndex = pickerCell.Items.IndexOf(newValue);
                            }
                        }
 
@@ -66,22 +69,23 @@ namespace ProjectPanda.Views.CustomViews
 
         public IList<string> Items
         {
-            get { return picker.Items; }
+            get { return bloodTypePicker.Items; }
         }
-        */
+      
+
         void OnPickerSelectedIndexChanged(object sender, EventArgs args)
         {
-            /*
-            if (picker.SelectedIndex == -1)
+           
+            if (bloodTypePicker.SelectedIndex == -1)
             {
                 SelectedValue = null;
             }
 
             else
             {
-                SelectedValue = Items[picker.SelectedIndex];
+                SelectedValue = Items[bloodTypePicker.SelectedIndex];
             }
-            */
+            
         }
 
     }
