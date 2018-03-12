@@ -15,8 +15,19 @@ namespace ProjectPanda.Views.AppoinmentViews
 		public ConfirmationPage ()
 		{
 			InitializeComponent ();
-		}
 
+            /*
+           Messeging center
+
+            MessagingCenter.Subscribe<MyAppointments, string>(this, "dateParmaters", (sender, MyAppointments) => 
+            {
+              
+            });
+        
+            */
+        }
+
+       
 
     
         async private void FinalConfirmation(object sender, EventArgs e)

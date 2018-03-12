@@ -35,17 +35,8 @@ namespace ProjectPanda.Views.AppoinmentViews
         }
         #endregion
 
-        //Might not even need this property changing event handler
-        private void FiftyWordParagraph_PropertyChanging(object sender, PropertyChangingEventArgs e)
-        {
-            int maxWordCount = 50;
-
-            while (maxWordCount <= 50)
-            {
-                //it's suppse to let the user countine to key in some input 
-            }
-
-        }
+      
+      
 
       
     }
