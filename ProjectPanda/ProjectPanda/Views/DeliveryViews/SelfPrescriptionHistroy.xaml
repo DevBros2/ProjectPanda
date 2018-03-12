@@ -25,9 +25,9 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <Label Text="{Binding selfMedicationHistory}" Grid.Row="0" />
-                            <Label Text="{Binding selfMedicationDosageHistory}" Grid.Row="1"/>
-                            <Label Text="{Binding  selfMedicationDeliveryHistory}" Grid.Row="2"/>
+                            <Label Text="{Binding SelfMedicationHistory}" Grid.Row="0" />
+                            <Label Text="{Binding SelfMedicationDosageHistory}" Grid.Row="1"/>
+                            <Label Text="{Binding  SelfMedicationDeliveryHistory}" Grid.Row="2"/>
                          
                         </Grid>
                     </ViewCell>

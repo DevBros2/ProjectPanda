@@ -8,28 +8,50 @@ namespace ProjectPanda.Models.DeliveryModels
     public class SelfPrescriptionHistoryModel
     {
 
-      
+        private string selfMedicationDeliveryHistory;
+        private string selfMedicationDosageHistory;
+        private string selfMedicationHistory;
+
+
         //the self prescription medication history
-        public string selfMedicationHistory
+        public string SelfMedicationHistory
         {
-            get;
-            set;
+            get
+            {
+                return selfMedicationHistory;
+            }
+            set
+            {
+                selfMedicationHistory = value;
+            }
         }
 
 
         //self medication dosage history
-        public string selfMedicationDosageHistory
+        public string SelfMedicationDosageHistory
         {
-            get;
-            set;
+            get
+            {
+                return selfMedicationDosageHistory;
+            }
+            set
+            {
+                selfMedicationDosageHistory = value;
+            }
         }
 
 
         //self medication delivery history
-        public string selfMedicationDeliveryHistory
+        public string SelfMedicationDeliveryHistory
         {
-            get;
-            set;
+            get
+            {
+                return selfMedicationDeliveryHistory;
+            }
+            set
+            {
+                selfMedicationDeliveryHistory = value;
+            }
         }
 
     }

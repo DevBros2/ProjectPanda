@@ -19,7 +19,7 @@ namespace ProjectPanda.ViewModels.DeliveryViewModels
         {
             _selfPrescriptionHistoryList = new ObservableCollection<SelfPrescriptionHistoryModel>
             {
-                new SelfPrescriptionHistoryModel{ selfMedicationDeliveryHistory="15/03/18", selfMedicationHistory="Panado", selfMedicationDosageHistory="8mL/g" }
+                new SelfPrescriptionHistoryModel{ SelfMedicationDeliveryHistory="15/03/18", SelfMedicationHistory="Panado", SelfMedicationDosageHistory="8mL/g" }
             };
         }
     }
