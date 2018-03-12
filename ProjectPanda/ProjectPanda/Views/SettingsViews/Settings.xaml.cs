@@ -68,7 +68,7 @@ namespace ProjectPanda.Pages
 
 
         #region the event handler for changing the distance proximty 
-        private void KilometerChange(object sender, ValueChangedEventArgs args)
+          void KilometerChange(object sender, ValueChangedEventArgs args)
         {
             kilometerValue.Text = string.Format("{0}", args.NewValue);
         }

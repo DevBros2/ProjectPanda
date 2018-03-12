@@ -5,7 +5,6 @@
              BackgroundColor="Snow"
              xmlns:pickermodel="clr-namespace:ProjectPanda.Models"
              xmlns:pickertype="clr-namespace:ProjectPanda.Views.CustomViews"
-            
              >
     <ContentPage.Content>
         <ScrollView>
@@ -43,7 +42,7 @@
                                     <x:String>AB-Postive</x:String>
                                     <x:String>AB-Negative</x:String>
                                 </pickertype:PickerCell>
-<!--#endregion-->
+                        <!--#endregion-->
 
                         <!--#region Medical aid custom picker-->
                             <pickertype:PickerCell Label="Medical Aid" Title="Medical Aid" >
@@ -136,9 +135,10 @@
 
             </TableView>
 
-
+                <StackLayout>
                 <Button Text="Save settings" x:Name="User_0Settings" Clicked="User_0Settings_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}"/>
-
+                </StackLayout>
+                
             </StackLayout>
 
         </ScrollView>

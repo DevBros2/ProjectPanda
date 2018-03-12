@@ -6,10 +6,9 @@ using System.ComponentModel;
 
 namespace ProjectPanda.ViewModels.SettingsViewModels
 {
-    public partial class SettingsViewModel:INotifyPropertyChanged
+    public partial class SettingsViewModel
     {
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }
