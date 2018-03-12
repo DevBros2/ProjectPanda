@@ -25,7 +25,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\AppoitmentHistoryModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DoctorsAtPractice.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\ProblemEntryModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrecriptionHistory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\SelfPrescriptionHistoryModel.cs" />
@@ -43,7 +42,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\ProblemEntryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>

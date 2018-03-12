@@ -71,6 +71,13 @@
                 <Setter Property="LineBreakMode" Value="TailTruncation"/>
             </Style>
             
+            <!--#region The DatePicker and TimePicker style sheet-->
+
+            <Style x:Key="datePickerStyling" TargetType="DatePicker">
+                <Setter Property="Format" Value="D"/>
+            </Style>
+            
+            <!--#endregion-->
         </ResourceDictionary>
 
 		<!-- Application resource dictionary -->
