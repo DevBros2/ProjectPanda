@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using ProjectPanda.Helpers;
-using ProjectPanda.Models;
+using ProjectPanda.ViewModels.SettingsViewModels;
+//using ProjectPanda.Models; <<<MVVM aritecture not permit this dude
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.ComponentModel;
 namespace ProjectPanda.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Settings : ContentPage
+	public partial class Settings : ContentPage, INotifyPropertyChanged
 	{
 
         #region Global variables
@@ -29,7 +30,35 @@ namespace ProjectPanda.Pages
             //removes the second Navbar 
             NavigationPage.SetHasNavigationBar(this,false);
             NavigationPage.SetHasBackButton(this,true);
-            
+
+            #region The Disabling of some code that is not needed at the time
+            /*
+            //set the bindingcontext of the Tableview
+            SettingsViewModel switcher = new SettingsViewModel();
+            settingProperty.BindingContext = switcher;
+
+            //remove the work delivery section
+            settingProperty.Root.Remove(deliveryAtWork);
+
+            //propertychanged event handeler to spot for changes on the visual tree of the UI
+
+            switcher.PropertyChanged+=(sender, args)=>
+                    {
+                        if (switcher.workDelivEnbaled && settingProperty.Root.IndexOf(deliveryAtWork) == -1)
+                        {
+                            settingProperty.Root.Add(deliveryAtWork);
+                        }
+                        else
+                        {
+                            if (!switcher.workDelivEnabled && settingProperty.Root.IndexOf(deliveryAtWork) != -1)
+                            {
+                                settingProperty.Root.Remove(deliveryAtWork);
+                            }
+                        }
+                    };
+                    */
+            #endregion
+
         }
         #endregion
 
@@ -54,6 +83,8 @@ namespace ProjectPanda.Pages
             await Navigation.PopToRootAsync(true);
         }
         #endregion
+
+        #region Might have Two delete these two cause the custom view cell view model class has the code for it
 
         #region pick and convert the blood type to a text for saving -event handler
         private void Blood_Type_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,19 +117,13 @@ namespace ProjectPanda.Pages
 
         #endregion
 
-
+        #endregion
 
         #region Switchcell Event handler
 
-        private void switchWorkDelivery_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName== "workDelivEnabled")
-            {
-                
-            }
-        }
-
+        
         #endregion
+
 
     }
 }
