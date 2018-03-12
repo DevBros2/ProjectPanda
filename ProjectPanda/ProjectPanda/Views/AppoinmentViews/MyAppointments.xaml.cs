@@ -85,7 +85,7 @@ namespace ProjectPanda.Views
             }
             catch
             {
-                await DisplayAlert("Invalid Selection", "You have entred something incorrectly", "Cancel");
+                await DisplayAlert("Invalid Selection", "Incorrect Entry", "Cancel");
             }
             //This needs to use a diffrent navigation method
             finally
