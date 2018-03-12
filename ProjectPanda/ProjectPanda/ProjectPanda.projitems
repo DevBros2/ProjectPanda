@@ -42,7 +42,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -359,7 +359,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\AppointmentHistoryFolder\AppoitnmentHistory.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

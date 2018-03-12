@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.DeliveryViews.PrescriptionHistory">
+             x:Class="ProjectPanda.Views.DeliveryViews.PrescriptionHistory"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             >
     <ContentPage.Content>
         <ListView x:Name="ContextDemoList" ItemsSource="{Binding _historyPrescriptionList}" HasUnevenRows="True" SeparatorVisibility="Default" >
             <ListView.ItemTemplate>
@@ -28,7 +30,8 @@
                             <Label Text="{Binding  DescriptionHistory}" Grid.Row="2"/>
                             <Label Text="{Binding MedicationDeliveryDate}" Grid.Row="3"/>
                         </Grid>
-                    </ViewCell>
+                        
+                    </ViewCell>     
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

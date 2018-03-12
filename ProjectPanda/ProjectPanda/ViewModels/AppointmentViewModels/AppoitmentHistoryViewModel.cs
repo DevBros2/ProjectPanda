@@ -4,6 +4,11 @@ using System.Text;
 using ProjectPanda.Models;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using ProjectPanda.Models.AppointmentModels;
+using System.Windows.Input;
+using System.Xml.Serialization;
+using Xamarin.Forms;
+using ProjectPanda.Pages.AppointmentHistoryFolder;
 
 namespace ProjectPanda.ViewModels
 {
@@ -12,12 +17,22 @@ namespace ProjectPanda.ViewModels
 
         public ObservableCollection<AppoitmentHistoryModel> _History { get; set; }
         public object SelectedItem { get; set; }
+        public Command RemoveAppointmentLog { get; }
 
         public AppoitmentHistoryViewModel()
         {
             GenerateAppoitmentHistory();
+
+          //  RemoveAppointmentLog = new Command(() => ));
         }
 
+        /*
+        public void RemoveLog(AppoitmentHistoryModel appoitmentlog)
+        {
+            _History.Remove(appoitmentlog);
+        }
+        */
+        
 
         private void GenerateAppoitmentHistory()
         {

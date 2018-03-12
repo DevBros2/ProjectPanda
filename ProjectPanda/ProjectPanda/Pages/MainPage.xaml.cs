@@ -17,7 +17,7 @@ namespace ProjectPanda.Pages
     {
         
         
-        public MainPage()
+         public MainPage()
         {
             InitializeComponent();
 
@@ -73,12 +73,11 @@ namespace ProjectPanda.Pages
         #endregion
 
 
-
-
         //   void Button_Clicked(object sender, EventArgs e)
         //    => new NavigationPage();//doctorlist
+    
         #region Appointment history
-        private void AppointmentHistory(object sender, EventArgs e)
+          private void  AppointmentHistory(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new ProjectPanda.Pages.AppointmentHistoryFolder.AppoitnmentHistory());
             IsPresented = false;
@@ -100,7 +99,7 @@ namespace ProjectPanda.Pages
             if (result)
             {
                 //need to put a log out protocol that deletes the users information on that device 
-                Navigation.PushModalAsync(new LoginPage());
+              await  Navigation.PushModalAsync(new LoginPage());
                
             }
 
@@ -108,6 +107,8 @@ namespace ProjectPanda.Pages
             //Navigation.NavigationStack
         }
         #endregion
+
+        
 
 
         #region Sos emergency
