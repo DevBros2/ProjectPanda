@@ -64,13 +64,11 @@ namespace ProjectPanda.Views
         #region Confirm code
         private void Confirm(object sender, EventArgs e)
         {
-            //going to be moved else where
-            //code to confirm the appointemnt 
-            //  XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+           
 
             try
             {
-                
+                //book the appointment
             }
             catch
             {
