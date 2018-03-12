@@ -5,6 +5,7 @@
              BackgroundColor="{StaticResource BackgroundColor}"
              >
     <ContentPage.Content>
+        <ScrollView>
         <Grid Padding="15" RowSpacing="10">
 
 
@@ -41,6 +42,6 @@
 
 
         </Grid>
-
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
