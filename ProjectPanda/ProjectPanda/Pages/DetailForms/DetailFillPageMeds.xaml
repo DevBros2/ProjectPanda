@@ -7,10 +7,7 @@
     <ContentPage.Content>
 
         <ScrollView>
-
-
-            <StackLayout Padding="10">
-
+    
                 <Grid Padding="15">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -21,17 +18,14 @@
                     <StackLayout Grid.Row="0" VerticalOptions="Start">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                          
+                            <Label  Grid.Row="0" Text="Do you have any recurring medication?" Style="{StaticResource DetailFillFormLabels}"/>
 
-                            <Label Grid.Column="0" Grid.Row="0" Text="Do you have any recurring medication?" Style="{StaticResource DetailFillFormLabels}"/>
-
-                            <Switch Grid.Row="0" Grid.Column="1" IsToggled="false" Toggled="MedSwitch" x:Name="medsSwitcher" HorizontalOptions="End"/>
+                            <Switch Grid.Row="1"  IsToggled="false" Toggled="MedSwitch" x:Name="medsSwitcher" HorizontalOptions="End"/>
 
                         </Grid>
                     </StackLayout>
@@ -56,15 +50,9 @@
 
 
                 </Grid>
-            </StackLayout>
-
-
-
+     
 
         </ScrollView>
-
-
-
 
     </ContentPage.Content>
 </ContentPage>

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.PaymentHistory"
              BackgroundColor="{StaticResource BackgroundColor}"
+             NavigationPage.HasNavigationBar="True"
              >
     <ContentPage.Content>
         <ScrollView>
