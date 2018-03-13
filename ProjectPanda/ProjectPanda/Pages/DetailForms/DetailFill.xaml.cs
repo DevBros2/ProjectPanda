@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using ProjectPanda.Models;
 using ProjectPanda.Services;
 using Xamarin.Forms;
+using System.ComponentModel;
+using ProjectPanda.Models.DetailUserModel;
+using Xamarin.Forms.Internals;
 
 namespace ProjectPanda.Pages
 {
@@ -11,24 +14,48 @@ namespace ProjectPanda.Pages
     {
 
         public String GlobalString;
+        public bool hasDependencies;
+       
 
         UserRegistrationManager manager;
         public DetailFill()
         {
             InitializeComponent();
             manager = UserRegistrationManager.DefaultManager;
+
+
+
+            /*
+            
+                DetailedUserModel detailedUser = new DetailedUserModel();
+                    userDetails.BindingContext = detailedUser;
+
+            userDetails.Root.Remove(dependencyViewcell);
+
+              detailedUser.PropertyChanging += (sender, args) =>
+              {
+                  if (detailedUser.hasDependencies && userDetails.Root.IndexOf(dependencyViewcell) == -1)
+                  {
+                      userDetails.Root.Add(dependencyViewcell);
+                  }
+                  if(!userDetails.hasDependencies && userDetails.Root.IndexOf(dependencyViewcell)!=-1)
+                  {
+                      userDetails.Root.Remove(detailedUser);
+                  }
+              };
+           */
         }
 
         //this is for the switch
-        private void DependencyPresent(object sender, ToggledEventArgs e)
-        {
-            bool isToggled = e.Value;
-           
-        }       
+        #region
+
+
+
+        #endregion
 
         #region medical aid event handler
         //this is for the medical aid text
-         void medicalAidPicker_SelectedIndexChanged(object sender, EventArgs e)
+        void medicalAidPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker medicalAidPicker = (Picker)sender;
             int selectedIndex = medicalAidPicker.SelectedIndex;
@@ -72,16 +99,16 @@ namespace ProjectPanda.Pages
             await AddDetails(users);
 
             first_name.Text = string.Empty;
-            first_name.Unfocus();
+            //first_name.Unfocus();
 
             surname.Text = string.Empty;
-            surname.Unfocus();
+           // surname.Unfocus();
 
             email_address.Text = string.Empty;
-            email_address.Unfocus();
+           // email_address.Unfocus();
 
             cellphoneNum.Text = string.Empty;
-            cellphoneNum.Unfocus();
+          //  cellphoneNum.Unfocus();
 
             //Gonna add them later cause well they are a diffrent data type for some reason
 
@@ -91,10 +118,10 @@ namespace ProjectPanda.Pages
             await Navigation.PushAsync(new DetailFillPageChronic());
         }
 
+        //Rather use the messaging center then send them at the end
         async Task AddDetails(UserRegistration userregistration)
         {
             await manager.InsertUsers(userregistration);
-
         }
 
     }

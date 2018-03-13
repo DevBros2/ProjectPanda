@@ -15,7 +15,7 @@ namespace ProjectPanda.Pages
         public TabbedPage1 ()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, true);
 
         }
     }

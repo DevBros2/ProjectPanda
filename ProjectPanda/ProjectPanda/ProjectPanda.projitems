@@ -42,6 +42,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
+      <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -195,9 +199,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillPageMeds.xaml.cs">
       <DependentUpon>DetailFillPageMeds.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
-      <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\AllergiesDetailList.xaml.cs">
       <DependentUpon>AllergiesDetailList.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -232,17 +233,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\CustomModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\SettingsModels\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\DetailForms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
@@ -468,6 +464,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CustomViews\PickerCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -13,15 +13,15 @@
 
                 <Grid Padding="15">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="380"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
 
                     <StackLayout Grid.Row="0" VerticalOptions="Start">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
@@ -29,22 +29,22 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <Label Grid.Column="0" Grid.Row="0" Text="Do you have any recurring medication?" Style="{DynamicResource DetailFillFormLabels}" VerticalOptions="Center" FontSize="15" TextColor="Black"/>
+                            <Label Grid.Column="0" Grid.Row="0" Text="Do you have any recurring medication?" Style="{StaticResource DetailFillFormLabels}"/>
 
-                            <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0" IsToggled="false" Toggled="MedSwitch" x:Name="medsSwitcher"/>
+                            <Switch Grid.Row="0" Grid.Column="1" IsToggled="false" Toggled="MedSwitch" x:Name="medsSwitcher" HorizontalOptions="End"/>
 
                         </Grid>
                     </StackLayout>
 
-                    <StackLayout Grid.Row="1" >
+                    <StackLayout Grid.Row="1" VerticalOptions="StartAndExpand">
 
-                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="MedsSearch">
+                        <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="MedsSearch" IsVisible="False">
                             <SearchBar CancelButtonColor="Red" VerticalOptions="Start"/>
                         </Frame>
 
                     </StackLayout>
 
-                    <StackLayout Grid.Row="2" HorizontalOptions="End" VerticalOptions="End" AbsoluteLayout.LayoutBounds=".5,0,100,25" AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <StackLayout Grid.Row="2" HorizontalOptions="End" VerticalOptions="End" >
                         <Image Source="continueArrow.png"  Aspect="AspectFill" >
 
                             <Image.GestureRecognizers>

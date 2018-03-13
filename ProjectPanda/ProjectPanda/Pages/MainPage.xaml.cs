@@ -20,8 +20,8 @@ namespace ProjectPanda.Pages
         {
             InitializeComponent();
 
-            NavigationPage.SetHasNavigationBar(this, true);
             Detail = new NavigationPage(new TabbedPage1());
+            NavigationPage.SetHasNavigationBar(this, true);
         }
 
 
