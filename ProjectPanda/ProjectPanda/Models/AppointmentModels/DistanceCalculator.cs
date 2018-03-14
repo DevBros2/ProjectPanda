@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Plugin.Geolocator;
+using System.Threading.Tasks;
 namespace ProjectPanda.Models
 {
     public class DistanceCalculator:Locator
@@ -16,8 +17,8 @@ namespace ProjectPanda.Models
         #endregion
 
 
-        //instantiate user location
-        Locator userCurrentLocation = new Locator();
+       
+       
 
 
     
@@ -33,9 +34,6 @@ namespace ProjectPanda.Models
                  L1 and L2 will be taken from the gpslocator class
              
              */
-
-
-
 
             const double kilo = 6372.8; //in kilometeres this the radius of the earth
 
@@ -63,7 +61,23 @@ namespace ProjectPanda.Models
         }
         #endregion
 
-        
+
+
+        public async Task GetCurrentLocation()
+        {
+
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 5;
+            var postion = await locator.GetPositionAsync(TimeSpan.FromMilliseconds(100000));
+
+            double userLat = postion.Latitude;
+
+            double userLongi = postion.Longitude;
+
+            DistanceCalculating(userLat, 56.67, userLongi, 563.5);
+     
+        }
+
 
 
     }

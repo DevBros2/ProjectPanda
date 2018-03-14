@@ -12,9 +12,7 @@ namespace ProjectPanda.Models
 {
     public class Locator
     {
-
         
-    
         public async Task GetCurrentLocation()
         {
 
@@ -27,15 +25,23 @@ namespace ProjectPanda.Models
             double userLongi = postion.Longitude;
 
 
-           
-
-            
-            #region Try catch-finally region
-            try
+            void SendLatCordinates()
             {
                 GetLatitude(userLat);
+            }
 
+            void SendLongitudeCoordinates()
+            {
                 GetLongitude(userLongi);
+            }
+
+            #region Try catch-finally region-might have to come and revist this block cause I am not sure how I will use it-khanyisani
+
+            try
+            {
+                // GetLatitude(userLat);
+
+                //  GetLongitude(userLongi);
 
 
             }
@@ -50,14 +56,16 @@ namespace ProjectPanda.Models
             {
 
             }
+
             #endregion
 
 
 
         }
 
+
         //the user Latitude
-         private  double GetLatitude(double userLatitudeLocation)
+        private double GetLatitude(double userLatitudeLocation)
         {
             return userLatitudeLocation;
         }
@@ -68,5 +76,6 @@ namespace ProjectPanda.Models
             return userLongitudeLocation;
         }
 
+        
     }
 }

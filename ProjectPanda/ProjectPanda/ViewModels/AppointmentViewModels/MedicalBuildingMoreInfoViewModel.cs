@@ -21,7 +21,7 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
         {
             moreInformation = new ObservableCollection<MedicalBuildingModel> {
 
-                new MedicalBuildingModel{ PracticeName="Grey's Hospital", Distance="7.8Km", ProfileImage="GreysHospital.jpg"}
+                new MedicalBuildingModel{ PracticeName="Grey's Hospital", Distance=7.8, ProfileImage="GreysHospital.jpg"}
 
             };
         }
