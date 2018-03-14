@@ -10,16 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SearchMedicalCondition : ContentPage
+	public partial class SearchMedicalConditionChronicDisease : ContentPage
 	{
-		public SearchMedicalCondition ()
+		public SearchMedicalConditionChronicDisease ()
 		{
 			InitializeComponent ();
 		}
 
         private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
-            //add code for searching for what 
+            //search the Allergies text file with all the allergies 
         }
+
     }
 }

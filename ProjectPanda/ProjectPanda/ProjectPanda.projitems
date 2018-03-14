@@ -79,6 +79,14 @@
       <DependentUpon>PickerCell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalConditionAllergies.xaml.cs">
+      <DependentUpon>SearchMedicalConditionAllergies.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalConditionChronicDisease.xaml.cs">
+      <DependentUpon>SearchMedicalConditionChronicDisease.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\SettingsViews\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -211,8 +219,8 @@
       <DependentUpon>MedicationDetailList.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalCondition.xaml.cs">
-      <DependentUpon>SearchMedicalCondition.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalConditionMedication.xaml.cs">
+      <DependentUpon>SearchMedicalConditionMedication.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -457,7 +465,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalCondition.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalConditionMedication.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -470,6 +478,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalConditionAllergies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchMedicalConditionChronicDisease.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

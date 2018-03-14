@@ -32,7 +32,7 @@ namespace ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo
 
         async private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-          await  Navigation.PushAsync(new SearchMedicalCondition());
+          await  Navigation.PushAsync(new SearchMedicalConditionAllergies());
         }
 
      
