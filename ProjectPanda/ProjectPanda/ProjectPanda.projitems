@@ -325,6 +325,7 @@
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\tappForConfirmationCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\ThePrescriptionListCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\MicroCharts.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Texts\medication.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\DetailedUserInfo.xaml">
