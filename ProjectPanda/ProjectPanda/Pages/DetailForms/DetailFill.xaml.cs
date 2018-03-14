@@ -14,8 +14,9 @@ namespace ProjectPanda.Pages
     {
 
         public String GlobalString;
-        public bool hasDependencies;
        
+
+        
 
         UserRegistrationManager manager;
         public DetailFill()
@@ -25,26 +26,33 @@ namespace ProjectPanda.Pages
 
 
 
-            /*
+            
             
                 DetailedUserModel detailedUser = new DetailedUserModel();
                     userDetails.BindingContext = detailedUser;
 
-            userDetails.Root.Remove(dependencyViewcell);
+                userDetails.Root.Remove(dependencyViewcell);
 
               detailedUser.PropertyChanging += (sender, args) =>
               {
-                  if (detailedUser.hasDependencies && userDetails.Root.IndexOf(dependencyViewcell) == -1)
+                  if (args.PropertyName == "hasDependencies")
                   {
-                      userDetails.Root.Add(dependencyViewcell);
-                  }
-                  if(!userDetails.hasDependencies && userDetails.Root.IndexOf(dependencyViewcell)!=-1)
-                  {
-                      userDetails.Root.Remove(detailedUser);
+                      if (detailedUser.hasDependencies  && userDetails.Root.IndexOf(dependencyViewcell) == 1)
+                      {
+                          userDetails.Root.Add(dependencyViewcell);
+                      }
+                    
+                          if (detailedUser.hasDependencies  && userDetails.Root.IndexOf(dependencyViewcell) != 1)
+                          {
+                              userDetails.Root.Remove(dependencyViewcell);
+                          }
+                      
                   }
               };
-           */
+          
         }
+
+      
 
         //this is for the switch
         #region

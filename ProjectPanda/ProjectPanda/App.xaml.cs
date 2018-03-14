@@ -46,8 +46,8 @@ namespace ProjectPanda
         {
             if (IsLoggedIn==true)
             {
-                  MainPage = new NavigationPage(new MainPage());
-                //MainPage = new NavigationPage(new DetailFill());
+                //  MainPage = new NavigationPage(new MainPage());
+                MainPage = new NavigationPage(new DetailFill());
             }
 
 

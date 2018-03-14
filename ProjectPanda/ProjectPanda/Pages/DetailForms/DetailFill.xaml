@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectPanda.Pages.DetailFill"
              Title="Personal Information "
-            BackgroundColor="{StaticResource BackgroundColor}"
+            BackgroundColor="Snow"
              xmlns:local="clr-namespace:ProjectPanda.Models"
             xmlns:picker="clr-namespace:ProjectPanda.Views.CustomViews"
+             
              >
 	<ContentPage.Content>
 
@@ -56,9 +57,9 @@
                             <x:String>Not Sure</x:String>
                         </picker:PickerCell>
 
-                       
 
-                        <SwitchCell x:Name="dependency"  Text="Do you have any Dependencies?" />
+
+                        <SwitchCell x:Name="dependency"  Text="Do you have any Dependencies?" On="{Binding hasDependencies}" />
 
 
 
@@ -92,18 +93,19 @@
                             </Grid>
                         </ViewCell>
                      
+
+                    </TableSection>
+
+                    <TableSection Title=" ">
                         <ViewCell Height="120">
-                                <Image Source="continueArrow.png" HeightRequest="120" Aspect="AspectFill" Grid.Row="1" HorizontalOptions="End">
+                            <Image Source="continueArrow.png" HeightRequest="120" Aspect="AspectFill" Grid.Row="1" HorizontalOptions="End">
 
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="NextDetailfillPage"/>
-                                    </Image.GestureRecognizers>
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="NextDetailfillPage"/>
+                                </Image.GestureRecognizers>
 
-                                </Image>
-                         </ViewCell>
-
-                        
-
+                            </Image>
+                        </ViewCell>
                     </TableSection>
                     
                 </TableRoot>

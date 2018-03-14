@@ -7,9 +7,12 @@ using ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo;
 
 namespace ProjectPanda.Models
 {
-    public class DetailedUserModel 
-    {
+   
 
-      
+    public class DetailedUserModel: INotifyPropertyChanging
+    {
+        public bool hasDependencies;
+
+        public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
     }
 }
