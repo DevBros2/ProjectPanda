@@ -9,21 +9,19 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
 {
      public class MedicalBuildingMoreInfoViewModel
     {
-        public ObservableCollection<MedicalBuildingModel> moreInformation { get; set; }
-
+       
 
         public MedicalBuildingMoreInfoViewModel()
         {
+            
             MoreInformationDisplay(); 
         }
 
         private void MoreInformationDisplay()
         {
-            moreInformation = new ObservableCollection<MedicalBuildingModel> {
 
-                new MedicalBuildingModel{ PracticeName="Grey's Hospital", Distance=7.8, ProfileImage="GreysHospital.jpg", PatientsCurrentlyAtPractice=8, AvgTimeSpent=12 }
+            new MedicalBuildingModel { PracticeName = "Grey's Hospital", Distance = 7.8, ProfileImage = "GreysHospital.jpg", PatientsCurrentlyAtPractice = 8, AvgTimeSpent = 12 };
 
-            };
         }
     }
 }
