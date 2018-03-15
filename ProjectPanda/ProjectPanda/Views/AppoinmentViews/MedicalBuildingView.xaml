@@ -21,9 +21,59 @@
                     <ViewCell>
                         <ContentView Padding="5">
 
-                            <Frame OutlineColor="LimeGreen"  Padding="10"  CornerRadius="7"  VerticalOptions="StartAndExpand">
+                            <Frame OutlineColor="LimeGreen"   Padding="5,2"  CornerRadius="7"  VerticalOptions="StartAndExpand">
 
-                                
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="150"/>
+                                        <RowDefinition Height="110"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                                        <Label Text="{Binding PracticeName}" Style="{StaticResource cardViewHeader}"/>
+                                    </Grid>
+
+                                    <Grid Grid.Row="1" Grid.Column="0">
+                                        <Image Source="{Binding ProfileImage}"/>
+                                    </Grid>
+
+                                    <Grid Grid.Row="1" Grid.Column="1">
+                                        <Grid RowSpacing="15">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="5*"/>
+                                                <ColumnDefinition Width="5*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label  Text="{Binding Distance, StringFormat='{0} km'}" TextColor="Green" Style="{DynamicResource secondaryInformation}"  Grid.Row="0" Grid.ColumnSpan="2"/>
+
+                                            <Label Grid.Row="1"  Grid.Column="0" Style="{DynamicResource numOfPatientsAtPracticeLabel}" Text="{Binding PatientsCurrentlyAtPractice, StringFormat='{0} '}"/>
+
+
+                                            <Image Style="{StaticResource moreInfoImageIcon}"  Source="info.png" Grid.Row="2" >
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="MoreInformation" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+
+                                        </Grid>
+                                    </Grid>
+
+                                    <forms:ChartView  Chart="{Binding ChartData}" Grid.Row="2" Grid.ColumnSpan="2"/>
+
+                                </Grid>
                               
                             </Frame>
 
