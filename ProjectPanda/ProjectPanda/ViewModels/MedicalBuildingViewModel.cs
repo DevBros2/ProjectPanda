@@ -46,7 +46,7 @@ namespace ProjectPanda.ViewModels
         {
             Entries = new[]
             {
-                new Entry(60) { Label = "8am", ValueLabel = "", Color = SKColor.Parse("#FFFF00")},
+                new Entry(60) { Label = "8am",ValueLabel = "", Color = SKColor.Parse("#FFFF00")},
                 new Entry(40)//then less value of the first Entry out of 100
                 {
                     Label = "10am",

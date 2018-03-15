@@ -44,7 +44,7 @@
                                         <Image Source="{Binding ProfileImage}"/>
                                     </Grid>
 
-                                    <Grid Grid.Row="1" Grid.Column="1">
+                                    <Grid Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand">
                                         <Grid RowSpacing="15">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto"/>

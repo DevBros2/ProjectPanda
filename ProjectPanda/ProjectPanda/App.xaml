@@ -106,8 +106,9 @@
                 <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
                 <Setter Property="VerticalOptions" Value="Start"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
                 <Setter Property="LineBreakMode" Value="NoWrap"/>
+                <Setter Property="FontSize" Value="18"/>
             </Style>
                 <!--#endregion-->
 
