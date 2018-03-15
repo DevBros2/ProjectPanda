@@ -15,5 +15,6 @@ namespace ProjectPanda.Models
         public double Latitude { get; set; } //The Hospitals Latitude postion in space
         public double Longitude { get; set; } //The Hospitals Longitude postion in space
         public int PatientsCurrentlyAtPractice{ get; set; }
+        public double AvgTimeSpent { get; set; } //The average time a pateint spends at a practice
     }
 }

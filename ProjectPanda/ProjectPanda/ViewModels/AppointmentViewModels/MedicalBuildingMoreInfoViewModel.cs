@@ -7,7 +7,7 @@ using ProjectPanda.Models;
 
 namespace ProjectPanda.ViewModels.AppointmentViewModels
 {
-     public class MedicalBuildingMoreInfoViewModel:MedicalBuildingModel
+     public class MedicalBuildingMoreInfoViewModel
     {
         public ObservableCollection<MedicalBuildingModel> moreInformation { get; set; }
 
@@ -21,7 +21,7 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
         {
             moreInformation = new ObservableCollection<MedicalBuildingModel> {
 
-                new MedicalBuildingModel{ PracticeName="Grey's Hospital", Distance=7.8, ProfileImage="GreysHospital.jpg"}
+                new MedicalBuildingModel{ PracticeName="Grey's Hospital", Distance=7.8, ProfileImage="GreysHospital.jpg", PatientsCurrentlyAtPractice=8, AvgTimeSpent=12 }
 
             };
         }

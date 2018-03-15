@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjectPanda.ViewModels;
-using ProjectPanda.ViewModels.AppointmentViewModels;
+using ProjectPanda.ViewModels.AppointmentHistoryViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,20 +12,16 @@ namespace ProjectPanda.Views.AppoinmentViews
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MedicalBuildingMoreInfo : ContentPage
 	{
-        DoctorsAtPracticeViewModel viewModel;
+        MedicalBuildingMoreInfoViewModel viewModel;
 
         public MedicalBuildingMoreInfo ()
 		{
 			InitializeComponent ();
 
-
-            BindingContext = viewModel = new DoctorsAtPracticeViewModel();
+            BindingContext = viewModel = new MedicalBuildingMoreInfoViewModel();
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
+       
 
     }
 }

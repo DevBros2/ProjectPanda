@@ -7,7 +7,9 @@
         
         <!--The page with more info regarding the practice-->
         <ScrollView>
-        <Grid VerticalOptions="FillAndExpand">
+        
+        <Grid>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -15,70 +17,55 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" TextColor="Black" Text="Grays Hospital" FontSize="28" HorizontalOptions="Center" />
+                <Label Grid.Row="0" TextColor="Black" Text="{Binding PracticeName}" FontSize="28" HorizontalOptions="Center" />
 
                 <Image Grid.Row="1" Source="GreysHospital.jpg"  Aspect="AspectFit"/>
 
                 <Label Grid.Row="2"  HeightRequest="120" Text="Some Value"/>
 
                 <Grid Grid.Row="3">
+                   
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <Label Grid.Row="0" Text="StringFormat='Distance: 7Km" FontSize="18"/>
+                    <Label Grid.Row="0" Text="{Binding Distance, StringFormat='{0} km'}" FontSize="18"/>
 
-                    <Label Grid.Row="1" Text="People at Practice:  15" FontSize="18"/>
+                    <Label Grid.Row="1" Text="{Binding PatientsCurrentlyAtPractice, StringFormat='{0} people at practice'}" FontSize="18"/>
 
-                    <Label Grid.Row="2" Text="Average Spend Time:  25 minutes" FontSize="18"/>
+                    <Label Grid.Row="2" Text="{Binding AvgTimeSpent, StringFormat='Average Time Spent {0} mins'}" FontSize="18"/>
 
                 </Grid>
 
-                <Grid Grid.Row="4" HorizontalOptions="StartAndExpand">
-                    
-                    <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" Grid.Row="4" HorizontalOptions="StartAndExpand">
 
-                        <ListView SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center" HorizontalOptions="Center" HasUnevenRows="True">
+
+
+                    <ListView  SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center" HorizontalOptions="Center" HasUnevenRows="True">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <ViewCell.View>
+                                        <ScrollView Orientation="Horizontal">
                                             <StackLayout VerticalOptions="Center" Orientation="Horizontal" HorizontalOptions="Start">
-
-
-                                              
-
-                                                <Grid>
-
-                                                    <Grid>
-                                                        <Grid.RowDefinitions>
-                                                            <RowDefinition Height="Auto"/>
-                                                            <RowDefinition Height="Auto"/>
-                                                        </Grid.RowDefinitions>
+     
 
                                                         <Image Source="{Binding ProfileImageURl}" HeightRequest="70" Grid.Row="0"/>
                                                         <Label Text="{Binding Name}" Grid.Row="1"/>
 
-                                                    </Grid>
-
-
-
-                                                </Grid>
-
-
-                                            </StackLayout>
-
-                                        </ViewCell.View>
+                                        </StackLayout>
+                                        </ScrollView>
+                                    </ViewCell.View>
                                     </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
 
-                    </ScrollView>
+                   
                     
-                </Grid>
+                </StackLayout>
             
             </Grid>
         </ScrollView>
