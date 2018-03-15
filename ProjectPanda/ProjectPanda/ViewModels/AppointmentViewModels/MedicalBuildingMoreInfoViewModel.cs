@@ -7,7 +7,7 @@ using ProjectPanda.Models;
 
 namespace ProjectPanda.ViewModels.AppointmentViewModels
 {
-     public class MedicalBuildingMoreInfoViewModel
+     public class MedicalBuildingMoreInfoViewModel:MedicalBuildingModel
     {
        
 

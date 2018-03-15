@@ -110,7 +110,32 @@
                 <Setter Property="LineBreakMode" Value="NoWrap"/>
                 <Setter Property="FontSize" Value="18"/>
             </Style>
-                <!--#endregion-->
+
+
+            <Style x:Key="HeaderMoreInformation" TargetType="Label">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="LineBreakMode" Value="NoWrap"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="MoreInformationHeaderLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="MoreInformationLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <!--#endregion-->
 
 
                 <!--#region The DatePicker and TimePicker style sheet-->

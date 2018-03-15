@@ -16,7 +16,7 @@ namespace ProjectPanda.Views.AppoinmentViews
 
         public MedicalBuildingMoreInfo ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
             BindingContext = viewModel = new MedicalBuildingMoreInfoViewModel();
         }

@@ -1,74 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.AppoinmentViews.MedicalBuildingMoreInfo">
-    <ContentPage.Content>
-       
-        
+             x:Class="ProjectPanda.Views.AppoinmentViews.MedicalBuildingMoreInfo"     
+             Padding="15"
+             >
+    
+      
         <!--The page with more info regarding the practice-->
+
         <ScrollView>
-        
-        <Grid>
-            
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+                <StackLayout>
 
-                <Label Grid.Row="0" TextColor="Black" Text="{Binding PracticeName}" FontSize="28" HorizontalOptions="Center" />
+                        <Grid>
 
-                <Image Grid.Row="1" Source="GreysHospital.jpg"  Aspect="AspectFit"/>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                <Label Grid.Row="2"  HeightRequest="120" Text="Some Value"/>
+                            <Label Grid.Row="0" TextColor="Black" Text="Gray Hospital" Style="{StaticResource HeaderMoreInformation}"/>
 
-                <Grid Grid.Row="3">
-                   
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-
-                    <Label Grid.Row="0" Text="{Binding Distance}" FontSize="18"/>
-
-                    <Label Grid.Row="1" Text="{Binding PatientsCurrentlyAtPractice}" FontSize="18"/>
-
-                    <Label Grid.Row="2" Text="{Binding AvgTimeSpent}" FontSize="18"/>
-
-                </Grid>
-
-                <StackLayout Orientation="Horizontal" Grid.Row="4" HorizontalOptions="StartAndExpand">
+                            <Image Grid.Row="1" Source="GreysHospital.jpg"  Aspect="AspectFit"/>
 
 
-
-                    <ListView  SeparatorVisibility="Default" ItemsSource="{Binding _docs}" VerticalOptions="Center" HorizontalOptions="Center" HasUnevenRows="True">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <ViewCell.View>
-                                        <ScrollView Orientation="Horizontal">
-                                            <StackLayout VerticalOptions="Center" Orientation="Horizontal" HorizontalOptions="Start">
-     
-
-                                                        <Image Source="{Binding ProfileImageURl}" HeightRequest="70" Grid.Row="0"/>
-                                                        <Label Text="{Binding Name}" Grid.Row="1"/>
-
-                                        </StackLayout>
-                                        </ScrollView>
-                                    </ViewCell.View>
-                                    </ViewCell>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-
-                   
+                         </Grid>
                     
-                </StackLayout>
-            
-            </Grid>
+                </StackLayout>  
         </ScrollView>
 
-    </ContentPage.Content>
+   
 </ContentPage>
