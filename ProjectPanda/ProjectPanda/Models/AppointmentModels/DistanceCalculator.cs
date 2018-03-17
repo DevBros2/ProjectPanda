@@ -5,7 +5,7 @@ using Plugin.Geolocator;
 using System.Threading.Tasks;
 namespace ProjectPanda.Models
 {
-    public class DistanceCalculator:Locator
+    public class DistanceCalculator
     {
         #region Calculates the radians of the degree 
         //the c# libaray does not allow you to have parameters as degrees and radians are more accurate
@@ -16,9 +16,6 @@ namespace ProjectPanda.Models
 
         #endregion
 
-
-       
-       
 
 
     
@@ -31,7 +28,7 @@ namespace ProjectPanda.Models
                 
                 latitude2 and longitude2-practice location
 
-                 L1 and L2 will be taken from the gpslocator class
+                 L1 and L2 will be taken from the gpslocator class by James 
              
              */
 
@@ -63,7 +60,7 @@ namespace ProjectPanda.Models
 
 
 
-        public async Task GetCurrentLocation()
+        public async Task GetDistanceFromLocation()
         {
 
             var locator = CrossGeolocator.Current;
