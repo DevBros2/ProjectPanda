@@ -55,7 +55,7 @@ namespace ProjectPanda.Views
         #region The select doctor and medical practice code
         private async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MedicalBuildingView());
+            await Navigation.PushAsync(new MedicalBuildingView(), true);
         }
         #endregion
 

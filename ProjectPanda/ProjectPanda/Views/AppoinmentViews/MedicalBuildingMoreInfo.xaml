@@ -37,11 +37,13 @@
                     <Label Grid.Row="2" Grid.Column="0" Text="Average Time Spent:" Style="{StaticResource MoreInformationHeaderLabel}"/>
                     <Label Grid.Row="2" Grid.Column="1" Text="23 mins" Style="{StaticResource MoreInformationLabel}"/>
 
-                </Grid>
+             </Grid>
 
-            <Grid>
-                
-            </Grid>
+         
+            <StackLayout Rotation="90">
+             
+            </StackLayout>
+         
 
             <Label Grid.Row="0" Text="Bio" FontFamily="Roboto-Bold.ttf#Roboto-Bold" FontSize="25"/>
 
