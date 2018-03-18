@@ -36,10 +36,16 @@ namespace ProjectPanda.ViewModels
                 new MedicalBuildingModel{Distance=5.5, ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6, PatientsCurrentlyAtPractice=11},
                 new MedicalBuildingModel{Distance=2.5, ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7, PatientsCurrentlyAtPractice=15},
 
+       
 
             };
 
             //ChartValue = this.ChartValue;
+
+            /*
+                             
+         
+             */
         }
 
         public Chart Chart1 => new LineChart()
