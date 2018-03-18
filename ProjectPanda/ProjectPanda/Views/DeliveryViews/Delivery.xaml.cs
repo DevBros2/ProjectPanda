@@ -40,15 +40,15 @@ namespace ProjectPanda.Views
         #region Self prescribed medication history
         private async void OrderHistorySelfPrecribedMeds(object sender, EventArgs e)
         {
-           
+            await Navigation.PushAsync(new SelfPrescriptionHistroy());
         }
         #endregion
 
 
         #region The button to make medical orders 
-        async private void ShowSelfPrescriptionHistory(object sender, EventArgs e)
+        async private void DocPrescriptionHistory(object sender, EventArgs e)
         {
-          //deleting option listview
+            await Navigation.PushAsync(new PrescriptionHistory());
         }
         #endregion
 

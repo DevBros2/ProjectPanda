@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.DeliveryViews.PrescriptionHistory"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Padding="5"
+             >
+    <ContentPage.Content>
+        <ListView x:Name="ContextDemoList" ItemsSource="{Binding _historyPrescriptionList}" HasUnevenRows="True" SeparatorVisibility="Default" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                          
+                            <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"  Text="More" />
+
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding DeleteMedicalHistory}"   Text="Delete" IsDestructive="True" />
+
+                        </ViewCell.ContextActions>
+                        <Grid Padding="15" BackgroundColor="GhostWhite">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding MedicationNameHistory}" Grid.Row="0" />
+                            <Label Text="{Binding MedicationDosageHistory}" Grid.Row="1"/>
+                            <Label Text="{Binding  DescriptionHistory}" Grid.Row="2"/>
+                            <Label Text="{Binding MedicationDeliveryDate}" Grid.Row="3"/>
+                        </Grid>
+                        
+                    </ViewCell>     
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>

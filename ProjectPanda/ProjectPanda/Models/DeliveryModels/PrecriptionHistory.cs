@@ -8,7 +8,7 @@ namespace ProjectPanda.Models.DeliveryModels
     public class PrecriptionHistory: PrescribedMedication
     {
 
-        public string _medicationHistory;
+        public string _medicationHistory; 
         public string _dosageHistory;
         public string _descriptionHistory;
 
@@ -37,6 +37,15 @@ namespace ProjectPanda.Models.DeliveryModels
 
             set { _descriptionHistory = DescriptionHistory; }
         }
+
+        public string MedicationDeliveryDate
+        {
+            get;
+            set;
+        }
+
+
+      
 
 
     }

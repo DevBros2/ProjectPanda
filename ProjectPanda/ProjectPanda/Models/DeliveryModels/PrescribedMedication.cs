@@ -7,12 +7,51 @@ namespace ProjectPanda.Models
     public  class PrescribedMedication
     {
 
-        public string Medication { get; set; }
+        private string medication;
+        private string dosageamount;
+        private string medicationdescription;
+     
 
-        public string DosageAmount { get; set; }
+
+        public string Medication
+        {
+            get
+            {
+                return medication;
+            }
+
+            set
+            {
+                medication = value;
+            }
+        }
+
+        public string DosageAmount
+        {
+            get
+            {
+                return dosageamount;
+            }
+
+            set
+            {
+                dosageamount = value;
+            }
+        }
 
 
-        public string MedicationDescription { get; set; }
+        public string MedicationDescription
+        {
+            get
+            {
+                return medicationdescription;
+            }
+
+            set
+            {
+                medication = value;
+            }
+        }
 
 
 

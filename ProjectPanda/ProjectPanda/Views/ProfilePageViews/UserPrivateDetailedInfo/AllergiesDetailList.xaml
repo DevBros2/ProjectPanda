@@ -5,9 +5,17 @@
              Title="My Allergies"
              BackgroundColor="{StaticResource BackgroundColor}"
              >
-    
-        <ContentPage.Content>
-            <ListView HasUnevenRows="True" SeparatorVisibility="None" ItemsSource="{Binding _allergies}" >
+
+
+    <ContentPage.ToolbarItems >
+      
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
+
+
+    </ContentPage.ToolbarItems>
+
+
+        <ListView HasUnevenRows="True" SeparatorVisibility="None" ItemsSource="{Binding _allergies}" Grid.Row="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -39,6 +47,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </ContentPage.Content>
-    
+ 
+
 </ContentPage>

@@ -5,8 +5,15 @@
              BackgroundColor="{StaticResource BackgroundColor}"
             Title="My Medication"
              >
-    <ContentPage.Content>
-        <ListView ItemsSource="{Binding _Medications}" HasUnevenRows="True" SeparatorVisibility="None">
+
+
+    <ContentPage.ToolbarItems >
+
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked" />
+
+    </ContentPage.ToolbarItems>
+
+    <ListView ItemsSource="{Binding _Medications}" HasUnevenRows="True" SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -53,5 +60,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </ContentPage.Content>
+   
 </ContentPage>

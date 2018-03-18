@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ProjectPanda.Views.PopUpPages
+namespace ProjectPanda.Views.AppoinmentViews
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ConfirmationPage : ContentPage
@@ -15,8 +15,19 @@ namespace ProjectPanda.Views.PopUpPages
 		public ConfirmationPage ()
 		{
 			InitializeComponent ();
-		}
 
+            /*
+           Messeging center
+
+            MessagingCenter.Subscribe<MyAppointments, string>(this, "dateParmaters", (sender, MyAppointments) => 
+            {
+              
+            });
+        
+            */
+        }
+
+       
 
     
         async private void FinalConfirmation(object sender, EventArgs e)

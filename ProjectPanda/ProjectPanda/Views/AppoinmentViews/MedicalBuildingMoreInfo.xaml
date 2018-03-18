@@ -1,34 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.AppoinmentViews.MedicalBuildingMoreInfo">
-    <ContentPage.Content>
-       
+             x:Class="ProjectPanda.Views.AppoinmentViews.MedicalBuildingMoreInfo"     
+             Padding="15"
+             >
+    <!--The page with more info regarding the practice-->
+
+    <ScrollView>
+
+        <StackLayout>
+
+            <Label TextColor="Black" Text="Gray Hospital" Style="{StaticResource HeaderMoreInformation}"/>
+
+            <Image  Source="GreysHospital.jpg"  Aspect="AspectFit"/>
+
+            <Label  HeightRequest="150"  Text="Chart"/>
+
+            <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0"  Text="Distance:" Style="{StaticResource MoreInformationHeaderLabel}"/>
+                    <Label Grid.Row="0" Grid.Column="1"  Text="7 km" Style="{StaticResource MoreInformationLabel}"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Patients at practice:" Style="{StaticResource MoreInformationHeaderLabel}"/>
+                    <Label Grid.Row="1" Grid.Column="1"  Text="14" Style="{StaticResource MoreInformationLabel}"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Average Time Spent:" Style="{StaticResource MoreInformationHeaderLabel}"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="23 mins" Style="{StaticResource MoreInformationLabel}"/>
+
+             </Grid>
+
+         
+            <StackLayout Rotation="90">
+             
+            </StackLayout>
+         
+
+            <Label Grid.Row="0" Text="Bio" FontFamily="Roboto-Bold.ttf#Roboto-Bold" FontSize="25"/>
+
+
+        </StackLayout>
+            
+    </ScrollView>
         
-        <!--The page with more info regarding the practice-->
-
-        <Grid Padding="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="2*"/>
-
-            </Grid.RowDefinitions>
-
-            <!--A bigger picture of the practice-->
-            <Frame BackgroundColor="Green" Grid.Row="0"/>
-
-            
-            <!--More detailed graph  -->
-            <Frame BackgroundColor="Red" Grid.Row="1"/>
-
-            
-            <!--The doctors at that practice listview with horzontal scroll-->
-            <Frame BackgroundColor="Yellow" Grid.Row="2"/>
-
-
-        </Grid>
-    
-    
-    </ContentPage.Content>
 </ContentPage>

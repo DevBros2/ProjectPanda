@@ -9,6 +9,11 @@
                   xmlns:appoitmentPages="clr-namespace:ProjectPanda.Views.AppointmentDetailsFlipxaml"
                   >
 
+
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem Text="SOS" Clicked="SosEmergency"/>
+    </MasterDetailPage.ToolbarItems>
+    
     <MasterDetailPage.Master >
         <ContentPage Padding="10" BackgroundColor="{StaticResource BackgroundColor}" Title="Menu" >
             <ContentPage.Content>

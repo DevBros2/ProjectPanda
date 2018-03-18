@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ProjectPanda.Pages;
+using ProjectPanda.Pages.DetailForms;
 using Xamarin.Forms;
 
 namespace ProjectPanda.Pages
@@ -27,7 +28,8 @@ namespace ProjectPanda.Pages
 
         async void NextDetailfillPageAllergies(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new DetailFillAllergies());
+            //   await Navigation.PushModalAsync(new );
+            await Navigation.PushAsync(new DetailFillAllergies());
         }
 
 

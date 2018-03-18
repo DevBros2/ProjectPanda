@@ -28,25 +28,31 @@ namespace ProjectPanda.ViewModels
         {
             Practices = new ObservableCollection<MedicalBuildingModel>
             {
-                new MedicalBuildingModel{ Distance="7.8 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1},
-                new MedicalBuildingModel{ Distance="7 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2},
-                new MedicalBuildingModel{Distance="6 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3},
-                new MedicalBuildingModel{Distance="12 Km",  ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4},
-                new MedicalBuildingModel{Distance="8 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5},
-                new MedicalBuildingModel{Distance="5 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6},
-                new MedicalBuildingModel{Distance="2 Km", ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7},
+                new MedicalBuildingModel{Distance=7.8, ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1, PatientsCurrentlyAtPractice=5},
+                new MedicalBuildingModel{Distance=7.0, ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2, PatientsCurrentlyAtPractice=3},
+                new MedicalBuildingModel{Distance=6.0, ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3, PatientsCurrentlyAtPractice=12},
+                new MedicalBuildingModel{Distance=12.5,  ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4, PatientsCurrentlyAtPractice=20},
+                new MedicalBuildingModel{Distance=8.0, ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5, PatientsCurrentlyAtPractice=8},
+                new MedicalBuildingModel{Distance=5.5, ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6, PatientsCurrentlyAtPractice=11},
+                new MedicalBuildingModel{Distance=2.5, ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7, PatientsCurrentlyAtPractice=15},
 
+       
 
             };
 
             //ChartValue = this.ChartValue;
+
+            /*
+                             
+         
+             */
         }
 
         public Chart Chart1 => new LineChart()
         {
             Entries = new[]
             {
-                new Entry(60) { Label = "8am", ValueLabel = "", Color = SKColor.Parse("#FFFF00")},
+                new Entry(60) { Label = "8am",ValueLabel = "", Color = SKColor.Parse("#FFFF00")},
                 new Entry(40)//then less value of the first Entry out of 100
                 {
                     Label = "10am",

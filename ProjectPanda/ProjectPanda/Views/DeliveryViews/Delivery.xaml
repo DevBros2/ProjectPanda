@@ -7,25 +7,89 @@
              >
 
     <ContentPage.Content>
-
+       
         <Grid Padding="15">
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="70"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            
+            <!--#region Section 1-->
+        <Grid Grid.Row="0" VerticalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+               
+                <RowDefinition Height="Auto"/>
+              
+               
             </Grid.RowDefinitions>
 
+          
+            <!--#region The section for doctor prescription buttons-->
 
-            <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"  Grid.Row="0"/>
-            <Button  Text="Show Prescription" Image="moremeds.png"  BackgroundColor="{StaticResource ButtonLoginColour}"  Grid.Row="1" HeightRequest="65" VerticalOptions="Start" Clicked="ShowDocPrecription"/>
-            <Button x:Name="MedDeliveryButton" Text="Prescription Delivery History" VerticalOptions="Start" TextColor="Black"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}"  Image="historyOfDel.png"  Clicked="ShowSelfPrescriptionHistory" Grid.Row="2"/>
-            <Label Text="Self prescription" Margin="0,0,0,15" TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="3"/>
-            <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Center" HeightRequest="65"  BorderWidth="2"  Grid.Row="4" Clicked="OrderMedicine"/>
-            <Button Text="Order History" BackgroundColor="{StaticResource ButtonLoginColour}" HeightRequest="65" Grid.Row="5" VerticalOptions="End" Image="historyOfDel.png" Clicked="OrderHistorySelfPrecribedMeds"/>
-        </Grid>  
-      
+            <Grid Grid.Row="0" RowSpacing="20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                    <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"  Grid.Row="0"/>
+
+                    <Button  Text="Show Prescription" Image="moremeds.png"  BackgroundColor="{StaticResource ButtonLoginColour}"  Grid.Row="1" HeightRequest="65" VerticalOptions="Start" Clicked="ShowDocPrecription"/>
+               
+                    <Button x:Name="MedDeliveryButton" Text="Prescription Delivery History" VerticalOptions="Start" TextColor="Black"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}"  Image="historyOfDel.png"  Clicked="DocPrescriptionHistory" Grid.Row="2"/>
+
+            </Grid>
+           
+            <!--#endregion-->
+            
+            
+         
+            
+        </Grid>
+        <!--#endregion-->
+
+            <!--#region Section 2-->
+            <Grid Grid.Row="1" VerticalOptions="StartAndExpand">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto"/>
+                  
+                </Grid.RowDefinitions>
+
+            
+
+                <!--#region The section for the self prescription buttons-->
+
+                <Grid Grid.Row="0" >
+
+                    <Grid RowSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Center" HeightRequest="65"  BorderWidth="2"  Grid.Row="1" Clicked="OrderMedicine"/>
+                        <Button Text="Order History" BackgroundColor="{StaticResource ButtonLoginColour}" HeightRequest="65" Grid.Row="2" VerticalOptions="End" Image="historyOfDel.png" Clicked="OrderHistorySelfPrecribedMeds"/>
+                        <Label Text="Self prescription"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0"/>
+
+
+                    </Grid>
+
+                  
+                </Grid>
+
+                <!--#endregion-->
+
+            </Grid>
+            <!--#endregion-->
+            
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

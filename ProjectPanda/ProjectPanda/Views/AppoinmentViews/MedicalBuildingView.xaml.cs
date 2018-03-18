@@ -52,7 +52,7 @@ namespace ProjectPanda.Views
         #region More information on that practice
         private void MoreInformation(object sender, EventArgs e)
         {
-            //for now using the navigation push method cause I asked charlin to help me with the pop ups
+           
 
             //This event handler gives more information than the the standard view card 
 
@@ -60,7 +60,6 @@ namespace ProjectPanda.Views
                 
 
         }
-
         #endregion
 
 
