@@ -21,6 +21,7 @@
       <DependentUpon>UserMessage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LoginBackend.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\AppoitmentHistoryModel.cs" />
@@ -39,9 +40,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrescribedMedication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModels\SettingsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PseudoCode\XFFlipView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PseudoCode\XNFlipView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
       <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -244,9 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\CustomModels\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Models\SettingsModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />

@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using ProjectPanda.Helpers;
 using ProjectPanda.ViewModels.SettingsViewModels;
-//using ProjectPanda.Models; <<<MVVM aritecture not permit this dude
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.ComponentModel;
+using SQLite;
+using ProjectPanda.Models;
+
 namespace ProjectPanda.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Settings : ContentPage, INotifyPropertyChanged
-	{
+    {
 
         #region Global variables
 
@@ -66,7 +68,6 @@ namespace ProjectPanda.Pages
 
         #endregion
 
-
         #region the event handler for changing the distance proximty 
           void KilometerChange(object sender, ValueChangedEventArgs args)
         {
@@ -74,13 +75,12 @@ namespace ProjectPanda.Pages
         }
         #endregion
 
-        #region Some Event handler by Bonga
+        #region Some Event handler 
         private async void User_0Settings_Clicked(object sender, EventArgs e)
         {
-             Helpers.Settings.GeneralSettings = AddressLine.Text;
-             Helpers.Settings.GeneralSettings = AddressLine2.Text;  
-            Helpers.Settings.GeneralSettings = CityOrTown.Text;
+            SendInformationToLocalDb();
             await Navigation.PopToRootAsync(true);
+
         }
         #endregion
 
@@ -121,9 +121,40 @@ namespace ProjectPanda.Pages
 
         #region Switchcell Event handler
 
-        
+
         #endregion
 
+        #region Methods
 
+        public void SendInformationToLocalDb()
+        {
+            Models.SettingsModel currentSettings = new Models.SettingsModel()
+            {
+                AddressLine = addressLine.Text,
+                AddressLine2 = addressLine2.Text,
+                CityOrTown = cityOrTown.Text,
+               // Blood = bloodType.Text,
+               // MedicalAid = medAid.Text,
+                Postal_Code = postal_Code.Text,
+                Cellphone_Number = cellphone_Number.Text,
+                Email = email.Text,
+                WorkAddressLine1 = wAddressLine.Text,
+                WorkAddressLine2 = wAddressLine2.Text,
+                WorkCityOrTown = wCityOrTown.Text,
+                WorkPostal_Code = wPostal_Code.Text,
+
+            };
+
+            using (SQLiteConnection connection=new SQLiteConnection(App.DatabaseLocation))
+            {
+                connection.CreateTable<Models.SettingsModel>();
+
+                var Data = connection.Insert(currentSettings);
+
+            }
+
+        }
+
+        #endregion
     }
 }

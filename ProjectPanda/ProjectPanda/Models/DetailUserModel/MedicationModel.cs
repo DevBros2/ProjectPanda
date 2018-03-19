@@ -9,10 +9,5 @@ namespace ProjectPanda.Models.DetailUserModel
         public string titleofmedication { get; set; }
         public string dosageofmedication { get; set; }
         public string medicationIcon { get; set;  }
-
-
-
-
-
     }
 }

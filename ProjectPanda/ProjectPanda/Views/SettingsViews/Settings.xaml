@@ -23,16 +23,16 @@
                     <TableSection Title="Personal Infomation"  >
 
                         <!--#region Contact information-->
-                            <EntryCell Label="cellphone number:" x:Name="Cellphone_Number" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0609887758" Keyboard="Telephone"/>
+                            <EntryCell Label="cellphone number:" x:Name="cellphone_Number" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0609887758" Keyboard="Telephone"/>
 
                             <EntryCell Label="Alternate number" x:Name="altNum" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="0787554429" Keyboard="Telephone"/>
 
-                            <EntryCell Label="Email:" x:Name="Email" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="khanyisani.buthelezi03@gmail.com"/>
+                            <EntryCell Label="Email:" x:Name="email" LabelColor="Black" HorizontalTextAlignment="Center" Placeholder="khanyisani.buthelezi03@gmail.com"/>
                         <!--#endregion-->
                         
                         <!--#region Blood type Custom Picker-->
                             
-                                <pickertype:PickerCell Title="Blood type" Label="Blood type">
+                                <pickertype:PickerCell Title="Blood type" Label="Blood type" x:Name="bloodType">
                                     <x:String>O-Postive</x:String>
                                     <x:String>O-Negative</x:String>
                                     <x:String>A-Postive</x:String>
@@ -45,7 +45,7 @@
                         <!--#endregion-->
 
                         <!--#region Medical aid custom picker-->
-                            <pickertype:PickerCell Label="Medical Aid" Title="Medical Aid" >
+                            <pickertype:PickerCell Label="Medical Aid" Title="Medical Aid" x:Name="medAid">
                                         <x:String>Discovery Health</x:String>
                                         <x:String>Bonitas</x:String>
                                         <x:String>FedHealth</x:String>
@@ -70,13 +70,13 @@
 
                     <TableSection Title="Delivery" >
 
-                            <EntryCell Label="Address Line 1:" x:Name="AddressLine" Placeholder="6 Calsi gardens"  LabelColor="Black" HorizontalTextAlignment="Center"/>
+                            <EntryCell Label="Address Line 1:" x:Name="addressLine" Placeholder="6 Calsi gardens"  LabelColor="Black" HorizontalTextAlignment="Center"/>
 
-                            <EntryCell Label="Address Line 2:" x:Name="AddressLine2" Placeholder="11 Sunnyside Lane" LabelColor="Black" HorizontalTextAlignment="Center"/>
+                            <EntryCell Label="Address Line 2:" x:Name="addressLine2" Placeholder="11 Sunnyside Lane" LabelColor="Black" HorizontalTextAlignment="Center"/>
 
-                            <EntryCell Label="City/Town:" x:Name="CityOrTown" LabelColor="Black" Placeholder="Pinetown" HorizontalTextAlignment="Center"/>
+                            <EntryCell Label="City/Town:" x:Name="cityOrTown" LabelColor="Black" Placeholder="Pinetown" HorizontalTextAlignment="Center"/>
 
-                            <EntryCell Label="Postal code:" x:Name="Postal_Code" LabelColor="Black" Placeholder="3610" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+                            <EntryCell Label="Postal code:" x:Name="postal_Code" LabelColor="Black" Placeholder="3610" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
 
                             <SwitchCell Text="Enable Work Delivery" x:Name="switchWorkDelivery" On="{Binding workDelivEnabled}"/>
         
