@@ -6,8 +6,8 @@ namespace ProjectPanda.Models
 {
     public class ChatBotMessage
     {
-        public string UserMessage { get; set; }
-        public string ChatbotMessage { get; set; }
-        public string ConversationID { get; set; }
+        public String UserMessage { get; set; }
+        public String ChatbotMessage { get; set; }
+
     }
 }
