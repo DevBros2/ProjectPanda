@@ -15,8 +15,8 @@
     </MasterDetailPage.ToolbarItems>
     
     <MasterDetailPage.Master >
-        <ContentPage Padding="10" BackgroundColor="{StaticResource BackgroundColor}" Title="Menu">
-            <ContentPage.Content VerticalOptions="FillAndExpand">
+        <ContentPage Padding="10" BackgroundColor="{StaticResource BackgroundColor}" Title="Menu" >
+            <ContentPage.Content>
 
                 <ScrollView>
 
@@ -27,7 +27,7 @@
                             <RowDefinition Height="83"/>
                             <RowDefinition Height="83"/>
                             <RowDefinition Height="83"/>
-
+                          
                         </Grid.RowDefinitions>
 
                         <Button x:Name="a" 
@@ -38,7 +38,7 @@
                               Image="home.png"
                            BackgroundColor="{StaticResource BackgroundColor}" 
                             />
-
+                        
                         <Button x:Name="Menu_btn3" 
                              Text="Payments" 
                               Grid.Row="1"
@@ -94,7 +94,6 @@
                     </Grid>
 
                 </ScrollView>
-
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>
