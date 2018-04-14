@@ -31,13 +31,7 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "Dependencies")]
         public bool Dependencies { get; set; }
 
-        [JsonProperty(PropertyName="Chronic Disease")]
-        public string ChronicDiseaseList { get; set; }
 
-        [JsonProperty(PropertyName="Recurring Medicine")]
-        public string RecurringMedicineList { get; set; }
 
-        [JsonProperty(PropertyName="Allergies")]
-        public string AllergiesList { get; set; }
     }
 }

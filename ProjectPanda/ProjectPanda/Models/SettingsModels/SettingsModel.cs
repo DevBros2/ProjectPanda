@@ -9,8 +9,6 @@ namespace ProjectPanda.Models
 
         //computation time is wasted here, why are these primative bonga?
 
-         
-
         public String AddressLine { get; set; }
         public String AddressLine2 { get; set; }
         public String CityOrTown { get; set; }

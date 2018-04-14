@@ -8,7 +8,6 @@ using ProjectPanda.Pages;
 using ProjectPanda.ViewModels.UserViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using ProjectPanda.Helpers;
 
 namespace ProjectPanda.Views
 {
@@ -35,11 +34,12 @@ namespace ProjectPanda.Views
            //     BarTextColor = Color.White,
            // };
 
-        }
+            
 
+
+        }
         async void Button_Clicked(object sender, EventArgs e)
         {
-            #region Huge comment section
             // _viewModel.SignIn();
 
             /*
@@ -47,14 +47,14 @@ namespace ProjectPanda.Views
                     if(EmailAddress && Password && (isAuthenticated==true) == those in the databse )    {Navigation.PushAsync(new MainProfilePage());}
              
              */
-            // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
-            // Navigation.InsertPageBefore(new LoginPage(), new MainPage());
+           // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
+           // Navigation.InsertPageBefore(new LoginPage(), new MainPage());
 
             // await Navigation.PushAsync(new ProjectPanda.Pages.DetailFill());
-            #endregion
+
         }
 
-         async void prompt(object sender, EventArgs e)
+        async void prompt(object sender, EventArgs e)
         {
             // await Navigation.PushModalAsync(new ProjectPanda.Pages.MainPage());
             // Navigation.InsertPageBefore(new LoginPage(), new MainPage());
@@ -63,8 +63,9 @@ namespace ProjectPanda.Views
         }
 
 
-         async void ContactUs(object sender, EventArgs e)
+        async void ContactUs(object sender, EventArgs e)
         {
+
             await Navigation.PushAsync(new SupportPage());
         }
 

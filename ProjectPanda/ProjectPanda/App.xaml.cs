@@ -13,7 +13,6 @@ namespace ProjectPanda
 {
 	public partial class App : Application
 	{
-        //From stored token 
         public bool IsLoggedIn;
 
         //The variable for the local database
@@ -28,6 +27,7 @@ namespace ProjectPanda
             SerapisInit();
 
             DatabaseLocation = dbLocation;
+
         }
         
         
@@ -36,6 +36,7 @@ namespace ProjectPanda
 		{
             IsLoggedIn = true;
 			InitializeComponent();
+
             SerapisInit(); 
         }
         #endregion
@@ -48,6 +49,7 @@ namespace ProjectPanda
                  MainPage = new NavigationPage(new MainPage());
                // MainPage = new NavigationPage(new DetailFill());
             }
+
 
             else
             {
