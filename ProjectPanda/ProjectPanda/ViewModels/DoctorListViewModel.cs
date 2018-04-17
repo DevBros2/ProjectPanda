@@ -49,7 +49,7 @@ namespace ProjectPanda.ViewModels
 
 
             }
-
+//This function must be removed
         public void HideOrShowProfile(DocAvaliable doctors)
         {
             if (_oldDoctorSelected == doctors)
@@ -74,6 +74,7 @@ namespace ProjectPanda.ViewModels
             _oldDoctorSelected = doctors;
 
         }
+        //This function must be removed
         private void UpdateDoctorList(DocAvaliable doctors)
         {
             var index = Doctors.IndexOf(doctors);
