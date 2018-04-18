@@ -22,7 +22,7 @@ namespace ProjectPanda
 
         public App(string dbLocation)
         {
-            IsLoggedIn = true;
+            IsLoggedIn = false;
             InitializeComponent();
             SerapisInit();
 
