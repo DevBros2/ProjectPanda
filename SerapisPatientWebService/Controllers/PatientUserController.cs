@@ -1,28 +1,17 @@
 using System;
-
 using System.Collections.Generic;
-
 using System.Collections.ObjectModel;
-
 using System.Linq;
-
 using ProjectPanda.Models;
-
 using System.Threading.Tasks;
-
 using Microsoft.Azure.Documents.Client;
-
 using Microsoft.Azure.Documents.Linq;
 
-namespace MVC6_WEBAPI_MongoDB.Controllers
+namespace SerapisPatientWebService.Controllers
 {
-
-    [Route("api/product")]
-
-    public class ProductAPIController : Controller
-
+    [Route("api/PatientUser")]
+    public class PatientUserController : Controller
     {
-
         DataAccess objds;
         
         // DocumentDB deafult values
