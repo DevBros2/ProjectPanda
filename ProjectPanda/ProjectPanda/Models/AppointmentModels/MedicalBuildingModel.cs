@@ -7,6 +7,7 @@ namespace ProjectPanda.Models
 {
     public class MedicalBuildingModel
     {
+        public string Id { get; set; }
         public string ProfileImage { get; set; }
         public string PracticeName { get; set; }
         public float ChartValue { get; set; } //This Must be value 0 - 100%
@@ -16,5 +17,7 @@ namespace ProjectPanda.Models
         public double Longitude { get; set; } //The Hospitals Longitude postion in space
         public int PatientsCurrentlyAtPractice{ get; set; }
         public double AvgTimeSpent { get; set; } //The average time a pateint spends at a practice
+        public DocAvaliable doctor { get; set; }
+        public Specilization FieldsSpecilized { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace ProjectPanda.Models
 {
-    public class DocAvaliable : INotifyPropertyChanged
+    public class DocAvaliable :Appointment, INotifyPropertyChanged
     {
 
         [JsonProperty(PropertyName = "id")]
@@ -28,7 +28,10 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "complete")]
         public bool Complete { get; set; }
 
+        //not sure what this property does
         public bool IsVisible { get; set; }
+
+        public Specilization docSpecilization { get; set; }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

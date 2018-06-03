@@ -5,10 +5,8 @@
 
     <Grid ColumnSpacing="2" Padding="5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*">
-            </ColumnDefinition>
-            <ColumnDefinition Width="40">
-            </ColumnDefinition>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*">

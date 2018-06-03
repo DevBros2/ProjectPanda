@@ -97,7 +97,7 @@ namespace ProjectPanda.Pages
         {
             //All this code must be pushed to the ViewModel
 
-            var users = new UserRegistration {
+            var users = new PatientInfo {
                 FirstName = first_name.Text,
                 Surname = surname.Text,
                 EmailAddress= email_address.Text,
@@ -127,9 +127,9 @@ namespace ProjectPanda.Pages
         }
 
         //Rather use the messaging center then send them at the end
-        async Task AddDetails(UserRegistration userregistration)
+        async Task AddDetails(PatientInfo patientInformation)
         {
-            await manager.InsertUsers(userregistration);
+            await manager.InsertUsers(patientInformation);
         }
 
     }

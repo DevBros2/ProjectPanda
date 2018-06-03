@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrecriptionHistory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\SelfPrescriptionHistoryModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DependencyDetails.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\DetailedUserModel.cs" />
@@ -39,13 +40,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrescribedMedication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModels\SettingsModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\UserRegistration .cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\XFFlipView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\XNFlipView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PatientInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Specilization.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
       <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\FieldsOfExpiertiseConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -75,8 +81,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\FieldsOfSpecialization.xaml.cs">
+      <DependentUpon>FieldsOfSpecialization.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CustomViews\PickerCell.xaml.cs">
       <DependentUpon>PickerCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\MedicalRecords.xaml.cs">
+      <DependentUpon>MedicalRecords.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchAllergies.xaml.cs">
@@ -252,7 +266,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\JudoPay\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\CustomViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\SettingsViews\" />
   </ItemGroup>
   <ItemGroup>
@@ -493,6 +506,18 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\SearchChronicDisease.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\MedicalRecords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\FieldsOfSpecialization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -14,10 +14,10 @@
             <Grid Padding="10">
                 
                     <Grid.RowDefinitions>
-                    <RowDefinition  Height="200"/>
+                    <RowDefinition  Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                  
-                </Grid.RowDefinitions>
+                     </Grid.RowDefinitions>
 
                 <!--#region The first part of the card-->
                 
@@ -45,7 +45,7 @@
                             </controls:CircleImage.HeightRequest>
                         </controls:CircleImage>
 
-                        <Label x:Name="City" Text="Khanyisani Buthelezi" HorizontalOptions="Center" TextColor="Black" FontSize="25" Grid.Row="1"/>
+                        <Label Text="Khanyisani Buthelezi" HorizontalOptions="Center" TextColor="Black" FontSize="25" Grid.Row="1"/>
 
                     </Grid>
                 
@@ -156,7 +156,16 @@
 
                         
                         <!--#region  The more medical card-->
-                        <Button Grid.Row="4"  Image="moremeds.png" TextColor="Black"  BorderRadius="4" BorderColor="Black" BorderWidth="2" Text="Detailed Information" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="PrivateInformation"/>
+                        <Button Grid.Row="4" 
+                                Image="moremeds.png" 
+                                TextColor="Black"  
+                                BorderRadius="4" 
+                                BorderColor="White" 
+                                BorderWidth="2" 
+                                Text="Detailed Information" 
+                                BackgroundColor="{StaticResource ButtonLoginColour}" 
+                                Command="{Binding NavigateToFiles}"
+                                />
                         <!--#endregion-->
 
 

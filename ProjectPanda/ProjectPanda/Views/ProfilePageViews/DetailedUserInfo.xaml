@@ -7,19 +7,47 @@
              >
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Padding="20">
+            <StackLayout Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="25*"/>
+                    </Grid.RowDefinitions>
 
 
-                <Button Text="Allergies" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="allergyList" Image="allergiesIcon.png"/>
+                    <Button Text="Allergies" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            Command="{Binding NavigateToAllergiesList}" 
+                            Image="allergiesIcon.png"
+                            Grid.Row="0"
+                            />
 
 
-                <Button Text="Medication" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="medciationList" Image="medicationBottle.png"/>
+                    <Button Text="Medication" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            Command="{Binding NavigateToRecurringMeds}" 
+                            Image="medicationBottle.png"
+                            Grid.Row="1"
+                            />
 
 
-                <Button Text="Chronic Diseases" HeightRequest="150" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="chronicDiseaseList" Image="chronicDisease.png"/>
+                    <Button Text="Chronic Diseases"
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            Command="{Binding NavigateToChronicList}" 
+                            Image="chronicDisease.png"
+                            Grid.Row="2"
+                            />
 
-                <Button HeightRequest="150" Text="Medical Records" Image="record.png" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                    <Button Text="Medical Records" 
+                            Image="record.png" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            Command="{Binding NavigateToMedicalRecords}"
+                            Grid.Row="3"
+                            />
 
+                </Grid>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

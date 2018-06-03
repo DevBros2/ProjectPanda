@@ -23,7 +23,7 @@
             <!--STYLES-->
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
-                <Setter Property="BarTextColor" Value="Black"/>
+                <Setter Property="BarTextColor" Value="White"/>
               
             </Style> 
        

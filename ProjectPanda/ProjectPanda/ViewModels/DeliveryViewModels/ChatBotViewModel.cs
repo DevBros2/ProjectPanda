@@ -4,10 +4,11 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using ProjectPanda.Models;
+using ProjectPanda.ViewModels.Base;
 
 namespace ProjectPanda.ViewModels.DeliveryViewModels
 {
-    public class ChatBotViewModel : INotifyPropertyChanged
+    public class ChatBotViewModel :BaseViewModel, INotifyPropertyChanged
     {
         private string messageText;
 
@@ -31,9 +32,8 @@ namespace ProjectPanda.ViewModels.DeliveryViewModels
             set
             {
                 messageText = value;
-                OnPropertyChanged();
+                OnPropertyChanged("MessageText");
 
-                //sendMessageCommand.ChangeCanExecute();
             }
         }
 
@@ -58,10 +58,13 @@ namespace ProjectPanda.ViewModels.DeliveryViewModels
         }
 
         //implementing
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged(string propertyName = null)
+        new public event PropertyChangedEventHandler PropertyChanged;
+        void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if(propertyName != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
 

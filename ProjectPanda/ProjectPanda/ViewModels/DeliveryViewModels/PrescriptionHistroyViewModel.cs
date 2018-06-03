@@ -7,13 +7,14 @@ using ProjectPanda.Views;
 using System.Windows.Input;
 using System.Xml.Serialization;
 using Xamarin.Forms;
+using ProjectPanda.ViewModels.Base;
 
 namespace ProjectPanda.ViewModels.DeliveryViewModels
 {
 
     
 
-    public class PrescriptionHistroyViewModel
+    public class PrescriptionHistroyViewModel:BaseViewModel
     {
 
         public ObservableCollection<PrecriptionHistory> _historyPrescriptionList { get; set; }

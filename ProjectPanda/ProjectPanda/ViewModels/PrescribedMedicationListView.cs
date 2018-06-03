@@ -4,10 +4,11 @@ using System.Text;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using ProjectPanda.Models;
+using ProjectPanda.ViewModels.Base;
 
 namespace ProjectPanda.ViewModels
 {
-    public class PrescribedMedicationListView
+    public class PrescribedMedicationListView : BaseViewModel
     {
 
         public ObservableCollection<PrescribedMedication> _prescribedMedication { get; set; }

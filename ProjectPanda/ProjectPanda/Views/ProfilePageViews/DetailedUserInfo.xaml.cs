@@ -8,6 +8,7 @@ using ProjectPanda.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo;
+using ProjectPanda.ViewModels.DetailUserViewModels;
 
 namespace ProjectPanda.Views
 {
@@ -15,32 +16,16 @@ namespace ProjectPanda.Views
 	public partial class DetailedUserInfo : ContentPage
 	{
 
-   
+        DetailedUserViewModel viewModel; 
 
         public DetailedUserInfo ()
 		{
 			InitializeComponent ();
 
-           // BindingContext = listOfDetails = new DetailedUserViewModel;
-
+            viewModel = new DetailedUserViewModel();
+            BindingContext = viewModel;
+            
         }
-
-        private void allergyList(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AllergiesDetailList());
-        }
-
-
-        private void medciationList(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MedicationDetailList());
-        }
-
-        private void chronicDiseaseList(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ChronicDiseaseList());
-        }
-
-     
+ 
     }
 }

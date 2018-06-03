@@ -13,6 +13,6 @@ namespace ProjectPanda.Models
     {
         public bool hasDependencies;
 
-        public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+        public event PropertyChangingEventHandler PropertyChanging;
     }
 }

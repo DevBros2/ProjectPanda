@@ -7,7 +7,8 @@ using ProjectPanda.Pages;
 using ProjectPanda.Views.DeliveryViews;
 using Xamarin.Forms;
 using ProjectPanda.ViewModels.UserViewModels;
-
+using ProjectPanda.Models;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjectPanda
 {
@@ -18,7 +19,11 @@ namespace ProjectPanda
         //The variable for the local database
         public static string DatabaseLocation = string.Empty;
 
+        public static MedicalBuildingModel practice = new MedicalBuildingModel();
 
+        public static DocAvaliable doctor = new DocAvaliable();
+
+        public static MobileServiceClient client = new MobileServiceClient("https://projectpanda.azurewebsites.net");
 
         public App(string dbLocation)
         {

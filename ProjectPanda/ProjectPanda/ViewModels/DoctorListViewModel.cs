@@ -6,11 +6,11 @@ using ProjectPanda.Views;
 using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
-
+using ProjectPanda.ViewModels.Base;
 
 namespace ProjectPanda.ViewModels
 {
-    public class DoctorListViewModel
+    public class DoctorListViewModel : BaseViewModel
     {
         private DocAvaliable _oldDoctorSelected;
 

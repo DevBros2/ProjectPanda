@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
 using ProjectPanda.Models.DeliveryModels;
+using ProjectPanda.ViewModels.Base;
 
 namespace ProjectPanda.ViewModels.DeliveryViewModels
 {
-     public class SelfPrescriptionHistoryViewModel
+     public class SelfPrescriptionHistoryViewModel : BaseViewModel
     {
         public ObservableCollection<SelfPrescriptionHistoryModel> _selfPrescriptionHistoryList { get; set; }
 

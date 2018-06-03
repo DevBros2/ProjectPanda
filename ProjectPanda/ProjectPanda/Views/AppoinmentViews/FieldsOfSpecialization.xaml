@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.AppoinmentViews.FieldsOfSpecialization"
+             Padding="10"
+             >
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+
+            <ListView ItemsSource="{Binding Specilization}" 
+                      CachingStrategy="RecycleElement" 
+                      SeparatorVisibility="Default" 
+                      SeparatorColor="Black"
+                      ItemSelected="SpeciltySelected"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Image Source="{Binding FieldIcon}" Aspect="AspectFit"/>
+                                    </Grid>
+
+                                    <Grid Grid.Column="1">
+                                        <Label Text="{Binding Name}" VerticalOptions="Center"/>
+                                    </Grid>
+                                    
+                                </Grid>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

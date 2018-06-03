@@ -39,7 +39,7 @@ namespace ProjectPanda.Services
             }
         }
 
-        public async Task<UserRegistration> InsertUsers(UserRegistration userRegistration)
+        public async Task<PatientInfo> InsertUsers(PatientInfo userRegistration)
         {
             try {
 

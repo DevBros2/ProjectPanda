@@ -8,10 +8,11 @@ using SkiaSharp;
 using Microcharts;
 
 using ProjectPanda.Models;
+using ProjectPanda.ViewModels.Base;
 
 namespace ProjectPanda.ViewModels
 {
-    public class MedicalBuildingViewModel
+    public class MedicalBuildingViewModel : BaseViewModel
     {
         //float ChartValue;
         public ObservableCollection<MedicalBuildingModel> Practices { get; set; }
