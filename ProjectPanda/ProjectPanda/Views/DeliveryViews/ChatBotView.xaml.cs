@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectPanda.ViewModels.DeliveryViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace ProjectPanda.Views.DeliveryViews
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ChatBotView : ContentPage
 	{
-		public ChatBotView ()
+        ChatBotViewModel viewModel;
+
+        public ChatBotView ()
 		{
 			InitializeComponent ();
+            viewModel = new ChatBotViewModel();
+            BindingContext = viewModel;
 		}
 	}
 }

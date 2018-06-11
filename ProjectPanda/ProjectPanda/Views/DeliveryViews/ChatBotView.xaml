@@ -12,19 +12,32 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout>
-            <ListView Grid.Row="0" x:Name="MessagesListView" HasUnevenRows="true" SeparatorVisibility="None" ItemTemplate="{StaticResource ChatBotDataSelector}" ItemsSource="{Binding Messages}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}" />
-            <Grid x:Name="MessageControls" RowSpacing="1" ColumnSpacing="2" Padding="5" BackgroundColor="#EFEFF4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MessagesListView, Property=Height,Factor=.91,Constant=0}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MessagesListView, Property=Height,Factor=.09,Constant=0}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*">
-                    </ColumnDefinition>
-                    <ColumnDefinition Width="Auto">
-                    </ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Entry Grid.Column="0" HeightRequest="45" Placeholder="Message" x:Name="txtMessage" Text="{Binding MessageText, Mode=TwoWay}" />
-                <Button BackgroundColor="{StaticResource ButtonLoginColour}" Grid.Column="1" Text="Send" CommandParameter="{Binding Source={x:Reference Name=txtMessage}, Path=Text}" Command="{Binding SendMessage}" />
-            </Grid>
-        </StackLayout>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--Messages in Row 0 -->
+            <ListView 
+			x:Name="MessagesListView" 
+			ItemTemplate="{StaticResource ChatBotDataSelector}" 
+			ItemsSource="{Binding Messages}" 
+			HasUnevenRows="True"  
+			SeparatorVisibility="None" />
+
+            <!-- Entry and Send button in Row 1 -->
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Padding="10" BackgroundColor="#EFEFEF">
+                <Entry 
+			    HorizontalOptions="FillAndExpand" 
+				HeightRequest="25" 
+				Placeholder="Message" 
+				Text="{Binding OutGoingText}"/>
+                <Button 
+				Text="Send" 
+				Command="{Binding SendCommand}"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
     
 </ContentPage>

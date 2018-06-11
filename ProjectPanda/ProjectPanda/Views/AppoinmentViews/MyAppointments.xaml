@@ -2,82 +2,103 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.MyAppointments"
-             BackgroundColor="{StaticResource BackgroundColor}"
-              xmlns:xfFlipViewControl="clr-namespace:ProjectPanda.Models"
+             BackgroundColor="White"
              xmlns:refrencePage="clr-namespace:ProjectPanda.Views.AppoinmentViews" 
              xmlns:Customizededitor="clr-namespace:ProjectPanda.Views.CustomEntry"
              >
     <ContentPage.Content>
-        <ScrollView>
-            <Grid Padding="10">
+        <Grid Padding="10">
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
 
-                <Grid VerticalOptions="CenterAndExpand">
+                <!--#region Title grid row 0-->
+                <Label Grid.Row="0" 
+                       Text="Set Appointment" 
+                       HorizontalOptions="Center"  
+                       TextColor="Black" 
+                       Style="{DynamicResource Key=FontStyle}"
+                       />
+                <!--#endregion-->
+
+                <!--#region Line-->
+                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand">
+                    <BoxView Color="Black" HorizontalOptions="FillAndExpand"/>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Pick By convieniance-->
+                <Grid Grid.Row="2" VerticalOptions="FillAndExpand">
+
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
                     </Grid.RowDefinitions>
 
-                    <!--#region Title grid row 0-->
-                    <Label Grid.Row="0" Text="Set Appointment" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource Key=FontStyle}" Margin="10,0,0,20"/>
-                    <!--#endregion-->
 
-                    <!--#region Button to select doctor Grid row 1-->
-                    <Button BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Text="{Binding MyAppointmentsViewModelText}" 
-                            Image="doct.png" 
-                            x:Name="DoctorLabel"   
-                            Style="{DynamicResource ButtonFont}"  
-                            Command="{Binding NavigateToDocPracSelect}" 
-                            TextColor="Black"  
-                            BorderWidth="2" 
-                            Grid.Row="1" 
-                            Margin="0,0,0,20"
-                            />
+                    <Image 
+                        Grid.Row="0" 
+                        Source="SerapisBooking.png" 
+                        Aspect="AspectFit"
+                        />
 
-                    <!--#endregion-->
+                    <Label 
+                        Grid.Row="1" 
+                        Text="Serapis Booking" 
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        FontSize="20"
+                        TextColor="Black"
+                        />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToSerapisBooking}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Line-->
+                <Grid Grid.Row="3" HorizontalOptions="FillAndExpand">
+                    <BoxView Color="Black" HorizontalOptions="FillAndExpand"/>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Pick by practice, doctor, date, and Time-->
+                <Grid Grid.Row="4" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
 
 
-                    <!--#region Date xaml code Grid row 2-->
-                    <Button TextColor="Black" 
-                            BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Style="{DynamicResource ButtonFont}" 
-                            Image="calendar64.png" 
-                            Text="Date" BorderWidth="2"   
-                            Grid.Row="2" Margin="0,0,0,20"
-                            Command="{Binding NavigateToCalendarSelect}"
-                            />
+                    <Image 
+                        Grid.Row="0" 
+                        Source="AppointmentByDate.png" 
+                        Aspect="AspectFit"
+                        />
 
-                    <!--#endregion-->
+                    <Label 
+                        Grid.Row="1" 
+                        Text="Book by Date" 
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        TextColor="Black"
+                        FontSize="20"
+                        />
 
-
-                    <!--#region Time Pick code grid row 3-->
-                    <Button TextColor="Black" 
-                            BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Text="Time" 
-                            Style="{DynamicResource ButtonFont}" 
-                            BorderWidth="2" 
-                            Image="clock.png" 
-                            Grid.Row="3"
-                            />
-                    <!--#endregion-->
-
-                    <!--#region Confirm button grid row 4-->
-                    <Button  Image="ButtonConfirm.png" 
-                             Text="Confirm" 
-                             Margin="0,20,0,10" 
-                             HeightRequest="65"  
-                             BackgroundColor="{StaticResource Primary}" 
-                             Grid.Row="4" 
-                             Style="{DynamicResource ButtonFont}" 
-                             />
-                    <!--#endregion-->
-
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToDateBooking}"/>
+                    </Grid.GestureRecognizers>
                 </Grid>
 
+                <!--#endregion-->
+
             </Grid>
-        </ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

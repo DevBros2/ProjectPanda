@@ -12,22 +12,22 @@
                   ItemsSource="{Binding Practices}"
                   IsPullToRefreshEnabled="True"
                   CachingStrategy="RecycleElement"
-                  HeightRequest="100"
                   SelectedItem="MedicalBuilding_ItemSelected"
-                  ItemSelected="MedicalBuilding_ItemSelected">
+                  ItemSelected="MedicalBuilding_ItemSelected"
+                  >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ContentView Padding="5">
 
-                            <Frame OutlineColor="LimeGreen"   Padding="5,2"  CornerRadius="7"  VerticalOptions="StartAndExpand">
+                            <Frame OutlineColor="LimeGreen" Padding="5,2"  CornerRadius="7"  VerticalOptions="StartAndExpand">
 
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="25"/>
-                                        <RowDefinition Height="150"/>
-                                        <RowDefinition Height="110"/>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="3*"/>
+                                        <RowDefinition Height="6*"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -51,7 +51,7 @@
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="Auto"/>
                                             </Grid.RowDefinitions>
-                                            
+
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="5*"/>
                                                 <ColumnDefinition Width="5*"/>
@@ -62,7 +62,7 @@
                                             <Label Grid.Row="1"  Grid.Column="0" Style="{DynamicResource numOfPatientsAtPracticeLabel}" Text="{Binding PatientsCurrentlyAtPractice, StringFormat='{0} '}"/>
 
 
-                                            <Image Style="{StaticResource moreInfoImageIcon}"  Source="info.png" Grid.Row="2" >
+                                            <Image Style="{StaticResource moreInfoImageIcon}"  Source="MoreInfo.png" Grid.Row="2" >
                                                 <Image.GestureRecognizers>
                                                     <TapGestureRecognizer Tapped="MoreInformation" />
                                                 </Image.GestureRecognizers>
@@ -74,7 +74,7 @@
                                     <forms:ChartView  Chart="{Binding ChartData}" Grid.Row="2" Grid.ColumnSpan="2"/>
 
                                 </Grid>
-                              
+
                             </Frame>
 
                         </ContentView>

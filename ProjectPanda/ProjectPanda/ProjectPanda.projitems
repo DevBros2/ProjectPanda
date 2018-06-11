@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\MedicalBuildingModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrescribedMedication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PatientCard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModels\SettingsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PatientInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Specilization.cs" />
@@ -50,8 +51,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DeliveryViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DoctorPrescriptionViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SideMenuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -85,8 +89,20 @@
       <DependentUpon>FieldsOfSpecialization.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\FieldsOfSpecilizationDate.xaml.cs">
+      <DependentUpon>FieldsOfSpecilizationDate.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CustomViews\PickerCell.xaml.cs">
       <DependentUpon>PickerCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\DoctorsPrescription.xaml.cs">
+      <DependentUpon>DoctorsPrescription.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MainDeliveryPage.xaml.cs">
+      <DependentUpon>MainDeliveryPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProfilePageViews\UserPrivateDetailedInfo\MedicalRecords.xaml.cs">
@@ -138,7 +154,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\MyAppointmentsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PrescribedMedicationListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\LoginPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PseudoCode\AppoitmentBack.xaml.cs">
       <DependentUpon>AppoitmentBack.xaml</DependentUpon>
@@ -174,10 +189,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\SelfPrescriptionHistroy.xaml.cs">
       <DependentUpon>SelfPrescriptionHistroy.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ShowPrecriptionPopUp.xaml.cs">
-      <DependentUpon>ShowPrecriptionPopUp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MedicationSearch.xaml.cs">
@@ -437,12 +448,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ShowPrecriptionPopUp.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\MedicalBuildingMoreInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -516,6 +521,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\FieldsOfSpecialization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\FieldsOfSpecilizationDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\MainDeliveryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\DoctorsPrescription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

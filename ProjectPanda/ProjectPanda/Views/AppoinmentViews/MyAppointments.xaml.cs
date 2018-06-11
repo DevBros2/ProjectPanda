@@ -30,7 +30,6 @@ namespace ProjectPanda.Views
             {
                 //replaces string, using the OnPropertyChanged method in viewmodel
                 viewmodel.MyAppointmentsViewModelText = specialArgs;
-
             });
 
         }

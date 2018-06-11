@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectPanda.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -21,7 +22,7 @@ namespace ProjectPanda.ViewModels.Base
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged(string propertyName)
+        protected void OnPropertyChanged(string propertyName)
         {
             if(propertyName != null)
             {

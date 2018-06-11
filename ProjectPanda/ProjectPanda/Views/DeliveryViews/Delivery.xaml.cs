@@ -8,8 +8,7 @@ using ProjectPanda.ViewModels;
 using Xamarin.Forms;
 using System.ComponentModel;
 using Xamarin.Forms.Xaml;
-
-using ProjectPanda.Views.DeliveryViews.DeliveryPopUps;
+using ProjectPanda.ViewModels.DeliveryViewModels;
 
 namespace ProjectPanda.Views
 {
@@ -17,18 +16,13 @@ namespace ProjectPanda.Views
 	public partial class Delivery : ContentPage
 	{
 
-        PrescribedMedicationListView prescribedModel;
-        PrescribedMedicationListView prescribeModelList;
-
-     
+        DeliveryViewModel viewModel; 
 
         public Delivery ()
 		{
 			InitializeComponent ();
-
-            BindingContext = prescribedModel = new PrescribedMedicationListView();
-
-
+            viewModel = new DeliveryViewModel();
+            BindingContext = viewModel;
             NavigationPage.SetHasNavigationBar(this, true);
         }
 
@@ -37,20 +31,6 @@ namespace ProjectPanda.Views
             base.OnAppearing();
         }
 
-        #region Self prescribed medication history
-        private async void OrderHistorySelfPrecribedMeds(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SelfPrescriptionHistroy());
-        }
-        #endregion
-
-
-        #region The button to make medical orders 
-        async private void DocPrescriptionHistory(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PrescriptionHistory());
-        }
-        #endregion
 
         #region Order Medicine (brings the chat bot up)
 
@@ -61,14 +41,6 @@ namespace ProjectPanda.Views
 
         #endregion 
 
-        #region The button for brining up the pop up for doctor prescription
-
-        async private void ShowDocPrecription(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ShowPrecriptionPopUp());
-        }
-
-       
     }
-          #endregion
+      
 }

@@ -10,29 +10,23 @@ using System.Diagnostics;
 using ProjectPanda.Models;
 using System.Threading.Tasks;
 using ProjectPanda.Views.AppoinmentViews;
+using System.Windows.Input;
 
 namespace ProjectPanda.ViewModels
 {
-    public class MyAppointmentsViewModel :BaseViewModel, INotifyPropertyChanged
+    public class MyAppointmentsViewModel : BaseViewModel
     {
         private string buildingDetails;
         private DateTime dates;
         private TimeSpan times;
+        
+
         public MyAppointmentsViewModel()
         {
             MyAppointmentsViewModelText = "Doctor";
-            NavigateToDocPracSelect = new Command(SelectPracAndDoc);
-            
-            //Temp navigation for testing
-            NavigateToCalendarSelect = new Command(SelectDate);
+            NavigateToSerapisBooking =new Command(async () => await GoToSerapisBooking());
+            NavigateToDateBooking = new Command(async () => await GoToDateBooking());
         }
-
-        //Temp
-        private void SelectDate()
-        {
-            App.Current.MainPage.Navigation.PushAsync(new FieldsOfSpecialization());
-        }
-
 
 
         #region Variables
@@ -51,36 +45,7 @@ namespace ProjectPanda.ViewModels
             set
             {
                 _MyAppointmentsViewModelText = value;
-                if(PropertyChanged != null)
-                {
-                    PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(MyAppointmentsViewModelText)));
-                }
-            }
-        }
-
-        public DateTime DateTextLabel
-        {
-            get
-            {
-                return dates;
-            }
-            set
-            {
-                dates= value;
-                OnPropertyChanged("DateTextLabel");
-            }
-        }
-
-        public TimeSpan TimeTextLabel
-        {
-            get
-            {
-                return times;
-            }
-            set
-            {
-                times = value;
-                OnPropertyChanged("TimeTextLabel");
+           
             }
         }
 
@@ -96,29 +61,22 @@ namespace ProjectPanda.ViewModels
                 OnPropertyChanged("MedicalBuildingId");
             }
         }
+       
+        public ICommand NavigateToSerapisBooking { get; set; }
 
-        public Command NavigateToDocPracSelect { get; set; }
-
-        public Command NavigateToCalendarSelect { get; set; }
-
-        public Command NavigateToTimeSelect { get; set; }
+        public ICommand NavigateToDateBooking { get; set; }
         #endregion
 
 
-        new public event PropertyChangedEventHandler PropertyChanged;
-
         #region Methods
-        private void OnPropertyChanged(string propertyName)
+        private async Task GoToSerapisBooking()
         {
-            if (propertyName != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+           await App.Current.MainPage.Navigation.PushAsync(new FieldsOfSpecialization());
         }
 
-        private async void SelectPracAndDoc()
+        private async Task GoToDateBooking()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new MedicalBuildingView(), true);
+            await App.Current.MainPage.Navigation.PushAsync(new FieldsOfSpecilizationDate());
         }
 
         #endregion

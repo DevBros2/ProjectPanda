@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+using ProjectPanda.Models;
 
 namespace ProjectPanda.Cell
 {
@@ -17,9 +18,9 @@ namespace ProjectPanda.Cell
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            var message = item as ChatBotMessage;
+            var message = item as Models.ChatBotMessage;
             // There must be a loop here as each item is added to the list
-            if (message.IsUser)
+            if (message.Incoming)
                 return userMessage;
                  
             

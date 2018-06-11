@@ -2,183 +2,81 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.ProfilePage"
-             BackgroundColor="{StaticResource BackgroundColor}"
-            xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"     
+             BackgroundColor="White"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"     
              NavigationPage.TitleIcon="Profile"
+             Padding="10"
              >
+
+ 
+    
     <ContentPage.Content>
-        
-            <ScrollView>
-           
-            <!--#region The whole thing-->    
-            <Grid Padding="10">
-                
-                    <Grid.RowDefinitions>
-                    <RowDefinition  Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                 
-                     </Grid.RowDefinitions>
-
-                <!--#region The first part of the card-->
-                
-                <StackLayout Grid.Row="0">
-
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="8*"/>
-                            <RowDefinition Height="2*"/>
-
-                        </Grid.RowDefinitions>
-
-                        <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit" BorderColor="Black" BorderThickness="3" Grid.Row="0" Margin="0,20,0,0">
-                            <controls:CircleImage.WidthRequest>
-                                <OnPlatform x:TypeArguments="x:Double">
-                                    <On Platform="Android, iOS">125</On>
-                                    <On Platform="WinPhone">75</On>
-                                </OnPlatform>
-                            </controls:CircleImage.WidthRequest>
-                            <controls:CircleImage.HeightRequest>
-                                <OnPlatform x:TypeArguments="x:Double">
-                                    <On Platform="Android, iOS">125</On>
-                                    <On Platform="WinPhone">75</On>
-                                </OnPlatform>
-                            </controls:CircleImage.HeightRequest>
-                        </controls:CircleImage>
-
-                        <Label Text="Khanyisani Buthelezi" HorizontalOptions="Center" TextColor="Black" FontSize="25" Grid.Row="1"/>
-
-                    </Grid>
-                
-                </StackLayout>
-
-                <!--#endregion-->
-                
-                <!--#region  The second part of the card-->
-                
-                <StackLayout Grid.Row="1" VerticalOptions="Center">
-                    <Grid RowSpacing="20">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="200"/>
-                            <RowDefinition Height="200"/>
-                            <RowDefinition Height="200"/>
-                            <RowDefinition Height="200"/>
-                            <RowDefinition Height="70"/>
-
-                        </Grid.RowDefinitions>
-
-                      <!--#region  The medical information cards-->
-                        
-                        <Frame Grid.Row="0"   BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
+        <Grid>
+            <ListView Grid.Row="0" 
+                      SeparatorVisibility="Default"
+                      ItemsSource="{Binding ListPatientInformation}"
+                      HasUnevenRows="True"
+                      SeparatorColor="Black"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="70"/>
-                                    <RowDefinition Height="30"/>
-                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="5*"/>
+                                    <RowDefinition Height="5*"/>
                                 </Grid.RowDefinitions>
 
-                              
-                                <Image Source="hospital.png" VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Grid Grid.RowSpan="1" Grid.Column="0" VerticalOptions="Center">
+                                    <Image 
+                                        Source="{Binding Icon}" 
+                                        VerticalOptions="Center" 
+                                        HorizontalOptions="Center" 
+                                        Aspect="AspectFit"
+                                        />
+                                </Grid>
 
-                                <Label Grid.Row="1" Text="Medical Aid" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
 
-                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="Discovery health"   Style="{DynamicResource InformationLabel}" />
+                                <Grid Grid.Column="1" Grid.Row="0" VerticalOptions="Center">
+                                    <Label 
+                                          VerticalOptions="Center" 
+                                          HorizontalOptions="Center" 
+                                          Text="{Binding SubTitle}" 
+                                          Style="{DynamicResource HeaderAttributes}"
+                                            />
+                                </Grid>
 
+
+                                <Grid Grid.Column="1" Grid.Row="1" VerticalOptions="Center">
+                                    <Label
+                                          VerticalOptions="Center" 
+                                          HorizontalOptions="Center" 
+                                          Text="{Binding Title}" 
+                                          Style="{DynamicResource InformationLabel}"
+                                            />
+                                </Grid>
+                                
                             </Grid>
-                            
-                        </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
 
-                        <Frame Grid.Row="1" BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="70"/>
-                                    <RowDefinition Height="30"/>
-                                    <RowDefinition Height="30"/>
-                                </Grid.RowDefinitions>
-
-
-                                <Image Source="bloodtype.png"  VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
-
-                                <Label Grid.Row="1" Text="Blood Type" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
-
-                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" x:Name="BloodType"   Style="{DynamicResource InformationLabel}" />
-
-                            </Grid>
-
-
-                        </Frame>
-
-                        <Frame Grid.Row="2" BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="70"/>
-                                    <RowDefinition Height="30"/>
-                                    <RowDefinition Height="30"/>
-                                </Grid.RowDefinitions>
-
-
-                                <Image Source="gender.png" VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
-
-                                <Label Grid.Row="1" Text="Gender" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
-
-                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="Male"   Style="{DynamicResource InformationLabel}" />
-
-                            </Grid>
-
-
-                        </Frame>
-
-
-                        <Frame Grid.Row="3" BackgroundColor="#ffff" HeightRequest="125"  CornerRadius="5">
-
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="70"/>
-                                    <RowDefinition Height="30"/>
-                                    <RowDefinition Height="30"/>
-                                </Grid.RowDefinitions>
-
-
-                                <Image Source="age.png" VerticalOptions="Start" HorizontalOptions="Center" Aspect="AspectFit" Grid.Row="0" />
-
-                                <Label Grid.Row="1" Text="Age" HorizontalOptions="Center" VerticalOptions="Start" Style="{DynamicResource HeaderAttributes}" />
-
-                                <Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Text="21"   Style="{DynamicResource InformationLabel}"/>
-
-                            </Grid>
-
-
-                        </Frame>
-
-                        <!--#endregion-->
-
-                        
-                        <!--#region  The more medical card-->
-                        <Button Grid.Row="4" 
-                                Image="moremeds.png" 
-                                TextColor="Black"  
-                                BorderRadius="4" 
-                                BorderColor="White" 
-                                BorderWidth="2" 
-                                Text="Detailed Information" 
-                                BackgroundColor="{StaticResource ButtonLoginColour}" 
-                                Command="{Binding NavigateToFiles}"
-                                />
-                        <!--#endregion-->
-
-
-                    </Grid>
-                </StackLayout>
-                
-                <!--#endregion-->
-                
-            </Grid>
-           
-            <!--#endregion-->
-                
-            </ScrollView>
-        
+                <ListView.Footer>
+                    <StackLayout HorizontalOptions="Center">
+                        <Image Source="MoreIcon.png" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateToFiles}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
+    
 </ContentPage>

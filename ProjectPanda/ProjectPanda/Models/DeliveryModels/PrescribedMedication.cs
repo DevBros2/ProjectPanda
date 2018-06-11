@@ -4,14 +4,55 @@ using System.Text;
 
 namespace ProjectPanda.Models
 {
-    public  class PrescribedMedication
+    public class PrescribedMedication
     {
 
         private string medication;
         private string dosageamount;
-        private string medicationdescription;
-     
+        private string medicationDescription;
+        private string addedNotes;
+        private string medicationTitle;
+        private string dosageAmountTitle;
+        private string addedNotesTitle;
+        private string medicationDescriptionTitle;
+        private string id; 
 
+
+        public string MedicationTitle
+        {
+            get
+            {
+                return medicationTitle;
+            }
+            set
+            {
+                medicationTitle = value;
+            }
+        }
+
+        public string DosageAmountTitle
+        {
+            get
+            {
+                return dosageAmountTitle;
+            }
+            set
+            {
+                dosageAmountTitle = value;
+            }
+        }
+
+        public string MedicationDescriptionTitle
+        {
+            get
+            {
+                return medicationDescriptionTitle;
+            }
+            set
+            {
+                medicationDescriptionTitle = value;
+            }
+        }
 
         public string Medication
         {
@@ -39,21 +80,30 @@ namespace ProjectPanda.Models
             }
         }
 
-
         public string MedicationDescription
         {
             get
             {
-                return medicationdescription;
+                return medicationDescription;
             }
 
             set
             {
-                medication = value;
+                medicationDescription = value;
             }
         }
 
-
+        public string AddedNotes
+        {
+            get
+            {
+                return addedNotes;
+            }
+            set
+            {
+                addedNotes = value;
+            }
+        }
 
     }
 }

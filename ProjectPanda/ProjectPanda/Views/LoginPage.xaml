@@ -2,74 +2,56 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.LoginPage"
+             BackgroundImage="fish.png"
              >
 
 
-        <RelativeLayout>
-
-            <Image Source="fish.png" Aspect="AspectFill" 
-         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"  
-         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"      
-         />
-
-            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+    <ContentPage.Content>
+        <Grid Padding="10">
 
 
-                <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="2.5*"/>
+            </Grid.RowDefinitions>
 
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition Height="200"/>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White">
+                <!--Logo here-->
+
+            </StackLayout>
+
+            <StackLayout  VerticalOptions="Center"  Grid.Row="1" >
 
 
-                <StackLayout Grid.Row="0"  Margin="0,0,0,0">
-                    <!--Logo here-->
-                    
-                </StackLayout>
-                    
-                    
-                    <StackLayout  VerticalOptions="Center" Margin="30,90,30,0" Grid.Row="1" >
+                <Label Text="Login"  HorizontalOptions="Center" Margin="15" TextColor="White" FontSize="30" FontAttributes="Bold"/>
 
+                <Image Source="loginArrow.png">
+                    <Image.GestureRecognizers >
+                        <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
 
-                    <Label Text="Login"  HorizontalOptions="Center" Margin="15" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+            </StackLayout>
 
-                    <Image Source="loginArrow.png">
-                        <Image.GestureRecognizers >
-                           
-                            <TapGestureRecognizer Tapped="prompt"/>
-                        </Image.GestureRecognizers>
-                    </Image>
+            <StackLayout Grid.Row="2" VerticalOptions="End">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
 
-
-
-                </StackLayout>
-
-
-
-                
-                <StackLayout Grid.Row="3"  VerticalOptions="Center" >
-                    <Button Margin="30,0,30,10" 
+            <StackLayout Grid.Row="3"  VerticalOptions="Center" >
+                <Button Margin="30,0,30,10" 
                             Text="Need Help?" 
                             BackgroundColor="{StaticResource ButtonLoginColour}" 
                             TextColor="White"
                             BorderWidth="1" 
                             Opacity="0.80"  
                             FontSize="18"
-                            Clicked="ContactUs"
                             />
-                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
 
-                </Grid>
-
-
-            </Grid>
-
-
-        </RelativeLayout>
 
 </ContentPage>

@@ -13,17 +13,17 @@ namespace ProjectPanda.ViewModels.UserViewModels
 {
      public class ProfilePageViewModel:ObservableRangeCollection<PatientInfo>, INotifyPropertyChanged
     {
-        public ObservableRangeCollection<PatientInfo> listPatientInformation;
+
+        PatientInfo info = new PatientInfo();
 
         public Command NavigateToFiles{ get; set; }
 
-        public ObservableRangeCollection<PatientInfo> ListPatientInformation { get; set; }
+        public ObservableRangeCollection<PatientCard> ListPatientInformation { get; set; }
       
-
         public ProfilePageViewModel()
         {
             NavigateToFiles = new Command(GoToPrivateInformation);
-            ListPatientInformation = new ObservableRangeCollection<PatientInfo>();
+            LoadPatientInformation();
         }
 
 
@@ -32,14 +32,15 @@ namespace ProjectPanda.ViewModels.UserViewModels
             await App.Current.MainPage.Navigation.PushAsync(new DetailedUserInfo());
         }
 
-        private async Task LoadPatientInformation()
+        private void LoadPatientInformation()
         {
-
-            //list all the patient information here
-            foreach (var info in ListPatientInformation)
+            ListPatientInformation = new ObservableRangeCollection<PatientCard>()
             {
-                ListPatientInformation.Add(info);
-            }
+               new PatientCard{Title=info.Age="21", Icon="Age.png", SubTitle="Age"},
+               new PatientCard{Title=info.MedicalAid="Bonitas", Icon="MedicalAid.png", SubTitle="Medical aid"},
+               new PatientCard{Title=info.Gender="Male", Icon="gender.png", SubTitle="Gender"},
+               new PatientCard{Title=info.BloodType="A+", Icon="Blood.png", SubTitle="Blood type"}
+            };
         }
 
 

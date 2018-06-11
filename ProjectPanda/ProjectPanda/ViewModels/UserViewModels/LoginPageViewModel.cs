@@ -3,11 +3,27 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using ProjectPanda.ViewModels.Base;
+using System.Windows.Input;
+using System.Threading.Tasks;
+using ProjectPanda.Pages;
+using Xamarin.Forms;
 
 namespace ProjectPanda.ViewModels.UserViewModels
 {
-    public class LoginPageViewModel : INotifyPropertyChanged
+    public class LoginPageViewModel : BaseViewModel
     {
+        public ICommand LoginCommand { get; set; }
+        public ICommand HelpCommand { get; set; }
+
+
+        public LoginPageViewModel()
+        {
+            SignInRequired = true;
+            LoginCommand = new Command(async () => await Login());
+        }
+
+        #region Properties
         private bool _signInRequired;
         public bool SignInRequired
         {
@@ -18,29 +34,43 @@ namespace ProjectPanda.ViewModels.UserViewModels
             private set
             {
                 _signInRequired = value;
-                RaisePropertyChanged();
-
+                // OnPropertyChanged("SignInRequired");
             }
         }
+        #endregion
 
-        public LoginPageViewModel()
-        {
-            SignInRequired = true;
-        }
-
+        #region Methods
         public void SignIn()
         {
             SignInRequired = false;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void RaisePropertyChanged([CallerMemberName] string property = null)
+        private async Task Login()
         {
-            var propChanged = PropertyChanged;
-            if (propChanged != null)
+            
+            try
             {
-                propChanged(this, new PropertyChangedEventArgs(property));
+                IsBusy = true;
+
+                await App.Current.MainPage.Navigation.PushAsync(new SignUpPrompt());
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
+
+        private async Task Help()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new SupportPage());
+        }
+
+        #endregion
+
     }
 }

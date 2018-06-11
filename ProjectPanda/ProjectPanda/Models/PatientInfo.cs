@@ -53,5 +53,12 @@ namespace ProjectPanda.Models
         [JsonProperty(PropertyName = "MedicationTaken")]
         public List<MedicationModel> MedicationTaken { get; set; }
 
+        [JsonProperty(PropertyName = "Age")]
+        public string Age { get; set; }
+
+        [JsonProperty(PropertyName = "Gender")]
+        public string Gender { get; set; }
+
+
     }
 }

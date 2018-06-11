@@ -2,94 +2,110 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.Delivery"
-             BackgroundColor="{StaticResource BackgroundColor}"   
-            xmlns:PopperPage="clr-namespace:ProjectPanda.Views.PopUpPages"
+             BackgroundColor="White"   
+             xmlns:PopperPage="clr-namespace:ProjectPanda.Views.PopUpPages"
+             Padding="10"
              >
 
+
     <ContentPage.Content>
-       
-        <Grid Padding="15">
-
+        <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="5*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
-            
-            <!--#region Section 1-->
-        <Grid Grid.Row="0" VerticalOptions="StartAndExpand">
-            <Grid.RowDefinitions>
-               
-                <RowDefinition Height="Auto"/>
-              
-               
-            </Grid.RowDefinitions>
 
-          
-            <!--#region The section for doctor prescription buttons-->
-
-            <Grid Grid.Row="0" RowSpacing="20">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-
-                    <Label Text="Doctor prescription" HorizontalOptions="Start"  TextColor="Black" Style="{DynamicResource FontStyle}"  Grid.Row="0"/>
-
-                    <Button  Text="Show Prescription" Image="moremeds.png"  BackgroundColor="{StaticResource ButtonLoginColour}"  Grid.Row="1" HeightRequest="65" VerticalOptions="Start" Clicked="ShowDocPrecription"/>
-               
-                    <Button x:Name="MedDeliveryButton" Text="Prescription Delivery History" VerticalOptions="Start" TextColor="Black"  BorderWidth="2" BackgroundColor="{StaticResource ButtonLoginColour}"  Image="historyOfDel.png"  Clicked="DocPrescriptionHistory" Grid.Row="2"/>
-
+            <Grid Grid.Row="0">
+                <Label 
+                Text="Doctor prescription" 
+                HorizontalOptions="Center"  
+                TextColor="Black" 
+                Style="{DynamicResource FontStyle}" 
+                Grid.Row="0"
+                />
             </Grid>
-           
-            <!--#endregion-->
-            
-            
-         
-            
-        </Grid>
-        <!--#endregion-->
 
-            <!--#region Section 2-->
-            <Grid Grid.Row="1" VerticalOptions="StartAndExpand">
+            <Grid Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
 
-                <Grid.RowDefinitions>
+                    <Image 
+                        Source="DoctorPrescription.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
 
-                    <RowDefinition Height="Auto"/>
-                  
-                </Grid.RowDefinitions>
+                    <Label
+                        Text="Show Prescription"
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="20"
+                        />
 
-            
-
-                <!--#region The section for the self prescription buttons-->
-
-                <Grid Grid.Row="0" >
-
-                    <Grid RowSpacing="20">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-
-
-                        <Button Text="Order Medicine" BackgroundColor="{StaticResource ButtonLoginColour}" Image="pill.png" VerticalOptions="Center" HeightRequest="65"  BorderWidth="2"  Grid.Row="1" Clicked="OrderMedicine"/>
-                        <Button Text="Order History" BackgroundColor="{StaticResource ButtonLoginColour}" HeightRequest="65" Grid.Row="2" VerticalOptions="End" Image="historyOfDel.png" Clicked="OrderHistorySelfPrecribedMeds"/>
-                        <Label Text="Self prescription"  TextColor="Black" Style="{DynamicResource FontStyle}" Grid.Row="0"/>
-
-
-                    </Grid>
-
-                  
                 </Grid>
 
-                <!--#endregion-->
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToPrescription}"/>
+                </Grid.GestureRecognizers>
+            
+            </Grid>
+
+            <BoxView
+                Grid.Row="2" 
+                HorizontalOptions="FillAndExpand" 
+                Color="Black"
+                />
+
+            <Grid Grid.Row="3">
+                <Label 
+                Text="Self prescription" 
+                HorizontalOptions="Center"  
+                TextColor="Black" 
+                Style="{DynamicResource FontStyle}" 
+                Grid.Row="0" 
+                />
+            </Grid>
+
+            <Grid Grid.Row="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image 
+                        Source="DoctorPrescription.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+
+                    <Label
+                        Text="Chat Bot"
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="20"
+                        TextColor="Black"
+                        />
+
+                </Grid>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToSelfPresription}"/>
+                </Grid.GestureRecognizers>
 
             </Grid>
-            <!--#endregion-->
-            
+
         </Grid>
-        
     </ContentPage.Content>
+    
 </ContentPage>
