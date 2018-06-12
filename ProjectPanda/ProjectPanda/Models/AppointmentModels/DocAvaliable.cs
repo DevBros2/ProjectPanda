@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -6,39 +6,33 @@ using Newtonsoft.Json;
 
 namespace ProjectPanda.Models
 {
-    public class DocAvaliable :Appointment, INotifyPropertyChanged
+    public class DocAvaliable : Appointment
     {
+        [BsonId]
+        public ObjectId Id { get; set; }
 
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        //[BsonElement("id")]
+        //public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        [BsonElement("docName")]
+        public string DocName { get; set; }
 
-        [JsonProperty(PropertyName = "varsity")]
+        [BsonElement("varsity")]
         public string Varsity { get; set;}
 
-        [JsonProperty(PropertyName = "profileimageurl")]
+        [BsonElement("profileimageurl")]
         public string ProfileImageURl { get; set; }
 
-
-        [JsonProperty(PropertyName = "medicalbuilding")]
+        [BsonElement("medicalbuilding")]
         public string MedicalBuilding { get; set; }
 
-        [JsonProperty(PropertyName = "complete")]
+        [BsonElement("complete")]
         public bool Complete { get; set; }
-
+        
+        [BsonElement("docSpecilization")]
+        public Specilization DocSpecilization { get; set; }
         //not sure what this property does
         public bool IsVisible { get; set; }
 
-        public Specilization docSpecilization { get; set; }
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public static implicit operator string(DocAvaliable v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
