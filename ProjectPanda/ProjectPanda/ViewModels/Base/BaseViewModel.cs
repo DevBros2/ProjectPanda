@@ -1,4 +1,4 @@
-﻿using ProjectPanda.Utils;
+using ProjectPanda.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +29,18 @@ namespace ProjectPanda.ViewModels.Base
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
+       public static void SetActivityIndicatorStatus(bool isNetworkConnectionActive)
+        {
+            if (isNetworkConnectionActive)
+            {
+                _networkIndicatorCount++;
+                Device.BeginInvokeOnMainThread(() => Application.Current.MainPage.IsBusy = true);
+            }
+            else if (--_networkIndicatorCount <= 0)
+            {
+                _networkIndicatorCount = 0;
+                Device.BeginInvokeOnMainThread(() => Application.Current.MainPage.IsBusy = false);
+            }
+}
     }
 }
