@@ -14,7 +14,7 @@ namespace ProjectPanda.Models.AppointmentModels
        
         public string FullName
         {
-           set { value= Name; }
+           set { value= DocName; }
         }
 
 

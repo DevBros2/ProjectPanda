@@ -40,7 +40,7 @@
                                         </Grid>
 
                                         <StackLayout Grid.Row="0">
-                                            <Label Text="{Binding Name}" FontSize="20" VerticalOptions="StartAndExpand" TextColor="Black"/>
+                                            <Label Text="{Binding DocName}" FontSize="20" VerticalOptions="StartAndExpand" TextColor="Black"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Row="1">

@@ -52,7 +52,7 @@ namespace ProjectPanda.Views
             if (item == null)
                 return;
 
-            string listitem = item.Name.ToString(); 
+            string listitem = item.DocName.ToString(); 
             //This sends the message of itemSelected
             MessagingCenter.Send<AppointmentView,string>(this, _BasicString, listitem);
 
