@@ -47,6 +47,7 @@
       <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MongoDBResp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\FieldsOfExpiertiseConstants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />
