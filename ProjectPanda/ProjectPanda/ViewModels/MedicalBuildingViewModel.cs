@@ -7,21 +7,59 @@ using Entry = Microcharts.Entry;
 using SkiaSharp;
 using Microcharts;
 
+using ProjectPanda.Services;
 using ProjectPanda.Models;
 using ProjectPanda.ViewModels.Base;
+using System.Threading.Tasks;
 
 namespace ProjectPanda.ViewModels
 {
     public class MedicalBuildingViewModel : BaseViewModel
     {
+       // readonly static string connectionString = "mongodb://localhost:27017";//for local development
+        readonly static string connectionString = "mongodb+srv://Bonga:langelihle@cluster0-bkjo1.mongodb.net/test?retryWrites=true";
         //float ChartValue;
+        MongoDBResp mongoDB = new MongoDBResp(connectionString);
         public ObservableCollection<MedicalBuildingModel> Practices { get; set; }
+        List<MedicalBuildingModel> Practice = new List<MedicalBuildingModel>();
+        List<MedicalBuildingModel> practices = new List<MedicalBuildingModel>();
         public object SelectedItem { get; set; }
+        public string medicalbuilding;
+        public string FieldsSpecilized;
 
         public MedicalBuildingViewModel()
         {
             GenerateMedicalBuildingModel();
-           
+            //LoadMedicalBuildingAsync();
+        }
+
+        private async Task<List<MedicalBuildingModel>> LoadMedicalBuildingAsync()
+        {
+            var ConnectedToDB = mongoDB.CheckConnection();
+            if(ConnectedToDB !=false)
+                try
+                {
+                    int NumOfPractices = 0;
+                    //need to implement the itemtapped
+                    //must get values from MessagingCenter
+                    practices = await mongoDB.GetUsersBySpecialization(medicalbuilding,FieldsSpecilized);
+                    while (NumOfPractices < practices.Count)
+                    {
+                        //Practice.Add(practices);
+                        Practice.AddRange(practices);
+                        NumOfPractices++;
+                    }
+                    
+                }
+                catch(Exception e)
+                {
+                    //e.debug.writeline();
+                }
+                finally
+                {
+                    //return Practices;
+                }
+            return Practice;
         }
 
         #region ListViewData

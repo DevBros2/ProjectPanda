@@ -9,13 +9,12 @@ namespace ProjectPanda.Services
 {
     public class MongoDBResp
     {
-        readonly static string connectionString = "mongodb://localhost:27017";//for local development
         readonly static string DatabaseCall = "database"; //making it readonly so cant be attacked easily
         readonly static string CollectionCall = "Collection";
 
         private IMongoClient _client;
         private IMongoDatabase _database;
-        IMongoCollection<DocAvaliable> _doctorCollection;
+        IMongoCollection<MedicalBuildingModel> _doctorCollection;
 
         /// <summary>
 
@@ -45,15 +44,15 @@ namespace ProjectPanda.Services
                 .GetDatabase(DatabaseCall);
 
             _doctorCollection = _database
-                .GetCollection<DocAvaliable>(CollectionCall); 
+                .GetCollection<MedicalBuildingModel>(CollectionCall); 
             
         }
-        public async Task<List<DocAvaliable>> GetUsersBySpecialization(string medicalbuilding, string docSpecialization )
+        public async Task<List<MedicalBuildingModel>> GetUsersBySpecialization(string medicalbuilding, string FieldsSpecilized)
         {
             //filter function, this will filter by Medical building and specialization
-            var filter = Builders<DocAvaliable>
+            var filter = Builders<MedicalBuildingModel>
                 .Filter
-                .Eq(medicalbuilding, docSpecialization);
+                .Eq(medicalbuilding, FieldsSpecilized);
             //adds filter to the query
             var result = await _doctorCollection
                 .Find(filter)
