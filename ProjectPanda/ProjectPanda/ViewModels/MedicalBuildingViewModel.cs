@@ -18,11 +18,10 @@ namespace ProjectPanda.ViewModels
     {
        // readonly static string connectionString = "mongodb://localhost:27017";//for local development
         readonly static string connectionString = "mongodb+srv://Bonga:langelihle@cluster0-bkjo1.mongodb.net/test?retryWrites=true";
-        //float ChartValue;
         MongoDBResp mongoDB = new MongoDBResp(connectionString);
         public ObservableCollection<MedicalBuildingModel> Practices { get; set; }
         List<MedicalBuildingModel> Practice = new List<MedicalBuildingModel>();
-        List<MedicalBuildingModel> practices = new List<MedicalBuildingModel>();
+        //List<MedicalBuildingModel> practices = new List<MedicalBuildingModel>();
         public object SelectedItem { get; set; }
         public string medicalbuilding;
         public string FieldsSpecilized;
@@ -39,13 +38,14 @@ namespace ProjectPanda.ViewModels
             if(ConnectedToDB !=false)
                 try
                 {
+                    IsBusy = true;//Starts ActivityIndicator
+
                     int NumOfPractices = 0;
                     //need to implement the itemtapped
                     //must get values from MessagingCenter
-                    practices = await mongoDB.GetUsersBySpecialization(medicalbuilding,FieldsSpecilized);
+                    var practices = await mongoDB.GetUsersBySpecialization(medicalbuilding,FieldsSpecilized);
                     while (NumOfPractices < practices.Count)
                     {
-                        //Practice.Add(practices);
                         Practice.AddRange(practices);
                         NumOfPractices++;
                     }
@@ -57,7 +57,7 @@ namespace ProjectPanda.ViewModels
                 }
                 finally
                 {
-                    //return Practices;
+                    IsBusy = false;
                 }
             return Practice;
         }

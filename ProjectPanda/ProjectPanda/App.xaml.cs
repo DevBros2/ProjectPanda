@@ -14,7 +14,7 @@ namespace ProjectPanda
 {
 	public partial class App : Application
 	{
-        public bool IsLoggedIn;
+        
 
         //The variable for the local database
         public static string DatabaseLocation = string.Empty;
@@ -27,9 +27,9 @@ namespace ProjectPanda
 
         public App(string dbLocation)
         {
-            IsLoggedIn = false;
+            
             InitializeComponent();
-            SerapisInit();
+            MainPage = new NavigationPage(new MainPage());
 
             DatabaseLocation = dbLocation;
 
@@ -39,31 +39,13 @@ namespace ProjectPanda
         #region App constructor without any construtor arguments 
         public App ()
 		{
-            IsLoggedIn = true;
 			InitializeComponent();
-
-            SerapisInit(); 
+            MainPage = new NavigationPage(new MainPage());
+           
         }
         #endregion
 
-        #region Method to test if the user is logged in or not 
-        private void SerapisInit()
-        {
-            if (IsLoggedIn==true)
-            {
-                 MainPage = new NavigationPage(new MainPage());
-               // MainPage = new NavigationPage(new DetailFill());
-            }
-
-
-            else
-            {
-                MainPage = new NavigationPage(new LoginPage());
-            }
-
-            
-        }
-        #endregion
+      
 
 
         #region Start method
