@@ -4,51 +4,120 @@
              x:Class="ProjectPanda.Views.DetailedUserInfo"
              Title="Detailed Information"            
              BackgroundColor="{StaticResource BackgroundColor}"
+             Padding="10"
              >
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Padding="20">
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="25*"/>
-                        <RowDefinition Height="25*"/>
-                        <RowDefinition Height="25*"/>
-                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToAllergiesList}"/>
+                    </Grid.GestureRecognizers>
+                                        
+                    <Image Grid.Row="0" Source="allergiesIcon.png"/>
+
+                    <Label Grid.Row="1" HorizontalOptions="Center" Text="Allergies"/>
+                </Grid>
+            </Grid>
+
+            <BoxView Grid.Row="1" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand" 
+                     Color="Black"
+                     />
+
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
 
-                    <Button Text="Allergies" 
-                            BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Command="{Binding NavigateToAllergiesList}" 
-                            Image="allergiesIcon.png"
-                            Grid.Row="0"
-                            />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToChronicList}"/>
+                    </Grid.GestureRecognizers>
 
+                    <Image Grid.Row="0" Source="chronicIcon.png"/>
 
-                    <Button Text="Medication" 
-                            BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Command="{Binding NavigateToRecurringMeds}" 
-                            Image="medicationBottle.png"
-                            Grid.Row="1"
-                            />
-
-
-                    <Button Text="Chronic Diseases"
-                            BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Command="{Binding NavigateToChronicList}" 
-                            Image="chronicDisease.png"
-                            Grid.Row="2"
-                            />
-
-                    <Button Text="Medical Records" 
-                            Image="record.png" 
-                            BackgroundColor="{StaticResource ButtonLoginColour}" 
-                            Command="{Binding NavigateToMedicalRecords}"
-                            Grid.Row="3"
-                            />
-
+                    <Label 
+                        TextColor="Black" 
+                        Grid.Row="1" 
+                        HorizontalOptions="Center" 
+                        Text="Chronic Diseases"
+                        />
                 </Grid>
-            </StackLayout>
-        </ScrollView>
+            </Grid>
+
+            <BoxView Grid.Row="3" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand" 
+                     Color="Black"
+                     />
+
+            <Grid Grid.Row="4">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToRecurringMeds}"/>
+                    </Grid.GestureRecognizers>
+                    
+                    <Image Grid.Row="0" Source="medicationIcon.png"/>
+
+                    <Label Grid.Row="1" 
+                           TextColor="Black" 
+                           HorizontalOptions="Center" 
+                           Text="Medications"
+                           />
+                </Grid>
+            </Grid>
+
+            <BoxView Grid.Row="5" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand" 
+                     Color="Black"
+                     />
+
+            <Grid Grid.Row="6">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToMedicalRecords}"/>
+                    </Grid.GestureRecognizers>
+
+                    <Image Grid.Row="0" Source="FolderIcon.png"/>
+
+                    <Label Grid.Row="1" 
+                           HorizontalOptions="Center" 
+                           Text="Files"
+                           TextColor="Black"
+                           />
+                </Grid>
+            </Grid>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
