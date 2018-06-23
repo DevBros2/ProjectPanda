@@ -37,23 +37,75 @@ namespace ProjectPanda.ViewModels.DetailUserViewModels
   
         private async void GoToChronicList()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new ChronicDiseaseList());
+            IsBusy = true;
+
+            try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new ChronicDiseaseList());
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
         
         private async void GoToMedicationList()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new MedicationDetailList());
+            IsBusy = true;
+
+            try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new MedicationDetailList());
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
         }
 
         private async void GoToAllergiesList()
         {
+            IsBusy = false;
 
-            await App.Current.MainPage.Navigation.PushAsync(new AllergiesDetailList());
+            try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new AllergiesDetailList());
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
         private async void GoToMedicalFiles()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new MedicalRecords());
+            IsBusy = true;
+
+            try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new MedicalRecords());
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
         #endregion

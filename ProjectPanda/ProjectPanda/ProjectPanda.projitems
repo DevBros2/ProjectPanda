@@ -32,6 +32,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\DetailedUserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\MedicalFilesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\MedicationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DistanceCalculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DocAvaliable.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DeliveryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DoctorPrescriptionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\MedicalFilesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SideMenuViewModel.cs" />

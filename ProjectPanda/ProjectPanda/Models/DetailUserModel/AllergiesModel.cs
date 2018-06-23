@@ -15,9 +15,6 @@ namespace ProjectPanda.Models.DetailUserModel
 
         public string AllergyIcon { get; set; }
 
-        public const string Icon = "allergiesIcon.png";
-
-        public const string Title = "Allergies";
     }
 
 }
