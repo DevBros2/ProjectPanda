@@ -59,6 +59,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SideMenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SignUpPromptViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
