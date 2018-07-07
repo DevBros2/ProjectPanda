@@ -278,6 +278,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\JudoPay\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\CustomViews\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\SettingsViews\" />
   </ItemGroup>
   <ItemGroup>
