@@ -11,11 +11,9 @@ namespace ProjectPanda.Models.DetailUserModel
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        
         public string AllergyName { get; set; }
 
         public string AllergyIcon { get; set; }
-
 
     }
 

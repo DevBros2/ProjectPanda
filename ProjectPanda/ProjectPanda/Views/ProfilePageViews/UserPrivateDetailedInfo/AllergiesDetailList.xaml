@@ -4,6 +4,7 @@
              x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.AllergiesDetailList"
              Title="My Allergies"
              BackgroundColor="{StaticResource BackgroundColor}"
+             Padding="10"
              >
 
 
@@ -12,38 +13,48 @@
     </ContentPage.ToolbarItems>
 
 
-        <ListView HasUnevenRows="True" SeparatorVisibility="None" ItemsSource="{Binding _allergies}" Grid.Row="1">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ContentView Padding="15">
-                                <Frame OutlineColor="Black" Padding="10" CornerRadius="8" VerticalOptions="StartAndExpand" HeightRequest="80">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
+        <ListView 
+            HasUnevenRows="True" 
+            SeparatorVisibility="Default" 
+            SeparatorColor="Black"
+            ItemsSource="{Binding _allergies}" 
+            Grid.Row="1"
+            >
 
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="60"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            
-                                        </Grid.ColumnDefinitions>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
 
-                                    <StackLayout HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Padding="5">
-                                        <Image Source="{Binding AllergyIcon}"  />
-                                    </StackLayout>
+                        <Grid 
+                        HorizontalOptions="Start" 
+                        VerticalOptions="Start" 
+                        Grid.Column="0" 
+                        >
+                            <Image Source="{Binding AllergyIcon}"  />
+                        </Grid>
 
-                                    <StackLayout HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="0" Grid.Column="1" Margin="20,20,0,0">
-                                    <Label Text="{Binding AllergyName}"   Style="{DynamicResource InformationLabel}"/>
-                                    </StackLayout>
+                        <Grid 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        Grid.Column="1" 
+                        >
+                            <Label Text="{Binding AllergyName}" 
+                               Style="{DynamicResource InformationLabel}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"    
+                            />
+                        </Grid>
 
-                                </Grid>
-                                </Frame>
-                            </ContentView>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
- 
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+            
+        </ListView> 
 
 </ContentPage>

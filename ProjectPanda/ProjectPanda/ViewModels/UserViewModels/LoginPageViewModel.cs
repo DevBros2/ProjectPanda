@@ -47,11 +47,12 @@ namespace ProjectPanda.ViewModels.UserViewModels
 
         private async Task Login()
         {
-            
+
+            IsBusy = true;
+
             try
             {
-                IsBusy = true;
-
+                
                 await App.Current.MainPage.Navigation.PushAsync(new SignUpPrompt());
 
             }
