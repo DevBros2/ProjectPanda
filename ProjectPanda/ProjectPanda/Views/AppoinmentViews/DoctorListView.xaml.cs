@@ -13,13 +13,13 @@ using Xamarin.Forms.Xaml;
 namespace ProjectPanda.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AppointmentView : ContentPage
+	public partial class DoctorListView : ContentPage
 	{
         DoctorListViewModel viewmodel;
         public DocAvaliable DocAvaliable;
         private String _BasicString = "Doctor"; //a global string needs to be created
 
-		public AppointmentView ()
+		public DoctorListView()
 		{
 			InitializeComponent ();
            // DoctorList.On<Android>().SetIsFastScrollEnable(true);
@@ -34,27 +34,20 @@ namespace ProjectPanda.Views
         }
 
 
-        private void DoctorList_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            var vm = viewmodel;
-
-
-            var doctors = e.Item as DocAvaliable;
-            vm.HideOrShowProfile(doctors);
-        }
+        
 
         private async void DoctorList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             //simulates connection latency
-           // await Task.Delay(4000);
-
-            var item = e.SelectedItem as DocAvaliable;
-            if (item == null)
+            // await Task.Delay(4000);
+            if (!(e.SelectedItem is DocAvaliable item))
                 return;
 
-            string listitem = item.DocName.ToString(); 
+
+            string listitem = item.DocName.ToString();
+            // MessagingCenter.Send<AppointmentView,string>(this, _BasicString, listitem);
             //This sends the message of itemSelected
-            MessagingCenter.Send<AppointmentView,string>(this, _BasicString, listitem);
+            MessagingCenter.Send(this, _BasicString, listitem);//This is the simple version
 
             await Navigation.PopToRootAsync();
            //await Navigation.PushAsync(new MyAppointments());

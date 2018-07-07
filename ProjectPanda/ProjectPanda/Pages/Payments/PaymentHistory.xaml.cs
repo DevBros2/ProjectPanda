@@ -16,7 +16,7 @@ namespace ProjectPanda.Pages
 		{
 			InitializeComponent ();
             //removes the second Navbar 
-            NavigationPage.SetHasNavigationBar(this, false);
+           // NavigationPage.SetHasNavigationBar(this, false);
         }
 
         #region Pick a payment option

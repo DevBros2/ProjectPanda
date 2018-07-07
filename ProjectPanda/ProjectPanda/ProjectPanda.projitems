@@ -12,15 +12,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\ItemSelectedBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Cell\ChatbotDataSelector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Cell\ChatBotMessage.xaml.cs">
       <DependentUpon>ChatBotMessage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Cell\IncomimgMessage.xaml.cs">
+      <DependentUpon>IncomimgMessage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Cell\OutgoingViewCell.xaml.cs">
+      <DependentUpon>OutgoingViewCell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Cell\UserMessage.xaml.cs">
       <DependentUpon>UserMessage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Cell\ExtendedViewCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\AppoitmentHistoryModel.cs" />
@@ -43,8 +53,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModels\SettingsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PatientInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Specilization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeServices\IToolbarItemBadgeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailForms\DetailFillAllergies.xaml.cs">
       <DependentUpon>DetailFillAllergies.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PracticeListView.xaml.cs">
+      <DependentUpon>PracticeListView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\MongoDBResp.cs" />
@@ -52,6 +67,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\ChatbotViewModel2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DeliveryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DoctorPrescriptionViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
@@ -94,8 +110,16 @@
       <DependentUpon>FieldsOfSpecilizationDate.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CustomViews\ChatInputBarView.xaml.cs">
+      <DependentUpon>ChatInputBarView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\CustomViews\PickerCell.xaml.cs">
       <DependentUpon>PickerCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ChatBotView2.xaml.cs">
+      <DependentUpon>ChatBotView2.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\DoctorsPrescription.xaml.cs">
@@ -148,10 +172,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\MedicationSearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\PrescriptionHistroyViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\SelfPrescriptionHistoryViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\AllergiesDetailListViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\ChronicDiseaseListViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\DetailedUserViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\MedicationDetailListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\DetailUserViewModels\AllergiesDetailListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\DetailUserViewModels\ChronicDiseaseListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\DetailUserViewModels\DetailedUserViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\DetailUserViewModels\MedicationDetailListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DoctorListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MedicalBuildingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\MyAppointmentsViewModel.cs" />
@@ -275,7 +299,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Models\SettingsModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\MainRootPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Settings\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Server\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\JudoPay\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\SettingsViews\" />
@@ -350,6 +373,7 @@
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\tappForConfirmationCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\ThePrescriptionListCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\MicroCharts.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Texts\Itemselectedcode.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Texts\medication.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -540,6 +564,36 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\DoctorsPrescription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PracticeListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Cell\IncomimgMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Cell\OutgoingViewCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\ChatBotView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CustomViews\ChatInputBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

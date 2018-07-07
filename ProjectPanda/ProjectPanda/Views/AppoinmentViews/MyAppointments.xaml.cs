@@ -26,7 +26,7 @@ namespace ProjectPanda.Views
             BindingContext = viewmodel;
 
             //subscribes(listens) for the item being sent from doctorlistViewModel 
-            MessagingCenter.Subscribe<AppointmentView, string>(this, _BasicString, (sender, specialArgs) =>
+            MessagingCenter.Subscribe<DoctorListView, string>(this, _BasicString, (sender, specialArgs) =>
             {
                 //replaces string, using the OnPropertyChanged method in viewmodel
                 viewmodel.MyAppointmentsViewModelText = specialArgs;

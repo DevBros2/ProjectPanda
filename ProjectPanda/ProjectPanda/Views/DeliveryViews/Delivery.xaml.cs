@@ -36,6 +36,7 @@ namespace ProjectPanda.Views
 
         async private void OrderMedicine(object sender, EventArgs e)
         {
+            //await Navigation.PushAsync(new ChatBotView2());
             await Navigation.PushAsync(new ChatBotView());
         }
 

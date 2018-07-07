@@ -7,7 +7,7 @@ namespace ProjectPanda.Models
 {
     public class ChatBotMessage
     {
-        
+        public string User { get; set; }
         public string Message { get; set; }
 
         public DateTime TimeStamp { get; set; }

@@ -1,4 +1,5 @@
-﻿using ProjectPanda.ViewModels.AppointmentViewModels;
+﻿using ProjectPanda.Pages;
+using ProjectPanda.ViewModels.AppointmentViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,7 @@ namespace ProjectPanda.Views.AppoinmentViews
             viewModel = new FieldsOfSpecialityViewModel();
             BindingContext = viewModel;
 		}
-	}
+
+        
+    }
 }

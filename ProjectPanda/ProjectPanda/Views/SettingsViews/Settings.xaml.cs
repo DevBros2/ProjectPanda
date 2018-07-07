@@ -27,10 +27,7 @@ namespace ProjectPanda.Pages
         public Settings ()
 		{
 			InitializeComponent();
-            //removes the second Navbar 
-            NavigationPage.SetHasNavigationBar(this,false);
-            NavigationPage.SetHasBackButton(this,true);
-
+           
             #region The Disabling of some code that is not needed at the time
             /*
             //set the bindingcontext of the Tableview
@@ -74,15 +71,7 @@ namespace ProjectPanda.Pages
         }
         #endregion
 
-        #region Some Event handler by Bonga
-        private async void User_0Settings_Clicked(object sender, EventArgs e)
-        {
-             Helpers.Settings.GeneralSettings = AddressLine.Text;
-             Helpers.Settings.GeneralSettings = AddressLine2.Text;  
-            Helpers.Settings.GeneralSettings = CityOrTown.Text;
-            await Navigation.PopToRootAsync(true);
-        }
-        #endregion
+       
 
         #region Might have Two delete these two cause the custom view cell view model class has the code for it
 

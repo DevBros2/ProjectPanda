@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectPanda.Views.AppointmentView"
+             x:Class="ProjectPanda.Views.DoctorListView"
              BackgroundColor="{StaticResource BackgroundColor}" >
     <ContentPage.Content>
 
@@ -11,7 +11,7 @@
               ItemsSource="{Binding Doctors}"
               CachingStrategy="RecycleElement"
                   HeightRequest="20"
-                  SelectedItem="DoctorList_ItemSelected"
+                  
                   ItemSelected="DoctorList_ItemSelected">
 
             <ListView.ItemTemplate>

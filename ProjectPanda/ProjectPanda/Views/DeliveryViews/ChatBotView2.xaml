@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.DeliveryViews.ChatBotView2"
+             xmlns:local="clr-namespace:ProjectPanda.Cell"
+             xmlns:part="clr-namespace:ProjectPanda.Views.CustomViews">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ChatbotDataSelector x:Key="ChatbotDataSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MedicationOrder" Order="Primary" Icon="cart" Text="Medication 1" Priority="0"/>
+    </ContentPage.ToolbarItems>
+    
+    <Stepper Value="0" Minimum="0" Maximum="99" Increment="1" HorizontalOptions="Center" VerticalOptions="Center" ValueChanged="Stepper_ValueChanged"/>
+    
+    <Grid RowSpacing="0"
+          ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/><!--allows space -->
+            <RowDefinition Height="1"/><!--Space between messages-->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Our chatviews here-->
+
+        <ListView Grid.Row="0"
+              ItemTemplate="{StaticResource MessageTemplateSelector}"
+              ItemsSource="{Binding Messages}"
+                  Margin="0"
+                  HasUnevenRows="True"
+                  VerticalOptions="FillAndExpand"
+                  SeparatorColor="Transparent"
+            >
+        </ListView>
+        <BoxView HorizontalOptions="FillAndExpand"
+                 HeightRequest="1"
+                 BackgroundColor="LightGray"
+                 Grid.Row="1"/>
+        <part:ChatInputBarView Grid.Row="2"
+                               Margin="0,0,10,0"/>
+
+    </Grid>
+</ContentPage>

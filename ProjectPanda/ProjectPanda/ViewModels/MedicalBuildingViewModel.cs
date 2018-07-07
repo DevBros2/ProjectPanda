@@ -6,23 +6,23 @@ using System.Text;
 using Entry = Microcharts.Entry;
 using SkiaSharp;
 using Microcharts;
-
 using ProjectPanda.Services;
 using ProjectPanda.Models;
 using ProjectPanda.ViewModels.Base;
 using System.Threading.Tasks;
+using ProjectPanda.Views;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ProjectPanda.ViewModels
 {
     public class MedicalBuildingViewModel : BaseViewModel
     {
-       // readonly static string connectionString = "mongodb://localhost:27017";//for local development
+       //readonly static string connectionString = "mongodb://localhost:27017";//for local development
         readonly static string connectionString = "mongodb+srv://Bonga:langelihle@cluster0-bkjo1.mongodb.net/test?retryWrites=true";
-        MongoDBResp mongoDB = new MongoDBResp(connectionString);
+        MongoDBResp mongoDB = new MongoDBResp();
         public ObservableCollection<MedicalBuildingModel> Practices { get; set; }
-        List<MedicalBuildingModel> Practice = new List<MedicalBuildingModel>();
-        //List<MedicalBuildingModel> practices = new List<MedicalBuildingModel>();
-        public object SelectedItem { get; set; }
+        List<MedicalBuildingModel> Practice = new List<MedicalBuildingModel>();     
         public string medicalbuilding;
         public string FieldsSpecilized;
 
@@ -30,6 +30,7 @@ namespace ProjectPanda.ViewModels
         {
             GenerateMedicalBuildingModel();
             //LoadMedicalBuildingAsync();
+            NavigateToDoctorList = new Command(async () => await GoToDoctorList());
         }
 
         private async Task<List<MedicalBuildingModel>> LoadMedicalBuildingAsync()
@@ -54,6 +55,7 @@ namespace ProjectPanda.ViewModels
                 catch(Exception e)
                 {
                     //e.debug.writeline();
+                    
                 }
                 finally
                 {
@@ -62,24 +64,34 @@ namespace ProjectPanda.ViewModels
             return Practice;
         }
 
+        public ICommand NavigateToDoctorList { get; set; }
+
+        private async Task GoToDoctorList()
+        {
+            //var item = e.SelectedItem as MedicalBuildingModel;
+            //if (item == null)
+            //    return;
+
+            //MedicalBuilding.SelectedItem = null;
+            await App.Current.MainPage.Navigation.PushAsync(new DoctorListView());
+        }
+
         #region ListViewData
         private void GenerateMedicalBuildingModel()
         {
             Practices = new ObservableCollection<MedicalBuildingModel>
             {
-                new MedicalBuildingModel{Distance=7.8, ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1, PatientsCurrentlyAtPractice=5},
-                new MedicalBuildingModel{Distance=7.0, ProfileImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2, PatientsCurrentlyAtPractice=3},
-                new MedicalBuildingModel{Distance=6.0, ProfileImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3, PatientsCurrentlyAtPractice=12},
-                new MedicalBuildingModel{Distance=12.5,ProfileImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4, PatientsCurrentlyAtPractice=20},
-                new MedicalBuildingModel{Distance=8.0, ProfileImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5, PatientsCurrentlyAtPractice=8},
-                new MedicalBuildingModel{Distance=5.5, ProfileImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6, PatientsCurrentlyAtPractice=11},
-                new MedicalBuildingModel{Distance=2.5, ProfileImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7, PatientsCurrentlyAtPractice=15},
+                new MedicalBuildingModel{Distance=2.5,  MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart1, PatientsCurrentlyAtPractice=5},
+                new MedicalBuildingModel{Distance=7.0,  MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "CromptomHospital",ChartData = Chart2, PatientsCurrentlyAtPractice=3},
+                new MedicalBuildingModel{Distance=6.0,  MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "GrooteSchuurHospital",ChartData = Chart3, PatientsCurrentlyAtPractice=12},
+                new MedicalBuildingModel{Distance=12.5, MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "PinetownClinic",ChartData = Chart4, PatientsCurrentlyAtPractice=20},
+                new MedicalBuildingModel{Distance=14.0, MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "WestvilleHospital",ChartData = Chart5, PatientsCurrentlyAtPractice=8},
+                new MedicalBuildingModel{Distance=20.5, MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "Medicross:Pinetown",ChartData = Chart6, PatientsCurrentlyAtPractice=11},
+                new MedicalBuildingModel{Distance=22.5, MedicalBuildingImage ="GreysHospital.jpg",PracticeName = "Grey's Hospital",ChartData = Chart7, PatientsCurrentlyAtPractice=15},
             };
-
-            //ChartValue = this.ChartValue;
-            /*
-             */
         }
+
+      
 
         public Chart Chart1 => new LineChart()
         {
