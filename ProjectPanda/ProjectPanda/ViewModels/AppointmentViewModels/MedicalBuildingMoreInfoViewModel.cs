@@ -20,7 +20,7 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
         private void MoreInformationDisplay()
         {
 
-            new MedicalBuildingModel { PracticeName = "Grey's Hospital", Distance = 7.8, MedicalBuildingImage = "GreysHospital.jpg", PatientsCurrentlyAtPractice = 8, AvgTimeSpent = 12 };
+            new MedicalBuildingModel { PracticeName = "Grey's Hospital", Distance = 7.8, ProfileImage = "GreysHospital.jpg", PatientsCurrentlyAtPractice = 8, AvgTimeSpent = 12 };
 
         }
     }

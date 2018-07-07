@@ -43,6 +43,8 @@ namespace ProjectPanda.Droid
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 
 
+            
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
 
@@ -65,14 +67,6 @@ namespace ProjectPanda.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
         {
             ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-        public override bool OnPrepareOptionsMenu(IMenu menu)
-        {
-            return base.OnPrepareOptionsMenu(menu);
-        }
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            return base.OnCreateOptionsMenu(menu);
         }
 
     }

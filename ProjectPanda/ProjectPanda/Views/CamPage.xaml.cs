@@ -13,23 +13,28 @@ namespace ProjectPanda.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CamPage : ContentPage
 	{
+
+        
+
+
         public CamPage ()
 		{
 			InitializeComponent ();
+
+
+
         }
-        
-        private void ScanMeds(object sender, EventArgs e)
-        {
-            Scan();
-        }
+
+
         public async void Scan()
         {
-            var ScannerPage = new ZXingScannerPage();
+            var ScannerPage=new ZXingScannerPage();
 
             ScannerPage.OnScanResult += (result) => {
-
+               
                 //scan instance
                 ScannerPage.IsScanning = false;
+
                 // Alert with customers name
                 Device.BeginInvokeOnMainThread(() => {
                     Navigation.PopAsync();
@@ -40,6 +45,15 @@ namespace ProjectPanda.Views
 
             await Navigation.PushAsync(ScannerPage);
 
+        }
+
+
+
+
+        private void ScanMeds(object sender, EventArgs e)
+        {
+
+            Scan();
         }
 
     }

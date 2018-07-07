@@ -11,7 +11,7 @@ namespace ProjectPanda.Services
     {
         readonly static string DatabaseCall = "database"; //making it readonly so cant be attacked easily
         readonly static string CollectionCall = "Collection";
-        readonly static string connectionString = "";
+
         private IMongoClient _client;
         private IMongoDatabase _database;
         IMongoCollection<MedicalBuildingModel> _doctorCollection;
@@ -35,10 +35,10 @@ namespace ProjectPanda.Services
             return true;
         }
 
-        public MongoDBResp()
+        public MongoDBResp(string connectionString)
         {
 
-            _client = new MongoClient();
+            _client = new MongoClient(connectionString);
 
             _database = _client
                 .GetDatabase(DatabaseCall);

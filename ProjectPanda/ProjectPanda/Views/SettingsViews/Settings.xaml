@@ -136,7 +136,7 @@
             </TableView>
 
                 <StackLayout>
-                <Button Text="Save settings" x:Name="User_0Settings" BackgroundColor="{StaticResource ButtonLoginColour}"/>
+                <Button Text="Save settings" x:Name="User_0Settings" Clicked="User_0Settings_Clicked" BackgroundColor="{StaticResource ButtonLoginColour}"/>
                 </StackLayout>
                 
             </StackLayout>

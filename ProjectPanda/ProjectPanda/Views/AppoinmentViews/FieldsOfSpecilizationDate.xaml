@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.AppoinmentViews.FieldsOfSpecilizationDate"
-             xmlns:local="clr-namespace:ProjectPanda.Behaviors"
              Padding="10"
              >
     <ContentPage.Content>
@@ -10,10 +9,8 @@
             <ListView ItemsSource="{Binding Specilization}" 
                       CachingStrategy="RecycleElement" 
                       SeparatorVisibility="Default" 
-                      SeparatorColor="Black">
-                <ListView.Behaviors>
-                    <local:ItemSelectedBehavior Command="{Binding NavigateToMedicalBuilding }"/>
-                </ListView.Behaviors>
+                      SeparatorColor="Black"
+                      >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -37,7 +34,6 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                
             </ListView>
         </StackLayout>
     </ContentPage.Content>

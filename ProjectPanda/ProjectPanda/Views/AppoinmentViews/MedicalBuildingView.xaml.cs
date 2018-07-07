@@ -23,7 +23,8 @@ namespace ProjectPanda.Views
         public MedicalBuildingView ()
 		{
 			InitializeComponent ();
-                      
+            
+            
             BindingContext = viewModel = new MedicalBuildingViewModel();
            // BindingContext = viewModel = new DoctorListViewModel();
         }
@@ -31,12 +32,28 @@ namespace ProjectPanda.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            
+
         }
 
+        #region Navigation  to doctors at the practice
+        private async void MedicalBuilding_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as MedicalBuildingModel;
+            if (item == null)
+                return;
+
+           await Navigation.PushAsync(new AppointmentView());
+
+           MedicalBuilding.SelectedItem = null;
+        }
+        #endregion
 
         #region More information on that practice
         private void MoreInformation(object sender, EventArgs e)
         {
+           
+
             //This event handler gives more information than the the standard view card 
 
             Navigation.PushAsync(new MedicalBuildingMoreInfo());

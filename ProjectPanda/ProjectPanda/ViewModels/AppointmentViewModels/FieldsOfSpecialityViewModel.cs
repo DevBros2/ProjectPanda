@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using ProjectPanda.Models;
-using ProjectPanda.Pages;
 using ProjectPanda.Utils;
 using ProjectPanda.ViewModels.Base;
-using ProjectPanda.Views;
 using Xamarin.Forms;
 
 namespace ProjectPanda.ViewModels.AppointmentViewModels
@@ -17,15 +14,14 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
      public class FieldsOfSpecialityViewModel : BaseViewModel
     {
 
-        public ObservableCollection<Specilization> Specilization { get; set; }
+       public ObservableCollection<Specilization> Specilization { get; set; }
 
         public FieldsOfSpecialityViewModel()
         {
             GenerateSpecialitiesList();
-            NavigateToMedicalBuilding = new Command(async () => await GoToMedicalBuilding());
         }
 
-        public ICommand NavigateToMedicalBuilding { get; set; }
+        
 
         #region Methods
         void GenerateSpecialitiesList()
@@ -58,12 +54,6 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
                  
             };
         }
-        private async Task GoToMedicalBuilding()
-        {
-            await App.Current.MainPage.Navigation.PushAsync(new PracticeListView());
-            //await App.Current.MainPage.Navigation.PushAsync(new MedicalBuildingView());
-        }
-
         #endregion
 
     }

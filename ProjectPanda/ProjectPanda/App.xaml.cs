@@ -14,7 +14,7 @@ namespace ProjectPanda
 {
 	public partial class App : Application
 	{
-        public static String User1 = "Chaney";
+        
 
         //The variable for the local database
         public static string DatabaseLocation = string.Empty;
@@ -30,11 +30,20 @@ namespace ProjectPanda
             
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
-             //MainPage = new NavigationPage(new ChatBotView2());
+
             DatabaseLocation = dbLocation;
 
         }
         
+        
+        #region App constructor without any construtor arguments 
+        public App ()
+		{
+			InitializeComponent();
+            MainPage = new NavigationPage(new MainPage());
+           
+        }
+        #endregion
 
       
 

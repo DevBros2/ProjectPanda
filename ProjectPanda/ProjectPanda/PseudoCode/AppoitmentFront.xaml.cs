@@ -21,7 +21,7 @@ namespace ProjectPanda.Views.AppoinmentViews
 
         async void Doctor_Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DoctorListView());
+            await Navigation.PushAsync(new AppointmentView());
             // var newpage = await NavigationPage(new DoctorListView());
 
         }

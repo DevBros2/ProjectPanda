@@ -1,4 +1,0 @@
-﻿<DataTemplate>
-	<CustomControl:ExtendedViewCell SelectedBackgroundColor="Teal">
-	</CustomControl:ExtendedViewCell>
-</DataTemplate>
