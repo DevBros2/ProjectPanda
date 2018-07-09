@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.LoginPage"
+             BackgroundImage="fish.png"
+             >
+
+
+    <ContentPage.Content>
+        <Grid Padding="10">
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="2.5*"/>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White">
+                <!--Logo here-->
+
+            </StackLayout>
+
+            <StackLayout  VerticalOptions="Center"  Grid.Row="1" >
+
+
+                <Label Text="Login"  HorizontalOptions="Center" Margin="15" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+
+                <Image Source="loginArrow.png">
+                    <Image.GestureRecognizers >
+                        <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" VerticalOptions="End">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3"  VerticalOptions="Center" >
+                <Button Margin="30,0,30,10" 
+                            Text="Need Help?" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}" 
+                            TextColor="White"
+                            BorderWidth="1" 
+                            Opacity="0.80"  
+                            FontSize="18"
+                            />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+
+
+</ContentPage>

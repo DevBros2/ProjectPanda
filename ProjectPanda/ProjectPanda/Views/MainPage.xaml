@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.MainPage"
+             xmlns:Page="clr-namespace:ProjectPanda.Views"
+                  >
+    
+    
+    <MasterDetailPage.Master >
+        <ContentPage Padding="10" BackgroundColor="Gray" Title="Menu" >
+            <ContentPage.Content>
+                <StackLayout >
+                    <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+
+
+
+
+                    <Button x:Name="Menu_btn3" 
+                             Text="Payments" 
+                              BackgroundColor="LightGreen" 
+                               BorderWidth="2"
+                              WidthRequest="222" 
+                              HeightRequest="54"
+                              HorizontalOptions="Center" 
+                              VerticalOptions="Center" 
+                             BorderColor="Black"
+                              TextColor="Black"
+                              Clicked="Menu_btn3_Clicked" 
+                              Image="creditcard.png"
+                         />
+
+
+
+
+
+
+                    <Button x:Name="Menu_btn2"
+                                Text="Settings"
+                                BackgroundColor="LightGreen" 
+                                BorderWidth="2"
+                                WidthRequest="222" 
+                                HeightRequest="54"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"      
+                               BorderColor="Black"
+                                Margin="20"
+                                TextColor="Black"
+                                Clicked="Menu_btn2_Clicked"
+                                Image="settings.png"
+                        />
+
+
+
+
+
+                    <Button x:Name="Menu_btn4" 
+                                 Text="Contact us"
+                                BackgroundColor="LightGreen"
+                               BorderWidth="2"
+                                WidthRequest="222"
+                                HeightRequest="54"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                               BorderColor="Black"
+                                Margin="20"            
+                                TextColor="Black"
+                                Clicked="Menu_btn4_Clicked"
+                               Image="contactus.png"
+                         />
+
+
+
+
+
+                    <Button Text="Log out" HorizontalOptions="Center" BackgroundColor="LightGreen" BorderColor="Black" BorderWidth="2" Margin="20" TextColor="Black"  Clicked="Logout"/>
+
+                </StackLayout>
+                <!--Tabb.MasterPage(Menu)-->
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <!--The code for the manually congguired tabbed pages-->
+
+    <MasterDetailPage.Detail>
+
+        <TabbedPage >
+
+            <TabbedPage.Children >
+
+                <Page:ProfilePage Title="Profile" Icon="user.png" />
+
+
+
+                <Page:MyAppointments Title="My Appoitments" Icon="monthlycalendar.png" />
+
+
+
+                <Page:Delivery Title="Delivery" Icon="vansideview.png" />
+
+
+
+                <Page:CamPage Icon="photocamera.png" />
+
+
+
+            </TabbedPage.Children>
+
+        </TabbedPage>
+
+    </MasterDetailPage.Detail>
+
+
+</MasterDetailPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Pages.PaymentHistory"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             NavigationPage.HasNavigationBar="True"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <StackLayout Margin="10">
+                    <Label WidthRequest="150" HeightRequest="200" BackgroundColor="White" TextColor="Black"  Text="You can change your credit card or debit card for out dated cards. " VerticalTextAlignment="Center" Margin="10" HorizontalTextAlignment="Center" FontSize="20" Opacity="0.90"/>
+                </StackLayout>
+
+                <Label Text="Add credit card/debit card details" Margin="22,0,0,0"/>
+
+
+                <Button Text="Payment History" Margin="20,20,20,0" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="ViewPaymentHistory"/>
+
+                <Button Text="Add Credit/Debit card or Cash" Margin="20,20,20,0" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="PickPaymentOption"/>
+
+                <Button Text="Subscription" Margin="20,20,20,0" BackgroundColor="{StaticResource ButtonLoginColour}" Clicked="ManageSubscription"/>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

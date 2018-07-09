@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.DeliveryViews.ChatBotView"
+             xmlns:template="clr-namespace:ProjectPanda.Cell">
+    
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <template:ChatbotDataSelector x:Key="ChatBotDataSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--Messages in Row 0 -->
+            <ListView 
+			x:Name="MessagesListView" 
+			ItemTemplate="{StaticResource ChatBotDataSelector}" 
+			ItemsSource="{Binding Messages}" 
+			HasUnevenRows="True"  
+			SeparatorVisibility="None" />
+
+            <!-- Entry and Send button in Row 1 -->
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Padding="10" BackgroundColor="#EFEFEF">
+                <Entry 
+			    HorizontalOptions="FillAndExpand" 
+				HeightRequest="25" 
+				Placeholder="Message" 
+				Text="{Binding OutGoingText}"/>
+                <Button 
+				Text="Send" 
+				Command="{Binding SendCommand}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
+

@@ -1,0 +1,32 @@
+﻿{
+  "dependencies": {
+    "Com.Airbnb.Xamarin.Forms.Lottie": "2.5.2.1",
+    "LottieUWP": "2.5.2",
+    "Microcharts": "0.7.1",
+    "Microcharts.Forms": "0.7.1",
+    "Microsoft.Azure.DocumentDB": "1.22.0",
+    "Microsoft.Azure.Mobile.Client": "4.0.2",
+    "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.0.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Plugin.Permissions": "2.2.1",
+    "Rg.Plugins.Popup": "1.0.4",
+    "sqlite-net-pcl": "1.4.118",
+    "System.Threading.Timer": "4.3.0",
+    "Xam.Plugin.Geolocator": "4.2.0",
+    "Xam.Plugins.Settings": "3.1.1",
+    "Xamarin.Auth": "1.6.0.2",
+    "Xamarin.Forms": "2.4.0.280",
+    "ZXing.Net.Mobile.Forms": "2.4.1"
+  },
+  "frameworks": {
+    "uap10.0.10586": {}
+  },
+  "runtimes": {
+    "win10-arm": {},
+    "win10-arm-aot": {},
+    "win10-x86": {},
+    "win10-x86-aot": {},
+    "win10-x64": {},
+    "win10-x64-aot": {}
+  }
+}

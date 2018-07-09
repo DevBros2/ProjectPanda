@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.Delivery"
+             BackgroundColor="White"   
+             xmlns:PopperPage="clr-namespace:ProjectPanda.Views.PopUpPages"
+             Padding="10"
+             >
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Label 
+                Text="Doctor prescription" 
+                HorizontalOptions="Center"  
+                TextColor="Black" 
+                Style="{DynamicResource FontStyle}" 
+                Grid.Row="0"
+                />
+            </Grid>
+
+            <Grid Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image 
+                        Source="DoctorPrescription.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+
+                    <Label
+                        Text="Show Prescription"
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="20"
+                        />
+
+                </Grid>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToPrescription}"/>
+                </Grid.GestureRecognizers>
+            
+            </Grid>
+
+            <BoxView
+                Grid.Row="2" 
+                HorizontalOptions="FillAndExpand" 
+                Color="Black"
+                />
+
+            <Grid Grid.Row="3">
+                <Label 
+                Text="Self prescription" 
+                HorizontalOptions="Center"  
+                TextColor="Black" 
+                Style="{DynamicResource FontStyle}" 
+                Grid.Row="0" 
+                />
+            </Grid>
+
+            <Grid Grid.Row="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image 
+                        Source="DoctorPrescription.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        />
+
+                    <Label
+                        Text="Chat Bot"
+                        Grid.Row="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="20"
+                        TextColor="Black"
+                        />
+
+                </Grid>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToSelfPresription}"/>
+                </Grid.GestureRecognizers>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>

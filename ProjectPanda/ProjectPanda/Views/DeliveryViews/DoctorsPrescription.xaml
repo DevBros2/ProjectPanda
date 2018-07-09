@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.DeliveryViews.DoctorsPrescription">
+    <ContentPage.Content>
+        <Grid Padding="10">
+
+            <ListView 
+                HasUnevenRows="True" 
+                SeparatorVisibility="Default" 
+                ItemsSource="{Binding MedicationList}"  
+                VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+
+                                <Grid >
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Medication}" TextColor="Black" Grid.Row="0" />
+                                    <Label Text="{Binding DosageAmount}" TextColor="Black" Grid.Row="1"/>
+                                    <Label Text="{Binding MedicationDescription}" TextColor="Black" Grid.Row="2"/>
+
+
+                                </Grid>
+
+
+
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.Footer>
+                    <Button 
+                            Text="Order Prescribed medication" 
+                            BackgroundColor="{StaticResource ButtonLoginColour}"
+                            />
+                </ListView.Footer>
+
+            </ListView>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

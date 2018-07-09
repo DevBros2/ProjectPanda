@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <!-- COLORS -->
+            <Color x:Key="Primary">#92da69</Color>
+            <Color x:Key="DarkPrimary">#229122</Color>
+            <Color x:Key="BackgroundColor">#fffff</Color>
+            <Color x:Key="LightPrimary">#c5ff99</Color>
+            <Color x:Key="LightGreenColor">#83D01B</Color>
+            <Color x:Key="GreenColor">#00A69C</Color>
+            <Color x:Key="DarkGreenColor">#00857D</Color>
+            <Color x:Key="GrayColor">#e2e2e2</Color>
+            <Color x:Key="ErrorColor">#ff5252</Color>
+            <Color x:Key="TextColor">#757575</Color>
+            <Color x:Key="InverseTextColor">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#979797</Color>
+            <Color x:Key="ButtonLoginColour">#2db1ff</Color>
+            <Color x:Key="DetailFillColour">#000000</Color>
+          
+            <!--STYLES-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BarTextColor" Value="White"/>
+              
+            </Style> 
+       
+        <!--Font Styles Detail Fill forms Entry-->
+            <Style x:key="DetailFillFont" TargetType="Entry">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="PlaceholderColor" Value="Black"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+       
+            <!--Detail fill form Font Labels-->
+            <Style x:Key="DetailFillFormLabels" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+           
+            <!--Font Family for the headers of pages-->
+            <Style x:Key="FontStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+            
+            <!--Button font Attributes-->
+            <Style x:Key="ButtonFont" TargetType="Button">
+                <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+            
+            <!--The header for Profile Attributes-->
+            <Style x:Key="HeaderAttributes" TargetType="Label" >
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="End"/>
+            </Style>
+            
+            <!--The font Attritbutes for the information-->
+            <Style x:Key="InformationLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="End"/>
+                <Setter Property="LineBreakMode" Value="TailTruncation"/>
+            </Style>
+            
+            <!--#region Medical Building Style Sheet-->
+            <Style x:Key="cardViewHeader" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="LineBreakMode" Value="NoWrap"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="medicalbuildingImage" TargetType="Image">
+                <Setter Property="Aspect" Value="Fill"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            </Style>
+
+            <Style x:Key="secondaryInformation" TargetType="Label">
+                <Setter Property="TextColor" Value="Green"/>
+                <Setter Property="LineBreakMode" Value="NoWrap"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+
+            <Style x:Key="moreInfoImageIcon" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit"/>
+                <Setter Property="VerticalOptions" Value="End"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+
+            <Style x:Key="numOfPatientsAtPracticeLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="LineBreakMode" Value="NoWrap"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+
+
+            <Style x:Key="HeaderMoreInformation" TargetType="Label">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="Roboto-Bold.ttf#Roboto-Bold"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="LineBreakMode" Value="NoWrap"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="MoreInformationHeaderLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="MoreInformationLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <!--#endregion-->
+
+
+                <!--#region The DatePicker and TimePicker style sheet-->
+
+            <Style x:Key="datePickerStyling" TargetType="DatePicker">
+                <Setter Property="Format" Value="D"/>
+            </Style>
+            
+            <!--#endregion-->
+        </ResourceDictionary>
+
+		<!-- Application resource dictionary -->
+
+	</Application.Resources>
+</Application>

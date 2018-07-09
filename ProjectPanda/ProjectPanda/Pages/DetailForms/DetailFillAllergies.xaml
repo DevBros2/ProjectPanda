@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Pages.DetailForms.DetailFillAllergies"
+             Title="Allergies"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+
+
+            <Grid Padding="15">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" VerticalOptions="Start">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" Text="Are you Allergic to anything?" Style="{DynamicResource DetailFillFormLabels}"/>
+
+                        <Switch Grid.Row="0" Grid.Column="1" Margin="15,0,0,0" x:Name="showValues" IsToggled="False" Toggled="showValues_Toggled"/>
+
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" VerticalOptions="StartAndExpand">
+
+                    <Frame  OutlineColor="Black" VerticalOptions="StartAndExpand" CornerRadius="3" HeightRequest="20" x:Name="allergySearch" IsVisible="False">
+                        <SearchBar CancelButtonColor="Red" VerticalOptions="Start"/>
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="End" VerticalOptions="End" >
+                    <Image Source="continueArrow.png"  Aspect="AspectFill" >
+
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MainProfilePageNav"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+                </StackLayout>
+
+
+            </Grid>
+
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

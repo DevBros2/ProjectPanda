@@ -1,0 +1,6 @@
+﻿<Image Source="check.png" IsVisible="True" Grid.Row="4" HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Confirm"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+

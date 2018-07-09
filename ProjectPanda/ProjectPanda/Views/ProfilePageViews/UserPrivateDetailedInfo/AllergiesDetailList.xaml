@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.AllergiesDetailList"
+             Title="My Allergies"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Padding="10"
+             >
+
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+
+        <ListView 
+            HasUnevenRows="True" 
+            SeparatorVisibility="Default" 
+            SeparatorColor="Black"
+            ItemsSource="{Binding _allergies}" 
+            Grid.Row="1"
+            >
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid 
+                        HorizontalOptions="Start" 
+                        VerticalOptions="Start" 
+                        Grid.Column="0" 
+                        >
+                            <Image Source="{Binding AllergyIcon}"  />
+                        </Grid>
+
+                        <Grid 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        Grid.Column="1" 
+                        >
+                            <Label Text="{Binding AllergyName}" 
+                               Style="{DynamicResource InformationLabel}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"    
+                            />
+                        </Grid>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+            
+        </ListView> 
+
+</ContentPage>

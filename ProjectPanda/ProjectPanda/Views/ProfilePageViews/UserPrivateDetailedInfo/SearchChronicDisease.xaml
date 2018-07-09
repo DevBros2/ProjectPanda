@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.SearchMedicalConditionChronicDisease">
+    <ContentPage.Content>
+        <Frame BackgroundColor="White" CornerRadius="10" VerticalOptions="Start">
+            <SearchBar CancelButtonColor="Red" SearchButtonPressed="SearchBar_SearchButtonPressed" Placeholder="Search" PlaceholderColor="Black"/>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
