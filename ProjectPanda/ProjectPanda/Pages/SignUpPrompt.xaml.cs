@@ -8,16 +8,22 @@ using ProjectPanda.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ProjectPanda.Views;
+using ProjectPanda.ViewModels.UserViewModels;
 
 namespace ProjectPanda.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SignUpPrompt : ContentPage
 	{
-		public SignUpPrompt ()
+
+        SignUpPromptViewModel viewModel;
+
+        public SignUpPrompt ()
 		{
-			InitializeComponent ();
-		}
+            InitializeComponent ();
+            viewModel = new SignUpPromptViewModel();
+            BindingContext = viewModel;
+        }
 
           private void GoogleSignIn(object sender, EventArgs e)
         {
@@ -45,7 +51,7 @@ namespace ProjectPanda.Pages
         {
             
               //await Navigation.PushAsync(new Pages.MainPage());
-              Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack[0]);
+              Navigation.InsertPageBefore(new LoginPage(), Navigation.NavigationStack[0]);
               await Navigation.PopToRootAsync();
               Navigation.RemovePage(new LoginPage());
               Navigation.RemovePage(new SignUpPrompt());

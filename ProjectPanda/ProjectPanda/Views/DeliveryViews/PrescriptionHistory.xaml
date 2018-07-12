@@ -3,10 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.DeliveryViews.PrescriptionHistory"
              BackgroundColor="{StaticResource BackgroundColor}"
-             Padding="5"
+             Padding="15"
              >
     <ContentPage.Content>
-        <ListView x:Name="ContextDemoList" ItemsSource="{Binding _historyPrescriptionList}" HasUnevenRows="True" SeparatorVisibility="Default" >
+        <ListView 
+            x:Name="ContextDemoList" 
+            SeparatorColor="Black" 
+            ItemsSource="{Binding _historyPrescriptionList}" 
+            HasUnevenRows="True" 
+            SeparatorVisibility="Default" 
+            >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -17,7 +23,7 @@
                             <MenuItem Clicked="OnDelete" CommandParameter="{Binding DeleteMedicalHistory}"   Text="Delete" IsDestructive="True" />
 
                         </ViewCell.ContextActions>
-                        <Grid Padding="15" BackgroundColor="GhostWhite">
+                        <Grid>
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -26,10 +32,10 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <Label Text="{Binding MedicationNameHistory}" Grid.Row="0" />
-                            <Label Text="{Binding MedicationDosageHistory}" Grid.Row="1"/>
-                            <Label Text="{Binding  DescriptionHistory}" Grid.Row="2"/>
-                            <Label Text="{Binding MedicationDeliveryDate}" Grid.Row="3"/>
+                            <Label Text="{Binding MedicationNameHistory, StringFormat='Medication:  {0}'}" Grid.Row="0" />
+                            <Label Text="{Binding MedicationDosageHistory, StringFormat='Dosage Amount:  {0}'}"  Grid.Row="1"/>
+                            <Label Text="{Binding  DescriptionHistory, StringFormat='Added Notes:  {0}'}" Grid.Row="2"/>
+                            <Label Text="{Binding MedicationDeliveryDate, StringFormat='Date Prescribed:  {0}'}" Grid.Row="3"/>
                         </Grid>
                         
                     </ViewCell>     

@@ -13,52 +13,18 @@ using System.ComponentModel;
 namespace ProjectPanda.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Settings : ContentPage, INotifyPropertyChanged
+	public partial class Settings : ContentPage
 	{
-
-        #region Global variables
-
-        bool workDelivEnabled;
-
-
-        #endregion
-
+        SettingsViewModel viewModel;
+        
         #region default constructor
         public Settings ()
 		{
 			InitializeComponent();
             //removes the second Navbar 
-            NavigationPage.SetHasNavigationBar(this,false);
             NavigationPage.SetHasBackButton(this,true);
-
-            #region The Disabling of some code that is not needed at the time
-            /*
-            //set the bindingcontext of the Tableview
-            SettingsViewModel switcher = new SettingsViewModel();
-            settingProperty.BindingContext = switcher;
-
-            //remove the work delivery section
-            settingProperty.Root.Remove(deliveryAtWork);
-
-            //propertychanged event handeler to spot for changes on the visual tree of the UI
-
-            switcher.PropertyChanged+=(sender, args)=>
-                    {
-                        if (switcher.workDelivEnbaled && settingProperty.Root.IndexOf(deliveryAtWork) == -1)
-                        {
-                            settingProperty.Root.Add(deliveryAtWork);
-                        }
-                        else
-                        {
-                            if (!switcher.workDelivEnabled && settingProperty.Root.IndexOf(deliveryAtWork) != -1)
-                            {
-                                settingProperty.Root.Remove(deliveryAtWork);
-                            }
-                        }
-                    };
-                    */
-            #endregion
-
+            viewModel = new SettingsViewModel();
+            BindingContext = viewModel;
         }
         #endregion
 
@@ -70,16 +36,16 @@ namespace ProjectPanda.Pages
         #region the event handler for changing the distance proximty 
           void KilometerChange(object sender, ValueChangedEventArgs args)
         {
-            kilometerValue.Text = string.Format("{0}", args.NewValue);
+           // kilometerValue.Text = string.Format("{0}", args.NewValue);
         }
         #endregion
 
         #region Some Event handler by Bonga
         private async void User_0Settings_Clicked(object sender, EventArgs e)
         {
-             Helpers.Settings.GeneralSettings = AddressLine.Text;
-             Helpers.Settings.GeneralSettings = AddressLine2.Text;  
-            Helpers.Settings.GeneralSettings = CityOrTown.Text;
+            // Helpers.Settings.GeneralSettings = AddressLine.Text;
+           //  Helpers.Settings.GeneralSettings = AddressLine2.Text;  
+          //  Helpers.Settings.GeneralSettings = CityOrTown.Text;
             await Navigation.PopToRootAsync(true);
         }
         #endregion

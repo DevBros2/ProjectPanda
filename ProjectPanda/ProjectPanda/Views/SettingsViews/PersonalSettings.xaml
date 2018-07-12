@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.SettingsViews.PersonalSettings"
+             xmlns:pickermodel="clr-namespace:ProjectPanda.Models"
+             xmlns:pickertype="clr-namespace:ProjectPanda.Views.CustomViews"
+             Padding="10"
+             Title="Personal settings"
+             >
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Text="Cellphone number" Style="{StaticResource SettingLabel}"/>
+            <Entry Grid.Row="1" Placeholder="06069887758" Style="{DynamicResource SettingEntry}"/>
+
+            <Label Grid.Row="2" Text="Alternative number" Style="{StaticResource SettingLabel}"/>
+            <Entry Grid.Row="3" Placeholder="0787224416" Style="{DynamicResource SettingEntry}"/>
+
+            <Label Grid.Row="4" Text="Email" TextColor="Black" Style="{StaticResource SettingLabel}"/>
+            <Entry Grid.Row="5" Placeholder="khanyisani.buthelezi@gmail.com" Style="{DynamicResource SettingEntry}"/>
+
+            <!--#region Blood type Custom Picker-->
+            <Label Grid.Row="6"  Text="Blood type" TextColor="Black" Style="{StaticResource SettingLabel}"/>
+            <Picker Title="A+" TextColor="Black" HorizontalOptions="FillAndExpand" Grid.Row="7" Style="{DynamicResource SettingEntry}">
+                <Picker.Items>
+                    <x:String>O-Postive</x:String>
+                    <x:String>O-Negative</x:String>
+                    <x:String>A-Postive</x:String>
+                    <x:String>A-Negative</x:String>
+                    <x:String>B-Postive</x:String>
+                    <x:String>B-Negative</x:String>
+                    <x:String>AB-Postive</x:String>
+                    <x:String>AB-Negative</x:String>
+                </Picker.Items>
+            </Picker>
+            <!--#endregion-->
+
+            <!--#region Medical aid custom picker-->
+            <Label Grid.Row="8" Text="Medical Aid" Style="{StaticResource SettingLabel}"/>
+            <Picker Grid.Row="9" Title="Bonitas" TextColor="Black" HorizontalOptions="FillAndExpand" Style="{DynamicResource SettingEntry}">
+                <Picker.Items>
+                    <x:String>Discovery Health</x:String>
+                    <x:String>Bonitas</x:String>
+                    <x:String>FedHealth</x:String>
+                    <x:String>Metropolitan OpenPlan</x:String>
+                    <x:String>Oxygen</x:String>
+                    <x:String>Resolution Health</x:String>
+                    <x:String>Spectramed</x:String>
+                    <x:String>Sizwe</x:String>
+                    <x:String>Momentum</x:String>
+                    <x:String>Topmed</x:String>
+                    <x:String>Bestmed</x:String>
+                    <x:String>Profmed</x:String>
+                    <x:String>Jenus</x:String>
+                    <x:String>Keyhealth</x:String>
+                    <x:String>Medihelp</x:String>
+                </Picker.Items>
+            </Picker>
+            <!--#endregion-->
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

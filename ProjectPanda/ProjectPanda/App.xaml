@@ -24,9 +24,20 @@
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
                 <Setter Property="BarTextColor" Value="White"/>
-              
             </Style> 
        
+            <!--#region Settings Labels-->
+            <Style TargetType="Entry" x:Key="SettingEntry">
+                <Setter Property="PlaceholderColor" Value="Gray"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="SettingLabel">
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            
+            <!--#endregion-->
+            
         <!--Font Styles Detail Fill forms Entry-->
             <Style x:key="DetailFillFont" TargetType="Entry">
                 <Setter Property="FontSize" Value="18"/>

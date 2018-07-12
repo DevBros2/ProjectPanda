@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Pages.SignUpPrompt"
              xmlns:dictionery="clr-namespace:ProjectPanda"
-             BackgroundColor="{StaticResource Primary}"
+             BackgroundColor="White"
              >
    
     <ContentPage.Content>
         
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
 
-            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand" BorderRadius="20" WidthRequest="300"   HeightRequest="70" Margin="10" BorderWidth="3" Clicked="OurSignIn"  Text="Sign in" >
+            <Button BorderColor="Black" BackgroundColor="White" HorizontalOptions="StartAndExpand" BorderRadius="20" WidthRequest="300"   HeightRequest="70" Margin="10" BorderWidth="3" Clicked="OurSignIn" Command="{Binding CustomEmail}" Text="Sign in" >
 
             </Button>
 

@@ -30,7 +30,8 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <controls:CircleImage Source="userplaceholder.png" Aspect="AspectFit" BorderColor="Black" BorderThickness="3" Grid.Row="0">
+                            
+                            <controls:CircleImage Source="{Binding UserPicture}" Aspect="AspectFit" BorderColor="Black" BorderThickness="3" Grid.Row="0">
                                 <controls:CircleImage.WidthRequest>
                                     <OnPlatform x:TypeArguments="x:Double">
                                         <On Platform="Android, iOS">100</On>
@@ -45,14 +46,15 @@
                                 </controls:CircleImage.HeightRequest>
                             </controls:CircleImage>
 
-                            <Label Grid.Row="1" TextColor="Black" Text="Khanyisani Buthelezi" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Grid.Row="1" TextColor="Black" Text="{Binding UserName}" HorizontalOptions="Center" VerticalOptions="Center"/>
 
                         </Grid>
                     </Grid>
 
-                    <TableView Grid.Row="1"  Intent="Menu" VerticalOptions="FillAndExpand" >
+                    <TableView Grid.Row="1"  Intent="Menu" VerticalOptions="FillAndExpand">
                         <TableRoot>
                             <TableSection>
+                                
                                 <ImageCell 
                                         Text="Home page" 
                                         ImageSource="HomeIcon.png" 

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.SettingsViews.AppointmentSettings"
+             Title="Appointment settings"
+             Padding="10"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Label 
+                            FontSize="20" 
+                            Text="Maximum distance" 
+                            TextColor="DodgerBlue"
+                            />
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <BoxView 
+                            Color="Black" 
+                            HorizontalOptions="FillAndExpand"
+                            />    
+                    </Grid>
+
+
+                    <Grid Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label 
+                            FontSize="25" 
+                            TextColor="Black" 
+                            Text="{Binding MaxDistance, StringFormat='Distance: {0} km'}"
+                            />
+                    </Grid>
+
+                    <Grid Grid.Row="3" VerticalOptions="Center">
+                        <Slider Maximum="30" Minimum="1" Value="{Binding MaxDistance}" />
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" VerticalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Grid.Row="0" Grid.Column="0" FontSize="20" Text="Ride Request" TextColor="DodgerBlue"/>
+
+                            <Image Grid.Row="0" Grid.Column="1" Source="info.png"/>
+
+                            <BoxView Grid.Row="1" Grid.ColumnSpan="4" Color="Black" HorizontalOptions="FillAndExpand"/>
+                            
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="8*"/>
+                            </Grid.RowDefinitions>
+
+
+                            <Grid Grid.Row="0">
+                                <Grid ColumnSpacing="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Button 
+                                    Grid.Column="0"
+                                    BackgroundColor="{Binding ButtonColour}" 
+                                    Command="{Binding Activate}" 
+                                    Text="Enable" 
+                                    TextColor="White" 
+                                    HorizontalOptions="FillAndExpand"
+                                    />
+
+                                    <Button 
+                                    Grid.Column="1" 
+                                    BackgroundColor="{Binding ButtonColour2}" 
+                                    Command="{Binding Deactivate}" 
+                                    Text="Disable" 
+                                    TextColor="White" 
+                                    HorizontalOptions="FillAndExpand"
+                                    />
+
+                                </Grid>
+                            </Grid>
+
+                            <Grid Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        
+                                    </Grid>
+                                    
+                                    <Grid Grid.Column="1" HorizontalOptions="Fill">
+                                        <Image
+                                        Source="uberLogo.png"
+                                        Aspect="AspectFill"
+                                        VerticalOptions="Fill"
+                                        HorizontalOptions="FillAndExpand"
+                                        />
+                                    </Grid>
+
+                                    <Grid Grid.Column="2" HorizontalOptions="Center">
+                                        <Image
+                                        Source="{Binding Status}"
+                                        Aspect="AspectFill"                                           
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        />
+                                    </Grid>
+                                    
+                                </Grid>
+                            </Grid>
+                            
+                        </Grid>
+                    </Grid>
+                    
+                </Grid>
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using ProjectPanda.Models;
 
 namespace ProjectPanda.ViewModels.UserViewModels
 {
     public class SideMenuViewModel:BaseViewModel
     {
-
+        PatientInfo info;
         public ICommand HomeNavigation { get; set; }
         public ICommand PaymentsNavigation { get; set; }
         public ICommand SettingsNavigation { get; set; }
@@ -23,6 +24,27 @@ namespace ProjectPanda.ViewModels.UserViewModels
         public ICommand MedicationNavigation { get; set; }
         public ICommand LogoutCommand { get; set; }
         public ICommand EmergencyCommand { get; set; }
+
+        private string firstName= "Khanyisani";
+        private string surname="Buthelezi";
+
+
+        public string UserName
+        {
+            get
+            {
+                return firstName + " " + surname;
+            }
+
+        }
+
+        public string UserPicture
+        {
+            get
+            {
+                return "userplaceholder.png";
+            }
+        }
 
         public SideMenuViewModel()
         {
@@ -77,5 +99,7 @@ namespace ProjectPanda.ViewModels.UserViewModels
             }
         }
         #endregion
+
+        
     }
 }

@@ -4,11 +4,12 @@
              x:Class="ProjectPanda.Views.DeliveryViews.MainDeliveryPage"
              xmlns:pages="clr-namespace:ProjectPanda.Views.DeliveryViews"
              BarBackgroundColor="{StaticResource Primary}"
+             Title="Delivery History"
             >
 
-    <pages:PrescriptionHistory Title="Prescribed History"/>
+    <pages:PrescriptionHistory Title="Prescribed" Icon="PrescribedHistory.png"/>
 
-    <pages:SelfPrescriptionHistroy Title="Self prescription History"/>
+    <pages:SelfPrescriptionHistroy Title="Self-Prescribed" Icon="SelfPrescribedHistory.png"/>
 
 
 </TabbedPage>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.SettingsViews.DeliverySettings"
+             Title="Delivery settings"
+             Padding="10"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label FontSize="20" Grid.Row="0" Text="Home delivery" HorizontalOptions="Start" TextColor="DodgerBlue"/>
+
+                <BoxView Grid.Row="1" Color="Black" HorizontalOptions="FillAndExpand"/>
+
+                <Label Grid.Row="2" Text="Address Line 1:" Style="{StaticResource SettingLabel}"/>
+
+                <Entry Grid.Row="3" Placeholder="6 Calsi Gardens" Style="{StaticResource SettingEntry}"/>
+
+                <Label Grid.Row="4" Text="Address Line 2" Style="{StaticResource SettingLabel}"/>
+
+                <Entry Grid.Row="5" Placeholder="11 Sunnyside Lane" Style="{StaticResource SettingEntry}"/>
+
+                <Label  Grid.Row="6" Text="City/Town" Style="{StaticResource SettingLabel}"/>
+
+                <Entry Grid.Row="7" Placeholder="Pinetown" Style="{StaticResource SettingEntry}"/>
+
+                <Label Grid.Row="8" Text="Postal Code" Style="{StaticResource SettingLabel}"/>
+
+                <Entry Grid.Row="9" Placeholder="3610" Style="{StaticResource SettingEntry}"/>
+
+                <Grid Grid.Row="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label FontSize="20" Grid.Column="0" Text="Work Delivery" TextColor="DodgerBlue"/>
+
+                        <Switch Grid.Column="1" IsToggled="{Binding IsSelected, Mode=TwoWay}" />
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="11" IsVisible="{Binding IsSelected}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="Address Line 1:" Style="{StaticResource SettingLabel}"/>
+
+                        <Entry Grid.Row="1" Placeholder="6 Calsi Gardens" Style="{StaticResource SettingEntry}"/>
+
+                        <Label Grid.Row="2" Text="Address Line 2" Style="{StaticResource SettingLabel}"/>
+
+                        <Entry Grid.Row="3" Placeholder="11 Sunnyside Lane" Style="{StaticResource SettingEntry}"/>
+
+                        <Label  Grid.Row="4" Text="City/Town" Style="{StaticResource SettingLabel}"/>
+
+                        <Entry Grid.Row="5" Placeholder="Pinetown" Style="{StaticResource SettingEntry}"/>
+
+                        <Label Grid.Row="6" Text="Postal Code" Style="{StaticResource SettingLabel}"/>
+
+                        <Entry Grid.Row="7" Placeholder="3610" Style="{StaticResource SettingEntry}"/>
+
+                    </Grid>
+                </Grid>
+                
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
