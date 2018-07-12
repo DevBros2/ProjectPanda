@@ -32,10 +32,25 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <Label Text="{Binding MedicationNameHistory, StringFormat='Medication:  {0}'}" Grid.Row="0" />
-                            <Label Text="{Binding MedicationDosageHistory, StringFormat='Dosage Amount:  {0}'}"  Grid.Row="1"/>
-                            <Label Text="{Binding  DescriptionHistory, StringFormat='Added Notes:  {0}'}" Grid.Row="2"/>
-                            <Label Text="{Binding MedicationDeliveryDate, StringFormat='Date Prescribed:  {0}'}" Grid.Row="3"/>
+                            <Label 
+                                Grid.Row="0"
+                                Text="{Binding MedicationNameHistory}" 
+                                />
+
+                            <Label 
+                                Text="{Binding MedicationDosageHistory}"  
+                                Grid.Row="1"
+                                />
+                            
+                            <Label 
+                                Text="{Binding  DescriptionHistory}" 
+                                Grid.Row="2"
+                                />
+                            
+                            <Label 
+                                Text="{Binding MedicationDeliveryDate}" 
+                                Grid.Row="3"
+                                />
                         </Grid>
                         
                     </ViewCell>     
