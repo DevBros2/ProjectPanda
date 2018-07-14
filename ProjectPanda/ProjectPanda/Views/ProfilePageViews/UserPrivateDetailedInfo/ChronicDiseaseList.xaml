@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.ChronicDiseaseList" 
-             Title="My Chronic Diseases"
+             Title="Chronic Diseases"
             BackgroundColor="{StaticResource BackgroundColor}"
              Padding="10"
              >
 
 
     <ContentPage.ToolbarItems >
-        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Icon="AddItem.png"/>
     </ContentPage.ToolbarItems>
 
     <ListView 

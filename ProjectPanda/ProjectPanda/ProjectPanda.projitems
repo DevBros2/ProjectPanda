@@ -49,6 +49,29 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\MongoDBResp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Interfaces\IUberAuthenticationClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Interfaces\IUberClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\AccessToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\PriceEstimate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\PriceEstimateCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\Product.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\ProductCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\Promotion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\Request.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\RequestDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\RequestDetailsDriver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\RequestDetailsLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\RequestDetailsVehicle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\RequestMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\TimeEstimate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\TimeEstimateCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\UberError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\UberResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\UserActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\UserHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\Model\UserProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\UberAuthenticationClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\UberClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\FieldsOfExpiertiseConstants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />

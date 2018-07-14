@@ -16,24 +16,21 @@ namespace ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo
 	{
 
         ChronicDiseaseListViewModel chronicModel;
-        ChronicDiseaseListModel chronicDiseaseModel;
 
-        public ChronicDiseaseList ()
+        public ChronicDiseaseList()
 		{
 			InitializeComponent ();
+            chronicModel = new ChronicDiseaseListViewModel();
+            BindingContext = chronicModel;
 
-            BindingContext = chronicModel = new ChronicDiseaseListViewModel();
-		}
+        }
 
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
         }
 
-        async private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SearchMedicalConditionChronicDisease()); 
-        }
     }
 }

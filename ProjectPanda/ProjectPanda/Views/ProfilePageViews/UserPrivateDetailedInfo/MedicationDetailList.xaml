@@ -3,63 +3,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo.MedicationDetailList"
              BackgroundColor="{StaticResource BackgroundColor}"
-             Title="My Medication"
+             Title="Medication"
              Padding="10"
              >
 
     <ContentPage.ToolbarItems >
-        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Icon="AddItem.png" Command="{Binding SearchBar}"/>
     </ContentPage.ToolbarItems>
 
-    <ListView ItemsSource="{Binding _Medications}" 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" IsVisible="{Binding ShowSearchElement}">
+           
+            <SearchBar 
+            CancelButtonColor="Red" 
+            Placeholder="Search" 
+            PlaceholderColor="Black"
+            SearchCommand="{Binding Search}"
+            />
+            
+        </StackLayout>
+     
+
+        <ListView ItemsSource="{Binding _Medications}" 
               HasUnevenRows="True" 
               SeparatorVisibility="Default"
               SeparatorColor="Black"
+              Grid.Row="1"
               >
 
-        <ListView.ItemTemplate >
-            <DataTemplate>
-                <ViewCell>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="7*"/>
-                        </Grid.ColumnDefinitions>
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="7*"/>
+                            </Grid.ColumnDefinitions>
 
-                        <Grid 
+                            <Grid 
                         HorizontalOptions="Start" 
                         VerticalOptions="Start" 
                         Grid.Column="0" 
                         >
-                            <Image Source="medicationIcon.png"/>
-                        </Grid>
+                                <Image Source="medicationIcon.png"/>
+                            </Grid>
 
-                        <Grid 
+                            <Grid 
                         HorizontalOptions="Center" 
                         VerticalOptions="Center" 
                         Grid.Column="1" 
                         >
-                            <StackLayout>
-                                <Label Text="{Binding titleofmedication}" 
+                                <StackLayout>
+                                    <Label Text="{Binding TitleOfMedication}" 
                                Style="{DynamicResource InformationLabel}"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"    
                                 />
 
-                                <Label Text="{Binding dosageofmedication}" 
+                                    <Label Text="{Binding DosageOfMedication}" 
                                Style="{DynamicResource InformationLabel}"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"    
                                  />
 
-                            </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
                         </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-
-    </ListView>
+    </Grid>
    
 </ContentPage>

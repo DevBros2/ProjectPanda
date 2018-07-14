@@ -35,21 +35,25 @@
                             <Label 
                                 Grid.Row="0"
                                 Text="{Binding MedicationNameHistory}" 
+                                Style="{StaticResource HistoryLabel}"
                                 />
 
                             <Label 
                                 Text="{Binding MedicationDosageHistory}"  
                                 Grid.Row="1"
+                                Style="{StaticResource HistoryLabel}"
                                 />
                             
                             <Label 
                                 Text="{Binding  DescriptionHistory}" 
                                 Grid.Row="2"
+                                Style="{StaticResource HistoryLabel}"
                                 />
                             
                             <Label 
                                 Text="{Binding MedicationDeliveryDate}" 
                                 Grid.Row="3"
+                                Style="{StaticResource HistoryLabel}"
                                 />
                         </Grid>
                         

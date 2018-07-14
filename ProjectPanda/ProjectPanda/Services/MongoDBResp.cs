@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectPanda.Models;
 using MongoDB.Driver;
+using ProjectPanda.Models.DetailUserModel;
 
 namespace ProjectPanda.Services
 {
@@ -15,7 +16,6 @@ namespace ProjectPanda.Services
         private IMongoClient _client;
         private IMongoDatabase _database;
         IMongoCollection<MedicalBuildingModel> _doctorCollection;
-
         /// <summary>
 
         /// Checking is connection to the database established.
@@ -47,6 +47,7 @@ namespace ProjectPanda.Services
                 .GetCollection<MedicalBuildingModel>(CollectionCall); 
             
         }
+
         public async Task<List<MedicalBuildingModel>> GetUsersBySpecialization(string medicalbuilding, string FieldsSpecilized)
         {
             //filter function, this will filter by Medical building and specialization
@@ -60,6 +61,9 @@ namespace ProjectPanda.Services
             return result;
         }
 
-
+       // public async Task<List<MedicationModel>>GetMedicationByName(string medicationName)
+       // {
+            
+       // }
     }
 }

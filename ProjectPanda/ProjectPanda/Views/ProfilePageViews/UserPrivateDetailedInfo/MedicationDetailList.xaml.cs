@@ -15,24 +15,20 @@ namespace ProjectPanda.Views.ProfilePageViews.UserPrivateDetailedInfo
 	{
 
         MedicationDetailListViewModel medication;
-        MedicationDetailListViewModel MedicationBuildingModel;
+        
 
         public MedicationDetailList ()
 		{
 			InitializeComponent ();
-
-
-            BindingContext = medication = new MedicationDetailListViewModel();
+            medication = new MedicationDetailListViewModel();
+            BindingContext = medication;
         }
 
-        protected override void OnAppearing()
+        protected override void OnDisappearing()
         {
-            base.OnAppearing();
+            base.OnDisappearing();
+          //  medication.ShowSearchElement = false;
         }
 
-         async private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-           await Navigation.PushAsync(new SearchMedicalCondition());
-        }
     }
 }

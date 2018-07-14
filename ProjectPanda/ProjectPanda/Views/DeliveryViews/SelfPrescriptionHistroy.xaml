@@ -31,9 +31,21 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
-                            <Label Text="{Binding SelfMedicationHistory, StringFormat='Medication:  {0}'}" Grid.Row="0" TextColor="Black"/>
-                            <Label Text="{Binding SelfMedicationDosageHistory, StringFormat='Dosage:  {0}'}" Grid.Row="1" TextColor="Black"/>
-                            <Label Text="{Binding  SelfMedicationDeliveryHistory, StringFormat='Delivery Date:  {0}'}" Grid.Row="2" TextColor="Black"/>
+                            <Label 
+                                Text="{Binding SelfMedicationHistory}" 
+                                Grid.Row="0" 
+                                Style="{StaticResource HistoryLabel}"
+                                />
+                            <Label 
+                                Text="{Binding SelfMedicationDosageHistory}" 
+                                Grid.Row="1"
+                                Style="{StaticResource HistoryLabel}"
+                                />
+                            <Label 
+                                Text="{Binding  SelfMedicationDeliveryHistory}" 
+                                Grid.Row="2"
+                                Style="{StaticResource HistoryLabel}"
+                                />
                          
                         </Grid>
                     </ViewCell>

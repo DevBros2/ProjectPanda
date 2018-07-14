@@ -38,6 +38,13 @@
             
             <!--#endregion-->
             
+            <!--#region History Labels-->
+            <Style TargetType="Label" x:Key="HistoryLabel">
+                <Setter Property="TextColor" Value="#8e8e8e"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <!--#endregion-->
+            
         <!--Font Styles Detail Fill forms Entry-->
             <Style x:key="DetailFillFont" TargetType="Entry">
                 <Setter Property="FontSize" Value="18"/>
