@@ -68,6 +68,7 @@
             <Style x:Key="ButtonFont" TargetType="Button">
                 <Setter Property="FontFamily" Value="Roboto-Regular.ttf#Roboto-Regular"/>
                 <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="White"/>
             </Style>
             
             <!--The header for Profile Attributes-->

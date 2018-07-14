@@ -24,6 +24,7 @@
             Placeholder="Search" 
             PlaceholderColor="Black"
             SearchCommand="{Binding Search}"
+            HorizontalOptions="Center"
             />
             
         </StackLayout>
