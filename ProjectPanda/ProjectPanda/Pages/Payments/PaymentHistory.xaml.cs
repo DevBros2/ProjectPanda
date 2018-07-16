@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectPanda.ViewModels.PaymentsViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,14 @@ namespace ProjectPanda.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PaymentHistory : ContentPage
 	{
-		public PaymentHistory ()
+
+        PaymentViewModel viewModel;
+
+        public PaymentHistory ()
 		{
 			InitializeComponent ();
+            viewModel = new PaymentViewModel();
+            BindingContext = viewModel;
         }
 
     }

@@ -9,14 +9,14 @@
              >
     <ContentPage.Content>
         <ScrollView>
-            <Grid>
+            <Grid VerticalOptions="Start">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="5*"/>
-                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" VerticalOptions="Start">
-                    <Grid>
+                    <Grid VerticalOptions="Start">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="1"/>
@@ -27,74 +27,103 @@
 
                         <Grid Grid.Row="0">
                             <Label 
-                        Text="Payment methods"
-                        TextColor="DodgerBlue"
-                        FontSize="18"
-                        />
+                                Text="Payment methods"
+                                TextColor="DodgerBlue"
+                                FontSize="18"
+                            />
                         </Grid>
 
                         <Grid Grid.Row="1">
                             <BoxView Color="Black"/>
                         </Grid>
 
-                        <Grid Grid.Row="2">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="8*"/>
-                                </Grid.ColumnDefinitions>
+                        <ListView 
+                            ItemsSource="{Binding PaymentMethods}" 
+                            SeparatorVisibility="None"
+                            HasUnevenRows="True"
+                            Grid.Row="2"
+                            VerticalOptions="Start"
+                            >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*"/>
+                                                <ColumnDefinition Width="8*"/>
+                                            </Grid.ColumnDefinitions>
 
-                                <Image 
-                            Grid.Column="0"
-                            Source="mastercardIcon.png"
-                            Aspect="AspectFit"
-                            HorizontalOptions="Start"
-                            />
+                                            <Image 
+                                                Grid.Column="0"
+                                                Source="{Binding CardIcon}"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="Start"
+                                             />
 
-                                <Label
-                            Text="***9567"
-                            Grid.Column="1"
-                            HorizontalOptions="Start"
-                            TextColor="Black"
-                            VerticalOptions="Center"
-                            />
+                                            <Label
+                                                Text="{Binding CardNumber}"
+                                                Grid.Column="1"
+                                                HorizontalOptions="Start"
+                                                TextColor="Black"
+                                                VerticalOptions="Center"
+                                            />
 
-                            </Grid>
-                        </Grid>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
 
-                        <Grid Grid.Row="3">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="8*"/>
-                                </Grid.ColumnDefinitions>
+                            <ListView.Footer>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <Image 
-                            Grid.Column="0"
-                            Source="CashIcon.png"
-                            Aspect="AspectFit"
-                            HorizontalOptions="Start"
-                            />
+                                    <Grid Grid.Row="0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*"/>
+                                                <ColumnDefinition Width="8*"/>
+                                            </Grid.ColumnDefinitions>
 
-                                <Label
-                            Text="Cash"
-                            Grid.Column="1"
-                            HorizontalOptions="Start"
-                            TextColor="Black"
-                            VerticalOptions="Center"
-                            />
+                                            <Image 
+                                                Grid.Column="0"
+                                                Source="CashIcon.png"
+                                                Aspect="AspectFit"
+                                                HorizontalOptions="Start"
+                                            />
 
-                            </Grid>
-                        </Grid>
+                                            <Label
+                                                Text="Cash"
+                                                Grid.Column="1"
+                                                HorizontalOptions="Start"
+                                                TextColor="Black"
+                                                VerticalOptions="Center"
+                                            />
 
-                        <Grid Grid.Row="4">
-                            <Button 
-                        BackgroundColor="DodgerBlue"
-                        Text="Add payment method"
-                        Style="{StaticResource ButtonFont}"
-                        />
-                        </Grid>
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding .}"/>
+                                            </Grid.GestureRecognizers>
+                                            
+                                        </Grid>
+                                    </Grid>
 
+                                    <Grid Grid.Row="1">
+                                        <Button 
+                                            BackgroundColor="DodgerBlue"
+                                            Text="Add payment method"
+                                            Style="{StaticResource ButtonFont}"
+                                            Command="{Binding AddPayment}"
+                                            />
+                                    </Grid>
+
+
+                                </Grid>
+                            </ListView.Footer>
+                            
+                        </ListView>
+        
                     </Grid>
                 </Grid>
 

@@ -41,6 +41,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\MedicationSearchModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrescribedMedication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PatientCard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PaymentsModel\PaymentModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PaymentsModel\PaymentOptionsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModels\SettingsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PatientInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Specilization.cs" />
@@ -80,6 +82,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DoctorPrescriptionViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\MedicalFilesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaymentsViewModel\PaymentOptionsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaymentsViewModel\PaymentViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\AppointmentSetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\DeliverySetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
