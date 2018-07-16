@@ -37,7 +37,6 @@ namespace ProjectPanda.Models
 
         public string ENT_Specilist { get; set; }
 
-
         public string Gynaecologist { get; set; }
 
         public string Haematology { get; set; }

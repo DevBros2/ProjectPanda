@@ -7,6 +7,8 @@ using ProjectPanda.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.ComponentModel;
+using ProjectPanda.Models;
+using ProjectPanda.Views.AppoinmentViews.AppointmentHistoryFolder;
 //using ProjectPanda.Models;
 
 namespace ProjectPanda.Pages.AppointmentHistoryFolder
@@ -16,39 +18,24 @@ namespace ProjectPanda.Pages.AppointmentHistoryFolder
 	{
         AppoitmentHistoryViewModel appoitmentViewModel;
 
-        AppoitmentHistoryViewModel AppoitmentHistoryModel;
-
-        public Command RemoveAppointmentLog { get; }
-
         public AppoitnmentHistory ()
 		{
 			InitializeComponent ();
-
-            BindingContext = appoitmentViewModel = new AppoitmentHistoryViewModel();
-
-           
+            appoitmentViewModel = new AppoitmentHistoryViewModel();
+            BindingContext = appoitmentViewModel;
         }
-
-
-       
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
         }
 
-
-        private void OnMore(object sender, EventArgs e)
+        private async void AppointmentHistory_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var more = ((MenuItem)sender);
-            DisplayAlert("Hide Log", more.CommandParameter + "Cancel", "OK");
+            var item = e.SelectedItem as AppoitmentHistoryModel;
+            if (item == null) return;
+            await Navigation.PushAsync(new AppointmentHistoryDetail(new AppoitmentHistoryViewModel(item)));
+         
         }
-       
-        private void OnDelete(object sender, EventArgs e)
-        {
-            var deletion = ((MenuItem)sender);
-            DisplayAlert("Delete Appointment Log", deletion.CommandParameter + "Cancel", "OK");
-        }
-
     }
 }

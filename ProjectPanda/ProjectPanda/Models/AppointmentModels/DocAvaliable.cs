@@ -5,6 +5,7 @@ using System.Text;
 using Newtonsoft.Json;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using ProjectPanda.Models.AppointmentModels;
 
 namespace ProjectPanda.Models
 {
@@ -19,22 +20,33 @@ namespace ProjectPanda.Models
         [BsonElement("docName")]
         public string DocName { get; set; }
 
+        [BsonElement("firstName")]
+        public string FirstName { get; set; }
+
+        [BsonElement("middleName")]
+        public string MiddleName { get; set; }
+
+        [BsonElement("practiceLocation")]
+        public PracticeLocation PracticeLocation { get; set; }
+
+        [BsonElement("lastName")]
+        public string LastName { get; set; }
+
         [BsonElement("varsity")]
         public string Varsity { get; set;}
 
         [BsonElement("profileimageurl")]
         public string ProfileImageURl { get; set; }
 
-        [BsonElement("medicalbuilding")]
+        [BsonElement("medicalBuilding")]
         public string MedicalBuilding { get; set; }
 
         [BsonElement("complete")]
         public bool Complete { get; set; }
         
         [BsonElement("docSpecilization")]
-        public Specilization DocSpecilization { get; set; }
-        //not sure what this property does
+        public Specilization DocSpecilization { set; get; }
+       
         public bool IsVisible { get; set; }
-
     }
 }

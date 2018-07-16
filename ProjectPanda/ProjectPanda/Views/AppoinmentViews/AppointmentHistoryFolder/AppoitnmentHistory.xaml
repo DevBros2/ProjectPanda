@@ -13,16 +13,18 @@
                 SeparatorVisibility="Default" 
                 HasUnevenRows="True"
                 SeparatorColor="Black"
-                >
+                SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+               ItemSelected="AppointmentHistory_ItemSelected"
+            >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
 
                         <ViewCell.ContextActions>
 
-                            <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"  Text="More" />
+                            <MenuItem  CommandParameter="{Binding .}"  Text="More" />
 
-                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding RemoveAppointmentLog}" Text="Delete" IsDestructive="True" />
+                            <MenuItem  CommandParameter="{Binding RemoveAppointmentLog}" Text="Delete" IsDestructive="True" />
 
                         </ViewCell.ContextActions>
 

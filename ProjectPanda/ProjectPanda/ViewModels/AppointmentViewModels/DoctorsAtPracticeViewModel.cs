@@ -15,7 +15,7 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
         int NumOfDoctors = 0;
 
 
-        public ObservableCollection<DoctorsAtPractice> _docs { get; set; }
+        //public ObservableCollection<DoctorsAtPractice> _docs { get; set; }
 
         //UsersRepository _mongoDbRepo = new UsersRepository(MongodbServer, ActiveDatabase, ActiveCollection);
         
@@ -51,12 +51,15 @@ namespace ProjectPanda.ViewModels.AppointmentViewModels
 
         private void DummyDataGenerateDoctorsAtPractice()
         {
+            /*
             _docs = new ObservableCollection<DoctorsAtPractice>
             {
                 new DoctorsAtPractice{DocName="Dr Zulu", ProfileImageURl="userplaceholder.png"  },
                 new DoctorsAtPractice{DocName="Dr Buthelezi", ProfileImageURl="userplaceholder.png}" },
                 new DoctorsAtPractice{DocName="Dr Zuma", ProfileImageURl="userplaceholder.png}" }
             };
+        
+            */
         }
 
 

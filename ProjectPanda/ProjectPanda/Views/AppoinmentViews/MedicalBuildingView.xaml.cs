@@ -44,7 +44,6 @@ namespace ProjectPanda.Views
                 return;
 
            await Navigation.PushAsync(new AppointmentView());
-
            MedicalBuilding.SelectedItem = null;
         }
         #endregion

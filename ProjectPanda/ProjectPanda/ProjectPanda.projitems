@@ -24,7 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\AppoitmentHistoryModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DoctorsAtPractice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\PracticeLocation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ChatBotModels\ChatBotMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrecriptionHistory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\SelfPrescriptionHistoryModel.cs" />
@@ -89,6 +89,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SideMenuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SignUpPromptViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppointmentHistoryDetail.xaml.cs">
+      <DependentUpon>AppointmentHistoryDetail.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -601,6 +605,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsViews\AppointmentSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppointmentHistoryDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

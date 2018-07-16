@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectPanda.Views.AppoinmentViews.AppointmentHistoryFolder.AppointmentHistoryDetail"
+             Title="Appointment Details"
+             Padding="10"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="RemoveIcon.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" HorizontalOptions="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image
+                            Source="userplaceholder.png"
+                            Aspect="AspectFit"
+                            Grid.Row="0"
+                            />
+
+                        <Label
+                            Text="Dr K.L Buthelezi"
+                            Grid.Row="1"
+                            />
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1" HorizontalOptions="Fill">
+                    <BoxView
+                    Color="Black"
+                    />
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Text="Date"
+                            TextColor="DodgerBlue"
+                            FontSize="18"
+                            Grid.Row="0"
+                         />
+
+                        <Label
+                            Text="{Binding Item.DateSeen}"
+                            Grid.Row="1"
+                        />
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Text="Time"
+                            TextColor="DodgerBlue"
+                            FontSize="18"
+                            Grid.Row="0"
+                            />
+
+                        <Label
+                            Text="{Binding Item.Time}"
+                            Grid.Row="1"
+                            />
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Text="Duration"
+                            TextColor="DodgerBlue"
+                            FontSize="18"
+                            Grid.Row="0"
+                            />
+
+                        <Label
+                            Text="{Binding .}"
+                            Grid.Row="1"
+                            />
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="5">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Text="Practice name"
+                            TextColor="DodgerBlue"
+                            FontSize="18"
+                            Grid.Row="0"
+                            />
+
+                        <Label
+                            Text="{Binding .}"
+                            Grid.Row="1"
+                            />
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="6">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Text="Diagnosis"
+                            TextColor="DodgerBlue"
+                            FontSize="18"
+                            Grid.Row="0"
+                            />
+
+                        <Label
+                            Text="{Binding .}"
+                            Grid.Row="1"
+                            />
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

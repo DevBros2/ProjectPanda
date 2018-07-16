@@ -8,13 +8,13 @@ using ProjectPanda.ViewModels;
 
 namespace ProjectPanda.Models
 {
-      public class AppoitmentHistoryModel
+    public class AppoitmentHistoryModel
     {
 
         #region Global Variables
         private string dateseen;
         private string time;
-        private string doctorSeen;
+        //private DocAvaliable doctorSeen;
         #endregion
 
 
@@ -47,24 +47,13 @@ namespace ProjectPanda.Models
         }
 
 
-        public string DoctorSeen
-        {
-            get
-            {
-                return doctorSeen;
-            }
-            set
-            {
-                doctorSeen = value;
-            }
-        }
+        
+        public string DoctorName { get; set; }
+     
+
+        public string TimeSpan { get; set; }
 
         #endregion
 
-        /*
-        //deleting property
-        [XmlIgnore]
-        public ICommand RemoveAppointmentLog { get; private set; }
-        */
     }
 }
