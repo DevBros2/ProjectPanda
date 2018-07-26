@@ -4,7 +4,11 @@
              x:Class="ProjectPanda.Pages.Payments.PaymentOptions">
     <ContentPage.Content>
         <StackLayout>
-           
+            <Entry Text="{Binding CresditCardNumber}" Placeholder="Enter your Credit Card details here"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding ExpiryDate}" Placeholder="Expiry Date"/>
+                <Entry Text="{Binding CVV}" Placeholder="CVV"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
