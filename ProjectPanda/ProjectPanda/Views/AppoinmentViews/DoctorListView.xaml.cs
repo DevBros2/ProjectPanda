@@ -13,15 +13,15 @@ using Xamarin.Forms.Xaml;
 namespace ProjectPanda.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AppointmentView : ContentPage
+	public partial class DoctorListView : ContentPage
 	{
         DoctorListViewModel viewmodel;
         public DocAvaliable DocAvaliable;
         private String _BasicString = "Doctor"; //a global string needs to be created
 
-		public AppointmentView ()
+		public DoctorListView()
 		{
-			InitializeComponent ();
+			InitializeComponent();
            // DoctorList.On<Android>().SetIsFastScrollEnable(true);
            
             BindingContext = viewmodel = new DoctorListViewModel();
@@ -54,11 +54,11 @@ namespace ProjectPanda.Views
 
             string listitem = item.DocName.ToString(); 
             //This sends the message of itemSelected
-            MessagingCenter.Send<AppointmentView,string>(this, _BasicString, listitem);
+            MessagingCenter.Send<DoctorListView, string>(this, _BasicString, listitem);
 
             await Navigation.PopToRootAsync();
            //await Navigation.PushAsync(new MyAppointments());
-            DoctorList.SelectedItem = null;
+           // DoctorList.SelectedItem = null;
         }
     }
     
