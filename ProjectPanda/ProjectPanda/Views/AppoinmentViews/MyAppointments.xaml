@@ -4,7 +4,7 @@
              x:Class="ProjectPanda.Views.MyAppointments"
              BackgroundColor="White"
              xmlns:refrencePage="clr-namespace:ProjectPanda.Views.AppoinmentViews" 
-             xmlns:Customizededitor="clr-namespace:ProjectPanda.Views.CustomEntry"
+            
              >
     <ContentPage.Content>
         <Grid Padding="10">

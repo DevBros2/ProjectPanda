@@ -52,6 +52,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\MongoDBResp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\FieldsOfExpiertiseConstants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\CalenderViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DeliveryViewModel.cs" />
@@ -548,5 +549,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\CalenderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

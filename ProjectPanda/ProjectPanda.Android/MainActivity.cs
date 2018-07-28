@@ -46,7 +46,8 @@ namespace ProjectPanda.Droid
             
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-
+            //Calender view code
+            XamForms.Controls.Droid.Calendar.Init();
 
             //Lottie Animation android code
             AnimationViewRenderer.Init();
