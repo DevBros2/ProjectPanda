@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.ComponentModel;
 using ProjectPanda.Models;
-using ProjectPanda.Views.AppoinmentViews.AppointmentHistoryFolder;
+//using ProjectPanda.Views.AppoinmentViews.AppointmentHistoryFolder;
 //using ProjectPanda.Models;
 
 namespace ProjectPanda.Pages.AppointmentHistoryFolder

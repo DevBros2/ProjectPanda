@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -13,13 +14,13 @@ namespace ProjectPanda.Pages.Payments
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PaymentOptions : ContentPage
 	{
-        PaymentOptionsViewModel viewModel;
+        //PaymentOptionsViewModel viewModel;
 
         public PaymentOptions ()
 		{
 			InitializeComponent ();
-            viewModel = new PaymentOptionsViewModel();
-            BindingContext = viewModel;
+           // viewModel = new PaymentOptionsViewModel();
+           // BindingContext = viewModel;
 		}
 
         public string CreateToken(string cardNumber, int cardExpMonth, int cardExpYear, string cardCVC)

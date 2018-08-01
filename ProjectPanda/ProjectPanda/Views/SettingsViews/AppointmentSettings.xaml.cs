@@ -13,13 +13,13 @@ namespace ProjectPanda.Views.SettingsViews
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AppointmentSettings : ContentPage
 	{
-        AppointmentSetViewModel viewModel;
+        //AppointmentSetViewModel viewModel;
 
         public AppointmentSettings ()
 		{
 			InitializeComponent ();
-            viewModel = new AppointmentSetViewModel();
-            BindingContext = viewModel;
+           // viewModel = new AppointmentSetViewModel();
+           // BindingContext = viewModel;
 		}
 	}
 }

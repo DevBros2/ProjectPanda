@@ -13,13 +13,13 @@ namespace ProjectPanda.Views.SettingsViews
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DeliverySettings : ContentPage
 	{
-        DeliverySetViewModel viewModel;
+        //DeliverySetViewModel viewModel;
 
         public DeliverySettings ()
 		{
 			InitializeComponent ();
-            viewModel = new DeliverySetViewModel();
-            BindingContext = viewModel;
+           // viewModel = new DeliverySetViewModel();
+           // BindingContext = viewModel;
             
         }
 	}
