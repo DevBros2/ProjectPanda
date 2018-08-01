@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\ItemSelectedBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Cell\ChatbotDataSelector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Cell\ChatBotMessage.xaml.cs">
       <DependentUpon>ChatBotMessage.xaml</DependentUpon>
@@ -32,7 +33,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\AllergiesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\ChronicDiseaseListModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\DetailedUserModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\MedicalFilesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DetailUserModel\MedicationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DistanceCalculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\AppointmentModels\DocAvaliable.cs" />
@@ -42,8 +42,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\DeliveryModels\PrescribedMedication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MenuModel\MenuItems.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PatientCard.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\PaymentsModel\PaymentModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\PaymentsModel\PaymentOptionsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SettingsModels\SettingsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PatientInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Specilization.cs" />
@@ -77,23 +75,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\UberRide\UberClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\FieldsOfExpiertiseConstants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\CalenderViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppointmentViewModels\FieldsOfSpecialityViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DeliveryViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DeliveryViewModels\DoctorPrescriptionViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DetailUserViewModels\MedicalFilesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MessegingKeys.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaymentsViewModel\PaymentOptionsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaymentsViewModel\PaymentViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\AppointmentSetViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModels\DeliverySetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\ProfilePageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SideMenuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModels\SignUpPromptViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppointmentHistoryDetail.xaml.cs">
-      <DependentUpon>AppointmentHistoryDetail.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppoitnmentHistory.xaml.cs">
       <DependentUpon>AppoitnmentHistory.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -131,7 +121,7 @@
       <DependentUpon>FieldsOfSpecilizationDate.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\PickerCell.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CustomViews\PickerCell.xaml.cs">
       <DependentUpon>PickerCell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -327,6 +317,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Server\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\JudoPay\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\AuthenticationFile\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\SettingsViews\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
@@ -398,6 +389,7 @@
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\tappForConfirmationCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\ThePrescriptionListCode.txt" />
     <Content Include="$(MSBuildThisFileDirectory)PseudoCode\MicroCharts.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Texts\Old Code.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Texts\medication.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -539,7 +531,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CustomViews\PickerCell.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CustomViews\PickerCell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -588,30 +580,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DeliveryViews\DoctorsPrescription.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsViews\PersonalSettings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsViews\DeliverySettings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsViews\AppointmentSettings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AppoinmentViews\AppointmentHistoryFolder\AppointmentHistoryDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

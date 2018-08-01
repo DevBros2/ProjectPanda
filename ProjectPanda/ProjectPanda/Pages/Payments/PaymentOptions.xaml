@@ -6,38 +6,8 @@
              Padding="10"
              >
     <ContentPage.Content>
-        <ListView 
-            ItemsSource="{Binding Options}"
-            SeparatorVisibility="Default"
-            SeparatorColor="Black"
-            >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="6*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Grid Grid.Column="0">
-                                <Image
-                                    Source="{Binding PaymentMethodIcon}"
-                                    Aspect="AspectFit"
-                                    />
-                            </Grid>
-
-                            <Grid Grid.Column="1">
-                                <Label
-                                    Text="{Binding PaymentMethodName}"
-                                    VerticalOptions="Center"
-                                    />
-                            </Grid>
-                            
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <StackLayout>
+           
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

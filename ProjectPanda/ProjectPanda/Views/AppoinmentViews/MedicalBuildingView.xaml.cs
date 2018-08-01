@@ -23,17 +23,13 @@ namespace ProjectPanda.Views
         public MedicalBuildingView ()
 		{
 			InitializeComponent ();
-            
-            
-            BindingContext = viewModel = new MedicalBuildingViewModel();
-           // BindingContext = viewModel = new DoctorListViewModel();
+                        
+            BindingContext = viewModel = new MedicalBuildingViewModel();         
         }
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            
-
+            base.OnAppearing();            
         }
 
         #region Navigation  to doctors at the practice
@@ -44,6 +40,7 @@ namespace ProjectPanda.Views
                 return;
 
            await Navigation.PushAsync(new AppointmentView());
+
            MedicalBuilding.SelectedItem = null;
         }
         #endregion

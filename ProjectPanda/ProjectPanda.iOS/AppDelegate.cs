@@ -30,6 +30,9 @@ namespace ProjectPanda.iOS
             "https://projectpanda.azurewebsites.net");
             global::Xamarin.Forms.Forms.Init ();
 
+            //Calenderview code
+            XamForms.Controls.iOS.Calendar.Init();
+
             //Inicializa o Zxing no iOS
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
