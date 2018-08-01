@@ -11,8 +11,8 @@ namespace ProjectPanda.Services.UberRide
 {
     public class UberAuthenticationClient: IUberAuthenticationClient
     {
-        private readonly string _clientId;
-        private readonly string _clientSecret;
+        private readonly string _clientId="";
+        private readonly string _clientSecret="";
 
         public UberAuthenticationClient(string clientId, string clientSecret)
         {

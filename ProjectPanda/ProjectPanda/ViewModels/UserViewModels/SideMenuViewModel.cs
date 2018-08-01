@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ProjectPanda.Models;
+using System.Collections.ObjectModel;
+using ProjectPanda.Models.MenuModel;
 
 namespace ProjectPanda.ViewModels.UserViewModels
 {
     public class SideMenuViewModel:BaseViewModel
     {
-        PatientInfo info;
+        
         public ICommand HomeNavigation { get; set; }
         public ICommand PaymentsNavigation { get; set; }
         public ICommand SettingsNavigation { get; set; }
@@ -24,7 +26,7 @@ namespace ProjectPanda.ViewModels.UserViewModels
         public ICommand MedicationNavigation { get; set; }
         public ICommand LogoutCommand { get; set; }
         public ICommand EmergencyCommand { get; set; }
-
+        public ObservableCollection<MenuItems> Items { get; private set; }
         private string firstName= "Khanyisani";
         private string surname="Buthelezi";
 
@@ -48,13 +50,15 @@ namespace ProjectPanda.ViewModels.UserViewModels
 
         public SideMenuViewModel()
         {
-            HomeNavigation = new Command(async()=>await GoHomePage());
-            PaymentsNavigation = new Command(async()=>await GoPaymentsPage());
+
+            HomeNavigation = new Command(async () => await GoHomePage());
+            PaymentsNavigation = new Command(async () => await GoPaymentsPage());
             SettingsNavigation = new Command(async () => await GoToSettingsPage());
             ContactNavigation = new Command(async () => await GoToContactPage());
             AppointmentNavigation = new Command(async () => await GoToAppointmentHistoryPage());
             MedicationNavigation = new Command(async () => await GoToMedicationHistoryPage());
             LogoutCommand = new Command(async () => await LogOutProtocol());
+
         }
 
         #region Side Menu Methods

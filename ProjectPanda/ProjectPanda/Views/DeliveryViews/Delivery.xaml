@@ -4,12 +4,33 @@
              x:Class="ProjectPanda.Views.Delivery"
              BackgroundColor="White"   
              xmlns:PopperPage="clr-namespace:ProjectPanda.Views.PopUpPages"
-             Padding="10"
              >
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" 
+                   BasedOn="{StaticResource FontStyle}" 
+                   x:Key="DeliveryHeaderLabel"
+             >
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
 
+            </Style>
+
+            <Style TargetType="Label" x:Key="SubHeader">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="DarkGray"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
     <ContentPage.Content>
-        <Grid>
+        <Grid Padding="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="5*"/>
@@ -23,7 +44,7 @@
                 Text="Doctor prescription" 
                 HorizontalOptions="Center"  
                 TextColor="Black" 
-                Style="{DynamicResource FontStyle}" 
+                Style="{StaticResource DeliveryHeaderLabel}" 
                 Grid.Row="0"
                 />
             </Grid>
@@ -38,16 +59,14 @@
                     <Image 
                         Source="DoctorPrescription.png"
                         Grid.Row="0"
-                        VerticalOptions="Center"
+                        VerticalOptions="End"
                         HorizontalOptions="Center"
                         />
 
                     <Label
                         Text="Show Prescription"
                         Grid.Row="1"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        FontSize="20"
+                        Style="{StaticResource SubHeader}"
                         />
 
                 </Grid>
@@ -69,7 +88,7 @@
                 Text="Self prescription" 
                 HorizontalOptions="Center"  
                 TextColor="Black" 
-                Style="{DynamicResource FontStyle}" 
+                Style="{StaticResource DeliveryHeaderLabel}" 
                 Grid.Row="0" 
                 />
             </Grid>
@@ -84,17 +103,14 @@
                     <Image 
                         Source="DoctorPrescription.png"
                         Grid.Row="0"
-                        VerticalOptions="Center"
+                        VerticalOptions="End"
                         HorizontalOptions="Center"
                         />
 
                     <Label
                         Text="Chat Bot"
                         Grid.Row="1"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        FontSize="20"
-                        TextColor="Black"
+                        Style="{StaticResource SubHeader}"
                         />
 
                 </Grid>

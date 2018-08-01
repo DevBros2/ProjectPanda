@@ -46,7 +46,7 @@
             <!--#endregion-->
             
         <!--Font Styles Detail Fill forms Entry-->
-            <Style x:key="DetailFillFont" TargetType="Entry">
+            <Style x:Key="DetailFillFont" TargetType="Entry">
                 <Setter Property="FontSize" Value="18"/>
                 <Setter Property="PlaceholderColor" Value="Black"/>
                 <Setter Property="TextColor" Value="Black"/>
