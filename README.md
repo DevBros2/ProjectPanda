@@ -1,2 +1,2 @@
 # ProjectPanda
-[![Build Status](your travis url for the repo here.png)](your travis url for the repo here)
+[![Build Status](https://travis-ci.org/DevBros2/ProjectPanda.svg?branch=master)](https://travis-ci.org/DevBros2/ProjectPanda)
