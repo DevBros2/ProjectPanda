@@ -17,6 +17,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ProjectPanda\ProjectPanda\ProjectPanda.projitems*{b09f2ff3-4bda-4144-a8c8-d678464f4914}*SharedItemsImports = 4
 		ProjectPanda\ProjectPanda\ProjectPanda.projitems*{ba24ddd7-cdd1-4af8-948a-3da748e0bc1e}*SharedItemsImports = 4
+		ProjectPanda\ProjectPanda\ProjectPanda.projitems*{ea902c2d-6cbb-4daf-83f0-5929c495a593}*SharedItemsImports = 13
 		ProjectPanda\ProjectPanda\ProjectPanda.projitems*{fab34273-eee8-415b-ba16-59a8a6c7269c}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

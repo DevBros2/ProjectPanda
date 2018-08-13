@@ -33,16 +33,7 @@ namespace ProjectPanda.Views
         }
 
         #region Navigation  to doctors at the practice
-        private async void MedicalBuilding_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = e.SelectedItem as MedicalBuildingModel;
-            if (item == null)
-                return;
-
-           await Navigation.PushAsync(new AppointmentView());
-
-           MedicalBuilding.SelectedItem = null;
-        }
+        
         #endregion
 
         #region More information on that practice
